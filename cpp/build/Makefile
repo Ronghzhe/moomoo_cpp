@@ -142,6 +142,71 @@ bench_kline/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/build
 .PHONY : bench_kline/fast
 
+#=============================================================================
+# Target rules for targets named bench_push
+
+# Build rule for target.
+bench_push: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_push
+.PHONY : bench_push
+
+# fast build rule for target.
+bench_push/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/build
+.PHONY : bench_push/fast
+
+#=============================================================================
+# Target rules for targets named bench_push_batch
+
+# Build rule for target.
+bench_push_batch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_push_batch
+.PHONY : bench_push_batch
+
+# fast build rule for target.
+bench_push_batch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/build
+.PHONY : bench_push_batch/fast
+
+#=============================================================================
+# Target rules for targets named bench_order
+
+# Build rule for target.
+bench_order: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_order
+.PHONY : bench_order
+
+# fast build rule for target.
+bench_order/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_order.dir/build.make CMakeFiles/bench_order.dir/build
+.PHONY : bench_order/fast
+
+#=============================================================================
+# Target rules for targets named bench_real_roundtrip
+
+# Build rule for target.
+bench_real_roundtrip: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_real_roundtrip
+.PHONY : bench_real_roundtrip
+
+# fast build rule for target.
+bench_real_roundtrip/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_real_roundtrip.dir/build.make CMakeFiles/bench_real_roundtrip.dir/build
+.PHONY : bench_real_roundtrip/fast
+
+#=============================================================================
+# Target rules for targets named bench_query_cancel
+
+# Build rule for target.
+bench_query_cancel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_query_cancel
+.PHONY : bench_query_cancel
+
+# fast build rule for target.
+bench_query_cancel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_query_cancel.dir/build.make CMakeFiles/bench_query_cancel.dir/build
+.PHONY : bench_query_cancel/fast
+
 bench_kline.o: bench_kline.cpp.o
 .PHONY : bench_kline.o
 
@@ -165,6 +230,126 @@ bench_kline.s: bench_kline.cpp.s
 bench_kline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/bench_kline.cpp.s
 .PHONY : bench_kline.cpp.s
+
+bench_order.o: bench_order.cpp.o
+.PHONY : bench_order.o
+
+# target to build an object file
+bench_order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_order.dir/build.make CMakeFiles/bench_order.dir/bench_order.cpp.o
+.PHONY : bench_order.cpp.o
+
+bench_order.i: bench_order.cpp.i
+.PHONY : bench_order.i
+
+# target to preprocess a source file
+bench_order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_order.dir/build.make CMakeFiles/bench_order.dir/bench_order.cpp.i
+.PHONY : bench_order.cpp.i
+
+bench_order.s: bench_order.cpp.s
+.PHONY : bench_order.s
+
+# target to generate assembly for a file
+bench_order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_order.dir/build.make CMakeFiles/bench_order.dir/bench_order.cpp.s
+.PHONY : bench_order.cpp.s
+
+bench_push.o: bench_push.cpp.o
+.PHONY : bench_push.o
+
+# target to build an object file
+bench_push.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.o
+.PHONY : bench_push.cpp.o
+
+bench_push.i: bench_push.cpp.i
+.PHONY : bench_push.i
+
+# target to preprocess a source file
+bench_push.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.i
+.PHONY : bench_push.cpp.i
+
+bench_push.s: bench_push.cpp.s
+.PHONY : bench_push.s
+
+# target to generate assembly for a file
+bench_push.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.s
+.PHONY : bench_push.cpp.s
+
+bench_push_batch.o: bench_push_batch.cpp.o
+.PHONY : bench_push_batch.o
+
+# target to build an object file
+bench_push_batch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.o
+.PHONY : bench_push_batch.cpp.o
+
+bench_push_batch.i: bench_push_batch.cpp.i
+.PHONY : bench_push_batch.i
+
+# target to preprocess a source file
+bench_push_batch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.i
+.PHONY : bench_push_batch.cpp.i
+
+bench_push_batch.s: bench_push_batch.cpp.s
+.PHONY : bench_push_batch.s
+
+# target to generate assembly for a file
+bench_push_batch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.s
+.PHONY : bench_push_batch.cpp.s
+
+bench_query_cancel.o: bench_query_cancel.cpp.o
+.PHONY : bench_query_cancel.o
+
+# target to build an object file
+bench_query_cancel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_query_cancel.dir/build.make CMakeFiles/bench_query_cancel.dir/bench_query_cancel.cpp.o
+.PHONY : bench_query_cancel.cpp.o
+
+bench_query_cancel.i: bench_query_cancel.cpp.i
+.PHONY : bench_query_cancel.i
+
+# target to preprocess a source file
+bench_query_cancel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_query_cancel.dir/build.make CMakeFiles/bench_query_cancel.dir/bench_query_cancel.cpp.i
+.PHONY : bench_query_cancel.cpp.i
+
+bench_query_cancel.s: bench_query_cancel.cpp.s
+.PHONY : bench_query_cancel.s
+
+# target to generate assembly for a file
+bench_query_cancel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_query_cancel.dir/build.make CMakeFiles/bench_query_cancel.dir/bench_query_cancel.cpp.s
+.PHONY : bench_query_cancel.cpp.s
+
+bench_real_roundtrip.o: bench_real_roundtrip.cpp.o
+.PHONY : bench_real_roundtrip.o
+
+# target to build an object file
+bench_real_roundtrip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_real_roundtrip.dir/build.make CMakeFiles/bench_real_roundtrip.dir/bench_real_roundtrip.cpp.o
+.PHONY : bench_real_roundtrip.cpp.o
+
+bench_real_roundtrip.i: bench_real_roundtrip.cpp.i
+.PHONY : bench_real_roundtrip.i
+
+# target to preprocess a source file
+bench_real_roundtrip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_real_roundtrip.dir/build.make CMakeFiles/bench_real_roundtrip.dir/bench_real_roundtrip.cpp.i
+.PHONY : bench_real_roundtrip.cpp.i
+
+bench_real_roundtrip.s: bench_real_roundtrip.cpp.s
+.PHONY : bench_real_roundtrip.s
+
+# target to generate assembly for a file
+bench_real_roundtrip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_real_roundtrip.dir/build.make CMakeFiles/bench_real_roundtrip.dir/bench_real_roundtrip.cpp.s
+.PHONY : bench_real_roundtrip.cpp.s
 
 home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o: home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.cpp.o
 .PHONY : home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o
@@ -199,10 +384,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bench_kline"
+	@echo "... bench_order"
+	@echo "... bench_push"
+	@echo "... bench_push_batch"
+	@echo "... bench_query_cancel"
+	@echo "... bench_real_roundtrip"
 	@echo "... mm_demo_base"
 	@echo "... bench_kline.o"
 	@echo "... bench_kline.i"
 	@echo "... bench_kline.s"
+	@echo "... bench_order.o"
+	@echo "... bench_order.i"
+	@echo "... bench_order.s"
+	@echo "... bench_push.o"
+	@echo "... bench_push.i"
+	@echo "... bench_push.s"
+	@echo "... bench_push_batch.o"
+	@echo "... bench_push_batch.i"
+	@echo "... bench_push_batch.s"
+	@echo "... bench_query_cancel.o"
+	@echo "... bench_query_cancel.i"
+	@echo "... bench_query_cancel.s"
+	@echo "... bench_real_roundtrip.o"
+	@echo "... bench_real_roundtrip.i"
+	@echo "... bench_real_roundtrip.s"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.i"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.s"

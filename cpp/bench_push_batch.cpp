@@ -1,4 +1,5 @@
 #include "FTAPIDemoBase.h"
+#include "bench_jsonl_writer.hpp"
 
 #include <chrono>
 #include <condition_variable>
@@ -32,15 +33,6 @@ std::string JsonEscape(const std::string &s) {
       oss << c;
   }
   return oss.str();
-}
-
-void AppendJsonl(const std::string &path, const std::string &line) {
-  std::ofstream ofs(path.c_str(), std::ios::app);
-  if (!ofs.good()) {
-    std::cerr << "failed to open " << path << std::endl;
-    return;
-  }
-  ofs << line << "\n";
 }
 
 void ParseSymbol(const std::string &sym, Qot_Common::QotMarket &market, std::string &code) {
@@ -218,6 +210,8 @@ int main(int argc, char **argv) {
     return 2;
   }
 
+  BenchJsonlWriter jsonl_out(out_path);
+
   MMAPI::Init();
   PushBatchBench bench;
   double t_conn = NowMs();
@@ -260,7 +254,7 @@ int main(int argc, char **argv) {
         oss << intervals[k];
       }
       oss << "]}";
-      AppendJsonl(out_path, oss.str());
+      jsonl_out.AppendLine(oss.str());
       std::cerr << "[cpp warm] " << (i + 1) << "/" << symbols.size() << " " << symbol
                 << " ok=" << ok << " first_push_ms=" << ms_first_push
                 << " pushes=" << push_count << std::endl;

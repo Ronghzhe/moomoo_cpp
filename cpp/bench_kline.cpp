@@ -1,9 +1,9 @@
 #include "FTAPIDemoBase.h"
+#include "bench_jsonl_writer.hpp"
 
 #include <chrono>
 #include <cstdint>
 #include <cstdlib>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -25,15 +25,6 @@ class Ticker {
  private:
   double t0_;
 };
-
-void AppendJsonl(const std::string &path, const std::string &line) {
-  std::ofstream ofs(path.c_str(), std::ios::app);
-  if (!ofs.good()) {
-    std::cerr << "failed to open " << path << std::endl;
-    return;
-  }
-  ofs << line << "\n";
-}
 
 std::string JsonEscape(const std::string &s) {
   std::ostringstream oss;
@@ -179,6 +170,8 @@ int main(int argc, char **argv) {
     return 2;
   }
 
+  BenchJsonlWriter jsonl_out(out_path);
+
   MMAPI::Init();
   int rc = 0;
 
@@ -208,7 +201,7 @@ int main(int argc, char **argv) {
               << ",\"symbol\":\"" << JsonEscape(symbol) << "\",\"kl_type\":\"K_5M\",\"bars\":" << bars
               << ",\"kline_src\":\"get_kl\",\"bar_count\":" << count
               << ",\"trd_env\":\"SIMULATE\"}";
-          AppendJsonl(out_path, oss.str());
+          jsonl_out.AppendLine(oss.str());
           if (!ok) rc = 1;
         }
       }
@@ -239,7 +232,7 @@ int main(int argc, char **argv) {
           << ",\"symbol\":\"" << JsonEscape(symbol) << "\",\"kl_type\":\"K_5M\",\"bars\":" << bars
           << ",\"kline_src\":\"get_kl\",\"bar_count\":" << count
           << ",\"trd_env\":\"SIMULATE\"}";
-      AppendJsonl(out_path, oss.str());
+      jsonl_out.AppendLine(oss.str());
       if (!ok) rc = 1;
     }
   }

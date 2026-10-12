@@ -15,7 +15,7 @@
 ########################
 
 //Build targets: kline, order, or all
-BENCH_TARGETS:STRING=kline
+BENCH_TARGETS:STRING=all
 
 //Path to a program.
 CCACHE_PROGRAM:FILEPATH=CCACHE_PROGRAM-NOTFOUND

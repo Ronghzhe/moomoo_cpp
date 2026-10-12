@@ -1,10 +1,10 @@
 #include "FTAPIDemoBase.h"
+#include "bench_jsonl_writer.hpp"
 
 #include <chrono>
 #include <condition_variable>
 #include <cstdint>
 #include <cstdlib>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <mutex>
@@ -27,15 +27,6 @@ class Ticker {
  private:
   double t0_;
 };
-
-void AppendJsonl(const std::string &path, const std::string &line) {
-  std::ofstream ofs(path.c_str(), std::ios::app);
-  if (!ofs.good()) {
-    std::cerr << "failed to open " << path << std::endl;
-    return;
-  }
-  ofs << line << "\n";
-}
 
 std::string JsonEscape(const std::string &s) {
   std::ostringstream oss;
@@ -306,6 +297,8 @@ int main(int argc, char **argv) {
     return 2;
   }
 
+  BenchJsonlWriter jsonl_out(out_path);
+
   MMAPI::Init();
   int rc = 0;
 
@@ -335,7 +328,7 @@ int main(int argc, char **argv) {
         << ",\"push_any_order_id\":" << push_any_oid
         << ",\"ms_push_any\":" << ms_push_any
         << ",\"code\":\"" << JsonEscape(code) << "\",\"trd_env\":\"SIMULATE\"}";
-    AppendJsonl(out_path, oss.str());
+    jsonl_out.AppendLine(oss.str());
     std::cout << oss.str() << std::endl;
     if (!ok) rc = 1;
   };

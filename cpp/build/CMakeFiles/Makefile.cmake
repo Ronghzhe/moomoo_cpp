@@ -49,4 +49,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/mm_demo_base.dir/DependInfo.cmake"
   "CMakeFiles/bench_kline.dir/DependInfo.cmake"
+  "CMakeFiles/bench_push.dir/DependInfo.cmake"
+  "CMakeFiles/bench_push_batch.dir/DependInfo.cmake"
+  "CMakeFiles/bench_order.dir/DependInfo.cmake"
+  "CMakeFiles/bench_real_roundtrip.dir/DependInfo.cmake"
+  "CMakeFiles/bench_query_cancel.dir/DependInfo.cmake"
   )

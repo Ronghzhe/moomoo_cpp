@@ -1,4 +1,5 @@
 #include "FTAPIDemoBase.h"
+#include "bench_jsonl_writer.hpp"
 
 #include <algorithm>
 #include <cctype>
@@ -6,7 +7,6 @@
 #include <condition_variable>
 #include <cstdint>
 #include <cstdlib>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <mutex>
@@ -29,15 +29,6 @@ class Ticker {
  private:
   double t0_;
 };
-
-void AppendJsonl(const std::string &path, const std::string &line) {
-  std::ofstream ofs(path.c_str(), std::ios::app);
-  if (!ofs.good()) {
-    std::cerr << "failed to open " << path << std::endl;
-    return;
-  }
-  ofs << line << "\n";
-}
 
 std::string JsonEscape(const std::string &s) {
   std::ostringstream oss;
@@ -447,6 +438,8 @@ int main(int argc, char **argv) {
     return 2;
   }
 
+  BenchJsonlWriter jsonl_out(out_path);
+
   MMAPI::Init();
   RealRoundtripBench bench;
   Ticker t_conn;
@@ -479,7 +472,7 @@ int main(int argc, char **argv) {
         << ",\"sell_ms_place\":" << ms_sell_place << ",\"sell_ms_order_push\":" << ms_sell_push
         << ",\"sell_place_attempts\":" << sell_attempts << ",\"ms_sell_fill_wait\":" << ms_sell_fill
         << ",\"sell_order_id\":" << sell_oid << ",\"sell_order_status\":" << sell_status << "}";
-    AppendJsonl(out_path, oss.str());
+    jsonl_out.AppendLine(oss.str());
     std::cout << oss.str() << std::endl;
     if (!ok) rc = 1;
     bench.UnInitTrd();

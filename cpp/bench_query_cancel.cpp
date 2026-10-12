@@ -1,8 +1,8 @@
 #include "FTAPIDemoBase.h"
+#include "bench_jsonl_writer.hpp"
 
 #include <chrono>
 #include <cstdlib>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -24,15 +24,6 @@ class Ticker {
  private:
   double t0_;
 };
-
-void AppendJsonl(const std::string &path, const std::string &line) {
-  std::ofstream ofs(path.c_str(), std::ios::app);
-  if (!ofs.good()) {
-    std::cerr << "failed to open " << path << std::endl;
-    return;
-  }
-  ofs << line << "\n";
-}
 
 std::string JsonEscape(const std::string &s) {
   std::ostringstream oss;
@@ -219,6 +210,8 @@ int main(int argc, char **argv) {
     return 2;
   }
 
+  BenchJsonlWriter jsonl_out(out_path);
+
   MMAPI::Init();
   QueryCancelBench bench;
   Ticker t_conn;
@@ -247,7 +240,7 @@ int main(int argc, char **argv) {
           << ",\"ms_connect\":" << (i == 1 ? ms_connect : 0.0) << ",\"ms_place\":" << ms_place
           << ",\"ms_query\":" << ms_query << ",\"ms_cancel\":" << ms_cancel << ",\"code\":\"" << JsonEscape(code)
           << "\",\"trd_env\":\"SIMULATE\"}";
-      AppendJsonl(out_path, oss.str());
+      jsonl_out.AppendLine(oss.str());
       std::cout << oss.str() << std::endl;
       if (!ok) rc = 1;
       if (i < warm_iters) SleepSec(iter_gap_sec);
