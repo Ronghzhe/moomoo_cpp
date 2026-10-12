@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:13:08,nana_paper_AMAT_5m_1787233013546,US.AMAT,BUY,3246024,11,4,499.4,strategy_cpp_entry,,,,paper,,,

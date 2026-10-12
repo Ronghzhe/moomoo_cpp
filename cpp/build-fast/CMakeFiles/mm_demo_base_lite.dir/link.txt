@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmm_demo_base_lite.a CMakeFiles/mm_demo_base_lite.dir/FTAPIDemoBaseLite.cpp.o
+/usr/bin/ranlib libmm_demo_base_lite.a

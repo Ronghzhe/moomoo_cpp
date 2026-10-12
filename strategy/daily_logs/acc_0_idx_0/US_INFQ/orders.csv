@@ -1,0 +1,7 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T16:51:06,nana_paper_INFQ_5m_1787244634088,US.INFQ,BUY,3246498,11,167,11.945,strategy_cpp_entry,,,,paper,,,
+2026-08-20T18:15:37,nana_paper_INFQ_5m_1787244634088,US.INFQ,SELL,3246667,11,167,12.11,strategy_cpp_exit,,,,SIMULATE,profit,+1.38%,+27.55
+2026-08-20T18:50:25,nana_paper_INFQ_5m_1787251821815,US.INFQ,BUY,3246782,11,163,12.215,strategy_cpp_entry,,,,paper,,,
+2026-08-20T19:56:35,nana_paper_INFQ_5m_1787251821815,US.INFQ,SELL,3246903,11,163,12.485,strategy_cpp_exit,,,,SIMULATE,profit,+2.21%,+44.01
+2026-08-21T14:06:14,nana_paper_INFQ_5m_1787321133373,US.INFQ,BUY,3248156,11,148,13.47,strategy_cpp_entry,,,,paper,,,
+2026-08-21T14:20:39,nana_paper_INFQ_5m_1787321133373,US.INFQ,SELL,3248243,11,148,13.16,strategy_cpp_exit,,,,SIMULATE,loss,-2.30%,-45.88

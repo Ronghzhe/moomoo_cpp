@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/workspace/moomoo_CPP/cpp/build-ubuntu/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

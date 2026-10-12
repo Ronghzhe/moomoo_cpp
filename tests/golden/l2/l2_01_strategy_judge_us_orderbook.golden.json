@@ -1,0 +1,33 @@
+{
+  "id": "l2_01_strategy_judge_us_orderbook",
+  "steps": [
+    {
+      "label": "entry_hit",
+      "entry_hit": true,
+      "entry_rule_id": "S1_OPEN",
+      "exit_hit": true,
+      "exit_rule_id": "E1_CLOSE"
+    },
+    {
+      "label": "entry_miss",
+      "entry_hit": false,
+      "entry_rule_id": "",
+      "exit_hit": true,
+      "exit_rule_id": "E1_CLOSE"
+    },
+    {
+      "label": "exit_hit",
+      "entry_hit": false,
+      "entry_rule_id": "",
+      "exit_hit": true,
+      "exit_rule_id": "E1_CLOSE"
+    },
+    {
+      "label": "entry_and_exit",
+      "entry_hit": true,
+      "entry_rule_id": "S1_OPEN",
+      "exit_hit": true,
+      "exit_rule_id": "E1_CLOSE"
+    }
+  ]
+}

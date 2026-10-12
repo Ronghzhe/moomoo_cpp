@@ -1,0 +1,56 @@
+# 行情延时测试 50 标的名单
+# 2026-08-31 08:48:40
+# US: 5 fixed + 20 uniform Top800; HK: 5 fixed + 20 mcap (skip RMB-R)
+
+  #  市场    代码            名称                    原因
+--------------------------------------------------------------------------------
+  1  US    US.AAPL       Apple                 策略常用保留
+  2  US    US.NVDA       NVIDIA                策略常用保留
+  3  US    US.MU         Micron Technology     策略常用保留
+  4  US    US.SMCI       Super Micro Computer  策略常用保留
+  5  US    US.TSLA       Tesla                 策略常用保留
+  6  US    US.GOOGL      Alphabet-A            Top800均匀抽样
+  7  US    US.HD         Home Depot            Top800均匀抽样
+  8  US    US.CRWD       CrowdStrike           Top800均匀抽样
+  9  US    US.ISRG       Intuitive Surgical    Top800均匀抽样
+ 10  US    US.APP        Applovin              Top800均匀抽样
+ 11  US    US.JCI        Johnson Controls      Top800均匀抽样
+ 12  US    US.NWG        NatWest               Top800均匀抽样
+ 13  US    US.OKE        ONEOK Inc             Top800均匀抽样
+ 14  US    US.FNV        Franco-Nevada         Top800均匀抽样
+ 15  US    US.IBKR       Interactive Brokers   Top800均匀抽样
+ 16  US    US.RKLB       Rocket Lab            Top800均匀抽样
+ 17  US    US.ILMN       Illumina              Top800均匀抽样
+ 18  US    US.EIX        Edison International  Top800均匀抽样
+ 19  US    US.PHG        Royal Philips         Top800均匀抽样
+ 20  US    US.TROW       T. Rowe Price         Top800均匀抽样
+ 21  US    US.ENTG       Entegris              Top800均匀抽样
+ 22  US    US.CF         CF Industries Holdings  Top800均匀抽样
+ 23  US    US.DINO       HF Sinclair           Top800均匀抽样
+ 24  US    US.SKM        SK Telecom            Top800均匀抽样
+ 25  US    US.W          Wayfair               Top800均匀抽样
+ 26  HK    HK.02208      金风科技                  策略/常用保留
+ 27  HK    HK.09626      哔哩哔哩-W                策略/常用保留
+ 28  HK    HK.00700      腾讯控股                  策略/常用保留
+ 29  HK    HK.09988      阿里巴巴-W                策略/常用保留
+ 30  HK    HK.03750      宁德时代                  港股市值筛选(去R)
+ 31  HK    HK.01398      工商银行                  港股市值筛选(去R)
+ 32  HK    HK.00005      汇丰控股                  港股市值筛选(去R)
+ 33  HK    HK.00939      建设银行                  港股市值筛选(去R)
+ 34  HK    HK.00857      中国石油股份                港股市值筛选(去R)
+ 35  HK    HK.01288      农业银行                  港股市值筛选(去R)
+ 36  HK    HK.00941      中国移动                  港股市值筛选(去R)
+ 37  HK    HK.03988      中国银行                  港股市值筛选(去R)
+ 38  HK    HK.00883      中国海洋石油                港股市值筛选(去R)
+ 39  HK    HK.03968      招商银行                  港股市值筛选(去R)
+ 40  HK    HK.02318      中国平安                  港股市值筛选(去R)
+ 41  HK    HK.06288      FAST RETAIL-DRS       港股市值筛选(去R)
+ 42  HK    HK.01088      中国神华                  港股市值筛选(去R)
+ 43  HK    HK.02899      紫金矿业                  港股市值筛选(去R)
+ 44  HK    HK.01211      比亚迪股份                 港股市值筛选(去R)
+ 45  HK    HK.01299      友邦保险                  港股市值筛选(去R)
+ 46  HK    HK.02628      中国人寿                  港股市值筛选(去R)
+ 47  HK    HK.01810      小米集团-W                港股市值筛选(去R)
+ 48  HK    HK.00300      美的集团                  港股市值筛选(去R)
+ 49  HK    HK.03328      交通银行                  港股市值筛选(去R)
+ 50  HK    HK.01658      邮储银行                  港股市值筛选(去R)

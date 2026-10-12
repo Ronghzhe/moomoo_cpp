@@ -1,0 +1,152 @@
+2026-08-20 21:41:39.823 | INFO | strategy_runtime.acc_0_idx_0.US_MU | startup | 启动成功 symbol=US.MU mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:41:39.823 | INFO | strategy_runtime.acc_0_idx_0.US_MU | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:41:39.823 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU | lot_size/手 | code=US.MU value=1 (snapshot)
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   订阅 / subscribe: ORDER_BOOK  |  US.MU 推送已开 / push on
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU | ==========================================================
+2026-08-20 21:41:40.295 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 21:41:40.746 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.35 ask_1=952.71
+2026-08-20 21:41:40.746 | INFO | strategy_runtime.acc_0_idx_0.US_MU | entry_judge/开仓子条件 | code=US.MU rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=2 est_notional~1905.42
+2026-08-20 21:41:40.746 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 开始交易/start_trade | code=US.MU entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:41:40.746 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 报单计算/order_sizing | 参考价/px=952.71 | budget_total=2000.00 | lot_size=1 => qty=2 | lot_size=1 budget/price~2.09927 n_lots=2 qty=2 | est_notional~1905.42
+2026-08-20 21:41:40.746 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=952.71 submit_price=971.76 time_in_force=DAY side=BUY code=US.MU qty=2 est_notional~1943.53 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:41:40.949 | WARN | strategy_runtime.acc_0_idx_0.US_MU | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:41:40.949 | WARN | strategy_runtime.acc_0_idx_0.US_MU | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:41:40.949 | ERROR | strategy_runtime.acc_0_idx_0.US_MU | entry_order_fatal | entry_order_fatal | code=US.MU status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:12:07.013 | INFO | strategy_runtime.acc_0_idx_0.US_MU | startup | 启动成功 symbol=US.MU mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:12:07.013 | INFO | strategy_runtime.acc_0_idx_0.US_MU | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:12:07.013 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU | lot_size/手 | code=US.MU value=1 (snapshot)
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   订阅 / subscribe: ORDER_BOOK  |  US.MU 推送已开 / push on
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU | ==========================================================
+2026-08-20 22:12:07.490 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 22:12:07.735 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.86 ask_1=952.5
+2026-08-20 22:12:07.735 | INFO | strategy_runtime.acc_0_idx_0.US_MU | entry_judge/开仓子条件 | code=US.MU rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=2 est_notional~1905.00
+2026-08-20 22:12:07.735 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 开始交易/start_trade | code=US.MU entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:12:07.735 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 报单计算/order_sizing | 参考价/px=952.50 | budget_total=2000.00 | lot_size=1 => qty=2 | lot_size=1 budget/price~2.09974 n_lots=2 qty=2 | est_notional~1905.00
+2026-08-20 22:12:07.736 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=952.50 submit_price=971.55 time_in_force=DAY side=BUY code=US.MU qty=2 est_notional~1943.10 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:12:08.086 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 下单结果/place_order_result | ret=0 order_id=3246013 status=SUBMITTING
+2026-08-20 22:12:08.086 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 已报单，等待成交/await_order_fill | order_id=3246013 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:12:08.335 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.335 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.87 ask_1=952.5
+2026-08-20 22:12:08.336 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.336 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.87 ask_1=952.5
+2026-08-20 22:12:08.633 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.633 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.94 ask_1=952.5
+2026-08-20 22:12:08.633 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.633 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.94 ask_1=952.5
+2026-08-20 22:12:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.93 ask_1=952.5
+2026-08-20 22:12:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.87 ask_1=952.5
+2026-08-20 22:12:09.227 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.227 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.87 ask_1=952.5
+2026-08-20 22:12:09.227 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.227 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.87 ask_1=952.5
+2026-08-20 22:12:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.99 ask_1=952.5
+2026-08-20 22:12:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.99 ask_1=952.5
+2026-08-20 22:12:09.813 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.814 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:09.814 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:09.814 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:10.128 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.129 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:10.129 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.129 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:10.437 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.437 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:10.437 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.437 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.5
+2026-08-20 22:12:10.729 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.729 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.44
+2026-08-20 22:12:10.729 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:10.729 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.85 ask_1=952.44
+2026-08-20 22:12:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.85 ask_1=952.26
+2026-08-20 22:12:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.031 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.85 ask_1=952.26
+2026-08-20 22:12:11.334 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.338 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.86 ask_1=952.26
+2026-08-20 22:12:11.628 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.628 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.97 ask_1=952.26
+2026-08-20 22:12:11.629 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.629 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.97 ask_1=952.26
+2026-08-20 22:12:11.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.97 ask_1=952.26
+2026-08-20 22:12:11.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:11.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.86 ask_1=952.26
+2026-08-20 22:12:12.213 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.213 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.86 ask_1=952.26
+2026-08-20 22:12:12.213 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.213 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.91 ask_1=952.38
+2026-08-20 22:12:12.246 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.246 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.91 ask_1=952.38
+2026-08-20 22:12:12.246 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.246 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.91 ask_1=952.13
+2026-08-20 22:12:12.534 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.534 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:12.534 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.534 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:12.829 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.829 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:12.829 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:12.829 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:13.125 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.125 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:13.126 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.126 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.67 ask_1=952.13
+2026-08-20 22:12:13.429 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.429 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.13
+2026-08-20 22:12:13.430 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.430 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.12
+2026-08-20 22:12:13.727 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.728 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.12
+2026-08-20 22:12:13.728 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.728 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.11
+2026-08-20 22:12:13.745 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:13.745 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.11
+2026-08-20 22:12:14.034 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.034 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.11
+2026-08-20 22:12:14.035 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.035 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.68 ask_1=952.11
+2026-08-20 22:12:14.332 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.332 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.92 ask_1=952.12
+2026-08-20 22:12:14.332 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.333 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=951.92 ask_1=952.38
+2026-08-20 22:12:14.630 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.630 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.38
+2026-08-20 22:12:14.630 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.630 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.38
+2026-08-20 22:12:14.930 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.930 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.38
+2026-08-20 22:12:14.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:14.931 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.38
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 订单轮询/order_poll | code=US.MU order_id=3246013 status=11 dealt=2 target=2 -> filled
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 【开仓】====2026-08-20 22:12:15.237
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | US.MU-buy  |  计划金额: 2000
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | real_price: 952.17 (exp=971.55)
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | real_qty: 2 | real_amount: 1904.34
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | env: paper
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | o_status: filled (order_id:3246013)
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | task_id: nana_paper_MU_5m_1787232987432
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 触发开仓条件------------------------
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | ·立即开仓 (2%限仿市)
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 预设平仓条件------------------------
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 不平仓，无平仓监控
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 22:12:15.237 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 
+2026-08-20 22:12:16.141 | INFO | strategy_runtime.acc_0_idx_0.US_MU | 读取行情/read_market | code=US.MU bid_1=952.02 ask_1=952.38
+2026-08-20 22:12:16.141 | INFO | strategy_runtime.acc_0_idx_0.US_MU | managed_done_exit | loop_tick US.MU

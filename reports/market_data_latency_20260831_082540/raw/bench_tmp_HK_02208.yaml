@@ -1,0 +1,16 @@
+bars: 80
+code: HK.02208
+cold_iters: 5
+gateway_url: http://127.0.0.1:18765
+kl_type: K_5M
+opend_host: 127.0.0.1
+opend_port: 11121
+order_gap_sec: 0.05
+order_iters: 30
+order_price: 0.01
+order_qty: 1
+order_side: BUY
+order_type: NORMAL
+symbol: HK.02208
+trd_env: SIMULATE
+warm_iters: 50

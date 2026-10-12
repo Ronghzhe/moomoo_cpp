@@ -1,0 +1,26 @@
+ts,level,event_type,message
+2026-08-20T05:40:45,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T05:40:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T05:40:47,WARN,place_failed,Short selling is currently not supported.
+2026-08-20T05:40:47,ERROR,entry_order_fatal,entry_order_fatal | code=HK.01810 status=- reason=Short selling is currently not supported.
+2026-08-21T01:42:05,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T01:42:05,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T01:42:08,INFO,managed_done_exit,loop_tick HK.01810
+2026-08-21T03:30:42,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T03:30:42,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T03:30:43,INFO,place_exit,oid=3247437
+2026-08-21T03:30:48,INFO,managed_done_exit,loop_tick HK.01810
+2026-08-21T06:20:45,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T06:20:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T06:20:51,INFO,managed_done_exit,loop_tick HK.01810
+2026-08-21T07:26:02,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T07:26:02,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T07:26:03,INFO,place_exit,oid=3247642
+2026-08-21T07:26:06,INFO,managed_done_exit,loop_tick HK.01810
+2026-08-24T05:50:28,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T05:50:28,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T05:50:33,INFO,managed_done_exit,loop_tick HK.01810
+2026-08-24T07:01:03,INFO,startup,启动成功 symbol=HK.01810 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T07:01:03,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T07:01:04,INFO,place_exit,oid=3250659
+2026-08-24T07:01:06,INFO,managed_done_exit,loop_tick HK.01810

@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/moomoo_trade.dir/__/gateway/gateway_runtime.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/gateway/gateway_runtime.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/__/gateway/http_server.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/gateway/http_server.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/live_eval_compute.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/live_eval_compute.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/net_split_broker_query.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/net_split_broker_query.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/net_split_executor.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/net_split_executor.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/order_pending_loop.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/__/strategy/order_pending_loop.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/account_client.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/account_client.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/broker_factory.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/broker_factory.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/connect_guard.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/connect_guard.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/direct_broker.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/direct_broker.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/kline_connection.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/kline_connection.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/kline_service.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/kline_service.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/live_eval_inject.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/live_eval_inject.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/order_client.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/order_client.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/quote_connection.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/quote_connection.cpp.o.d"
+  "CMakeFiles/moomoo_trade.dir/trade_connection.cpp.o"
+  "CMakeFiles/moomoo_trade.dir/trade_connection.cpp.o.d"
+  "libmoomoo_trade.a"
+  "libmoomoo_trade.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/moomoo_trade.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

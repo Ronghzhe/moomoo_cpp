@@ -1,0 +1,44 @@
+ts,level,event_type,message
+2026-08-20T02:35:52,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T02:35:52,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T02:35:59,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-20T03:20:25,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T03:20:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T03:20:26,INFO,place_exit,oid=3244550
+2026-08-20T03:20:30,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-20T03:36:01,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T03:36:01,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T03:36:05,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-20T05:06:10,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T05:06:10,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T05:06:11,WARN,place_failed,Invalid quantity.
+2026-08-20T05:06:11,ERROR,exit_order_fatal,exit_order_fatal | code=HK.02556 status=- reason=Invalid quantity.
+2026-08-20T06:58:30,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T06:58:30,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T06:58:32,INFO,place_exit,oid=3244763
+2026-08-20T06:58:33,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-21T01:37:05,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T01:37:05,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T01:37:06,WARN,place_failed,Short selling is currently not supported.
+2026-08-21T01:37:06,ERROR,entry_order_fatal,entry_order_fatal | code=HK.02556 status=- reason=Short selling is currently not supported.
+2026-08-21T03:06:24,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T03:06:24,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T03:06:29,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-21T03:20:39,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T03:20:39,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T03:20:41,INFO,place_exit,oid=3247430
+2026-08-21T03:20:47,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-24T01:46:02,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T01:46:02,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T01:46:06,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-24T01:50:46,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T01:50:46,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T01:50:48,INFO,place_exit,oid=3250314
+2026-08-24T01:50:51,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-24T03:31:38,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T03:31:38,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T03:31:43,INFO,managed_done_exit,loop_tick HK.02556
+2026-08-24T05:05:40,INFO,startup,启动成功 symbol=HK.02556 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T05:05:40,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T05:05:42,INFO,place_exit,oid=3250540
+2026-08-24T05:05:45,INFO,managed_done_exit,loop_tick HK.02556

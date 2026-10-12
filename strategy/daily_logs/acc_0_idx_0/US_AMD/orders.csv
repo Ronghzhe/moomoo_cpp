@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:12:17,nana_paper_AMD_5m_1787232990589,US.AMD,BUY,3246014,11,4,469.39,strategy_cpp_entry,,,,paper,,,

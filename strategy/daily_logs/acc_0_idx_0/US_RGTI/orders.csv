@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:05:56,nana_paper_RGTI_5m_1787232927020,US.RGTI,SELL,3245961,11,121,16.505,strategy_cpp_entry,,,,paper,,,

@@ -1,0 +1,92 @@
+2026-08-20 21:40:24.302 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | startup | 启动成功 symbol=US.ETN mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:40:24.303 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:40:24.303 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | lot_size/手 | code=US.ETN value=1 (snapshot)
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   订阅 / subscribe: ORDER_BOOK  |  US.ETN 推送已开 / push on
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | ==========================================================
+2026-08-20 21:40:24.774 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 21:40:25.272 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=421.07 ask_1=421.71
+2026-08-20 21:40:25.272 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | entry_judge/开仓子条件 | code=US.ETN rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1686.84
+2026-08-20 21:40:25.272 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 开始交易/start_trade | code=US.ETN entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:40:25.272 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 报单计算/order_sizing | 参考价/px=421.07 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.7498 n_lots=4 qty=4 | est_notional~1684.28
+2026-08-20 21:40:25.272 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=421.07 submit_price=412.65 time_in_force=DAY side=SELL code=US.ETN qty=4 est_notional~1650.59 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:40:25.474 | WARN | strategy_runtime.acc_0_idx_0.US_ETN | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:40:25.474 | WARN | strategy_runtime.acc_0_idx_0.US_ETN | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:40:25.474 | ERROR | strategy_runtime.acc_0_idx_0.US_ETN | entry_order_fatal | entry_order_fatal | code=US.ETN status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:10:15.389 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | startup | 启动成功 symbol=US.ETN mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:10:15.389 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:10:15.389 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:10:15.888 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | lot_size/手 | code=US.ETN value=1 (snapshot)
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   订阅 / subscribe: ORDER_BOOK  |  US.ETN 推送已开 / push on
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | ==========================================================
+2026-08-20 22:10:15.889 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 22:10:16.279 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.05 ask_1=418.84
+2026-08-20 22:10:16.279 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | entry_judge/开仓子条件 | code=US.ETN rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1675.36
+2026-08-20 22:10:16.279 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 开始交易/start_trade | code=US.ETN entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:10:16.279 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 报单计算/order_sizing | 参考价/px=418.05 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.78412 n_lots=4 qty=4 | est_notional~1672.20
+2026-08-20 22:10:16.279 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=418.05 submit_price=409.68 time_in_force=DAY side=SELL code=US.ETN qty=4 est_notional~1638.72 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:10:16.604 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 下单结果/place_order_result | ret=0 order_id=3245992 status=SUBMITTING
+2026-08-20 22:10:16.604 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 已报单，等待成交/await_order_fill | order_id=3245992 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:10:17.604 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:17.604 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.05 ask_1=418.84
+2026-08-20 22:10:18.327 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:18.327 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.05 ask_1=418.84
+2026-08-20 22:10:18.353 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:18.354 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.19 ask_1=418.84
+2026-08-20 22:10:19.354 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:19.354 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.19 ask_1=418.84
+2026-08-20 22:10:19.376 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:19.376 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.19 ask_1=418.84
+2026-08-20 22:10:19.556 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:19.556 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:19.557 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:19.557 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:19.853 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:19.853 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:20.398 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:20.398 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:20.754 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:20.754 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:21.754 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:21.754 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:22.754 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:22.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:23.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:23.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:24.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:24.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:25.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:25.755 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:26.756 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:26.756 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.44 ask_1=418.84
+2026-08-20 22:10:26.993 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:26.993 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.46 ask_1=418.84
+2026-08-20 22:10:27.052 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:10:27.052 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.46 ask_1=418.84
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 订单轮询/order_poll | code=US.ETN order_id=3245992 status=11 dealt=4 target=4 -> filled
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 【开仓】====2026-08-20 22:10:27.667
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | US.ETN-sell  |  计划金额: 2000
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | real_price: 418.64 (exp=409.68)
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | real_qty: 4 | real_amount: 1674.56
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | env: paper
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | o_status: filled (order_id:3245992)
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | task_id: nana_paper_ETN_5m_1787232966654
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 触发开仓条件------------------------
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | ·立即开仓 (2%限仿市)
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 预设平仓条件------------------------
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 不平仓，无平仓监控
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 22:10:27.667 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 
+2026-08-20 22:10:28.390 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | 读取行情/read_market | code=US.ETN bid_1=418.46 ask_1=418.84
+2026-08-20 22:10:28.390 | INFO | strategy_runtime.acc_0_idx_0.US_ETN | managed_done_exit | loop_tick US.ETN

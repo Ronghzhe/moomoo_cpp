@@ -1,0 +1,16 @@
+# 模拟盘查单 / 撤单 API benchmark
+trd_env: SIMULATE
+opend_host: 127.0.0.1
+opend_port: 11121
+
+code: US.AAPL
+order_qty: 1
+order_price: 0.01
+order_side: BUY
+
+# warm 轮次（GetOrderList 限频 10 次/30s，iter_gap 需 >= 3s）
+warm_iters: 10
+# 同一轮内：下单 → 查单 → 撤单 之间的间隔
+api_gap_sec: 0.5
+# 轮次之间的间隔
+iter_gap_sec: 3.0

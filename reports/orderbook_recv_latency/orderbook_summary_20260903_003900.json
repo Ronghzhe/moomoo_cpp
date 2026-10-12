@@ -1,0 +1,178 @@
+{
+  "batch_id": "20260903_003900",
+  "host": "127.0.0.1",
+  "port": 11121,
+  "duration_sec": 25.0,
+  "symbols": 5,
+  "codes": [
+    "US.AAPL",
+    "US.TSLA",
+    "US.NVDA",
+    "HK.00700",
+    "HK.02208"
+  ],
+  "pushes": 80,
+  "pushes_with_data_time": 75,
+  "connect_ms": 4.08,
+  "subscribe_ms": 12.476,
+  "first_push_ms": 261.613,
+  "note": "数据时间=svrRecvTime*Timestamp；推送时间=回调入口；本地时间=解包后；OpenD 无独立服务器发出推送时刻，故推送≈本地收包，主看 本地−数据。",
+  "metrics": {
+    "ALL": {
+      "pushes": 80,
+      "with_data_time": 75,
+      "ms_local_minus_data": {
+        "n": 75,
+        "p50": 58.374,
+        "p90": 140.686,
+        "mean": 78.71,
+        "min": 34.816,
+        "max": 233.93
+      },
+      "ms_push_minus_data": {
+        "n": 75,
+        "p50": 58.142,
+        "p90": 140.34,
+        "mean": 78.319,
+        "min": 34.194,
+        "max": 233.579
+      },
+      "ms_local_minus_push": {
+        "n": 80,
+        "p50": 0.358,
+        "p90": 0.507,
+        "mean": 0.373,
+        "min": 0.054,
+        "max": 1.281
+      },
+      "ms_local_minus_data_bid": {
+        "n": 75,
+        "p50": 70.087,
+        "p90": 178.73,
+        "mean": 99.63,
+        "min": 34.816,
+        "max": 403.593
+      },
+      "ms_local_minus_data_ask": {
+        "n": 75,
+        "p50": 58.374,
+        "p90": 140.686,
+        "mean": 78.71,
+        "min": 34.816,
+        "max": 233.93
+      },
+      "ms_ask_minus_bid": {
+        "n": 75,
+        "p50": 0.0,
+        "p90": 59.0,
+        "mean": 20.92,
+        "min": 0.0,
+        "max": 307.0
+      }
+    },
+    "US": {
+      "pushes": 78,
+      "with_data_time": 75,
+      "ms_local_minus_data": {
+        "n": 75,
+        "p50": 58.374,
+        "p90": 140.686,
+        "mean": 78.71,
+        "min": 34.816,
+        "max": 233.93
+      },
+      "ms_push_minus_data": {
+        "n": 75,
+        "p50": 58.142,
+        "p90": 140.34,
+        "mean": 78.319,
+        "min": 34.194,
+        "max": 233.579
+      },
+      "ms_local_minus_push": {
+        "n": 78,
+        "p50": 0.359,
+        "p90": 0.512,
+        "mean": 0.378,
+        "min": 0.054,
+        "max": 1.281
+      },
+      "ms_local_minus_data_bid": {
+        "n": 75,
+        "p50": 70.087,
+        "p90": 178.73,
+        "mean": 99.63,
+        "min": 34.816,
+        "max": 403.593
+      },
+      "ms_local_minus_data_ask": {
+        "n": 75,
+        "p50": 58.374,
+        "p90": 140.686,
+        "mean": 78.71,
+        "min": 34.816,
+        "max": 233.93
+      },
+      "ms_ask_minus_bid": {
+        "n": 75,
+        "p50": 0.0,
+        "p90": 59.0,
+        "mean": 20.92,
+        "min": 0.0,
+        "max": 307.0
+      }
+    },
+    "HK": {
+      "pushes": 2,
+      "with_data_time": 0,
+      "ms_local_minus_data": {
+        "n": 0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ms_push_minus_data": {
+        "n": 0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ms_local_minus_push": {
+        "n": 2,
+        "p50": 0.152,
+        "p90": 0.19,
+        "mean": 0.152,
+        "min": 0.105,
+        "max": 0.199
+      },
+      "ms_local_minus_data_bid": {
+        "n": 0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ms_local_minus_data_ask": {
+        "n": 0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ms_ask_minus_bid": {
+        "n": 0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-21T13:37:02,nana_paper_UMAC_5m_1787319344169,US.UMAC,BUY,3247983,11,74,26.825,strategy_cpp_entry,,,,paper,,,
+2026-08-21T14:16:33,nana_paper_UMAC_5m_1787319344169,US.UMAC,SELL,3248218,11,74,26.745,strategy_cpp_exit,,,,SIMULATE,loss,-0.30%,-5.92
+2026-08-21T15:11:17,nana_paper_UMAC_5m_1787325041748,US.UMAC,BUY,3248456,11,72,27.47,strategy_cpp_entry,,,,paper,,,
+2026-08-21T16:55:47,nana_paper_UMAC_5m_1787325041748,US.UMAC,SELL,3248845,11,72,27.601,strategy_cpp_exit,,,,SIMULATE,profit,+0.48%,+9.43

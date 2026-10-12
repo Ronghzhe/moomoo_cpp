@@ -1,0 +1,130 @@
+2026-08-20 21:43:13.394 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | startup | 启动成功 symbol=US.AVGO mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:43:13.394 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:43:13.394 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | lot_size/手 | code=US.AVGO value=1 (snapshot)
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   订阅 / subscribe: ORDER_BOOK  |  US.AVGO 推送已开 / push on
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | ==========================================================
+2026-08-20 21:43:13.867 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 21:43:14.169 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=366.11 ask_1=366.3
+2026-08-20 21:43:14.169 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | entry_judge/开仓子条件 | code=US.AVGO rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=5 est_notional~1831.50
+2026-08-20 21:43:14.169 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 开始交易/start_trade | code=US.AVGO entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:43:14.169 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 报单计算/order_sizing | 参考价/px=366.30 | budget_total=2000.00 | lot_size=1 => qty=5 | lot_size=1 budget/price~5.46001 n_lots=5 qty=5 | est_notional~1831.50
+2026-08-20 21:43:14.169 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=366.30 submit_price=373.63 time_in_force=DAY side=BUY code=US.AVGO qty=5 est_notional~1868.13 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:43:14.371 | WARN | strategy_runtime.acc_0_idx_0.US_AVGO | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:43:14.372 | WARN | strategy_runtime.acc_0_idx_0.US_AVGO | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:43:14.372 | ERROR | strategy_runtime.acc_0_idx_0.US_AVGO | entry_order_fatal | entry_order_fatal | code=US.AVGO status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:12:31.211 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | startup | 启动成功 symbol=US.AVGO mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:12:31.211 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:12:31.211 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | lot_size/手 | code=US.AVGO value=1 (snapshot)
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   订阅 / subscribe: ORDER_BOOK  |  US.AVGO 推送已开 / push on
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | ==========================================================
+2026-08-20 22:12:31.682 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 22:12:32.319 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.78 ask_1=364.91
+2026-08-20 22:12:32.319 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | entry_judge/开仓子条件 | code=US.AVGO rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=5 est_notional~1824.55
+2026-08-20 22:12:32.320 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 开始交易/start_trade | code=US.AVGO entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:12:32.320 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 报单计算/order_sizing | 参考价/px=364.91 | budget_total=2000.00 | lot_size=1 => qty=5 | lot_size=1 budget/price~5.4808 n_lots=5 qty=5 | est_notional~1824.55
+2026-08-20 22:12:32.320 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=364.91 submit_price=372.21 time_in_force=DAY side=BUY code=US.AVGO qty=5 est_notional~1861.05 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:12:32.638 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 下单结果/place_order_result | ret=0 order_id=3246016 status=SUBMITTING
+2026-08-20 22:12:32.638 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 已报单，等待成交/await_order_fill | order_id=3246016 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:12:32.736 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:32.736 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.78 ask_1=364.91
+2026-08-20 22:12:32.736 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:32.736 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.86 ask_1=364.91
+2026-08-20 22:12:33.037 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.037 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.86 ask_1=364.93
+2026-08-20 22:12:33.037 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.038 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.637 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.637 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.637 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.637 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.949 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.949 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.82 ask_1=364.93
+2026-08-20 22:12:33.949 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:33.950 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.75 ask_1=364.88
+2026-08-20 22:12:34.245 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:34.245 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.75 ask_1=364.88
+2026-08-20 22:12:34.548 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:34.548 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.75 ask_1=364.88
+2026-08-20 22:12:34.548 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:34.548 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:34.848 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:34.848 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:34.849 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:34.849 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:35.143 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:35.143 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:35.143 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:35.143 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:35.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:35.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:35.748 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:35.748 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.71 ask_1=364.82
+2026-08-20 22:12:36.044 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.044 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:36.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:36.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.341 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:36.638 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.638 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:36.639 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.639 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:36.942 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:36.943 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.67 ask_1=364.77
+2026-08-20 22:12:37.245 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:37.245 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.66 ask_1=364.69
+2026-08-20 22:12:37.246 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:37.246 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:37.539 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:37.540 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:37.540 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:37.540 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:37.839 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:37.839 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:38.139 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:38.139 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:38.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:38.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.61 ask_1=364.68
+2026-08-20 22:12:38.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:38.442 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.65
+2026-08-20 22:12:38.739 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:38.739 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.65
+2026-08-20 22:12:38.739 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:38.739 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.65
+2026-08-20 22:12:39.039 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:39.040 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.65
+2026-08-20 22:12:39.040 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=5 dealt=0 target=5 -> wait
+2026-08-20 22:12:39.040 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.65
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 订单轮询/order_poll | code=US.AVGO order_id=3246016 status=11 dealt=5 target=5 -> filled
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 【开仓】====2026-08-20 22:12:39.348
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | US.AVGO-buy  |  计划金额: 2000
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | real_price: 364.60 (exp=372.21)
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | real_qty: 5 | real_amount: 1823.00
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | env: paper
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | o_status: filled (order_id:3246016)
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | task_id: nana_paper_AVGO_5m_1787232996833
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 触发开仓条件------------------------
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | ·立即开仓 (2%限仿市)
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 预设平仓条件------------------------
+2026-08-20 22:12:39.348 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 不平仓，无平仓监控
+2026-08-20 22:12:39.349 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 22:12:39.349 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 
+2026-08-20 22:12:40.130 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | 读取行情/read_market | code=US.AVGO bid_1=364.59 ask_1=364.59
+2026-08-20 22:12:40.130 | INFO | strategy_runtime.acc_0_idx_0.US_AVGO | managed_done_exit | loop_tick US.AVGO

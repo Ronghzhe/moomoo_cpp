@@ -1,0 +1,7 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:46:01,nana_paper_GLD_5m_1787237158013,US.GLD,BUY,3246146,11,4,412.86,strategy_cpp_entry,,,,paper,,,
+2026-08-20T15:40:46,nana_paper_GLD_5m_1787237158013,US.GLD,SELL,3246312,11,4,414.29,strategy_cpp_exit,,,,SIMULATE,profit,+0.35%,+5.72
+2026-08-20T18:56:16,nana_paper_GLD_5m_1787252168691,US.GLD,BUY,3246797,11,4,414.85,strategy_cpp_entry,,,,paper,,,
+2026-08-21T14:40:31,nana_paper_GLD_5m_1787252168691,US.GLD,SELL,3248351,11,4,420.221,strategy_cpp_exit,,,,SIMULATE,profit,+1.29%,+21.48
+2026-08-21T15:11:34,nana_paper_GLD_5m_1787325068513,US.GLD,BUY,3248458,11,4,421.63,strategy_cpp_entry,,,,paper,,,
+2026-08-21T17:25:23,nana_paper_GLD_5m_1787325068513,US.GLD,SELL,3248903,11,4,423.57,strategy_cpp_exit,,,,SIMULATE,profit,+0.46%,+7.76

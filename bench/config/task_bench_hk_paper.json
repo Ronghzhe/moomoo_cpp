@@ -1,0 +1,12 @@
+{
+  "task_type": 4,
+  "account": "nana_paper",
+  "trader": "all",
+  "rounds": 25,
+  "insert_gap_ms": 0,
+  "parallel_symbols": true,
+  "wait_timeout_sec": 900,
+  "cases": [
+    {"stock_code": "02208", "trade_qty": 200}
+  ]
+}

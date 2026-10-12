@@ -1,0 +1,24 @@
+{
+  "id": "l2_06_book_guard_emergency_ref",
+  "module": "book_guard_ref",
+  "cases": [
+    {
+      "side": "SELL",
+      "bid_1": 115.05,
+      "ask_1": 114.82,
+      "opened_price": 113.64,
+      "last_price": 0.0
+    },
+    {
+      "side": "SELL",
+      "bid_1": 0.0,
+      "ask_1": 0.0,
+      "opened_price": 113.64
+    },
+    {
+      "side": "SELL",
+      "code": "US.AMD",
+      "ref_px": 486.2705
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "l2_02_strategy_judge_us_pnl_exit",
+  "module": "strategy_judge",
+  "fixture": "strategy_config_us_fixture.json",
+  "symbol_index": 0,
+  "exit_overrides": {
+    "enable_rule_ids": [
+      "E3_CLOSE"
+    ],
+    "disable_rule_ids": [
+      "E1_CLOSE"
+    ]
+  },
+  "steps": [
+    {
+      "label": "pnl_exit_hit",
+      "tick": {
+        "gain_fraction": 0.12,
+        "now": 1.0
+      }
+    },
+    {
+      "label": "pnl_exit_miss",
+      "tick": {
+        "gain_fraction": 0.05,
+        "now": 2.0
+      }
+    }
+  ]
+}

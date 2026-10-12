@@ -1,0 +1,24 @@
+{
+  "source_config": "/home/ubuntu/workspace/moomoo_CPP/tests/fixtures/strategy_config_hk_fixture.json",
+  "symbols": {
+    "HK.09626": {
+      "closed_price": 0.0,
+      "closed_qty": 0.0,
+      "initial_qty": 200.0,
+      "opened_price": 137.3,
+      "opened_qty": 200.0,
+      "pre_entry_low_stop_bar_keys": {
+        "E_建仓前两根15m最低低减005:0": [
+          "2026-07-13 11:15:00",
+          "2026-07-13 11:30:00"
+        ]
+      },
+      "pre_entry_low_stop_levels": {
+        "E_建仓前两根15m最低低减005:0": 136.4145
+      },
+      "runtime_updated_at": "2026-07-13T03:42:53Z",
+      "startup_notify_once": false,
+      "status": 2
+    }
+  }
+}

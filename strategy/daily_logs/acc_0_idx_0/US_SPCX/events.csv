@@ -1,0 +1,25 @@
+ts,level,event_type,message
+2026-08-20T17:51:04,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T17:51:04,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T17:51:13,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-20T19:56:22,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T19:56:22,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T19:56:23,INFO,place_exit,oid=3246902
+2026-08-20T19:56:34,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-21T13:40:46,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T13:40:46,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T13:40:52,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-21T13:45:18,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T13:45:18,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-08-21T13:45:20,INFO,place_exit,oid=3248039
+2026-08-21T13:45:22,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-21T14:35:40,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T14:35:40,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T14:35:52,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-21T16:20:20,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T16:20:20,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T16:20:21,INFO,place_exit,oid=3248716
+2026-08-21T16:20:25,INFO,managed_done_exit,loop_tick US.SPCX
+2026-08-24T13:48:04,INFO,startup,启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T13:48:04,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T13:48:15,INFO,managed_done_exit,loop_tick US.SPCX

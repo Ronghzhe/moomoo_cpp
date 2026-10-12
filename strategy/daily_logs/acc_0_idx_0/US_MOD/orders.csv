@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:09:21,nana_paper_MOD_5m_1787232960416,US.MOD,SELL,3245990,11,10,191.015,strategy_cpp_entry,,,,paper,,,

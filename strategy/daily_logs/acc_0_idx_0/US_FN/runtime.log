@@ -1,0 +1,62 @@
+2026-08-20 21:39:02.229 | INFO | strategy_runtime.acc_0_idx_0.US_FN | startup | 启动成功 symbol=US.FN mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:39:02.229 | INFO | strategy_runtime.acc_0_idx_0.US_FN | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:39:02.229 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN | lot_size/手 | code=US.FN value=1 (snapshot)
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   订阅 / subscribe: ORDER_BOOK  |  US.FN 推送已开 / push on
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN | ==========================================================
+2026-08-20 21:39:02.713 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 21:39:03.924 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=453.01 ask_1=455.88
+2026-08-20 21:39:03.924 | INFO | strategy_runtime.acc_0_idx_0.US_FN | entry_judge/开仓子条件 | code=US.FN rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1823.52
+2026-08-20 21:39:03.924 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 开始交易/start_trade | code=US.FN entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:39:03.924 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 报单计算/order_sizing | 参考价/px=453.01 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.41491 n_lots=4 qty=4 | est_notional~1812.04
+2026-08-20 21:39:03.924 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=453.01 submit_price=443.95 time_in_force=DAY side=SELL code=US.FN qty=4 est_notional~1775.80 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:39:04.127 | WARN | strategy_runtime.acc_0_idx_0.US_FN | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:39:04.127 | WARN | strategy_runtime.acc_0_idx_0.US_FN | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:39:04.127 | ERROR | strategy_runtime.acc_0_idx_0.US_FN | entry_order_fatal | entry_order_fatal | code=US.FN status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:08:40.173 | INFO | strategy_runtime.acc_0_idx_0.US_FN | startup | 启动成功 symbol=US.FN mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:08:40.173 | INFO | strategy_runtime.acc_0_idx_0.US_FN | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:08:40.173 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN | lot_size/手 | code=US.FN value=1 (snapshot)
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   订阅 / subscribe: ORDER_BOOK  |  US.FN 推送已开 / push on
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN | ==========================================================
+2026-08-20 22:08:40.643 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 22:08:41.661 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=445.51 ask_1=446.56
+2026-08-20 22:08:41.661 | INFO | strategy_runtime.acc_0_idx_0.US_FN | entry_judge/开仓子条件 | code=US.FN rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1786.24
+2026-08-20 22:08:41.661 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 开始交易/start_trade | code=US.FN entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:08:41.661 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 报单计算/order_sizing | 参考价/px=445.51 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.48924 n_lots=4 qty=4 | est_notional~1782.04
+2026-08-20 22:08:41.661 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=445.51 submit_price=436.59 time_in_force=DAY side=SELL code=US.FN qty=4 est_notional~1746.36 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:08:41.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 下单结果/place_order_result | ret=0 order_id=3245983 status=SUBMITTING
+2026-08-20 22:08:41.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 已报单，等待成交/await_order_fill | order_id=3245983 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:08:42.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 订单轮询/order_poll | code=US.FN order_id=3245983 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:08:42.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=445.51 ask_1=446.56
+2026-08-20 22:08:43.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 订单轮询/order_poll | code=US.FN order_id=3245983 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:08:43.963 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=445.51 ask_1=446.56
+2026-08-20 22:08:44.964 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 订单轮询/order_poll | code=US.FN order_id=3245983 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:08:44.964 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=445.51 ask_1=446.56
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 订单轮询/order_poll | code=US.FN order_id=3245983 status=11 dealt=4 target=4 -> filled
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 【开仓】====2026-08-20 22:08:45.425
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | US.FN-sell  |  计划金额: 2000
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | real_price: 446.54 (exp=436.59)
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | real_qty: 4 | real_amount: 1786.16
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | env: paper
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | o_status: filled (order_id:3245983)
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | task_id: nana_paper_FN_5m_1787232957283
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 触发开仓条件------------------------
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | ·立即开仓 (2%限仿市)
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 预设平仓条件------------------------
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 不平仓，无平仓监控
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 22:08:45.425 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 
+2026-08-20 22:08:46.173 | INFO | strategy_runtime.acc_0_idx_0.US_FN | 读取行情/read_market | code=US.FN bid_1=445.9 ask_1=446.56
+2026-08-20 22:08:46.173 | INFO | strategy_runtime.acc_0_idx_0.US_FN | managed_done_exit | loop_tick US.FN

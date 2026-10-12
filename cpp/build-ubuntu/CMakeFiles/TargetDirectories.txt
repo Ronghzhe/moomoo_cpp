@@ -1,0 +1,4 @@
+/home/ubuntu/workspace/moomoo_CPP/cpp/build-ubuntu/CMakeFiles/mm_demo_base.dir
+/home/ubuntu/workspace/moomoo_CPP/cpp/build-ubuntu/CMakeFiles/bench_kline.dir
+/home/ubuntu/workspace/moomoo_CPP/cpp/build-ubuntu/CMakeFiles/edit_cache.dir
+/home/ubuntu/workspace/moomoo_CPP/cpp/build-ubuntu/CMakeFiles/rebuild_cache.dir

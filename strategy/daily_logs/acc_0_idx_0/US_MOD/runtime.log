@@ -1,0 +1,66 @@
+2026-08-20 21:39:38.273 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | startup | 启动成功 symbol=US.MOD mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:39:38.273 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:39:38.273 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:39:38.759 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | lot_size/手 | code=US.MOD value=1 (snapshot)
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   订阅 / subscribe: ORDER_BOOK  |  US.MOD 推送已开 / push on
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | ==========================================================
+2026-08-20 21:39:38.760 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 21:39:39.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=195.19 ask_1=195.55
+2026-08-20 21:39:39.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | entry_judge/开仓子条件 | code=US.MOD rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=10 est_notional~1955.50
+2026-08-20 21:39:39.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 开始交易/start_trade | code=US.MOD entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:39:39.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 报单计算/order_sizing | 参考价/px=195.19 | budget_total=2000.00 | lot_size=1 => qty=10 | lot_size=1 budget/price~10.2464 n_lots=10 qty=10 | est_notional~1951.90
+2026-08-20 21:39:39.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=195.19 submit_price=191.29 time_in_force=DAY side=SELL code=US.MOD qty=10 est_notional~1912.86 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:39:39.507 | WARN | strategy_runtime.acc_0_idx_0.US_MOD | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:39:39.507 | WARN | strategy_runtime.acc_0_idx_0.US_MOD | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:39:39.507 | ERROR | strategy_runtime.acc_0_idx_0.US_MOD | entry_order_fatal | entry_order_fatal | code=US.MOD status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:09:20.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | startup | 启动成功 symbol=US.MOD mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:09:20.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:09:20.304 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | lot_size/手 | code=US.MOD value=1 (snapshot)
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   订阅 / subscribe: ORDER_BOOK  |  US.MOD 推送已开 / push on
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | ==========================================================
+2026-08-20 22:09:20.800 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 22:09:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.53 ask_1=191.17
+2026-08-20 22:09:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | entry_judge/开仓子条件 | code=US.MOD rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=10 est_notional~1911.70
+2026-08-20 22:09:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 开始交易/start_trade | code=US.MOD entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:09:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 报单计算/order_sizing | 参考价/px=190.53 | budget_total=2000.00 | lot_size=1 => qty=10 | lot_size=1 budget/price~10.497 n_lots=10 qty=10 | est_notional~1905.30
+2026-08-20 22:09:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=190.53 submit_price=186.71 time_in_force=DAY side=SELL code=US.MOD qty=10 est_notional~1867.10 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:09:21.359 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 下单结果/place_order_result | ret=0 order_id=3245990 status=SUBMITTING
+2026-08-20 22:09:21.359 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 已报单，等待成交/await_order_fill | order_id=3245990 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:09:21.945 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=5 dealt=0 target=10 -> wait
+2026-08-20 22:09:21.945 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.86 ask_1=191.25
+2026-08-20 22:09:22.945 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=5 dealt=0 target=10 -> wait
+2026-08-20 22:09:22.945 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.86 ask_1=191.35
+2026-08-20 22:09:23.297 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=5 dealt=0 target=10 -> wait
+2026-08-20 22:09:23.297 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.99 ask_1=191.35
+2026-08-20 22:09:23.442 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=5 dealt=0 target=10 -> wait
+2026-08-20 22:09:23.442 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.99 ask_1=191.35
+2026-08-20 22:09:23.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=5 dealt=0 target=10 -> wait
+2026-08-20 22:09:23.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.86 ask_1=191.35
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 订单轮询/order_poll | code=US.MOD order_id=3245990 status=11 dealt=10 target=10 -> filled
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 【开仓】====2026-08-20 22:09:24.443
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | US.MOD-sell  |  计划金额: 2000
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | real_price: 191.01 (exp=186.71)
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | real_qty: 10 | real_amount: 1910.15
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | env: paper
+2026-08-20 22:09:24.443 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | o_status: filled (order_id:3245990)
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | task_id: nana_paper_MOD_5m_1787232960416
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 触发开仓条件------------------------
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | ·立即开仓 (2%限仿市)
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 预设平仓条件------------------------
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 不平仓，无平仓监控
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 22:09:24.444 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 
+2026-08-20 22:09:25.133 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | 读取行情/read_market | code=US.MOD bid_1=190.86 ask_1=191.35
+2026-08-20 22:09:25.133 | INFO | strategy_runtime.acc_0_idx_0.US_MOD | managed_done_exit | loop_tick US.MOD

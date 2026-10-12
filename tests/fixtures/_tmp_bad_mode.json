@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "client_name": "x",
+  "strategy_name": "t",
+  "mode": "invalid",
+  "opend": {"host":"127.0.0.1","port":11121},
+  "account": {"trd_market":"US"},
+  "symbols": [{"code":"US.AAPL","entry_side":"BUY","entry_qty":1,"status":0}]
+}

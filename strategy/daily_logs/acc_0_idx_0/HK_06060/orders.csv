@@ -1,0 +1,9 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-21T02:56:23,nana_paper_06060_5m_1787280934003,HK.06060,BUY,3247347,11,900,10.47,strategy_cpp_entry,,,,paper,,,
+2026-08-21T04:00:36,nana_paper_06060_5m_1787280934003,HK.06060,SELL,3247455,11,900,10.51,strategy_cpp_exit,,,,SIMULATE,profit,+0.38%,+36.00
+2026-08-21T06:55:56,nana_paper_06060_5m_1787295333606,HK.06060,BUY,3247624,11,900,10.51,strategy_cpp_entry,,,,paper,,,
+2026-08-21T07:56:21,nana_paper_06060_5m_1787295333606,HK.06060,SELL,3247663,11,900,10.51,strategy_cpp_exit,,,,SIMULATE,flat,+0.00%,+0.00
+2026-08-24T01:40:53,nana_paper_06060_5m_1787535641199,HK.06060,BUY,3250296,11,900,10.46,strategy_cpp_entry,,,,paper,,,
+2026-08-24T01:50:27,nana_paper_06060_5m_1787535641199,HK.06060,SELL,3250311,11,900,10.39,strategy_cpp_exit,,,,SIMULATE,loss,-0.67%,-63.00
+2026-08-24T05:11:39,nana_paper_06060_5m_1787548242691,HK.06060,BUY,3250546,11,900,10.8,strategy_cpp_entry,,,,paper,,,
+2026-08-24T05:41:25,nana_paper_06060_5m_1787548242691,HK.06060,SELL,3250566,11,900,10.7,strategy_cpp_exit,,,,SIMULATE,loss,-0.93%,-90.00

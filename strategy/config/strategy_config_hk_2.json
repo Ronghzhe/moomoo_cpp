@@ -1,0 +1,148 @@
+{
+  "$comment": "C++ paper 测试用 HK 模板。字段顺序与 Python strategy/config 一致；无 runtime 残留。symbols[] 顺序：task_id → enabled/exit_enabled/startup_notify_once → code → 报单 → status/成交 → 策略块。",
+  "version": 1,
+  "client_name": "TradeTest",
+  "strategy_name": "short_squeeze",
+  "mode": "paper",
+  "symbols": [
+    {
+      "task_id": "",
+      "enabled": true,
+      "exit_enabled": true,
+      "startup_notify_once": false,
+      "code": "HK.02208",
+      "instrument": {
+        "type": "stock"
+      },
+      "order_type": "sim_market",
+      "sim_market_pct": 0.01,
+      "time_in_force": "DAY",
+      "budget": null,
+      "entry_qty": 200,
+      "initial_qty": 200.0,
+      "exit_qty": null,
+      "entry_side": "BUY",
+      "status": 3,
+      "opened_qty": 200.0,
+      "opened_price": 10.85,
+      "closed_qty": 200.0,
+      "closed_price": 10.85,
+      "entry_strategy_logic": "any",
+      "entry_strategies": [
+        {
+          "id": "S1",
+          "enabled": true,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "ask_1",
+              "op": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "S2",
+          "enabled": false,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "ask_1",
+              "op": ">=",
+              "value": 18.2
+            }
+          ]
+        }
+      ],
+      "exit_strategy_logic": "any",
+      "exit_strategies": [
+        {
+          "id": "E1_CLOSE",
+          "enabled": true,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "E2_PRICE_LOW",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "<=",
+              "value": 17.2
+            }
+          ]
+        },
+        {
+          "id": "E3_PNL_TAKE",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": ">=",
+              "value": 0.1
+            }
+          ]
+        },
+        {
+          "id": "E4_PNL_STOP",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": "<=",
+              "value": -0.1
+            }
+          ]
+        }
+      ],
+      "runtime_updated_at": "2026-08-18T03:32:19Z"
+    }
+  ],
+  "opend": {
+    "host": "127.0.0.1",
+    "port": 11121
+  },
+  "account": {
+    "trd_market": "HK",
+    "acc_id": 0,
+    "acc_index": 0
+  },
+  "execution": {
+    "order_poll_min_sec": 3
+  },
+  "notify": {
+    "$comment_dingding": "C++ 暂未实现钉钉；paper 测试可关 enabled。",
+    "dingding": {
+      "enabled": false,
+      "paper": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      },
+      "real": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      }
+    }
+  },
+  "storage": {
+    "csv_dir": "./strategy/daily_logs"
+  }
+}

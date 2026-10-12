@@ -1,0 +1,51 @@
+soak_id=soak_20260901_032420 hours=4 sleep_sec=600 log=/home/ubuntu/workspace/moomoo_CPP/strategy/task_system/bench_logs/soak_run_20260901_032420.log
+[soak] round=1 start 2026-09-01T03:24:20+00:00
+inserted f_id=5068 task=bench_us_AAPL_20260901_032420_001 US.AAPL qty=1 leg=entry round=1
+Traceback (most recent call last):
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/task_latency_batch_submit.py", line 408, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/task_latency_batch_submit.py", line 355, in main
+    row = wait_tasks(conn, [task_name], float(timeout))[task_name]
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/task_latency_batch_submit.py", line 273, in wait_tasks
+    raise TimeoutError(f"timeout waiting tasks: {sorted(pending)}")
+TimeoutError: timeout waiting tasks: ['bench_us_AAPL_20260901_032420_001']
+Traceback (most recent call last):
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/soak_sampler.py", line 184, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/soak_sampler.py", line 138, in main
+    stuck = _stuck_count(task_type=args.task_type)
+  File "/home/ubuntu/workspace/moomoo_CPP/bench/soak_sampler.py", line 69, in _stuck_count
+    cur.execute(
+    ~~~~~~~~~~~^
+        """
+        ^^^
+    ...<5 lines>...
+        (task_type, min_age_sec),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/cursors.py", line 157, in execute
+    result = self._query(query)
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/connections.py", line 826, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/ubuntu/workspace/venv/lib/python3.14/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'f_update_time' in 'where clause'")

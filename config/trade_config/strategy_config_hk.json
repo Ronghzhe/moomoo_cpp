@@ -1,0 +1,286 @@
+{
+  "$comment": "多标的 symbols[]。exit_strategies：建议同时具备 bid_1 价格上沿(>= 止盈参照)与下沿(<= 止损参照)两条 orderbook 规则，再按需加 pnl；组内 logic(all/any)，组间 exit_strategy_logic=any 时常为任一命中即平仓。exit_enabled 为自动平仓总开关。symbols[] 推荐字段顺序：task_id → enabled/exit_enabled/startup_notify_once → code → 报单 → budget/entry_qty/exit_qty/entry_side → status/成交字段 → 策略块 → runtime_updated_at。execution.order_poll_min_sec：待成交订单查询最小间隔。budget 与 entry_qty 二选一。exit_qty：单笔平仓上限股数，null/省略则一次性平清持仓；模版常与 entry_qty 同值，可按需改小分批。",
+  "account": {
+    "trd_market": "HK"
+  },
+  "client_name": "TradeTest",
+  "execution": {
+    "order_poll_min_sec": 3
+  },
+  "mode": "paper",
+  "notify": {
+    "$comment_dingding": "mode=paper 用 paper 群的 webhook；mode=real 用 real 群。可同时配置；某一侧也可用 webhook_env / secret_env 从环境变量读。缺省仍支持仅写根级 webhook/secret（两边共用）。",
+    "dingding": {
+      "enabled": true,
+      "paper": {
+        "secret": "SEC22db50883fd5590e19395587cd36705b140fbd64d950c5ee884fdce0659102fb",
+        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=4d8448eea814cd72de157b9f58c77db65f21c8e96e3f20de247d330dc90506fe"
+      },
+      "real": {
+        "secret": "SECe26c4c225394c93797506200aac62cc17931cdbf7475e21481bce838104ab32b",
+        "webhook": "https://oapi.dingtalk.com/robot/send?access_token=6331824af06ae35db8ad23eb0348a3f02fed00be125975cfebd93471c29757f6"
+      }
+    }
+  },
+  "opend": {
+    "host": "127.0.0.1",
+    "port": 11121
+  },
+  "storage": {
+    "csv_dir": "./strategy/daily_logs"
+  },
+  "strategy_name": "short_squeeze",
+  "symbols": [
+    {
+      "budget": null,
+      "closed_price": 0.0,
+      "closed_qty": 0.0,
+      "code": "HK.02208",
+      "enabled": true,
+      "entry_qty": 200,
+      "entry_side": "BUY",
+      "entry_strategies": [
+        {
+          "conditions": [
+            {
+              "field": "ask_1",
+              "op": "",
+              "type": "orderbook",
+              "value": 16.5
+            }
+          ],
+          "enabled": true,
+          "id": "S1",
+          "logic": "all"
+        },
+        {
+          "conditions": [
+            {
+              "after_open_minutes": 15,
+              "candle": 1,
+              "candle_ref": "prev_close",
+              "eval_mode": "once",
+              "kl_type": "K_15M",
+              "poll_sec": 5,
+              "type": "kline_candle"
+            }
+          ],
+          "enabled": false,
+          "id": "candle_1",
+          "logic": "all"
+        },
+        {
+          "conditions": [
+            {
+              "field": "ask_1",
+              "op": ">=",
+              "type": "orderbook",
+              "value": 18.2
+            },
+            {
+              "gain_pct": 0.5,
+              "ref": "mid",
+              "type": "open"
+            },
+            {
+              "kl_type": "K_15M",
+              "ma_include_last": true,
+              "ma_period": 10,
+              "multiple": 3.0,
+              "poll_sec": 20,
+              "type": "volume"
+            },
+            {
+              "after_open_minutes": 15,
+              "kl_type": "K_15M",
+              "op": ">=",
+              "poll_sec": 20,
+              "type": "kline_close",
+              "value": 18.2
+            },
+            {
+              "after_open_minutes": 15,
+              "candle": 1,
+              "candle_ref": "prev_close",
+              "eval_mode": "once",
+              "kl_type": "K_15M",
+              "poll_sec": 5,
+              "type": "kline_candle"
+            }
+          ],
+          "enabled": false,
+          "id": "S2",
+          "logic": "all"
+        }
+      ],
+      "entry_strategy_logic": "any",
+      "exit_enabled": false,
+      "exit_qty": null,
+      "exit_strategies": [
+        {
+          "conditions": [
+            {
+              "field": "bid_1",
+              "op": "",
+              "type": "orderbook",
+              "value": 12.5
+            }
+          ],
+          "enabled": false,
+          "id": "普通orderbook平仓",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "kl_type": "K_15M",
+              "log_interval_sec": 10,
+              "n_pct": 0.01,
+              "price_field": "bid_1",
+              "type": "trailing_take_profit"
+            }
+          ],
+          "enabled": false,
+          "id": "吊灯止损",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "bars": 2,
+              "kl_type": "K_15M",
+              "log_interval_sec": 20,
+              "low_offset": 0.005,
+              "poll_sec": 30,
+              "price_field": "bid_1",
+              "type": "kline_pre_entry_low_stop"
+            }
+          ],
+          "enabled": true,
+          "id": "E_建仓前两根15m最低低减005",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "kl_type": "K_15M",
+              "log_interval_sec": 10,
+              "ma_period": 10,
+              "ma_ref_relax": 0.001,
+              "op": "<",
+              "poll_sec": 10,
+              "type": "trailing_ma20_close"
+            }
+          ],
+          "enabled": true,
+          "id": "15根close均线平仓",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "kl_type": "K_30M",
+              "log_interval_sec": 10,
+              "ma_period": 20,
+              "op": "<",
+              "price_field": "bid_1",
+              "type": "trailing_ma20_realtime"
+            }
+          ],
+          "enabled": true,
+          "id": "20日均线实时平仓",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "fractions": [
+                0.6,
+                0.4
+              ],
+              "price_field": "bid_1",
+              "targets": [
+                0.01,
+                0.02
+              ],
+              "type": "staged_take_profit"
+            }
+          ],
+          "enabled": true,
+          "id": "分批止盈示例",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "field": "bid_1",
+              "op": "<=",
+              "type": "orderbook",
+              "value": 17.2
+            }
+          ],
+          "enabled": false,
+          "id": "E2_PRICE_LOW",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "op": ">=",
+              "type": "pnl_gain_pct",
+              "value": 0.1
+            }
+          ],
+          "enabled": false,
+          "id": "E3_PNL_TAKE",
+          "logic": "all",
+          "side": "SELL"
+        },
+        {
+          "conditions": [
+            {
+              "op": "<=",
+              "type": "pnl_gain_pct",
+              "value": -0.1
+            }
+          ],
+          "enabled": false,
+          "id": "E4_PNL_STOP",
+          "logic": "all",
+          "side": "SELL"
+        }
+      ],
+      "exit_strategy_logic": "any",
+      "initial_qty": 200.0,
+      "instrument": {
+        "type": "stock"
+      },
+      "opened_price": 0.0,
+      "opened_qty": 0.0,
+      "order_type": "sim_market",
+      "pre_entry_low_stop_bar_keys": {
+        "E_建仓前两根15m最低低减005:0": [
+          "2026-07-13 11:15:00",
+          "2026-07-13 11:30:00"
+        ]
+      },
+      "pre_entry_low_stop_levels": {
+        "E_建仓前两根15m最低低减005:0": 136.4145
+      },
+      "runtime_updated_at": "2026-08-13T08:20:46Z",
+      "sim_market_pct": 0.01,
+      "startup_notify_once": false,
+      "status": 0,
+      "task_id": "",
+      "time_in_force": "DAY"
+    }
+  ],
+  "version": 1
+}

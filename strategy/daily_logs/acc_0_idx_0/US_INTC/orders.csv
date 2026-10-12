@@ -1,0 +1,10 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:01:26,nana_paper_INTC_5m_1787234434464,US.INTC,SELL,3245943,11,22,90.481,strategy_cpp_entry,,,,paper,,,
+2026-08-20T14:25:29,nana_paper_INTC_5m_1787234434464,US.INTC,BUY,3246076,11,22,91.265,strategy_cpp_exit,,,,SIMULATE,loss,-0.87%,-17.25
+2026-08-20T15:05:55,nana_paper_INTC_5m_1787238343244,US.INTC,BUY,3246231,11,21,91.54,strategy_cpp_entry,,,,paper,,,
+2026-08-20T15:40:34,nana_paper_INTC_5m_1787238343244,US.INTC,SELL,3246311,11,21,91.2,strategy_cpp_exit,,,,SIMULATE,loss,-0.37%,-7.14
+2026-08-21T13:40:57,nana_paper_INTC_5m_1787319635903,US.INTC,SELL,3248011,11,21,91.66,strategy_cpp_entry,,,,paper,,,
+2026-08-21T15:15:23,nana_paper_INTC_5m_1787319635903,US.INTC,BUY,3248469,11,21,90.68,strategy_cpp_exit,,,,SIMULATE,profit,+1.07%,+20.58
+2026-08-21T15:41:04,nana_paper_INTC_5m_1787326840796,US.INTC,BUY,3248576,11,21,90.97,strategy_cpp_entry,,,,paper,,,
+2026-08-21T16:05:35,nana_paper_INTC_5m_1787326840796,US.INTC,SELL,3248655,11,21,90.4,strategy_cpp_exit,,,,SIMULATE,loss,-0.63%,-11.97
+2026-08-24T13:49:58,nana_paper_INTC_5m_1787579148517,US.INTC,SELL,3251106,11,23,85.649,strategy_cpp_entry,,,,paper,,,

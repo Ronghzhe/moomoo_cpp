@@ -1,0 +1,29 @@
+ts,level,event_type,message
+2026-08-20T13:47:43,INFO,startup,启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T13:47:43,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T13:47:52,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-20T13:50:53,INFO,startup,启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T13:50:53,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T13:50:54,WARN,place_failed,The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20T13:50:54,ERROR,exit_order_fatal,exit_order_fatal | code=US.COHR status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20T14:00:58,INFO,startup,启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T14:00:58,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T14:01:00,INFO,place_exit,oid=3245939
+2026-08-20T14:01:07,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-21T15:01:16,INFO,startup,启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T15:01:16,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T15:01:22,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-21T17:05:43,INFO,startup,启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T17:05:43,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T17:05:45,INFO,place_exit,oid=3248869
+2026-08-21T17:05:49,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-21T17:31:21,INFO,startup,启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T17:31:21,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T17:31:28,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-21T18:00:41,INFO,startup,启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T18:00:41,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T18:00:42,INFO,place_exit,oid=3248977
+2026-08-21T18:00:49,INFO,managed_done_exit,loop_tick US.COHR
+2026-08-24T13:50:32,INFO,startup,启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T13:50:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T13:50:43,INFO,managed_done_exit,loop_tick US.COHR

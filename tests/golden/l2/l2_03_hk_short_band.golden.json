@@ -1,0 +1,47 @@
+{
+  "id": "l2_03_hk_short_band",
+  "cases": [
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "bid": 36.07,
+      "bid_in_band": true
+    },
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "bid": 36.0,
+      "bid_in_band": true
+    },
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "bid": 35.89,
+      "bid_in_band": true
+    },
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "bid": 35.7,
+      "bid_in_band": false
+    },
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "ask_in_band": 36.062,
+      "ask_in_original_band": true
+    },
+    {
+      "ask": 36.08,
+      "band_lo": 35.7192,
+      "band_hi": 36.08,
+      "ask_in_band": 36.1,
+      "ask_in_original_band": false
+    }
+  ]
+}

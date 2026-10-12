@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmm_proto_kline.a CMakeFiles/mm_proto_kline.dir/home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Include/Proto/Common.pb.cc.o CMakeFiles/mm_proto_kline.dir/home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Include/Proto/Qot_Common.pb.cc.o CMakeFiles/mm_proto_kline.dir/home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Include/Proto/Qot_Sub.pb.cc.o CMakeFiles/mm_proto_kline.dir/home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Include/Proto/Qot_GetKL.pb.cc.o
+/usr/bin/ranlib libmm_proto_kline.a

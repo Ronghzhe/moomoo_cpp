@@ -1,0 +1,188 @@
+2026-08-20 21:45:41.118 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | startup | 启动成功 symbol=US.MRVL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:45:41.118 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:45:41.118 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | lot_size/手 | code=US.MRVL value=1 (snapshot)
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   订阅 / subscribe: ORDER_BOOK  |  US.MRVL 推送已开 / push on
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | ==========================================================
+2026-08-20 21:45:41.599 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 21:45:41.948 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=242.09 ask_1=242.29
+2026-08-20 21:45:41.948 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | entry_judge/开仓子条件 | code=US.MRVL rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=8 est_notional~1938.32
+2026-08-20 21:45:41.948 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 开始交易/start_trade | code=US.MRVL entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:45:41.948 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 报单计算/order_sizing | 参考价/px=242.29 | budget_total=2000.00 | lot_size=1 => qty=8 | lot_size=1 budget/price~8.25457 n_lots=8 qty=8 | est_notional~1938.32
+2026-08-20 21:45:41.948 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=242.29 submit_price=247.14 time_in_force=DAY side=BUY code=US.MRVL qty=8 est_notional~1977.09 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:45:42.150 | WARN | strategy_runtime.acc_0_idx_0.US_MRVL | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:45:42.150 | WARN | strategy_runtime.acc_0_idx_0.US_MRVL | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:45:42.151 | ERROR | strategy_runtime.acc_0_idx_0.US_MRVL | entry_order_fatal | entry_order_fatal | code=US.MRVL status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:15:15.608 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | startup | 启动成功 symbol=US.MRVL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:15:15.608 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:15:15.608 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | lot_size/手 | code=US.MRVL value=1 (snapshot)
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   订阅 / subscribe: ORDER_BOOK  |  US.MRVL 推送已开 / push on
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | ==========================================================
+2026-08-20 22:15:16.085 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 22:15:16.444 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.35 ask_1=241.6
+2026-08-20 22:15:16.444 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | entry_judge/开仓子条件 | code=US.MRVL rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=8 est_notional~1932.80
+2026-08-20 22:15:16.444 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 开始交易/start_trade | code=US.MRVL entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:15:16.444 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 报单计算/order_sizing | 参考价/px=241.60 | budget_total=2000.00 | lot_size=1 => qty=8 | lot_size=1 budget/price~8.27815 n_lots=8 qty=8 | est_notional~1932.80
+2026-08-20 22:15:16.444 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=241.60 submit_price=246.44 time_in_force=DAY side=BUY code=US.MRVL qty=8 est_notional~1971.52 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:15:16.760 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 下单结果/place_order_result | ret=0 order_id=3246031 status=SUBMITTING
+2026-08-20 22:15:16.760 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 已报单，等待成交/await_order_fill | order_id=3246031 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:15:17.035 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.035 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.5 ask_1=241.58
+2026-08-20 22:15:17.035 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.035 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.5 ask_1=241.58
+2026-08-20 22:15:17.332 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.333 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.5 ask_1=241.68
+2026-08-20 22:15:17.333 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.333 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.51 ask_1=241.68
+2026-08-20 22:15:17.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.51 ask_1=241.68
+2026-08-20 22:15:17.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.4 ask_1=241.68
+2026-08-20 22:15:17.930 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.930 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.42 ask_1=241.68
+2026-08-20 22:15:17.930 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:17.930 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.42 ask_1=241.68
+2026-08-20 22:15:18.233 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.233 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.42 ask_1=241.68
+2026-08-20 22:15:18.233 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.234 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.43 ask_1=241.68
+2026-08-20 22:15:18.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.45 ask_1=241.68
+2026-08-20 22:15:18.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.45 ask_1=241.68
+2026-08-20 22:15:18.840 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.840 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.53 ask_1=241.79
+2026-08-20 22:15:18.840 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:18.840 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.79
+2026-08-20 22:15:19.134 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:19.134 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.79
+2026-08-20 22:15:19.135 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:19.135 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.79
+2026-08-20 22:15:19.430 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:19.430 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.78
+2026-08-20 22:15:19.728 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:19.728 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.61 ask_1=241.78
+2026-08-20 22:15:19.728 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:19.728 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.61 ask_1=241.78
+2026-08-20 22:15:20.034 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.034 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.61 ask_1=241.8
+2026-08-20 22:15:20.034 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.034 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.61 ask_1=241.94
+2026-08-20 22:15:20.334 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.335 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.61 ask_1=241.93
+2026-08-20 22:15:20.335 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.335 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.62 ask_1=241.93
+2026-08-20 22:15:20.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.630 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.62 ask_1=241.93
+2026-08-20 22:15:20.631 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.631 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.62 ask_1=241.93
+2026-08-20 22:15:20.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.62 ask_1=241.93
+2026-08-20 22:15:20.937 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:20.937 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.57 ask_1=241.93
+2026-08-20 22:15:21.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.93
+2026-08-20 22:15:21.238 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.238 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.59 ask_1=241.93
+2026-08-20 22:15:21.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.532 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.6 ask_1=241.93
+2026-08-20 22:15:21.533 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.533 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.6 ask_1=241.93
+2026-08-20 22:15:21.828 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.828 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.6 ask_1=241.93
+2026-08-20 22:15:21.828 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:21.828 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.6 ask_1=241.93
+2026-08-20 22:15:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.62 ask_1=241.93
+2026-08-20 22:15:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.63 ask_1=241.93
+2026-08-20 22:15:22.434 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.435 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.88 ask_1=241.99
+2026-08-20 22:15:22.435 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.435 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.94 ask_1=242.05
+2026-08-20 22:15:22.735 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.736 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.94 ask_1=242.05
+2026-08-20 22:15:22.736 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:22.736 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.65 ask_1=242.05
+2026-08-20 22:15:23.036 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.036 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=242.03 ask_1=242.09
+2026-08-20 22:15:23.037 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.037 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=242.03 ask_1=242.16
+2026-08-20 22:15:23.335 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.335 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=242.03 ask_1=242.16
+2026-08-20 22:15:23.336 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.336 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.85 ask_1=242.16
+2026-08-20 22:15:23.633 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.633 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.76 ask_1=242.16
+2026-08-20 22:15:23.633 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.633 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.76 ask_1=242.16
+2026-08-20 22:15:23.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.76 ask_1=242.14
+2026-08-20 22:15:23.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:23.936 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.7 ask_1=242.14
+2026-08-20 22:15:24.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.7 ask_1=242.14
+2026-08-20 22:15:24.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.237 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.69 ask_1=242.14
+2026-08-20 22:15:24.536 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.536 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.71 ask_1=242.16
+2026-08-20 22:15:24.537 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.537 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:24.832 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.833 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:24.833 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:24.833 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:25.126 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:25.126 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:25.126 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:25.126 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:25.433 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:25.433 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:25.732 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:25.733 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.73 ask_1=242.16
+2026-08-20 22:15:25.733 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:25.733 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.037 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.037 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.037 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.038 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.330 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.330 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.331 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.331 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.636 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.636 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.636 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.636 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.75 ask_1=242.1
+2026-08-20 22:15:26.940 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.940 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.76 ask_1=242.1
+2026-08-20 22:15:26.940 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=5 dealt=0 target=8 -> wait
+2026-08-20 22:15:26.940 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=241.76 ask_1=242.1
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 订单轮询/order_poll | code=US.MRVL order_id=3246031 status=11 dealt=8 target=8 -> filled
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 【开仓】====2026-08-20 22:15:27.224
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | US.MRVL-buy  |  计划金额: 2000
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | real_price: 241.81 (exp=246.44)
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | real_qty: 8 | real_amount: 1934.49
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | env: paper
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | o_status: filled (order_id:3246031)
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | task_id: nana_paper_MRVL_5m_1787233244302
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 触发开仓条件------------------------
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | ·立即开仓 (2%限仿市)
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 预设平仓条件------------------------
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 不平仓，无平仓监控
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 22:15:27.224 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 
+2026-08-20 22:15:27.934 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | 读取行情/read_market | code=US.MRVL bid_1=242.02 ask_1=242.16
+2026-08-20 22:15:27.934 | INFO | strategy_runtime.acc_0_idx_0.US_MRVL | managed_done_exit | loop_tick US.MRVL

@@ -1,0 +1,557 @@
+ts,level,event_type,message
+2026-08-26T07:07:26,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-26T07:07:26,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-26T07:07:30,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-26T07:08:07,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-26T07:08:07,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-26T07:08:08,WARN,place_failed,Not enough buying power
+2026-08-26T07:08:08,ERROR,entry_order_fatal,entry_order_fatal | code=HK.03308 status=- reason=Not enough buying power
+2026-08-26T07:30:49,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-26T07:30:49,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-26T07:30:55,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-26T07:31:00,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-26T07:31:00,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-26T07:31:01,WARN,place_failed,Not enough buying power
+2026-08-26T07:31:01,ERROR,entry_order_fatal,entry_order_fatal | code=HK.03308 status=- reason=Not enough buying power
+2026-08-27T02:42:16,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T02:42:16,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T02:42:22,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T02:42:45,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T02:42:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T02:42:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T02:43:10,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T02:43:10,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T02:43:16,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:04:38,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T03:04:39,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-08-27T03:04:46,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:04:48,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-27T03:04:48,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T03:04:49,INFO,place_exit,oid=3256961
+2026-08-27T03:04:54,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:05:16,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T03:05:16,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T03:05:23,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:05:25,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-27T03:05:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T03:05:26,INFO,place_exit,oid=3256969
+2026-08-27T03:05:32,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:05:48,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-27T03:05:49,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-08-27T03:05:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-08-27T03:05:53,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-27T03:05:53,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-27T03:05:54,INFO,place_exit,oid=3256978
+2026-08-27T03:06:00,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:42:11,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:42:11,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:42:18,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:50:18,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:50:18,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:50:23,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:50:32,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:50:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:50:33,INFO,place_exit,oid=3266368
+2026-09-02T05:50:37,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:50:42,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:50:42,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:50:47,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:50:56,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:50:56,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:50:57,INFO,place_exit,oid=3266372
+2026-09-02T05:51:01,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:51:18,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:51:18,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:51:20,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:51:30,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:51:30,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:51:31,INFO,place_exit,oid=3266376
+2026-09-02T05:51:35,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:51:45,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:51:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:51:49,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:51:59,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:51:59,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:52:00,INFO,place_exit,oid=3266380
+2026-09-02T05:52:03,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:52:13,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:52:13,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:52:18,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:52:23,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:52:23,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:52:24,INFO,place_exit,oid=3266384
+2026-09-02T05:52:27,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:52:37,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:52:37,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:52:42,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:52:47,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:52:47,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:52:48,INFO,place_exit,oid=3266388
+2026-09-02T05:52:52,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:53:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:53:01,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:53:06,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:53:11,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:53:11,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:53:12,INFO,place_exit,oid=3266392
+2026-09-02T05:53:24,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:53:30,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:53:30,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:53:35,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:53:45,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:53:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:53:46,INFO,place_exit,oid=3266396
+2026-09-02T05:53:49,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:53:59,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:53:59,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:54:03,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:54:13,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:54:13,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:54:14,INFO,place_exit,oid=3266400
+2026-09-02T05:54:18,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:54:32,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:54:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:54:37,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:54:47,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:54:47,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:54:47,INFO,place_exit,oid=3266404
+2026-09-02T05:54:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:55:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:55:01,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:55:05,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:55:15,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:55:15,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:55:16,INFO,place_exit,oid=3266408
+2026-09-02T05:55:20,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:55:30,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:55:30,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:55:35,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:55:44,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:55:44,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:55:46,INFO,place_exit,oid=3266412
+2026-09-02T05:55:49,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:55:59,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:55:59,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:56:03,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:56:14,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:56:14,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:56:15,INFO,place_exit,oid=3266416
+2026-09-02T05:56:18,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:56:27,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:56:27,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:56:32,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:56:42,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:56:42,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:56:43,INFO,place_exit,oid=3266420
+2026-09-02T05:56:47,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:56:52,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:56:52,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:56:56,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:57:06,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:57:06,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:57:07,INFO,place_exit,oid=3266424
+2026-09-02T05:57:10,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:57:20,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:57:20,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:57:25,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:57:39,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:57:39,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:57:41,INFO,place_exit,oid=3266428
+2026-09-02T05:57:44,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:57:54,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:57:54,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:57:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:58:08,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:58:08,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:58:09,INFO,place_exit,oid=3266432
+2026-09-02T05:58:13,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:58:23,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T05:58:23,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:58:27,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T05:58:37,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T05:58:37,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T05:58:38,INFO,place_exit,oid=3266436
+2026-09-02T05:58:42,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:23:46,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:23:46,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:23:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:24:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:24:01,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:24:01,INFO,place_exit,oid=3266456
+2026-09-02T06:24:05,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:24:15,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:24:15,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:24:20,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:24:25,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:24:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:24:25,INFO,place_exit,oid=3266460
+2026-09-02T06:24:29,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:24:39,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:24:39,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:24:44,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:24:53,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:24:53,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:24:54,INFO,place_exit,oid=3266464
+2026-09-02T06:24:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:25:03,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:25:03,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:25:08,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:25:18,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:25:18,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:25:18,INFO,place_exit,oid=3266468
+2026-09-02T06:25:22,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:25:27,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:25:27,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:25:32,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:25:45,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:25:45,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:25:46,INFO,place_exit,oid=3266472
+2026-09-02T06:25:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:25:56,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:25:56,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:26:00,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:26:06,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:26:06,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:26:06,INFO,place_exit,oid=3266476
+2026-09-02T06:26:10,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:26:15,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:26:15,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:26:19,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:26:29,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:26:29,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:26:30,INFO,place_exit,oid=3266480
+2026-09-02T06:26:34,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 10"",""parameters"":{""retry_after"":10}}"
+2026-09-02T06:26:34,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:26:54,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:26:54,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:26:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:27:08,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:27:08,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:27:09,INFO,place_exit,oid=3266484
+2026-09-02T06:27:12,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:27:17,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:27:17,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:27:22,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:27:32,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:27:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:27:32,INFO,place_exit,oid=3266488
+2026-09-02T06:27:36,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:27:47,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:27:47,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:27:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:27:56,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:27:56,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:27:56,INFO,place_exit,oid=3266492
+2026-09-02T06:28:00,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:28:10,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:28:10,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:28:15,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:28:20,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:28:20,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:28:20,INFO,place_exit,oid=3266496
+2026-09-02T06:28:24,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:28:34,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:28:34,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:28:39,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:28:52,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:28:52,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:28:52,INFO,place_exit,oid=3266500
+2026-09-02T06:28:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:29:08,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:29:08,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:29:12,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:29:22,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:29:22,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:29:23,INFO,place_exit,oid=3266504
+2026-09-02T06:29:27,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:29:36,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:29:36,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:29:41,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:29:51,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:29:51,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:29:51,INFO,place_exit,oid=3266508
+2026-09-02T06:29:56,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:30:00,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:30:00,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:30:07,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:30:17,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:30:17,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:30:17,INFO,place_exit,oid=3266512
+2026-09-02T06:30:22,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:30:27,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:30:27,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:30:32,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:30:43,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:30:43,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:30:43,INFO,place_exit,oid=3266516
+2026-09-02T06:30:48,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:30:56,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:30:56,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:30:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:31:09,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:31:09,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:31:09,INFO,place_exit,oid=3266520
+2026-09-02T06:31:14,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:31:19,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:31:19,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:31:25,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:31:35,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:31:35,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:31:36,INFO,place_exit,oid=3266524
+2026-09-02T06:31:40,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:31:46,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:31:46,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:31:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:32:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:32:01,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:32:02,INFO,place_exit,oid=3266531
+2026-09-02T06:32:06,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:32:12,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:32:12,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:32:16,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:32:28,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:32:28,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:32:28,INFO,place_exit,oid=3266541
+2026-09-02T06:32:33,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:32:43,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:32:43,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:32:48,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:32:53,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:32:53,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:32:54,INFO,place_exit,oid=3266545
+2026-09-02T06:32:58,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:33:03,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:33:03,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:33:08,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:33:14,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:33:14,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:33:14,INFO,place_exit,oid=3266551
+2026-09-02T06:33:19,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:33:29,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:33:29,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:33:35,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:33:40,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:33:40,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:33:41,INFO,place_exit,oid=3266555
+2026-09-02T06:33:45,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:33:55,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:33:55,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:34:00,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:34:11,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:34:11,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:34:11,INFO,place_exit,oid=3266559
+2026-09-02T06:34:16,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:34:21,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:34:21,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:34:26,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:34:32,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:34:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-02T06:34:32,INFO,place_exit,oid=3266563
+2026-09-02T06:34:36,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:54:41,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:54:42,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:54:49,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:54:51,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:54:55,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:54:56,INFO,place_exit,oid=3266604
+2026-09-02T06:54:59,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:55:02,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:55:05,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:09,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:55:10,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 31"",""parameters"":{""retry_after"":31}}"
+2026-09-02T06:55:11,INFO,place_exit,oid=3266607
+2026-09-02T06:55:15,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 27"",""parameters"":{""retry_after"":27}}"
+2026-09-02T06:55:15,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:17,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:55:18,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 23"",""parameters"":{""retry_after"":23}}"
+2026-09-02T06:55:20,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 21"",""parameters"":{""retry_after"":21}}"
+2026-09-02T06:55:20,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:21,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:55:22,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 19"",""parameters"":{""retry_after"":19}}"
+2026-09-02T06:55:23,INFO,place_exit,oid=3266611
+2026-09-02T06:55:25,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 16"",""parameters"":{""retry_after"":16}}"
+2026-09-02T06:55:25,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:27,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:55:28,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 13"",""parameters"":{""retry_after"":13}}"
+2026-09-02T06:55:31,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 11"",""parameters"":{""retry_after"":11}}"
+2026-09-02T06:55:31,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:33,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:55:45,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:55:45,INFO,place_exit,oid=3266616
+2026-09-02T06:55:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:55:53,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:55:57,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:56:02,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:03,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:56:04,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:56:05,INFO,place_exit,oid=3266621
+2026-09-02T06:56:10,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:11,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:56:13,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 32"",""parameters"":{""retry_after"":32}}"
+2026-09-02T06:56:17,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 27"",""parameters"":{""retry_after"":27}}"
+2026-09-02T06:56:17,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:20,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:56:20,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 24"",""parameters"":{""retry_after"":24}}"
+2026-09-02T06:56:21,INFO,place_exit,oid=3266625
+2026-09-02T06:56:27,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 17"",""parameters"":{""retry_after"":17}}"
+2026-09-02T06:56:27,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:30,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:56:30,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 14"",""parameters"":{""retry_after"":14}}"
+2026-09-02T06:56:45,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:48,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:56:48,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:56:50,INFO,place_exit,oid=3266629
+2026-09-02T06:56:53,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:56:56,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:57:00,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:57:04,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:06,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:57:07,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:57:07,INFO,place_exit,oid=3266633
+2026-09-02T06:57:12,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:14,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:57:15,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 31"",""parameters"":{""retry_after"":31}}"
+2026-09-02T06:57:19,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 26"",""parameters"":{""retry_after"":26}}"
+2026-09-02T06:57:19,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:22,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:57:23,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 23"",""parameters"":{""retry_after"":23}}"
+2026-09-02T06:57:23,INFO,place_exit,oid=3266636
+2026-09-02T06:57:30,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 16"",""parameters"":{""retry_after"":16}}"
+2026-09-02T06:57:30,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:32,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:57:33,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 12"",""parameters"":{""retry_after"":12}}"
+2026-09-02T06:57:45,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:48,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:57:49,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:57:50,INFO,place_exit,oid=3266641
+2026-09-02T06:57:55,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:57:58,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:58:02,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:58:06,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:58:08,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:58:09,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:58:10,INFO,place_exit,oid=3266645
+2026-09-02T06:58:16,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:58:18,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:58:19,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 26"",""parameters"":{""retry_after"":26}}"
+2026-09-02T06:58:21,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 24"",""parameters"":{""retry_after"":24}}"
+2026-09-02T06:58:21,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:58:24,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:58:25,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 20"",""parameters"":{""retry_after"":20}}"
+2026-09-02T06:58:26,INFO,place_exit,oid=3266649
+2026-09-02T06:58:32,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 14"",""parameters"":{""retry_after"":14}}"
+2026-09-02T06:58:32,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:58:34,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:58:35,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 10"",""parameters"":{""retry_after"":10}}"
+2026-09-02T06:58:45,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:58:46,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:58:50,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:58:51,INFO,place_exit,oid=3266653
+2026-09-02T06:58:57,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:00,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:59:01,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:59:08,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:10,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:59:14,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:59:15,INFO,place_exit,oid=3266657
+2026-09-02T06:59:18,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:21,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:59:21,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 24"",""parameters"":{""retry_after"":24}}"
+2026-09-02T06:59:28,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 17"",""parameters"":{""retry_after"":17}}"
+2026-09-02T06:59:28,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:30,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:59:31,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 14"",""parameters"":{""retry_after"":14}}"
+2026-09-02T06:59:32,INFO,place_exit,oid=3266661
+2026-09-02T06:59:34,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 12"",""parameters"":{""retry_after"":12}}"
+2026-09-02T06:59:34,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:37,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T06:59:45,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:59:52,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T06:59:55,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T06:59:55,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T06:59:56,INFO,place_exit,oid=3266665
+2026-09-02T06:59:59,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:01,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:00:05,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:00:10,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:13,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:00:14,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 32"",""parameters"":{""retry_after"":32}}"
+2026-09-02T07:00:14,INFO,place_exit,oid=3266669
+2026-09-02T07:00:20,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 25"",""parameters"":{""retry_after"":25}}"
+2026-09-02T07:00:20,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:23,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:00:23,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 22"",""parameters"":{""retry_after"":22}}"
+2026-09-02T07:00:31,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 15"",""parameters"":{""retry_after"":15}}"
+2026-09-02T07:00:31,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:33,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:00:34,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 12"",""parameters"":{""retry_after"":12}}"
+2026-09-02T07:00:34,INFO,place_exit,oid=3266673
+2026-09-02T07:00:36,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 10"",""parameters"":{""retry_after"":10}}"
+2026-09-02T07:00:36,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:37,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:00:46,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:00:51,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:00:53,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:00:54,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:00:54,INFO,place_exit,oid=3266676
+2026-09-02T07:00:57,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:03,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:01:04,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:01:07,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:11,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:01:12,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 33"",""parameters"":{""retry_after"":33}}"
+2026-09-02T07:01:13,INFO,place_exit,oid=3266681
+2026-09-02T07:01:17,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 28"",""parameters"":{""retry_after"":28}}"
+2026-09-02T07:01:17,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:19,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:01:20,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 25"",""parameters"":{""retry_after"":25}}"
+2026-09-02T07:01:22,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 23"",""parameters"":{""retry_after"":23}}"
+2026-09-02T07:01:22,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:23,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:01:24,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 21"",""parameters"":{""retry_after"":21}}"
+2026-09-02T07:01:25,INFO,place_exit,oid=3266685
+2026-09-02T07:01:28,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 18"",""parameters"":{""retry_after"":18}}"
+2026-09-02T07:01:28,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:29,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:01:30,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 15"",""parameters"":{""retry_after"":15}}"
+2026-09-02T07:01:33,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 12"",""parameters"":{""retry_after"":12}}"
+2026-09-02T07:01:33,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:35,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:01:36,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 9"",""parameters"":{""retry_after"":9}}"
+2026-09-02T07:01:37,INFO,place_exit,oid=3266689
+2026-09-02T07:01:46,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:47,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:01:51,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:01:53,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:01:55,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:01:59,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:02:00,INFO,place_exit,oid=3266693
+2026-09-02T07:02:04,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:02:05,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:02:06,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-02T07:02:12,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:02:14,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:02:14,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 32"",""parameters"":{""retry_after"":32}}"
+2026-09-02T07:02:15,INFO,place_exit,oid=3266697
+2026-09-02T07:02:19,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 27"",""parameters"":{""retry_after"":27}}"
+2026-09-02T07:02:19,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:02:21,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-09-02T07:02:22,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 24"",""parameters"":{""retry_after"":24}}"
+2026-09-02T07:02:25,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 22"",""parameters"":{""retry_after"":22}}"
+2026-09-02T07:02:25,INFO,managed_done_exit,loop_tick HK.03308
+2026-09-02T07:02:26,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-09-02T07:02:26,WARN,telegram_startup_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 20"",""parameters"":{""retry_after"":20}}"
+2026-09-02T07:02:27,INFO,place_exit,oid=3266700
+2026-09-02T07:02:30,WARN,telegram_fill_failed,"{""ok"":false,""error_code"":429,""description"":""Too Many Requests: retry after 17"",""parameters"":{""retry_after"":17}}"
+2026-09-02T07:02:30,INFO,managed_done_exit,loop_tick HK.03308
+2026-10-12T03:12:21,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-10-12T03:12:22,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-10-12T03:12:27,INFO,managed_done_exit,loop_tick HK.03308
+2026-10-12T03:12:29,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=2(持仓) exit_enabled=Y
+2026-10-12T03:12:33,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-10-12T03:12:33,INFO,place_exit,oid=3332053
+2026-10-12T03:12:38,INFO,managed_done_exit,loop_tick HK.03308
+2026-10-12T03:12:39,INFO,startup,启动成功 symbol=HK.03308 mode=paper status=0(待开仓) exit_enabled=N
+2026-10-12T03:12:40,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-10-12T03:12:43,INFO,managed_done_exit,loop_tick HK.03308

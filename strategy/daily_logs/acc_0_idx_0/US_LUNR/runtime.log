@@ -1,0 +1,126 @@
+2026-08-20 21:44:43.472 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | startup | 启动成功 symbol=US.LUNR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:44:43.472 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:44:43.472 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | lot_size/手 | code=US.LUNR value=1 (snapshot)
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   订阅 / subscribe: ORDER_BOOK  |  US.LUNR 推送已开 / push on
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | ==========================================================
+2026-08-20 21:44:43.944 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 21:44:44.162 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18.01
+2026-08-20 21:44:44.162 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | entry_judge/开仓子条件 | code=US.LUNR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=111 est_notional~1999.11
+2026-08-20 21:44:44.162 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 开始交易/start_trade | code=US.LUNR entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:44:44.162 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 报单计算/order_sizing | 参考价/px=18.01 | budget_total=2000.00 | lot_size=1 => qty=111 | lot_size=1 budget/price~111.049 n_lots=111 qty=111 | est_notional~1999.11
+2026-08-20 21:44:44.162 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=18.01 submit_price=18.37 time_in_force=DAY side=BUY code=US.LUNR qty=111 est_notional~2039.09 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:44:44.364 | WARN | strategy_runtime.acc_0_idx_0.US_LUNR | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:44.364 | WARN | strategy_runtime.acc_0_idx_0.US_LUNR | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:44.364 | ERROR | strategy_runtime.acc_0_idx_0.US_LUNR | entry_order_fatal | entry_order_fatal | code=US.LUNR status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:13:43.640 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | startup | 启动成功 symbol=US.LUNR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:13:43.641 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:13:43.641 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | lot_size/手 | code=US.LUNR value=1 (snapshot)
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   订阅 / subscribe: ORDER_BOOK  |  US.LUNR 推送已开 / push on
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | ==========================================================
+2026-08-20 22:13:44.117 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 22:13:44.462 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.02
+2026-08-20 22:13:44.462 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | entry_judge/开仓子条件 | code=US.LUNR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=110 est_notional~1982.20
+2026-08-20 22:13:44.462 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 开始交易/start_trade | code=US.LUNR entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:13:44.462 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 报单计算/order_sizing | 参考价/px=18.02 | budget_total=2000.00 | lot_size=1 => qty=110 | lot_size=1 budget/price~110.988 n_lots=110 qty=110 | est_notional~1982.20
+2026-08-20 22:13:44.463 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=18.02 submit_price=18.39 time_in_force=DAY side=BUY code=US.LUNR qty=110 est_notional~2022.90 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:13:44.781 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 下单结果/place_order_result | ret=0 order_id=3246026 status=SUBMITTING
+2026-08-20 22:13:44.781 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 已报单，等待成交/await_order_fill | order_id=3246026 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:13:45.050 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:45.050 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.02
+2026-08-20 22:13:45.350 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:45.350 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.02
+2026-08-20 22:13:45.650 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:45.650 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18.01 ask_1=18.03
+2026-08-20 22:13:45.651 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:45.651 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18.01 ask_1=18.03
+2026-08-20 22:13:45.948 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:45.949 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18.01 ask_1=18.03
+2026-08-20 22:13:46.312 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:46.312 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18.01 ask_1=18.02
+2026-08-20 22:13:46.563 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:46.563 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.01
+2026-08-20 22:13:46.564 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:46.564 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.01
+2026-08-20 22:13:46.857 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:46.858 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.02
+2026-08-20 22:13:47.695 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:47.695 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.01
+2026-08-20 22:13:47.756 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:47.756 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.01
+2026-08-20 22:13:48.050 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:48.050 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.02
+2026-08-20 22:13:48.924 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:48.925 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=18 ask_1=18.01
+2026-08-20 22:13:49.224 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.224 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.99 ask_1=18
+2026-08-20 22:13:49.225 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.225 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:49.555 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.555 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:49.555 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.555 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18.01
+2026-08-20 22:13:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:50.154 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:50.154 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:50.154 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:50.154 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:50.459 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:50.459 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:50.459 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:50.459 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:50.753 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:50.754 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:51.353 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:51.353 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:51.353 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:51.353 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:51.664 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:51.664 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=17.99
+2026-08-20 22:13:51.956 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:51.956 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=17.99
+2026-08-20 22:13:51.956 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:51.956 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:52.252 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:52.253 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:52.554 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:52.555 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:52.852 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:52.852 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:52.852 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:52.852 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:53.830 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:53.831 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:54.052 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=5 dealt=0 target=110 -> wait
+2026-08-20 22:13:54.052 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 订单轮询/order_poll | code=US.LUNR order_id=3246026 status=11 dealt=110 target=110 -> filled
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 【开仓】====2026-08-20 22:13:54.361
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | US.LUNR-buy  |  计划金额: 2000
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | real_price: 17.99 (exp=18.39)
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | real_qty: 110 | real_amount: 1978.90
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | env: paper
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | o_status: filled (order_id:3246026)
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | task_id: nana_paper_LUNR_5m_1787233229841
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 触发开仓条件------------------------
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | ·立即开仓 (2%限仿市)
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 预设平仓条件------------------------
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 不平仓，无平仓监控
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 22:13:54.361 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 
+2026-08-20 22:13:55.073 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | 读取行情/read_market | code=US.LUNR bid_1=17.98 ask_1=18
+2026-08-20 22:13:55.073 | INFO | strategy_runtime.acc_0_idx_0.US_LUNR | managed_done_exit | loop_tick US.LUNR

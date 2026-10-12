@@ -1,0 +1,30 @@
+ts,level,event_type,message
+2026-08-20T03:04:21,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T03:04:21,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T03:04:27,INFO,managed_done_exit,loop_tick HK.01211
+2026-08-20T06:05:43,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T06:05:43,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T06:05:45,WARN,place_failed,Invalid quantity.
+2026-08-20T06:05:45,ERROR,exit_order_fatal,exit_order_fatal | code=HK.01211 status=- reason=Invalid quantity.
+2026-08-20T06:57:24,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T06:57:24,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T06:57:26,INFO,place_exit,oid=3244753
+2026-08-20T06:57:31,INFO,managed_done_exit,loop_tick HK.01211
+2026-08-24T02:10:44,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T02:10:44,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T02:10:46,WARN,place_failed,Short selling is currently not supported.
+2026-08-24T02:10:46,ERROR,entry_order_fatal,entry_order_fatal | code=HK.01211 status=- reason=Short selling is currently not supported.
+2026-08-24T03:40:55,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T03:40:55,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T03:41:00,INFO,managed_done_exit,loop_tick HK.01211
+2026-08-24T05:40:45,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T05:40:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T05:40:47,INFO,place_exit,oid=3250565
+2026-08-24T05:40:53,INFO,managed_done_exit,loop_tick HK.01211
+2026-08-24T06:15:42,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T06:15:42,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T06:15:47,INFO,managed_done_exit,loop_tick HK.01211
+2026-08-24T07:10:31,INFO,startup,启动成功 symbol=HK.01211 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T07:10:31,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T07:10:33,INFO,place_exit,oid=3250669
+2026-08-24T07:10:39,INFO,managed_done_exit,loop_tick HK.01211

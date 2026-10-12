@@ -1,0 +1,15 @@
+{
+  "batch_id": "20260831_085043",
+  "session": {
+    "bj": "2026-08-31 16:50:43",
+    "et": "2026-08-31 04:50:43 EDT",
+    "hk": "2026-08-31 16:50:43 HKT",
+    "us_session": "美股盘前",
+    "hk_session": "港股收盘后"
+  },
+  "samples": 20,
+  "timeout_sec": 20.0,
+  "gap_sec": 0.9,
+  "symbol_count": 50,
+  "note": "热连接主测+冷连接附录；BasicQot 非 OrderBook"
+}

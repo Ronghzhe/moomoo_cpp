@@ -1,0 +1,118 @@
+2026-08-20 21:44:03.758 | INFO | strategy_runtime.acc_0_idx_0.US_STX | startup | 启动成功 symbol=US.STX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:44:03.758 | INFO | strategy_runtime.acc_0_idx_0.US_STX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:44:03.758 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX | lot_size/手 | code=US.STX value=1 (snapshot)
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   订阅 / subscribe: ORDER_BOOK  |  US.STX 推送已开 / push on
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX | ==========================================================
+2026-08-20 21:44:04.239 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 21:44:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=845.27 ask_1=847.91
+2026-08-20 21:44:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_STX | entry_judge/开仓子条件 | code=US.STX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=2 est_notional~1695.82
+2026-08-20 21:44:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 开始交易/start_trade | code=US.STX entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:44:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 报单计算/order_sizing | 参考价/px=847.91 | budget_total=2000.00 | lot_size=1 => qty=2 | lot_size=1 budget/price~2.35874 n_lots=2 qty=2 | est_notional~1695.82
+2026-08-20 21:44:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=847.91 submit_price=864.87 time_in_force=DAY side=BUY code=US.STX qty=2 est_notional~1729.74 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:44:04.761 | WARN | strategy_runtime.acc_0_idx_0.US_STX | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:04.761 | WARN | strategy_runtime.acc_0_idx_0.US_STX | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:04.761 | ERROR | strategy_runtime.acc_0_idx_0.US_STX | entry_order_fatal | entry_order_fatal | code=US.STX status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:12:58.200 | INFO | strategy_runtime.acc_0_idx_0.US_STX | startup | 启动成功 symbol=US.STX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:12:58.200 | INFO | strategy_runtime.acc_0_idx_0.US_STX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:12:58.200 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX | lot_size/手 | code=US.STX value=1 (snapshot)
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   订阅 / subscribe: ORDER_BOOK  |  US.STX 推送已开 / push on
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX | ==========================================================
+2026-08-20 22:12:58.676 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 22:12:59.164 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.6 ask_1=856.81
+2026-08-20 22:12:59.164 | INFO | strategy_runtime.acc_0_idx_0.US_STX | entry_judge/开仓子条件 | code=US.STX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=2 est_notional~1713.62
+2026-08-20 22:12:59.164 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 开始交易/start_trade | code=US.STX entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:12:59.164 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 报单计算/order_sizing | 参考价/px=856.81 | budget_total=2000.00 | lot_size=1 => qty=2 | lot_size=1 budget/price~2.33424 n_lots=2 qty=2 | est_notional~1713.62
+2026-08-20 22:12:59.164 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=856.81 submit_price=873.95 time_in_force=DAY side=BUY code=US.STX qty=2 est_notional~1747.90 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:12:59.475 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 下单结果/place_order_result | ret=0 order_id=3246021 status=SUBMITTING
+2026-08-20 22:12:59.475 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 已报单，等待成交/await_order_fill | order_id=3246021 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:12:59.761 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:12:59.761 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.22 ask_1=857.88
+2026-08-20 22:13:00.051 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.051 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.23 ask_1=858
+2026-08-20 22:13:00.051 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.051 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.23 ask_1=858
+2026-08-20 22:13:00.336 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.336 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.23 ask_1=858
+2026-08-20 22:13:00.337 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.337 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.55
+2026-08-20 22:13:00.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.362 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.55
+2026-08-20 22:13:00.657 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.657 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.55
+2026-08-20 22:13:00.965 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.966 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.55
+2026-08-20 22:13:00.966 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:00.966 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.49
+2026-08-20 22:13:01.260 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:01.260 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.49
+2026-08-20 22:13:01.261 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:01.261 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.5
+2026-08-20 22:13:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.26 ask_1=858.49
+2026-08-20 22:13:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.88 ask_1=858.49
+2026-08-20 22:13:01.851 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:01.851 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.88 ask_1=858.49
+2026-08-20 22:13:02.156 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:02.156 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.88 ask_1=858.48
+2026-08-20 22:13:02.451 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:02.451 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.88 ask_1=858.49
+2026-08-20 22:13:02.754 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:02.754 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=855.88 ask_1=858.49
+2026-08-20 22:13:03.097 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:03.097 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:03.355 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:03.355 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:03.656 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:03.656 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:03.954 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:03.954 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:03.954 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:03.954 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:04.257 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:04.257 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:04.257 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:04.257 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:04.862 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:04.862 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:04.863 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:04.864 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.24 ask_1=858.49
+2026-08-20 22:13:05.157 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:05.157 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:05.455 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:05.456 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:05.456 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:05.456 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:05.753 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:05.753 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:06.056 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=5 dealt=0 target=2 -> wait
+2026-08-20 22:13:06.056 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 订单轮询/order_poll | code=US.STX order_id=3246021 status=11 dealt=2 target=2 -> filled
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 【开仓】====2026-08-20 22:13:06.360
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | US.STX-buy  |  计划金额: 2000
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | real_price: 857.37 (exp=873.95)
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | real_qty: 2 | real_amount: 1714.73
+2026-08-20 22:13:06.360 | INFO | strategy_runtime.acc_0_idx_0.US_STX | env: paper
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | o_status: filled (order_id:3246021)
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | task_id: nana_paper_STX_5m_1787233010420
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 触发开仓条件------------------------
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | ·立即开仓 (2%限仿市)
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 预设平仓条件------------------------
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 不平仓，无平仓监控
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 22:13:06.361 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 
+2026-08-20 22:13:07.041 | INFO | strategy_runtime.acc_0_idx_0.US_STX | 读取行情/read_market | code=US.STX bid_1=856.52 ask_1=858.49
+2026-08-20 22:13:07.041 | INFO | strategy_runtime.acc_0_idx_0.US_STX | managed_done_exit | loop_tick US.STX

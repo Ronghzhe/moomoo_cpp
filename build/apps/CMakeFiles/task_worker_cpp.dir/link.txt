@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -no-pie -Wl,--dependency-file=CMakeFiles/task_worker_cpp.dir/link.d CMakeFiles/task_worker_cpp.dir/task_worker_main.cpp.o -o task_worker_cpp  ../src/libmoomoo_core.a -lmysqlclient

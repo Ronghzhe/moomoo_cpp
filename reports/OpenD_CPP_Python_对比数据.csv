@@ -1,0 +1,11 @@
+﻿section,experiment,trd_env,metric,code,python_n,python_p50_ms,python_p90_ms,python_p95_ms,python_mean_ms,python_min_ms,python_max_ms,cpp_n,cpp_p50_ms,cpp_p90_ms,cpp_p95_ms,cpp_mean_ms,cpp_min_ms,cpp_max_ms,p50_ratio_py_over_cpp,notes
+3_kline,kline_warm,SIMULATE,ms_fetch,US.AAPL,50,3.297,4.085,4.566,4.251,2.548,47.516,50,1.365,2.361,4.471,2.764,0.844,55.837,2.415,K_5M x80 warm 50 iters
+4_push,basic_qot_push,SIMULATE,ms_first_push,US.AAPL,30,11.084,14.684,22.299,20.725,9.672,277.869,30,7.41,11.687,14.586,8.341,5.783,16.346,1.496,BasicQot 30 rounds
+5_order_push,order_warm,SIMULATE,ms_place,HK.02208,15,60.364,72.389,72.389,62.397,48.311,100.831,15,42.218,49.927,49.927,43.814,36.472,51.603,1.43,qty=200 price=20; valid n=15 (rate limit after iter 15)
+5_order_push,order_warm,SIMULATE,ms_order_push,HK.02208,15,57.767,66.75,66.75,59.507,44.289,116.583,15,41.964,49.885,49.885,43.219,36.224,51.328,1.377,qty=200 price=20; valid n=15
+9_query_cancel,query_cancel_warm,SIMULATE,ms_query,US.AAPL,10,24.769,26.898,36.897,25.202,21.305,36.897,10,17.124,18.661,25.681,17.894,15.263,25.681,1.446,GetOrderList; iter_gap=3s n=10
+9_query_cancel,query_cancel_warm,SIMULATE,ms_cancel,US.AAPL,10,30.679,39.675,41.216,32.213,23.274,41.216,10,20.917,31.613,32.166,23.476,18.533,32.166,1.467,ModifyOrder CANCEL; iter_gap=3s n=10
+8_real_roundtrip,real_roundtrip,REAL,buy_ms_place,HK.02208,1,313.337,,,313.337,313.337,313.337,1,266.347,,,266.347,266.347,266.347,1.176,n=1 single round-trip; not mixed with SIMULATE p50
+8_real_roundtrip,real_roundtrip,REAL,buy_ms_order_push,HK.02208,1,308.702,,,308.702,308.702,308.702,1,266.293,,,266.293,266.293,266.293,1.159,n=1 single round-trip; not mixed with SIMULATE p50
+8_real_roundtrip,real_roundtrip,REAL,sell_ms_place,HK.02208,1,314.893,,,314.893,314.893,314.893,1,287.995,,,287.995,287.995,287.995,1.093,n=1 single round-trip; not mixed with SIMULATE p50
+8_real_roundtrip,real_roundtrip,REAL,sell_ms_order_push,HK.02208,1,309.322,,,309.322,309.322,309.322,1,286.453,,,286.453,286.453,286.453,1.08,n=1 single round-trip; not mixed with SIMULATE p50

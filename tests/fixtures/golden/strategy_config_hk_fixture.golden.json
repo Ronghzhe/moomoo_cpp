@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "client_name": "FixtureClient",
+  "strategy_name": "short_squeeze",
+  "mode": "paper",
+  "opend_host": "127.0.0.1",
+  "opend_port": 11121,
+  "trd_market": "HK",
+  "order_type": "NORMAL",
+  "order_poll_min_sec": 3.0,
+  "dingding_enabled": false,
+  "symbol_count": 1,
+  "symbols": [
+    {
+      "code": "HK.09626",
+      "enabled": true,
+      "entry_side": "BUY",
+      "order_type": "SIM_MARKET",
+      "time_in_force": "DAY",
+      "entry_qty": 200.0,
+      "budget": 0.0,
+      "status": 2,
+      "sim_market_pct": 0.01,
+      "exit_enabled": false,
+      "entry_strategy_logic": "any",
+      "exit_strategy_logic": "any",
+      "entry_strategies": [
+        {
+          "id": "S1",
+          "enabled": true,
+          "logic": "all",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "candle_1",
+          "enabled": false,
+          "logic": "all",
+          "condition_types": [
+            "KlineCandleCondition"
+          ]
+        },
+        {
+          "id": "S2",
+          "enabled": false,
+          "logic": "all",
+          "condition_types": [
+            "PriceCondition",
+            "DayOpenGainWhen",
+            "VolumeEntryWhen",
+            "KlineCloseCondition",
+            "KlineCandleCondition"
+          ]
+        }
+      ],
+      "exit_strategies": [
+        {
+          "id": "普通orderbook平仓",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "吊灯止损",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "TrailingTakeProfitCondition"
+          ]
+        },
+        {
+          "id": "E_建仓前两根15m最低低减005",
+          "enabled": true,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PreEntryBarsLowStopCondition"
+          ]
+        },
+        {
+          "id": "15根close均线平仓",
+          "enabled": true,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "TrailingMA20CloseCondition"
+          ]
+        },
+        {
+          "id": "20日均线实时平仓",
+          "enabled": true,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "TrailingMA20RealtimeCondition"
+          ]
+        },
+        {
+          "id": "分批止盈示例",
+          "enabled": true,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "StagedTakeProfitCondition"
+          ]
+        },
+        {
+          "id": "E2_PRICE_LOW",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "E3_PNL_TAKE",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PnlCondition"
+          ]
+        },
+        {
+          "id": "E4_PNL_STOP",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PnlCondition"
+          ]
+        }
+      ],
+      "task_id_nonempty": true
+    }
+  ]
+}

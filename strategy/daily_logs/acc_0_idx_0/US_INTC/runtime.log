@@ -1,0 +1,1198 @@
+2026-08-20 22:01:25.453 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:01:25.453 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:01:25.453 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:01:25.671 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-20 22:01:25.671 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:01:25.671 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:01:25.671 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:01:25.671 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-20 22:01:25.672 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:01:25.672 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:01:25.672 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-20 22:01:25.672 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:01:26.044 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.52 ask_1=90.55
+2026-08-20 22:01:26.044 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | entry_judge/开仓子条件 | code=US.INTC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=22 est_notional~1992.10
+2026-08-20 22:01:26.044 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 开始交易/start_trade | code=US.INTC entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:01:26.044 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单计算/order_sizing | 参考价/px=90.52 | budget_total=2000.00 | lot_size=1 => qty=22 | lot_size=1 budget/price~22.0946 n_lots=22 qty=22 | est_notional~1991.44
+2026-08-20 22:01:26.044 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.52 submit_price=88.70 time_in_force=DAY side=SELL code=US.INTC qty=22 est_notional~1951.40 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:01:26.349 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3245943 status=SUBMITTING
+2026-08-20 22:01:26.349 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 已报单，等待成交/await_order_fill | order_id=3245943 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:01:26.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:26.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.56 ask_1=90.59
+2026-08-20 22:01:26.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:26.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.56 ask_1=90.59
+2026-08-20 22:01:26.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:26.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.56 ask_1=90.58
+2026-08-20 22:01:26.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:26.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.58
+2026-08-20 22:01:27.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.59
+2026-08-20 22:01:27.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.59
+2026-08-20 22:01:27.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.529 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.59
+2026-08-20 22:01:27.529 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.529 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.59
+2026-08-20 22:01:27.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.59
+2026-08-20 22:01:27.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:27.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.63
+2026-08-20 22:01:28.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.62
+2026-08-20 22:01:28.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.58 ask_1=90.62
+2026-08-20 22:01:28.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.58 ask_1=90.62
+2026-08-20 22:01:28.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.58 ask_1=90.62
+2026-08-20 22:01:28.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.6 ask_1=90.62
+2026-08-20 22:01:28.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:28.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.61 ask_1=90.64
+2026-08-20 22:01:29.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.61 ask_1=90.64
+2026-08-20 22:01:29.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.6 ask_1=90.64
+2026-08-20 22:01:29.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.64
+2026-08-20 22:01:29.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.65
+2026-08-20 22:01:29.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.65
+2026-08-20 22:01:29.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.65
+2026-08-20 22:01:29.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.65
+2026-08-20 22:01:29.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:29.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.65
+2026-08-20 22:01:30.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.62 ask_1=90.62
+2026-08-20 22:01:30.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.62
+2026-08-20 22:01:30.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.6 ask_1=90.63
+2026-08-20 22:01:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.6 ask_1=90.63
+2026-08-20 22:01:30.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.6 ask_1=90.62
+2026-08-20 22:01:30.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:30.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.62
+2026-08-20 22:01:31.137 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.137 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.59 ask_1=90.56
+2026-08-20 22:01:31.138 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.138 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.54 ask_1=90.56
+2026-08-20 22:01:31.437 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.437 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.57
+2026-08-20 22:01:31.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.57
+2026-08-20 22:01:31.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.55 ask_1=90.55
+2026-08-20 22:01:31.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:31.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.53 ask_1=90.55
+2026-08-20 22:01:32.039 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.040 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.52 ask_1=90.51
+2026-08-20 22:01:32.040 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.040 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.48 ask_1=90.5
+2026-08-20 22:01:32.331 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.331 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.5
+2026-08-20 22:01:32.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.53
+2026-08-20 22:01:32.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.52
+2026-08-20 22:01:32.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.52
+2026-08-20 22:01:32.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.52
+2026-08-20 22:01:32.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:01:32.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.52
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3245943 status=11 dealt=22 target=22 -> filled
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【开仓】====2026-08-20 22:01:33.236
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-sell  |  计划金额: 2000
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 90.48 (exp=88.70)
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 22 | real_amount: 1990.58
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3245943)
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787234434464
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发开仓条件------------------------
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即开仓 (2%限仿市)
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 预设平仓条件------------------------
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 不平仓，无平仓监控
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:01:33.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:01:33.921 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.49 ask_1=90.52
+2026-08-20 22:01:33.921 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-20 22:25:28.466 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 22:25:28.466 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:25:28.466 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-20 22:25:28.942 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:25:29.363 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.32 ask_1=91.34
+2026-08-20 22:25:29.363 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | exit_judge/平仓子条件 | code=US.INTC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=22 est_notional~2009.04
+2026-08-20 22:25:29.363 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=91.34 submit_price=93.17 time_in_force=DAY side=BUY code=US.INTC qty=22 est_notional~2049.74 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 22:25:29.698 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3246076 status=SUBMITTING
+2026-08-20 22:25:29.698 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓已报单，等待成交/exit_await_fill | order_id=3246076 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-20 22:25:29.698 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓触发/exit_hit | code=US.INTC 立即平仓 (2%限仿市)
+2026-08-20 22:25:29.698 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | place_exit | oid=3246076
+2026-08-20 22:25:29.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:29.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.32 ask_1=91.34
+2026-08-20 22:25:29.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:29.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.32 ask_1=91.34
+2026-08-20 22:25:30.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.34 ask_1=91.34
+2026-08-20 22:25:30.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.34 ask_1=91.37
+2026-08-20 22:25:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.34 ask_1=91.37
+2026-08-20 22:25:30.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.532 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.37
+2026-08-20 22:25:30.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.37
+2026-08-20 22:25:30.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:30.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.37
+2026-08-20 22:25:31.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.36
+2026-08-20 22:25:31.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.36
+2026-08-20 22:25:31.437 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.437 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.33 ask_1=91.34
+2026-08-20 22:25:31.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.32 ask_1=91.34
+2026-08-20 22:25:31.724 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.724 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.3 ask_1=91.31
+2026-08-20 22:25:31.724 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.724 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.31
+2026-08-20 22:25:31.755 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:31.755 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.31
+2026-08-20 22:25:32.042 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.043 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.29
+2026-08-20 22:25:32.043 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.043 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.29
+2026-08-20 22:25:32.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.29
+2026-08-20 22:25:32.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.31
+2026-08-20 22:25:32.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.31
+2026-08-20 22:25:32.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.31
+2026-08-20 22:25:32.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.31
+2026-08-20 22:25:32.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:32.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.31
+2026-08-20 22:25:33.232 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.232 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.28 ask_1=91.28
+2026-08-20 22:25:33.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:33.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:33.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:33.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:33.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:33.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:34.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:34.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.28
+2026-08-20 22:25:34.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.27 ask_1=91.28
+2026-08-20 22:25:34.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:34.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:34.728 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:34.728 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.26 ask_1=91.28
+2026-08-20 22:25:35.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.27
+2026-08-20 22:25:35.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.27
+2026-08-20 22:25:35.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.27
+2026-08-20 22:25:35.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.27
+2026-08-20 22:25:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.28
+2026-08-20 22:25:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.28
+2026-08-20 22:25:35.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.25 ask_1=91.25
+2026-08-20 22:25:35.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=5 dealt=0 target=22 -> wait
+2026-08-20 22:25:35.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.23 ask_1=91.25
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246076 status=11 dealt=22 target=22 -> filled
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【平仓】====2026-08-20 22:25:36.235
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-sell
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 91.27 (exp=93.17)
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 22
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3246076)
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787234434464
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发平仓条件------------------------
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即平仓 (2%限仿市)
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【盈亏统计】------------------------
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl: -17.25
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl%: -0.87%
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:25:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 22:25:36.916 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.23 ask_1=91.24
+2026-08-20 22:25:36.916 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-20 23:05:54.450 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 23:05:54.450 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 23:05:54.450 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-20 23:05:54.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:05:55.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.62 ask_1=91.65
+2026-08-20 23:05:55.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | entry_judge/开仓子条件 | code=US.INTC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=21 est_notional~1924.65
+2026-08-20 23:05:55.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 开始交易/start_trade | code=US.INTC entry_hit=立即开仓 (2%限仿市)
+2026-08-20 23:05:55.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单计算/order_sizing | 参考价/px=91.65 | budget_total=2000.00 | lot_size=1 => qty=21 | lot_size=1 budget/price~21.8221 n_lots=21 qty=21 | est_notional~1924.65
+2026-08-20 23:05:55.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=91.65 submit_price=93.49 time_in_force=DAY side=BUY code=US.INTC qty=21 est_notional~1963.29 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 23:05:55.752 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3246231 status=SUBMITTING
+2026-08-20 23:05:55.752 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 已报单，等待成交/await_order_fill | order_id=3246231 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 23:05:56.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.62
+2026-08-20 23:05:56.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.62
+2026-08-20 23:05:56.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.62
+2026-08-20 23:05:56.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.62
+2026-08-20 23:05:56.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.62
+2026-08-20 23:05:56.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.62
+2026-08-20 23:05:56.916 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.916 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.62
+2026-08-20 23:05:56.916 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.917 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.63
+2026-08-20 23:05:56.937 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:56.938 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.63
+2026-08-20 23:05:57.237 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.237 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.59 ask_1=91.57
+2026-08-20 23:05:57.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.238 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.56 ask_1=91.57
+2026-08-20 23:05:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.57
+2026-08-20 23:05:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.58
+2026-08-20 23:05:57.833 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.833 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.58
+2026-08-20 23:05:57.833 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:57.833 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.58
+2026-08-20 23:05:58.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.58
+2026-08-20 23:05:58.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.59
+2026-08-20 23:05:58.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.56 ask_1=91.58
+2026-08-20 23:05:58.431 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.431 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.56 ask_1=91.58
+2026-08-20 23:05:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.56 ask_1=91.56
+2026-08-20 23:05:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.55 ask_1=91.56
+2026-08-20 23:05:59.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.55 ask_1=91.56
+2026-08-20 23:05:59.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.55 ask_1=91.56
+2026-08-20 23:05:59.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-20 23:05:59.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-20 23:05:59.620 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.621 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-20 23:05:59.621 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.621 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-20 23:05:59.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-20 23:05:59.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.54
+2026-08-20 23:05:59.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:05:59.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.54
+2026-08-20 23:06:00.216 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.216 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.53
+2026-08-20 23:06:00.216 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.216 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.53
+2026-08-20 23:06:00.241 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.242 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.53
+2026-08-20 23:06:00.242 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.242 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.53
+2026-08-20 23:06:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.54
+2026-08-20 23:06:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.531 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:00.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:00.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:00.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.58
+2026-08-20 23:06:01.113 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.113 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.58
+2026-08-20 23:06:01.113 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.113 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.58
+2026-08-20 23:06:01.432 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.432 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.56
+2026-08-20 23:06:01.432 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.432 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.56
+2026-08-20 23:06:01.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.56
+2026-08-20 23:06:01.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:01.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.57
+2026-08-20 23:06:02.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:02.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:02.326 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.56
+2026-08-20 23:06:02.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.56
+2026-08-20 23:06:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.56
+2026-08-20 23:06:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.56
+2026-08-20 23:06:02.919 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.919 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.56
+2026-08-20 23:06:02.919 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:06:02.919 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3246231 status=11 dealt=21 target=21 -> filled
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【开仓】====2026-08-20 23:06:03.234
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-buy  |  计划金额: 2000
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 91.54 (exp=93.49)
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21 | real_amount: 1922.34
+2026-08-20 23:06:03.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3246231)
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787238343244
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发开仓条件------------------------
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即开仓 (2%限仿市)
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 预设平仓条件------------------------
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 不平仓，无平仓监控
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:06:03.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:06:03.984 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.57
+2026-08-20 23:06:03.984 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-20 23:40:33.271 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 23:40:33.271 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 23:40:33.271 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-20 23:40:33.490 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:40:33.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.12 ask_1=91.14
+2026-08-20 23:40:33.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | exit_judge/平仓子条件 | code=US.INTC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=21 est_notional~1913.52
+2026-08-20 23:40:33.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=91.12 submit_price=89.29 time_in_force=DAY side=SELL code=US.INTC qty=21 est_notional~1875.09 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 23:40:34.183 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3246311 status=SUBMITTING
+2026-08-20 23:40:34.183 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓已报单，等待成交/exit_await_fill | order_id=3246311 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-20 23:40:34.183 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓触发/exit_hit | code=US.INTC 立即平仓 (2%限仿市)
+2026-08-20 23:40:34.183 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | place_exit | oid=3246311
+2026-08-20 23:40:34.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:34.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.12 ask_1=91.14
+2026-08-20 23:40:34.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:34.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.12 ask_1=91.14
+2026-08-20 23:40:34.726 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:34.726 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.14
+2026-08-20 23:40:34.726 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:34.726 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.14
+2026-08-20 23:40:35.022 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.022 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.14
+2026-08-20 23:40:35.022 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.022 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.14
+2026-08-20 23:40:35.324 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.324 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.14
+2026-08-20 23:40:35.325 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.325 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.14 ask_1=91.15
+2026-08-20 23:40:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.14 ask_1=91.15
+2026-08-20 23:40:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.13 ask_1=91.15
+2026-08-20 23:40:35.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.16 ask_1=91.16
+2026-08-20 23:40:35.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:35.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.17 ask_1=91.17
+2026-08-20 23:40:36.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.18 ask_1=91.19
+2026-08-20 23:40:36.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.2
+2026-08-20 23:40:36.546 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.546 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.2
+2026-08-20 23:40:36.547 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.547 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.2
+2026-08-20 23:40:36.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.2
+2026-08-20 23:40:36.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:36.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.2
+2026-08-20 23:40:37.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:37.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.19 ask_1=91.21
+2026-08-20 23:40:37.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:37.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:37.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:37.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:37.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:37.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:37.730 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:37.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.21 ask_1=91.22
+2026-08-20 23:40:38.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.028 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.21 ask_1=91.22
+2026-08-20 23:40:38.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.22
+2026-08-20 23:40:38.326 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.326 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.22
+2026-08-20 23:40:38.326 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.326 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.22
+2026-08-20 23:40:38.626 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.626 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.21 ask_1=91.22
+2026-08-20 23:40:38.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:38.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.22 ask_1=91.23
+2026-08-20 23:40:39.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.21 ask_1=91.21
+2026-08-20 23:40:39.232 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.232 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:39.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:39.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:39.828 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.828 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:39.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:39.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:40.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:40.128 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:40.426 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:40.426 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:40.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:40.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:40.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:40.727 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:41.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:41.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.027 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.21
+2026-08-20 23:40:41.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.2 ask_1=91.19
+2026-08-20 23:40:41.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.328 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.18 ask_1=91.19
+2026-08-20 23:40:41.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.18 ask_1=91.18
+2026-08-20 23:40:41.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.17 ask_1=91.18
+2026-08-20 23:40:41.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.16 ask_1=91.17
+2026-08-20 23:40:41.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=5 dealt=0 target=21 -> wait
+2026-08-20 23:40:41.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.15 ask_1=91.17
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3246311 status=11 dealt=21 target=21 -> filled
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【平仓】====2026-08-20 23:40:42.226
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-buy
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 91.20 (exp=89.29)
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3246311)
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787238343244
+2026-08-20 23:40:42.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发平仓条件------------------------
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即平仓 (2%限仿市)
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【盈亏统计】------------------------
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl: -7.14
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl%: -0.37%
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:40:42.227 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-20 23:40:42.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.15 ask_1=91.17
+2026-08-20 23:40:42.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-21 21:40:56.257 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 21:40:56.257 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 21:40:56.257 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-21 21:40:56.474 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 21:40:56.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.51 ask_1=91.53
+2026-08-21 21:40:56.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | entry_judge/开仓子条件 | code=US.INTC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=21 est_notional~1922.13
+2026-08-21 21:40:56.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 开始交易/start_trade | code=US.INTC entry_hit=立即开仓 (2%限仿市)
+2026-08-21 21:40:56.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单计算/order_sizing | 参考价/px=91.51 | budget_total=2000.00 | lot_size=1 => qty=21 | lot_size=1 budget/price~21.8555 n_lots=21 qty=21 | est_notional~1921.71
+2026-08-21 21:40:56.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=91.51 submit_price=89.67 time_in_force=DAY side=SELL code=US.INTC qty=21 est_notional~1883.07 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 21:40:57.304 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3248011 status=SUBMITTING
+2026-08-21 21:40:57.304 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 已报单，等待成交/await_order_fill | order_id=3248011 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 21:40:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.51 ask_1=91.52
+2026-08-21 21:40:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:57.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.52
+2026-08-21 21:40:57.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:57.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.52
+2026-08-21 21:40:57.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:57.832 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.52
+2026-08-21 21:40:58.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.51 ask_1=91.53
+2026-08-21 21:40:58.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.51 ask_1=91.53
+2026-08-21 21:40:58.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.53
+2026-08-21 21:40:58.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.434 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.53
+2026-08-21 21:40:58.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.52
+2026-08-21 21:40:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:58.732 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.49 ask_1=91.52
+2026-08-21 21:40:59.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.52
+2026-08-21 21:40:59.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.5 ask_1=91.53
+2026-08-21 21:40:59.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.51 ask_1=91.53
+2026-08-21 21:40:59.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.55
+2026-08-21 21:40:59.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.55
+2026-08-21 21:40:59.628 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.628 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.55
+2026-08-21 21:40:59.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.929 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.55
+2026-08-21 21:40:59.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:40:59.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.56
+2026-08-21 21:41:00.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.55
+2026-08-21 21:41:00.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.52 ask_1=91.55
+2026-08-21 21:41:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-21 21:41:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.54 ask_1=91.55
+2026-08-21 21:41:00.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.54
+2026-08-21 21:41:00.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:00.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.53 ask_1=91.54
+2026-08-21 21:41:01.132 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.57
+2026-08-21 21:41:01.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.57 ask_1=91.59
+2026-08-21 21:41:01.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.59
+2026-08-21 21:41:01.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.6 ask_1=91.62
+2026-08-21 21:41:01.718 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.718 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.65 ask_1=91.62
+2026-08-21 21:41:01.718 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.718 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.65 ask_1=91.66
+2026-08-21 21:41:01.757 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.757 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.65 ask_1=91.66
+2026-08-21 21:41:01.757 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:01.757 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.65 ask_1=91.66
+2026-08-21 21:41:02.034 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.034 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.65 ask_1=91.66
+2026-08-21 21:41:02.034 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.034 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.64 ask_1=91.66
+2026-08-21 21:41:02.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.64 ask_1=91.64
+2026-08-21 21:41:02.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.64
+2026-08-21 21:41:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.64
+2026-08-21 21:41:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.64
+2026-08-21 21:41:02.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.61 ask_1=91.63
+2026-08-21 21:41:02.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:41:02.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.59 ask_1=91.63
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248011 status=11 dealt=21 target=21 -> filled
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【开仓】====2026-08-21 21:41:03.233
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-sell  |  计划金额: 2000
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 91.66 (exp=89.67)
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21 | real_amount: 1924.86
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3248011)
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787319635903
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发开仓条件------------------------
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即开仓 (2%限仿市)
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 预设平仓条件------------------------
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 不平仓，无平仓监控
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 21:41:03.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 21:41:03.918 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=91.63 ask_1=91.63
+2026-08-21 21:41:03.918 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-21 23:15:22.300 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 23:15:22.301 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 23:15:22.301 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-21 23:15:22.770 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:15:23.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.69 ask_1=90.71
+2026-08-21 23:15:23.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | exit_judge/平仓子条件 | code=US.INTC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=21 est_notional~1904.49
+2026-08-21 23:15:23.037 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.71 submit_price=92.53 time_in_force=DAY side=BUY code=US.INTC qty=21 est_notional~1943.13 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 23:15:23.379 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3248469 status=SUBMITTING
+2026-08-21 23:15:23.379 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓已报单，等待成交/exit_await_fill | order_id=3248469 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 23:15:23.380 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓触发/exit_hit | code=US.INTC 立即平仓 (2%限仿市)
+2026-08-21 23:15:23.380 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | place_exit | oid=3248469
+2026-08-21 23:15:23.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:23.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.69
+2026-08-21 23:15:23.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:23.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.69 ask_1=90.71
+2026-08-21 23:15:23.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:23.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.69 ask_1=90.7
+2026-08-21 23:15:23.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:23.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.69 ask_1=90.7
+2026-08-21 23:15:24.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.69 ask_1=90.7
+2026-08-21 23:15:24.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.236 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.7
+2026-08-21 23:15:24.534 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.534 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.69
+2026-08-21 23:15:24.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.535 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.69
+2026-08-21 23:15:24.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.68
+2026-08-21 23:15:24.836 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:24.836 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:25.127 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.127 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:25.127 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.127 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:25.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:25.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.69
+2026-08-21 23:15:25.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:25.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:25.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.68
+2026-08-21 23:15:26.017 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.017 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.68
+2026-08-21 23:15:26.018 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.018 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.67 ask_1=90.7
+2026-08-21 23:15:26.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.7
+2026-08-21 23:15:26.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.71
+2026-08-21 23:15:26.628 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.628 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.7
+2026-08-21 23:15:26.629 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.629 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.7
+2026-08-21 23:15:26.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.68 ask_1=90.67
+2026-08-21 23:15:26.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:26.937 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.233 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.526 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.528 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.825 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.825 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:27.826 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:27.826 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.132 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.132 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.133 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.728 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.728 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:28.729 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:28.729 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:29.035 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.035 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:29.035 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.035 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:29.331 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:29.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.332 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:29.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:29.625 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.626 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:29.925 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.925 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:29.925 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:29.926 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:30.230 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.230 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:30.230 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.230 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:30.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:30.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.530 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:30.834 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.834 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:30.834 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:30.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:31.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:31.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:31.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:31.129 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:31.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:31.428 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:31.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:31.429 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:31.729 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:31.729 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:32.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:32.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.67
+2026-08-21 23:15:32.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:32.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.327 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:32.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.65 ask_1=90.68
+2026-08-21 23:15:32.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.627 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.68
+2026-08-21 23:15:32.934 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.934 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.66 ask_1=90.67
+2026-08-21 23:15:32.934 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:15:32.934 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.64 ask_1=90.67
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248469 status=11 dealt=21 target=21 -> filled
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【平仓】====2026-08-21 23:15:33.225
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-sell
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 90.68 (exp=92.53)
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3248469)
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787319635903
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发平仓条件------------------------
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即平仓 (2%限仿市)
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【盈亏统计】------------------------
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl: +20.58
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl%: +1.07%
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:15:33.225 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:15:33.949 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.64 ask_1=90.67
+2026-08-21 23:15:33.949 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-21 23:41:02.955 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 23:41:02.955 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 23:41:02.955 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 23:41:03.433 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 23:41:03.434 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-21 23:41:03.434 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:41:03.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.94
+2026-08-21 23:41:03.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | entry_judge/开仓子条件 | code=US.INTC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=21 est_notional~1909.74
+2026-08-21 23:41:03.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 开始交易/start_trade | code=US.INTC entry_hit=立即开仓 (2%限仿市)
+2026-08-21 23:41:03.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单计算/order_sizing | 参考价/px=90.94 | budget_total=2000.00 | lot_size=1 => qty=21 | lot_size=1 budget/price~21.9925 n_lots=21 qty=21 | est_notional~1909.74
+2026-08-21 23:41:03.838 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.94 submit_price=92.76 time_in_force=DAY side=BUY code=US.INTC qty=21 est_notional~1947.96 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 23:41:04.171 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3248576 status=SUBMITTING
+2026-08-21 23:41:04.171 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 已报单，等待成交/await_order_fill | order_id=3248576 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 23:41:04.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:04.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.94
+2026-08-21 23:41:04.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:04.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.94
+2026-08-21 23:41:04.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:04.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.94 ask_1=90.95
+2026-08-21 23:41:04.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:04.733 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.94 ask_1=90.95
+2026-08-21 23:41:05.033 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.034 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.94 ask_1=90.95
+2026-08-21 23:41:05.329 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.329 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.94 ask_1=90.96
+2026-08-21 23:41:05.329 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.329 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.94 ask_1=90.96
+2026-08-21 23:41:05.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.96
+2026-08-21 23:41:05.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.634 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.96
+2026-08-21 23:41:05.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.97
+2026-08-21 23:41:05.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:05.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.98
+2026-08-21 23:41:06.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:06.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:06.532 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.532 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:06.532 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.532 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:06.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:06.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:06.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:07.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:07.134 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:07.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:07.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:07.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:07.435 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.98
+2026-08-21 23:41:07.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:07.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.98
+2026-08-21 23:41:07.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:07.734 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.98
+2026-08-21 23:41:08.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.029 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.98
+2026-08-21 23:41:08.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.98
+2026-08-21 23:41:08.313 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.313 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.97 ask_1=90.97
+2026-08-21 23:41:08.313 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.313 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:08.337 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:08.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:08.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:08.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:08.930 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:09.230 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:09.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.96
+2026-08-21 23:41:09.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:09.831 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.96
+2026-08-21 23:41:10.114 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:10.115 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.95
+2026-08-21 23:41:10.115 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:10.115 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.93 ask_1=90.95
+2026-08-21 23:41:10.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:10.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.95
+2026-08-21 23:41:10.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:10.430 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.96
+2026-08-21 23:41:10.739 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:10.739 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.030 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:11.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.95 ask_1=90.97
+2026-08-21 23:41:11.632 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.633 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.934 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:11.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=5 dealt=0 target=21 -> wait
+2026-08-21 23:41:11.935 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3248576 status=11 dealt=21 target=21 -> filled
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【开仓】====2026-08-21 23:41:12.231
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-buy  |  计划金额: 2000
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 90.97 (exp=92.76)
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21 | real_amount: 1910.37
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3248576)
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787326840796
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发开仓条件------------------------
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即开仓 (2%限仿市)
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 预设平仓条件------------------------
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 不平仓，无平仓监控
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:41:12.231 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-21 23:41:12.923 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.96 ask_1=90.97
+2026-08-21 23:41:12.923 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-22 00:05:34.617 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 00:05:34.618 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 00:05:34.618 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-22 00:05:34.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-22 00:05:35.333 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.35 ask_1=90.37
+2026-08-22 00:05:35.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | exit_judge/平仓子条件 | code=US.INTC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=21 est_notional~1897.35
+2026-08-22 00:05:35.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.35 submit_price=88.54 time_in_force=DAY side=SELL code=US.INTC qty=21 est_notional~1859.34 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 00:05:35.725 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3248655 status=SUBMITTING
+2026-08-22 00:05:35.725 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓已报单，等待成交/exit_await_fill | order_id=3248655 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 00:05:35.725 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 平仓触发/exit_hit | code=US.INTC 立即平仓 (2%限仿市)
+2026-08-22 00:05:35.725 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | place_exit | oid=3248655
+2026-08-22 00:05:35.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:35.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.37
+2026-08-22 00:05:35.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:35.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.39
+2026-08-22 00:05:36.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.234 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.39
+2026-08-22 00:05:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.235 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.39
+2026-08-22 00:05:36.526 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.39
+2026-08-22 00:05:36.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.527 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.38 ask_1=90.39
+2026-08-22 00:05:36.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.829 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.39
+2026-08-22 00:05:36.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:36.830 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.125 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.125 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.125 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.125 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.426 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.426 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.427 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.723 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.723 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:37.723 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:37.723 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:38.024 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.024 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:38.024 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.024 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.39 ask_1=90.4
+2026-08-22 00:05:38.312 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.312 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.4
+2026-08-22 00:05:38.312 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.312 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.335 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.336 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.336 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.336 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.926 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.926 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:38.926 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=5 dealt=0 target=21 -> wait
+2026-08-22 00:05:38.926 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll_exit | code=US.INTC order_id=3248655 status=11 dealt=21 target=21 -> filled
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【平仓】====2026-08-22 00:05:39.226
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-buy
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 90.40 (exp=88.54)
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 21
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3248655)
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787326840796
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发平仓条件------------------------
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即平仓 (2%限仿市)
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【盈亏统计】------------------------
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl: -11.97
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | pnl%: -0.63%
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-22 00:05:39.226 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-22 00:05:40.303 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=90.4 ask_1=90.41
+2026-08-22 00:05:40.303 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC
+2026-08-24 21:49:57.153 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup | 启动成功 symbol=US.INTC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24 21:49:57.154 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24 21:49:57.154 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | lot_size/手 | code=US.INTC value=1 (snapshot)
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ========== 运行中 / RUNNING ==============================
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   [RUN] 本策略已上线 / strategy is live
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   订阅 / subscribe: ORDER_BOOK  |  US.INTC 推送已开 / push on
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ==========================================================
+2026-08-24 21:49:57.630 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-24 21:49:57.844 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.73
+2026-08-24 21:49:57.844 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | entry_judge/开仓子条件 | code=US.INTC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=23 est_notional~1971.79
+2026-08-24 21:49:57.844 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 开始交易/start_trade | code=US.INTC entry_hit=立即开仓 (2%限仿市)
+2026-08-24 21:49:57.844 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单计算/order_sizing | 参考价/px=85.71 | budget_total=2000.00 | lot_size=1 => qty=23 | lot_size=1 budget/price~23.3345 n_lots=23 qty=23 | est_notional~1971.33
+2026-08-24 21:49:57.844 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=85.71 submit_price=83.99 time_in_force=DAY side=SELL code=US.INTC qty=23 est_notional~1931.77 remark=strategy_cpp_entry trd_env=paper
+2026-08-24 21:49:58.207 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 下单结果/place_order_result | ret=0 order_id=3251106 status=SUBMITTING
+2026-08-24 21:49:58.207 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 已报单，等待成交/await_order_fill | order_id=3251106 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-24 21:49:58.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:58.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.73
+2026-08-24 21:49:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.72
+2026-08-24 21:49:58.730 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:58.730 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.72
+2026-08-24 21:49:58.730 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:58.731 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:49:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:49:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.74
+2026-08-24 21:49:59.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:49:59.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.334 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.73
+2026-08-24 21:49:59.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.73
+2026-08-24 21:49:59.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.631 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.71 ask_1=85.72
+2026-08-24 21:49:59.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.72
+2026-08-24 21:49:59.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:59.928 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:50:00.239 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.240 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.73
+2026-08-24 21:50:00.240 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.240 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:00.542 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.542 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.74
+2026-08-24 21:50:00.542 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.542 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.74
+2026-08-24 21:50:00.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.74 ask_1=85.74
+2026-08-24 21:50:00.836 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:00.836 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.74 ask_1=85.76
+2026-08-24 21:50:01.137 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:01.138 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.74 ask_1=85.76
+2026-08-24 21:50:01.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:01.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.74 ask_1=85.75
+2026-08-24 21:50:01.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:01.440 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.74 ask_1=85.75
+2026-08-24 21:50:01.744 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:01.744 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:01.744 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:01.744 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:02.047 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.047 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.69
+2026-08-24 21:50:02.047 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.047 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.69
+2026-08-24 21:50:02.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.68
+2026-08-24 21:50:02.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.338 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.68
+2026-08-24 21:50:02.638 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.638 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.67
+2026-08-24 21:50:02.638 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.638 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.67
+2026-08-24 21:50:02.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.931 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.65
+2026-08-24 21:50:02.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.933 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.64 ask_1=85.65
+2026-08-24 21:50:02.997 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.997 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.63 ask_1=85.64
+2026-08-24 21:50:02.997 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:02.998 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.63 ask_1=85.64
+2026-08-24 21:50:03.242 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.242 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.65
+2026-08-24 21:50:03.243 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.243 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.67
+2026-08-24 21:50:03.537 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.537 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.67
+2026-08-24 21:50:03.537 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.537 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.68
+2026-08-24 21:50:03.834 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.834 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.68
+2026-08-24 21:50:03.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:03.835 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.68
+2026-08-24 21:50:04.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.135 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.68
+2026-08-24 21:50:04.136 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.136 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.7
+2026-08-24 21:50:04.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.438 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.7
+2026-08-24 21:50:04.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.439 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:50:04.735 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.735 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.73
+2026-08-24 21:50:04.735 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:04.735 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:05.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.031 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:05.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.032 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.74
+2026-08-24 21:50:05.317 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.317 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.73 ask_1=85.73
+2026-08-24 21:50:05.318 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.318 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.72 ask_1=85.73
+2026-08-24 21:50:05.642 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.642 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.7 ask_1=85.71
+2026-08-24 21:50:05.642 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.642 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.7 ask_1=85.71
+2026-08-24 21:50:05.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.7 ask_1=85.69
+2026-08-24 21:50:05.936 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:05.937 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.69
+2026-08-24 21:50:06.244 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.244 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.65
+2026-08-24 21:50:06.246 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.247 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.64 ask_1=85.65
+2026-08-24 21:50:06.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.65
+2026-08-24 21:50:06.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.533 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.65 ask_1=85.66
+2026-08-24 21:50:06.836 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.67
+2026-08-24 21:50:06.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:06.837 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.67 ask_1=85.69
+2026-08-24 21:50:07.137 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.137 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.66
+2026-08-24 21:50:07.138 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.138 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.64 ask_1=85.66
+2026-08-24 21:50:07.443 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.443 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.66
+2026-08-24 21:50:07.443 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.444 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.67
+2026-08-24 21:50:07.739 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.739 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.68
+2026-08-24 21:50:07.740 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:07.740 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.7
+2026-08-24 21:50:08.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.68
+2026-08-24 21:50:08.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.036 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.66 ask_1=85.68
+2026-08-24 21:50:08.340 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.340 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.69
+2026-08-24 21:50:08.341 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.341 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.7
+2026-08-24 21:50:08.635 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.635 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.7
+2026-08-24 21:50:08.635 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.635 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.68 ask_1=85.7
+2026-08-24 21:50:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.7
+2026-08-24 21:50:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:50:08.932 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.71
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 订单轮询/order_poll | code=US.INTC order_id=3251106 status=11 dealt=23 target=23 -> filled
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 【开仓】====2026-08-24 21:50:09.220
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | US.INTC-sell  |  计划金额: 2000
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_price: 85.65 (exp=83.99)
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | real_qty: 23 | real_amount: 1969.93
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | env: paper
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | o_status: filled (order_id:3251106)
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | task_id: nana_paper_INTC_5m_1787579148517
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 触发开仓条件------------------------
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | ·立即开仓 (2%限仿市)
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 预设平仓条件------------------------
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 不平仓，无平仓监控
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-24 21:50:09.220 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 
+2026-08-24 21:50:09.943 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | 读取行情/read_market | code=US.INTC bid_1=85.69 ask_1=85.7
+2026-08-24 21:50:09.943 | INFO | strategy_runtime.acc_0_idx_0.US_INTC | managed_done_exit | loop_tick US.INTC

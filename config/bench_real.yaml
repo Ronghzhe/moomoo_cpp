@@ -1,0 +1,21 @@
+# 实盘 OpenD 单轮往返测试（HK.02208）
+trd_env: REAL
+opend_host: 127.0.0.1
+opend_port: 11121
+
+code: HK.02208
+order_qty: 200
+# 0 = 测试前自动取卖一/买一
+order_price: 0
+
+fill_timeout_sec: 60
+roundtrip_gap_sec: 3
+
+# OpenD 交易 API 限频：默认 15 次 / 30 秒；实盘 bench 保守留间隔
+order_gap_sec: 2.5
+query_gap_sec: 3.0
+rate_limit_retry_max: 5
+rate_limit_retry_wait_sec: 2.5
+
+# Python 与 C++ 两轮测试之间的冷却（秒）
+lang_gap_sec: 120

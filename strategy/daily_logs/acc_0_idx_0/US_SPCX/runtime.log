@@ -1,0 +1,788 @@
+2026-08-21 01:51:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 01:51:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 01:51:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-21 01:51:04.882 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 01:51:05.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:05.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | entry_judge/开仓子条件 | code=US.SPCX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=15 est_notional~1980.45
+2026-08-21 01:51:05.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 开始交易/start_trade | code=US.SPCX entry_hit=立即开仓 (2%限仿市)
+2026-08-21 01:51:05.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单计算/order_sizing | 参考价/px=132.03 | budget_total=2000.00 | lot_size=1 => qty=15 | lot_size=1 budget/price~15.1481 n_lots=15 qty=15 | est_notional~1980.45
+2026-08-21 01:51:05.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=132.03 submit_price=134.68 time_in_force=DAY side=BUY code=US.SPCX qty=15 est_notional~2020.20 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 01:51:05.468 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3246616 status=SUBMITTING
+2026-08-21 01:51:05.468 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 已报单，等待成交/await_order_fill | order_id=3246616 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 01:51:05.729 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:05.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.628 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.629 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.920 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.920 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.01 ask_1=132.03
+2026-08-21 01:51:06.921 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:06.921 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.233 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.233 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.532 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.532 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.532 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.533 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.829 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.829 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:07.830 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:07.830 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:08.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:08.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:08.429 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:08.429 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:08.430 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:08.430 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:08.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:08.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:09.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:09.030 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:09.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:09.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:09.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:09.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:09.934 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:09.934 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:09.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:09.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132 ask_1=132.01
+2026-08-21 01:51:10.232 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.232 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.03 ask_1=132.02
+2026-08-21 01:51:10.233 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.233 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.03 ask_1=132.05
+2026-08-21 01:51:10.530 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.531 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.06 ask_1=132.05
+2026-08-21 01:51:10.531 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.531 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.06 ask_1=132.09
+2026-08-21 01:51:10.828 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.828 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.06 ask_1=132.08
+2026-08-21 01:51:10.828 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:10.829 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.05 ask_1=132.08
+2026-08-21 01:51:11.129 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:11.129 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.05 ask_1=132.08
+2026-08-21 01:51:11.129 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:11.129 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:11.430 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:11.430 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:11.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:11.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:11.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:11.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:12.028 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:12.028 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:12.029 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=5 dealt=0 target=15 -> wait
+2026-08-21 01:51:12.029 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3246616 status=11 dealt=15 target=15 -> filled
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【开仓】====2026-08-21 01:51:12.328
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy  |  计划金额: 2000
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 132.08 (exp=134.68)
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15 | real_amount: 1981.20
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3246616)
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787248230601
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发开仓条件------------------------
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即开仓 (2%限仿市)
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 预设平仓条件------------------------
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 不平仓，无平仓监控
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 01:51:12.328 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 01:51:13.063 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=132.07 ask_1=132.08
+2026-08-21 01:51:13.063 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-21 03:56:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 03:56:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 03:56:22.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-21 03:56:22.611 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 03:56:22.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.18 ask_1=134.2
+2026-08-21 03:56:22.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | exit_judge/平仓子条件 | code=US.SPCX rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=15 est_notional~2012.70
+2026-08-21 03:56:22.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=134.18 submit_price=131.49 time_in_force=DAY side=SELL code=US.SPCX qty=15 est_notional~1972.35 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 03:56:23.176 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3246902 status=SUBMITTING
+2026-08-21 03:56:23.176 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓已报单，等待成交/exit_await_fill | order_id=3246902 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 03:56:23.176 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓触发/exit_hit | code=US.SPCX 立即平仓 (2%限仿市)
+2026-08-21 03:56:23.176 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | place_exit | oid=3246902
+2026-08-21 03:56:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.18 ask_1=134.17
+2026-08-21 03:56:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.16 ask_1=134.17
+2026-08-21 03:56:23.733 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:23.733 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.16 ask_1=134.17
+2026-08-21 03:56:23.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:23.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.16 ask_1=134.17
+2026-08-21 03:56:24.034 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.034 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.18 ask_1=134.18
+2026-08-21 03:56:24.034 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.18 ask_1=134.19
+2026-08-21 03:56:24.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:24.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.339 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:24.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:24.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:24.938 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:24.938 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:25.239 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.239 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:25.239 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.239 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:25.536 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.536 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:25.536 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.537 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.22 ask_1=134.23
+2026-08-21 03:56:25.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.23
+2026-08-21 03:56:25.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:25.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.25
+2026-08-21 03:56:26.134 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:26.134 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.25
+2026-08-21 03:56:26.438 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:26.438 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:26.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:26.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:26.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:26.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:26.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:26.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:27.024 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.024 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:27.024 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.024 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.26
+2026-08-21 03:56:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.29 ask_1=134.26
+2026-08-21 03:56:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.29 ask_1=134.3
+2026-08-21 03:56:27.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.3 ask_1=134.3
+2026-08-21 03:56:27.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.3 ask_1=134.31
+2026-08-21 03:56:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.3 ask_1=134.31
+2026-08-21 03:56:27.941 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:27.941 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.26 ask_1=134.31
+2026-08-21 03:56:28.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.26 ask_1=134.3
+2026-08-21 03:56:28.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.26 ask_1=134.3
+2026-08-21 03:56:28.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.26 ask_1=134.29
+2026-08-21 03:56:28.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.26 ask_1=134.29
+2026-08-21 03:56:28.842 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.842 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.27 ask_1=134.29
+2026-08-21 03:56:28.842 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:28.843 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.27 ask_1=134.29
+2026-08-21 03:56:29.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.27 ask_1=134.27
+2026-08-21 03:56:29.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.23 ask_1=134.26
+2026-08-21 03:56:29.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.26
+2026-08-21 03:56:29.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.439 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.26
+2026-08-21 03:56:29.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.24 ask_1=134.26
+2026-08-21 03:56:29.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:29.737 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.27
+2026-08-21 03:56:30.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.25 ask_1=134.22
+2026-08-21 03:56:30.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.040 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.18 ask_1=134.22
+2026-08-21 03:56:30.322 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.322 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.22
+2026-08-21 03:56:30.322 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.322 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.26
+2026-08-21 03:56:30.348 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.348 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.26
+2026-08-21 03:56:30.642 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.642 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.26
+2026-08-21 03:56:30.643 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.643 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.26
+2026-08-21 03:56:30.942 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.942 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.25
+2026-08-21 03:56:30.942 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:30.942 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.21 ask_1=134.25
+2026-08-21 03:56:31.242 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.242 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.29 ask_1=134.28
+2026-08-21 03:56:31.243 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.243 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.29 ask_1=134.3
+2026-08-21 03:56:31.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.3 ask_1=134.32
+2026-08-21 03:56:31.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.539 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.3 ask_1=134.32
+2026-08-21 03:56:31.845 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.845 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.31 ask_1=134.32
+2026-08-21 03:56:31.845 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:31.845 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.31 ask_1=134.32
+2026-08-21 03:56:32.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.31 ask_1=134.32
+2026-08-21 03:56:32.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.31 ask_1=134.32
+2026-08-21 03:56:32.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.31 ask_1=134.32
+2026-08-21 03:56:32.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.32 ask_1=134.32
+2026-08-21 03:56:32.739 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.739 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.32 ask_1=134.32
+2026-08-21 03:56:32.739 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:32.739 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.29 ask_1=134.31
+2026-08-21 03:56:33.037 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:33.037 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.28 ask_1=134.3
+2026-08-21 03:56:33.038 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=5 dealt=0 target=15 -> wait
+2026-08-21 03:56:33.038 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.28 ask_1=134.3
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3246902 status=11 dealt=15 target=15 -> filled
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【平仓】====2026-08-21 03:56:33.340
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 134.19 (exp=131.49)
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3246902)
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787248230601
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发平仓条件------------------------
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即平仓 (2%限仿市)
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【盈亏统计】------------------------
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl: +31.72
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl%: +1.60%
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 03:56:33.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 03:56:34.025 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=134.28 ask_1=134.3
+2026-08-21 03:56:34.025 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-21 21:40:46.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 21:40:46.196 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 21:40:46.196 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-21 21:40:46.413 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:40:46.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.95
+2026-08-21 21:40:46.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | entry_judge/开仓子条件 | code=US.SPCX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=15 est_notional~1979.25
+2026-08-21 21:40:46.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 开始交易/start_trade | code=US.SPCX entry_hit=立即开仓 (2%限仿市)
+2026-08-21 21:40:46.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单计算/order_sizing | 参考价/px=131.95 | budget_total=2000.00 | lot_size=1 => qty=15 | lot_size=1 budget/price~15.1573 n_lots=15 qty=15 | est_notional~1979.25
+2026-08-21 21:40:46.847 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=131.95 submit_price=134.59 time_in_force=DAY side=BUY code=US.SPCX qty=15 est_notional~2018.85 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 21:40:47.226 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3248008 status=SUBMITTING
+2026-08-21 21:40:47.226 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 已报单，等待成交/await_order_fill | order_id=3248008 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 21:40:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.95
+2026-08-21 21:40:47.725 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:47.725 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.93
+2026-08-21 21:40:47.725 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:47.725 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:47.741 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:47.742 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.036 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.036 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.334 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.334 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.335 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.335 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.93
+2026-08-21 21:40:48.925 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.926 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:48.926 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:48.926 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.92
+2026-08-21 21:40:49.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:49.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:49.522 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.522 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.85 ask_1=131.9
+2026-08-21 21:40:49.522 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.522 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.84 ask_1=131.9
+2026-08-21 21:40:49.541 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.541 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.84 ask_1=131.9
+2026-08-21 21:40:49.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.9
+2026-08-21 21:40:49.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:49.836 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.9
+2026-08-21 21:40:50.121 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.121 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.9
+2026-08-21 21:40:50.121 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.121 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.9 ask_1=131.91
+2026-08-21 21:40:50.138 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.138 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.91
+2026-08-21 21:40:50.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.139 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.92
+2026-08-21 21:40:50.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.93
+2026-08-21 21:40:50.735 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.735 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:50.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:50.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:51.038 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:51.038 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.92
+2026-08-21 21:40:51.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:40:51.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.86 ask_1=131.94
+2026-08-21 21:40:51.342 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248008 status=11 dealt=15 target=15 -> filled
+2026-08-21 21:40:51.342 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:40:51.342 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【开仓】====2026-08-21 21:40:51.342
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy  |  计划金额: 2000
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 131.93 (exp=134.59)
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15 | real_amount: 1978.95
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3248008)
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787319628600
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发开仓条件------------------------
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即开仓 (2%限仿市)
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 预设平仓条件------------------------
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 不平仓，无平仓监控
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:40:51.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:40:52.137 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.87 ask_1=131.94
+2026-08-21 21:40:52.137 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【监控：平仓】====2026-08-21 21:45:18.195
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy-sell  |  计划量: 15
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | s_name: short_term_v2_0-5m-stock-US
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 持仓: 量=15 | 价=131.93
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | status: 2
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787319628600
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 预设平仓条件------------------------
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即平仓 (2%限仿市)
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 启动: 策略进程已上线
+2026-08-21 21:45:18.195 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:18.997 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | telegram_startup_sent | 启动监控摘要已推送 Telegram
+2026-08-21 21:45:18.997 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-21 21:45:19.474 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:19.845 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.6 ask_1=131.67
+2026-08-21 21:45:19.846 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | exit_judge/平仓子条件 | code=US.SPCX rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=15 est_notional~1974.00
+2026-08-21 21:45:19.846 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=131.60 submit_price=128.96 time_in_force=DAY side=SELL code=US.SPCX qty=15 est_notional~1934.40 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 21:45:20.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3248039 status=SUBMITTING
+2026-08-21 21:45:20.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓已报单，等待成交/exit_await_fill | order_id=3248039 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 21:45:20.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓触发/exit_hit | code=US.SPCX 立即平仓 (2%限仿市)
+2026-08-21 21:45:20.234 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | place_exit | oid=3248039
+2026-08-21 21:45:20.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:20.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.75 ask_1=131.72
+2026-08-21 21:45:20.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:20.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.75 ask_1=131.8
+2026-08-21 21:45:20.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:20.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.75 ask_1=131.81
+2026-08-21 21:45:20.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:20.734 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.77 ask_1=131.81
+2026-08-21 21:45:21.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:21.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.77 ask_1=131.81
+2026-08-21 21:45:21.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=5 dealt=0 target=15 -> wait
+2026-08-21 21:45:21.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.77 ask_1=131.81
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248039 status=11 dealt=15 target=15 -> filled
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【平仓】====2026-08-21 21:45:21.338
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 131.80 (exp=128.96)
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3248039)
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787319628600
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发平仓条件------------------------
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即平仓 (2%限仿市)
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【盈亏统计】------------------------
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl: -1.95
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl%: -0.10%
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 21:45:22.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=131.77 ask_1=131.81
+2026-08-21 21:45:22.035 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-21 22:35:40.556 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 22:35:40.556 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 22:35:40.556 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-21 22:35:41.031 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 22:35:41.443 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.25 ask_1=133.3
+2026-08-21 22:35:41.443 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | entry_judge/开仓子条件 | code=US.SPCX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=15 est_notional~1999.50
+2026-08-21 22:35:41.443 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 开始交易/start_trade | code=US.SPCX entry_hit=立即开仓 (2%限仿市)
+2026-08-21 22:35:41.443 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单计算/order_sizing | 参考价/px=133.30 | budget_total=2000.00 | lot_size=1 => qty=15 | lot_size=1 budget/price~15.0038 n_lots=15 qty=15 | est_notional~1999.50
+2026-08-21 22:35:41.443 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=133.30 submit_price=135.97 time_in_force=DAY side=BUY code=US.SPCX qty=15 est_notional~2039.55 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 22:35:41.769 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3248332 status=SUBMITTING
+2026-08-21 22:35:41.769 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 已报单，等待成交/await_order_fill | order_id=3248332 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 22:35:42.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:42.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.039 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.28 ask_1=133.3
+2026-08-21 22:35:42.332 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.332 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:42.629 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.629 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:42.629 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.629 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:42.924 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.924 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:42.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:42.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:43.240 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:43.240 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:43.240 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:43.240 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:44.131 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:44.131 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:44.434 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:44.434 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:44.434 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:44.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:44.732 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:44.732 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:45.032 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.032 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.29 ask_1=133.3
+2026-08-21 22:35:45.032 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.033 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.29 ask_1=133.3
+2026-08-21 22:35:45.336 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.336 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.29 ask_1=133.3
+2026-08-21 22:35:45.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:45.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.638 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:45.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.639 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:45.933 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:45.933 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:46.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:46.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.235 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:46.534 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.534 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:46.535 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.535 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.3
+2026-08-21 22:35:46.838 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.839 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:46.839 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:46.839 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.135 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.135 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.135 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.436 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.724 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.724 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.724 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.724 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:47.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:47.736 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:48.042 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.042 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:48.042 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.042 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:48.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.343 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.29
+2026-08-21 22:35:48.622 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.622 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.27 ask_1=133.28
+2026-08-21 22:35:48.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.623 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.25 ask_1=133.28
+2026-08-21 22:35:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.25 ask_1=133.28
+2026-08-21 22:35:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.25 ask_1=133.26
+2026-08-21 22:35:49.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:49.236 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.23 ask_1=133.26
+2026-08-21 22:35:49.547 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:49.547 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.23 ask_1=133.21
+2026-08-21 22:35:49.548 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:49.548 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:49.841 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:49.841 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:49.842 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:49.842 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:50.135 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.135 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:50.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.136 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:50.441 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.2
+2026-08-21 22:35:50.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.442 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.22
+2026-08-21 22:35:50.737 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.737 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.22
+2026-08-21 22:35:50.737 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:50.737 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.22
+2026-08-21 22:35:51.036 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:51.036 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.22
+2026-08-21 22:35:51.037 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=5 dealt=0 target=15 -> wait
+2026-08-21 22:35:51.037 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.22
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3248332 status=11 dealt=15 target=15 -> filled
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【开仓】====2026-08-21 22:35:51.337
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy  |  计划金额: 2000
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 133.18 (exp=135.97)
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15 | real_amount: 1997.70
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3248332)
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787322933778
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发开仓条件------------------------
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即开仓 (2%限仿市)
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 预设平仓条件------------------------
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 不平仓，无平仓监控
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 22:35:51.337 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-21 22:35:52.025 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=133.17 ask_1=133.21
+2026-08-21 22:35:52.026 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-22 00:20:20.630 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 00:20:20.631 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 00:20:20.631 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-22 00:20:20.858 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-22 00:20:21.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.08 ask_1=136.11
+2026-08-22 00:20:21.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | exit_judge/平仓子条件 | code=US.SPCX rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=15 est_notional~2041.20
+2026-08-22 00:20:21.340 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=136.08 submit_price=133.35 time_in_force=DAY side=SELL code=US.SPCX qty=15 est_notional~2000.25 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 00:20:21.678 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3248716 status=SUBMITTING
+2026-08-22 00:20:21.678 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓已报单，等待成交/exit_await_fill | order_id=3248716 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 00:20:21.678 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 平仓触发/exit_hit | code=US.SPCX 立即平仓 (2%限仿市)
+2026-08-22 00:20:21.678 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | place_exit | oid=3248716
+2026-08-22 00:20:21.931 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:21.931 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.08 ask_1=136.11
+2026-08-22 00:20:21.932 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:21.932 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.08 ask_1=136.11
+2026-08-22 00:20:22.229 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:22.229 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:22.528 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:22.528 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:22.831 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:22.832 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:22.832 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:22.832 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:23.130 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:23.130 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:23.130 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:23.130 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:23.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:23.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:23.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:23.730 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:24.029 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=5 dealt=0 target=15 -> wait
+2026-08-22 00:20:24.029 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.05 ask_1=136.11
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll_exit | code=US.SPCX order_id=3248716 status=11 dealt=15 target=15 -> filled
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【平仓】====2026-08-22 00:20:24.330
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 136.09 (exp=133.35)
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 15
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3248716)
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787322933778
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发平仓条件------------------------
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即平仓 (2%限仿市)
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【盈亏统计】------------------------
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl: +43.58
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | pnl%: +2.18%
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-22 00:20:24.330 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-22 00:20:25.018 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.07 ask_1=136.11
+2026-08-22 00:20:25.018 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX
+2026-08-24 21:48:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup | 启动成功 symbol=US.SPCX mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24 21:48:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24 21:48:04.662 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | lot_size/手 | code=US.SPCX value=1 (snapshot)
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ========== 运行中 / RUNNING ==============================
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   [RUN] 本策略已上线 / strategy is live
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   订阅 / subscribe: ORDER_BOOK  |  US.SPCX 推送已开 / push on
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ==========================================================
+2026-08-24 21:48:05.132 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-24 21:48:05.365 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.92 ask_1=135.96
+2026-08-24 21:48:05.365 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | entry_judge/开仓子条件 | code=US.SPCX rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=14 est_notional~1903.44
+2026-08-24 21:48:05.366 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 开始交易/start_trade | code=US.SPCX entry_hit=立即开仓 (2%限仿市)
+2026-08-24 21:48:05.366 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单计算/order_sizing | 参考价/px=135.96 | budget_total=2000.00 | lot_size=1 => qty=14 | lot_size=1 budget/price~14.7102 n_lots=14 qty=14 | est_notional~1903.44
+2026-08-24 21:48:05.366 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=135.96 submit_price=138.68 time_in_force=DAY side=BUY code=US.SPCX qty=14 est_notional~1941.52 remark=strategy_cpp_entry trd_env=paper
+2026-08-24 21:48:05.714 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 下单结果/place_order_result | ret=0 order_id=3251096 status=SUBMITTING
+2026-08-24 21:48:05.714 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 已报单，等待成交/await_order_fill | order_id=3251096 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-24 21:48:05.970 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:05.971 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=136.05
+2026-08-24 21:48:05.971 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:05.971 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=136.05
+2026-08-24 21:48:06.269 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.269 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.92 ask_1=136.04
+2026-08-24 21:48:06.270 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.270 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.02 ask_1=136.04
+2026-08-24 21:48:06.569 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.569 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136.02 ask_1=136.05
+2026-08-24 21:48:06.570 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.570 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.94 ask_1=136.05
+2026-08-24 21:48:06.874 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.875 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136.04
+2026-08-24 21:48:06.875 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:06.875 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136.04
+2026-08-24 21:48:07.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136.04
+2026-08-24 21:48:07.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.99 ask_1=136.04
+2026-08-24 21:48:07.471 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.472 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.99 ask_1=136.04
+2026-08-24 21:48:07.472 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.472 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.04
+2026-08-24 21:48:07.770 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.770 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.04
+2026-08-24 21:48:07.770 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:07.770 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.03
+2026-08-24 21:48:08.070 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.070 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.03
+2026-08-24 21:48:08.071 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.071 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.03
+2026-08-24 21:48:08.371 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.371 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.03
+2026-08-24 21:48:08.371 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.371 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.02
+2026-08-24 21:48:08.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.02
+2026-08-24 21:48:08.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.02
+2026-08-24 21:48:08.969 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.970 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=136 ask_1=136.02
+2026-08-24 21:48:08.970 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:08.970 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:09.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:09.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:09.572 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.572 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.97 ask_1=136
+2026-08-24 21:48:09.572 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.572 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.97 ask_1=136
+2026-08-24 21:48:09.873 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.873 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:09.874 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:09.874 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.99
+2026-08-24 21:48:10.175 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:10.175 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.99
+2026-08-24 21:48:10.175 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:10.175 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.99
+2026-08-24 21:48:10.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:10.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.99
+2026-08-24 21:48:10.774 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:10.774 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:10.774 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:10.775 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.074 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.376 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.376 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.377 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.377 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.671 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.972 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.973 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.91 ask_1=135.98
+2026-08-24 21:48:11.973 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:11.973 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.97
+2026-08-24 21:48:12.275 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.275 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.97
+2026-08-24 21:48:12.275 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.276 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.97
+2026-08-24 21:48:12.574 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.575 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.95 ask_1=135.97
+2026-08-24 21:48:12.575 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.575 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.95 ask_1=136
+2026-08-24 21:48:12.871 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.871 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.94 ask_1=136
+2026-08-24 21:48:12.871 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:12.872 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:13.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:13.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.174 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:13.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=136
+2026-08-24 21:48:13.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.473 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.98
+2026-08-24 21:48:13.771 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.771 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.98
+2026-08-24 21:48:13.771 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:13.771 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.98
+2026-08-24 21:48:14.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.93 ask_1=135.87
+2026-08-24 21:48:14.073 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.074 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.87
+2026-08-24 21:48:14.372 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.372 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.88
+2026-08-24 21:48:14.373 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.373 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.96
+2026-08-24 21:48:14.672 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.673 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.91
+2026-08-24 21:48:14.673 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.673 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.91
+2026-08-24 21:48:14.975 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.975 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.9
+2026-08-24 21:48:14.975 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=5 dealt=0 target=14 -> wait
+2026-08-24 21:48:14.975 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.9
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 订单轮询/order_poll | code=US.SPCX order_id=3251096 status=11 dealt=14 target=14 -> filled
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 【开仓】====2026-08-24 21:48:15.273
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | US.SPCX-buy  |  计划金额: 2000
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_price: 135.93 (exp=138.68)
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | real_qty: 14 | real_amount: 1903.02
+2026-08-24 21:48:15.273 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | env: paper
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | o_status: filled (order_id:3251096)
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | task_id: nana_paper_SPCX_5m_1787578542320
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 触发开仓条件------------------------
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | ·立即开仓 (2%限仿市)
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 预设平仓条件------------------------
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 不平仓，无平仓监控
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-24 21:48:15.274 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 
+2026-08-24 21:48:15.950 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | 读取行情/read_market | code=US.SPCX bid_1=135.8 ask_1=135.82
+2026-08-24 21:48:15.951 | INFO | strategy_runtime.acc_0_idx_0.US_SPCX | managed_done_exit | loop_tick US.SPCX

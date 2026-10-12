@@ -1,0 +1,33 @@
+ts,level,event_type,message
+2026-08-20T03:01:24,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T03:01:24,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T03:01:31,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-20T06:55:40,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T06:55:40,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T06:55:42,INFO,place_exit,oid=3244747
+2026-08-20T06:55:46,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-21T01:36:22,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T01:36:22,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T01:36:25,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-21T01:55:38,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T01:55:38,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T01:55:40,INFO,place_exit,oid=3247279
+2026-08-21T01:55:47,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-21T03:15:58,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T03:15:58,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T03:15:59,WARN,place_failed,Short selling is currently not supported.
+2026-08-21T03:15:59,ERROR,entry_order_fatal,entry_order_fatal | code=HK.09927 status=- reason=Short selling is currently not supported.
+2026-08-21T06:16:03,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T06:16:03,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T06:16:08,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-21T07:00:37,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T07:00:37,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T07:00:39,INFO,place_exit,oid=3247631
+2026-08-21T07:00:43,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-24T06:10:48,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T06:10:48,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T06:10:52,INFO,managed_done_exit,loop_tick HK.09927
+2026-08-24T07:25:25,INFO,startup,启动成功 symbol=HK.09927 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T07:25:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T07:25:27,INFO,place_exit,oid=3250686
+2026-08-24T07:25:31,INFO,managed_done_exit,loop_tick HK.09927

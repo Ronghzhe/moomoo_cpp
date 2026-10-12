@@ -1,0 +1,4 @@
+case_lang,n,p50_ms,p95_ms,max_ms,mean_ms
+kline_cold|python,5,15.887,18.034,18.222,16.339
+kline_warm|cpp,50,1.369,4.056,55.837,2.764
+kline_warm|python,50,3.308,4.509,47.516,4.251

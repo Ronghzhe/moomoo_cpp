@@ -1,0 +1,8 @@
+InitTrd, suc = 1
+{"case":"l1_account","lang":"cpp","trd_env":"SIMULATE","ok":true,"ok_connect":true,"ok_accounts":true,"ok_funds":true,"ok_positions":true,"account_count":3,"cash":984673,"position_count":0,"code":"US.AAPL"}
+InitQot, suc = 1
+{"case":"l1_kline","lang":"cpp","trd_env":"SIMULATE","ok":true,"ok_connect":true,"ok_fetch":true,"symbol":"US.AAPL","kl_type":"K_5M","bars_requested":80,"bar_count":80}
+InitTrd, suc = 1
+{"case":"l1_contract","lang":"cpp","trd_env":"SIMULATE","ok":true,"ok_connect":true,"ok_place":true,"ok_push":false,"ok_query":true,"ok_cancel":true,"order_id":3940735150664561796,"code":"US.AAPL"}
+InitTrd, suc = 1
+{"case":"l1_direct_broker","lang":"cpp","trd_env":"SIMULATE","ok":true,"ok_place":true,"ok_cancel":true,"order_id":"3240144","code":"US.AAPL"}

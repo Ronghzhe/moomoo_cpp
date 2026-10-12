@@ -1,0 +1,16 @@
+{
+  "id": "l2_06_book_guard_emergency_ref",
+  "cases": [
+    {
+      "price": 114.82,
+      "source": "min_bid_ask"
+    },
+    {
+      "price": 113.64,
+      "source": "opened_price"
+    },
+    {
+      "submit_px": 486.27
+    }
+  ]
+}

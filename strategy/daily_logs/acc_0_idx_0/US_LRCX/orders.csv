@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:17:57,nana_paper_LRCX_5m_1787233561384,US.LRCX,BUY,3246044,11,6,309.085,strategy_cpp_entry,,,,paper,,,

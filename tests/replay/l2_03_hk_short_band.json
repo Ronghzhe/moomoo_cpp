@@ -1,0 +1,30 @@
+{
+  "id": "l2_03_hk_short_band",
+  "module": "hk_short_band",
+  "cases": [
+    {
+      "ask": 36.08,
+      "bid": 36.07
+    },
+    {
+      "ask": 36.08,
+      "bid": 36.0
+    },
+    {
+      "ask": 36.08,
+      "bid": 35.89
+    },
+    {
+      "ask": 36.08,
+      "bid": 35.7
+    },
+    {
+      "ask": 36.08,
+      "ask_in_band": 36.062
+    },
+    {
+      "ask": 36.08,
+      "ask_in_band": 36.1
+    }
+  ]
+}

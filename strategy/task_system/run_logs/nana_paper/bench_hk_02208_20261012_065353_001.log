@@ -1,0 +1,55 @@
+
+=== 2026-10-12T06:53:54 START task=bench_hk_02208_20261012_065353_001 mode=paper ===
+=== pool-worker session start id=0 config=/home/ubuntu/workspace/moomoo_python/strategy/config/backups/nana_paper/bench_hk_02208_20261012_065353_001/bench_hk_02208_20261012_065353_001_mapped.json ===
+[2026-10-12 14:53:54.232] [INFO] mode=paper (SIMULATE)
+[2026-10-12 14:53:54.232] [INFO] telegram enabled token=886585*** chat_id=-5560998729
+[2026-10-12 14:53:54.232] [INFO] telegram config=../moomoo_python/telegram/telegram_config.json secrets=../moomoo_python/secrets/tg_bot
+[2026-10-12 14:53:54.232] [INFO] csv_dir=/home/ubuntu/workspace/moomoo_CPP/./strategy/daily_logs
+[2026-10-12 14:53:54.233] [INFO] [HK.02208] 启动成功 symbol=HK.02208 mode=paper status=0(待开仓) exit_enabled=N
+[2026-10-12 14:53:54.927] [INFO] [HK.02208] Telegram 启动通知已发送
+[2026-10-12 14:53:55.192] [INFO] init HK.02208 status=0(待开仓) lot_size=200 opened_qty=0 exit_enabled=N
+[2026-10-12 14:53:55.192] [INFO] logs /home/ubuntu/workspace/moomoo_CPP/./strategy/daily_logs/acc_0_idx_0/HK_02208/runtime.log
+InitTrd, suc = 1
+[2026-10-12 14:53:55.394] [INFO] trade connected env=paper order_push=on place_via=gateway_fallback gateway=http://127.0.0.1:18766
+[2026-10-12 14:53:55.401] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=N
+[2026-10-12 14:53:55.652] [INFO] [HK.02208] 开仓触发 entry_hit=立即开仓 (1%限仿市) rule=S1_ENTRY_NOW | 下单 entry oid=3332387 px=8.21 qty=200
+[2026-10-12 14:53:56.152] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:56.652] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:57.153] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:57.653] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:58.153] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.12 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:58.210] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.125 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:58.260] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.125 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:58.349] [INFO] [HK.02208] status=0(待开仓) bid=8.115 ask=8.125 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=Y
+[2026-10-12 14:53:58.412] [INFO] [HK.02208] 开仓成交 qty=200 px=8.120000 entry_hit=立即开仓 (1%限仿市)
+[2026-10-12 14:53:59.127] [INFO] [HK.02208] status=2(持仓) bid=8.115 ask=8.125 | entry=S1_ENTRY_NOW(Y) exit=-(N) await_fill=N pos=200@8.12
+[2026-10-12 14:53:59.127] [INFO] 托管完毕，退出行情循环/managed_done_exit | reason=loop_tick | HK.02208
+ERROR: OnReply_Sub, retMsg = The OrderBook subscription duration for HK.02208 is too short. Minimum subscription duration is 1 minute.
+=== pool-worker session end id=0 exit=0 ===
+
+=== 2026-10-12T06:53:59 END task=bench_hk_02208_20261012_065353_001 exit_code=0 via=pool ===
+
+=== 2026-10-12T06:54:00 START task=bench_hk_02208_20261012_065353_001 mode=paper ===
+=== pool-worker session start id=1 config=/home/ubuntu/workspace/moomoo_python/strategy/config/backups/nana_paper/bench_hk_02208_20261012_065353_001/bench_hk_02208_20261012_065353_001_mapped.json ===
+[2026-10-12 14:54:00.293] [INFO] mode=paper (SIMULATE)
+[2026-10-12 14:54:00.293] [INFO] telegram enabled token=886585*** chat_id=-5560998729
+[2026-10-12 14:54:00.294] [INFO] telegram config=../moomoo_python/telegram/telegram_config.json secrets=../moomoo_python/secrets/tg_bot
+[2026-10-12 14:54:00.294] [INFO] csv_dir=/home/ubuntu/workspace/moomoo_CPP/./strategy/daily_logs
+[2026-10-12 14:54:00.294] [INFO] [HK.02208] 启动成功 symbol=HK.02208 mode=paper status=2(持仓) exit_enabled=Y
+[2026-10-12 14:54:01.035] [INFO] [HK.02208] Telegram 启动通知已发送
+[2026-10-12 14:54:01.047] [INFO] init HK.02208 status=2(持仓) lot_size=200 opened_qty=200 exit_enabled=Y
+[2026-10-12 14:54:01.047] [INFO] logs /home/ubuntu/workspace/moomoo_CPP/./strategy/daily_logs/acc_0_idx_0/HK_02208/runtime.log
+InitTrd, suc = 1
+[2026-10-12 14:54:01.251] [INFO] trade connected env=paper order_push=on place_via=gateway_fallback gateway=http://127.0.0.1:18766
+[2026-10-12 14:54:01.258] [INFO] [HK.02208] status=2(持仓) bid=8.115 ask=8.12 | entry=-(N) exit=X1_EXIT_NOW(Y) await_fill=N pos=200@8.12
+[2026-10-12 14:54:01.501] [INFO] [HK.02208] 平仓触发 exit_hit=立即平仓 (1%限仿市) rule=X1_EXIT_NOW | 下单 exit oid=3332388 px=8.03 qty=200
+[2026-10-12 14:54:01.790] [INFO] [HK.02208] status=2(持仓) bid=8.115 ask=8.12 | entry=-(N) exit=X1_EXIT_NOW(Y) await_fill=Y pos=200@8.12
+[2026-10-12 14:54:02.291] [INFO] [HK.02208] status=2(持仓) bid=8.115 ask=8.12 | entry=-(N) exit=X1_EXIT_NOW(Y) await_fill=Y pos=200@8.12
+[2026-10-12 14:54:02.793] [INFO] [HK.02208] status=2(持仓) bid=8.115 ask=8.12 | entry=-(N) exit=X1_EXIT_NOW(Y) await_fill=Y pos=200@8.12
+[2026-10-12 14:54:03.293] [INFO] [HK.02208] 平仓成交 qty=200 px=8.115000 exit_hit=立即平仓 (1%限仿市)
+[2026-10-12 14:54:03.987] [INFO] [HK.02208] status=3(已平仓) bid=8.115 ask=8.12 | entry=-(N) exit=X1_EXIT_NOW(Y) await_fill=N pos=200@8.12
+[2026-10-12 14:54:03.987] [INFO] 托管完毕，退出行情循环/managed_done_exit | reason=loop_tick | HK.02208
+ERROR: OnReply_Sub, retMsg = The OrderBook subscription duration for HK.02208 is too short. Minimum subscription duration is 1 minute.
+=== pool-worker session end id=1 exit=0 ===
+
+=== 2026-10-12T06:54:03 END task=bench_hk_02208_20261012_065353_001 exit_code=0 via=pool ===

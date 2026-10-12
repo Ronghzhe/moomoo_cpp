@@ -1,0 +1,188 @@
+2026-08-20 21:41:16.910 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup | 启动成功 symbol=US.FCEL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:41:16.910 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:41:16.910 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | lot_size/手 | code=US.FCEL value=1 (snapshot)
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   订阅 / subscribe: ORDER_BOOK  |  US.FCEL 推送已开 / push on
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ==========================================================
+2026-08-20 21:41:17.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 21:41:17.465 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.36 ask_1=20.4
+2026-08-20 21:41:17.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | entry_judge/开仓子条件 | code=US.FCEL rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=98 est_notional~1999.20
+2026-08-20 21:41:17.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 开始交易/start_trade | code=US.FCEL entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:41:17.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单计算/order_sizing | 参考价/px=20.36 | budget_total=2000.00 | lot_size=1 => qty=98 | lot_size=1 budget/price~98.2318 n_lots=98 qty=98 | est_notional~1995.28
+2026-08-20 21:41:17.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=20.36 submit_price=19.95 time_in_force=DAY side=SELL code=US.FCEL qty=98 est_notional~1955.37 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:41:17.668 | WARN | strategy_runtime.acc_0_idx_0.US_FCEL | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:41:17.668 | WARN | strategy_runtime.acc_0_idx_0.US_FCEL | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:41:17.668 | ERROR | strategy_runtime.acc_0_idx_0.US_FCEL | entry_order_fatal | entry_order_fatal | code=US.FCEL status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:11:46.182 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup | 启动成功 symbol=US.FCEL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:11:46.182 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:11:46.182 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | lot_size/手 | code=US.FCEL value=1 (snapshot)
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   订阅 / subscribe: ORDER_BOOK  |  US.FCEL 推送已开 / push on
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ==========================================================
+2026-08-20 22:11:46.656 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:47.002 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:47.002 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | entry_judge/开仓子条件 | code=US.FCEL rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=98 est_notional~1980.58
+2026-08-20 22:11:47.003 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 开始交易/start_trade | code=US.FCEL entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:11:47.003 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单计算/order_sizing | 参考价/px=20.17 | budget_total=2000.00 | lot_size=1 => qty=99 | lot_size=1 budget/price~99.1572 n_lots=99 qty=99 | est_notional~1996.83
+2026-08-20 22:11:47.003 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=20.17 submit_price=19.76 time_in_force=DAY side=SELL code=US.FCEL qty=99 est_notional~1956.24 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:11:47.326 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 下单结果/place_order_result | ret=0 order_id=3246005 status=SUBMITTING
+2026-08-20 22:11:47.326 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 已报单，等待成交/await_order_fill | order_id=3246005 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:11:47.347 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:47.347 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:47.347 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:47.347 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:47.748 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:47.749 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:48.046 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:48.046 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:48.650 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:48.650 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:49.650 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:49.650 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:49.666 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:49.666 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:49.857 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:50.275 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:50.275 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:50.455 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:50.455 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:50.756 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:50.756 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.21
+2026-08-20 22:11:51.407 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:51.408 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:51.660 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:51.660 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:11:51.951 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:51.951 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:11:51.952 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:51.952 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.22
+2026-08-20 22:11:52.256 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:52.256 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:53.125 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:53.125 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:53.754 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:53.754 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:54.059 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:54.059 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:54.951 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:54.952 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:55.952 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:55.952 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:56.023 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:56.023 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:56.155 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:56.155 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:57.031 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:57.031 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:57.272 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup | 启动成功 symbol=US.FCEL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:11:57.272 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:11:57.272 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246005 status=11 dealt=99 target=99 -> filled
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 【开仓】====2026-08-20 22:11:57.456
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | US.FCEL-sell  |  计划金额: 2000
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | real_price: 20.20 (exp=19.76)
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | real_qty: 99 | real_amount: 1999.31
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | env: paper
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | o_status: filled (order_id:3246005)
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | task_id: nana_paper_FCEL_5m_1787232983281
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 触发开仓条件------------------------
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ·立即开仓 (2%限仿市)
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 预设平仓条件------------------------
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 不平仓，无平仓监控
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:57.456 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | lot_size/手 | code=US.FCEL value=1 (snapshot)
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   订阅 / subscribe: ORDER_BOOK  |  US.FCEL 推送已开 / push on
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ==========================================================
+2026-08-20 22:11:57.491 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:11:58.116 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:58.116 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | entry_judge/开仓子条件 | code=US.FCEL rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=98 est_notional~1982.54
+2026-08-20 22:11:58.116 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 开始交易/start_trade | code=US.FCEL entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:11:58.116 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单计算/order_sizing | 参考价/px=20.17 | budget_total=2000.00 | lot_size=1 => qty=99 | lot_size=1 budget/price~99.1572 n_lots=99 qty=99 | est_notional~1996.83
+2026-08-20 22:11:58.116 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=20.17 submit_price=19.76 time_in_force=DAY side=SELL code=US.FCEL qty=99 est_notional~1956.24 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:11:58.126 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:58.126 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | managed_done_exit | loop_tick US.FCEL
+2026-08-20 22:11:58.457 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 下单结果/place_order_result | ret=0 order_id=3246009 status=SUBMITTING
+2026-08-20 22:11:58.457 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 已报单，等待成交/await_order_fill | order_id=3246009 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:11:58.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=SUBMITTING dealt=0 target=99 -> wait
+2026-08-20 22:11:58.466 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:58.786 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:58.786 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.23
+2026-08-20 22:11:58.787 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:58.787 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:11:59.156 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:11:59.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:12:00.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:00.157 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:12:00.686 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:00.686 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.2
+2026-08-20 22:12:00.953 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:00.953 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.17 ask_1=20.18
+2026-08-20 22:12:00.953 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:00.953 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:01.254 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:01.254 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:01.552 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:01.552 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:01.853 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:01.854 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:01.854 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:01.854 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:02.305 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:02.305 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:02.457 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:02.457 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:02.458 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:02.458 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:03.015 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:03.016 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.18
+2026-08-20 22:12:03.349 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:03.350 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.15 ask_1=20.17
+2026-08-20 22:12:03.350 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:03.350 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:03.648 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:03.648 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:04.254 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:04.254 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:04.552 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:04.552 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:04.853 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:04.853 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:05.177 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=5 dealt=0 target=99 -> wait
+2026-08-20 22:12:05.177 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:06.177 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 订单轮询/order_poll | code=US.FCEL order_id=3246009 status=11 dealt=99 target=99 -> filled
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 【开仓】====2026-08-20 22:12:06.178
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | US.FCEL-sell  |  计划金额: 2000
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | real_price: 20.16 (exp=19.76)
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | real_qty: 99 | real_amount: 1995.84
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | env: paper
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | o_status: filled (order_id:3246009)
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | task_id: nana_paper_FCEL_5m_1787232983281
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 触发开仓条件------------------------
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | ·立即开仓 (2%限仿市)
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 预设平仓条件------------------------
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 不平仓，无平仓监控
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:12:06.178 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 
+2026-08-20 22:12:06.858 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | 读取行情/read_market | code=US.FCEL bid_1=20.14 ask_1=20.17
+2026-08-20 22:12:06.858 | INFO | strategy_runtime.acc_0_idx_0.US_FCEL | managed_done_exit | loop_tick US.FCEL

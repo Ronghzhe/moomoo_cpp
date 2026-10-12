@@ -1,0 +1,40 @@
+{
+  "id": "l2_01_strategy_judge_us_orderbook",
+  "module": "strategy_judge",
+  "fixture": "strategy_config_us_fixture.json",
+  "symbol_index": 0,
+  "steps": [
+    {
+      "label": "entry_hit",
+      "tick": {
+        "bid_1": 13.9,
+        "ask_1": 14.0,
+        "now": 1.0
+      }
+    },
+    {
+      "label": "entry_miss",
+      "tick": {
+        "bid_1": 13.9,
+        "ask_1": 16.0,
+        "now": 2.0
+      }
+    },
+    {
+      "label": "exit_hit",
+      "tick": {
+        "bid_1": 24.0,
+        "ask_1": 24.1,
+        "now": 3.0
+      }
+    },
+    {
+      "label": "entry_and_exit",
+      "tick": {
+        "bid_1": 24.0,
+        "ask_1": 14.0,
+        "now": 4.0
+      }
+    }
+  ]
+}

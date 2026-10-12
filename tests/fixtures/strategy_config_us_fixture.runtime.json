@@ -1,0 +1,14 @@
+{
+  "source_config": "/home/ubuntu/workspace/moomoo_CPP/tests/fixtures/strategy_config_us_fixture.json",
+  "symbols": {
+    "US.QBTS": {
+      "closed_price": 19.9087529,
+      "closed_qty": 10000.0,
+      "opened_price": 19.6947,
+      "opened_qty": 10000.0,
+      "runtime_updated_at": "2026-05-01T14:25:25Z",
+      "startup_notify_once": false,
+      "status": 3
+    }
+  }
+}

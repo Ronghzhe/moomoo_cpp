@@ -1,0 +1,383 @@
+{
+  "built_at_bj": "2026-08-31 08:48:40",
+  "rule": "US: 5 fixed + 20 uniform Top800; HK: 5 fixed + 20 mcap (skip RMB-R)",
+  "us_count": 25,
+  "hk_count": 25,
+  "symbols": [
+    {
+      "code": "US.AAPL",
+      "name": "Apple",
+      "market": "US",
+      "mcap_rank": 2,
+      "reason": "策略常用保留"
+    },
+    {
+      "code": "US.NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "mcap_rank": 1,
+      "reason": "策略常用保留"
+    },
+    {
+      "code": "US.MU",
+      "name": "Micron Technology",
+      "market": "US",
+      "mcap_rank": 16,
+      "reason": "策略常用保留"
+    },
+    {
+      "code": "US.SMCI",
+      "name": "Super Micro Computer",
+      "market": "US",
+      "mcap_rank": 547,
+      "reason": "策略常用保留"
+    },
+    {
+      "code": "US.TSLA",
+      "name": "Tesla",
+      "market": "US",
+      "mcap_rank": 11,
+      "reason": "策略常用保留"
+    },
+    {
+      "code": "US.GOOGL",
+      "name": "Alphabet-A",
+      "market": "US",
+      "mcap_rank": 3,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.HD",
+      "name": "Home Depot",
+      "market": "US",
+      "mcap_rank": 44,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.CRWD",
+      "name": "CrowdStrike",
+      "market": "US",
+      "mcap_rank": 83,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.ISRG",
+      "name": "Intuitive Surgical",
+      "market": "US",
+      "mcap_rank": 122,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.APP",
+      "name": "Applovin",
+      "market": "US",
+      "mcap_rank": 161,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.JCI",
+      "name": "Johnson Controls",
+      "market": "US",
+      "mcap_rank": 200,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.NWG",
+      "name": "NatWest",
+      "market": "US",
+      "mcap_rank": 239,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.OKE",
+      "name": "ONEOK Inc",
+      "market": "US",
+      "mcap_rank": 278,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.FNV",
+      "name": "Franco-Nevada",
+      "market": "US",
+      "mcap_rank": 317,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.IBKR",
+      "name": "Interactive Brokers",
+      "market": "US",
+      "mcap_rank": 356,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.RKLB",
+      "name": "Rocket Lab",
+      "market": "US",
+      "mcap_rank": 395,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.ILMN",
+      "name": "Illumina",
+      "market": "US",
+      "mcap_rank": 434,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.EIX",
+      "name": "Edison International",
+      "market": "US",
+      "mcap_rank": 473,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.PHG",
+      "name": "Royal Philips",
+      "market": "US",
+      "mcap_rank": 512,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.TROW",
+      "name": "T. Rowe Price",
+      "market": "US",
+      "mcap_rank": 552,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.ENTG",
+      "name": "Entegris",
+      "market": "US",
+      "mcap_rank": 591,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.CF",
+      "name": "CF Industries Holdings",
+      "market": "US",
+      "mcap_rank": 630,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.DINO",
+      "name": "HF Sinclair",
+      "market": "US",
+      "mcap_rank": 669,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.SKM",
+      "name": "SK Telecom",
+      "market": "US",
+      "mcap_rank": 708,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "US.W",
+      "name": "Wayfair",
+      "market": "US",
+      "mcap_rank": 747,
+      "reason": "Top800均匀抽样"
+    },
+    {
+      "code": "HK.02208",
+      "name": "金风科技",
+      "market": "HK",
+      "mcap_rank": null,
+      "cap_usd_like": 73367035098.39,
+      "reason": "策略/常用保留"
+    },
+    {
+      "code": "HK.09626",
+      "name": "哔哩哔哩-W",
+      "market": "HK",
+      "mcap_rank": null,
+      "cap_usd_like": 69951110331.3,
+      "reason": "策略/常用保留"
+    },
+    {
+      "code": "HK.00700",
+      "name": "腾讯控股",
+      "market": "HK",
+      "mcap_rank": null,
+      "cap_usd_like": 4272604813175.2,
+      "reason": "策略/常用保留"
+    },
+    {
+      "code": "HK.09988",
+      "name": "阿里巴巴-W",
+      "market": "HK",
+      "mcap_rank": null,
+      "cap_usd_like": 2431675806665.0,
+      "reason": "策略/常用保留"
+    },
+    {
+      "code": "HK.03750",
+      "name": "宁德时代",
+      "market": "HK",
+      "mcap_rank": 2,
+      "cap_usd_like": 2774960717824.0,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01398",
+      "name": "工商银行",
+      "market": "HK",
+      "mcap_rank": 3,
+      "cap_usd_like": 2519792237619.23,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00005",
+      "name": "汇丰控股",
+      "market": "HK",
+      "mcap_rank": 5,
+      "cap_usd_like": 2414290254465.0,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00939",
+      "name": "建设银行",
+      "market": "HK",
+      "mcap_rank": 6,
+      "cap_usd_like": 2312547372097.56,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00857",
+      "name": "中国石油股份",
+      "market": "HK",
+      "mcap_rank": 7,
+      "cap_usd_like": 2212723621819.62,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01288",
+      "name": "农业银行",
+      "market": "HK",
+      "mcap_rank": 8,
+      "cap_usd_like": 2127896845947.84,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00941",
+      "name": "中国移动",
+      "market": "HK",
+      "mcap_rank": 9,
+      "cap_usd_like": 1833302259769.8,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.03988",
+      "name": "中国银行",
+      "market": "HK",
+      "mcap_rank": 10,
+      "cap_usd_like": 1636839052015.12,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00883",
+      "name": "中国海洋石油",
+      "market": "HK",
+      "mcap_rank": 11,
+      "cap_usd_like": 1387874656332.8,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.03968",
+      "name": "招商银行",
+      "market": "HK",
+      "mcap_rank": 12,
+      "cap_usd_like": 1193403093839.32,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.02318",
+      "name": "中国平安",
+      "market": "HK",
+      "mcap_rank": 13,
+      "cap_usd_like": 1143497591984.25,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.06288",
+      "name": "FAST RETAIL-DRS",
+      "market": "HK",
+      "mcap_rank": 14,
+      "cap_usd_like": 1130957320272.0,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01088",
+      "name": "中国神华",
+      "market": "HK",
+      "mcap_rank": 15,
+      "cap_usd_like": 1045430733452.8,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.02899",
+      "name": "紫金矿业",
+      "market": "HK",
+      "mcap_rank": 16,
+      "cap_usd_like": 940247669033.92,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01211",
+      "name": "比亚迪股份",
+      "market": "HK",
+      "mcap_rank": 17,
+      "cap_usd_like": 934512750412.5,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01299",
+      "name": "友邦保险",
+      "market": "HK",
+      "mcap_rank": 18,
+      "cap_usd_like": 889527502223.6,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.02628",
+      "name": "中国人寿",
+      "market": "HK",
+      "mcap_rank": 19,
+      "cap_usd_like": 812327621700.0,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01810",
+      "name": "小米集团-W",
+      "market": "HK",
+      "mcap_rank": 20,
+      "cap_usd_like": 753243611533.24,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.00300",
+      "name": "美的集团",
+      "market": "HK",
+      "mcap_rank": 21,
+      "cap_usd_like": 683058235759.8,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.03328",
+      "name": "交通银行",
+      "market": "HK",
+      "mcap_rank": 22,
+      "cap_usd_like": 632684695036.68,
+      "reason": "港股市值筛选(去R)"
+    },
+    {
+      "code": "HK.01658",
+      "name": "邮储银行",
+      "market": "HK",
+      "mcap_rank": 23,
+      "cap_usd_like": 604078119064.76,
+      "reason": "港股市值筛选(去R)"
+    }
+  ]
+}

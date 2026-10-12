@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:07:18,nana_paper_BLDP_5m_1787232951016,US.BLDP,SELL,3245968,11,823,2.435,strategy_cpp_entry,,,,paper,,,

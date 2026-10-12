@@ -1,0 +1,122 @@
+2026-08-20 21:55:50.702 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | startup | 启动成功 symbol=US.AMBA mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:55:50.702 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:55:50.702 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:55:51.177 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | lot_size/手 | code=US.AMBA value=1 (snapshot)
+2026-08-20 21:55:51.177 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 21:55:51.177 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:55:51.177 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:55:51.177 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   订阅 / subscribe: ORDER_BOOK  |  US.AMBA 推送已开 / push on
+2026-08-20 21:55:51.178 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:55:51.178 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:55:51.178 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | ==========================================================
+2026-08-20 21:55:51.178 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 21:55:51.653 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.71 ask_1=74.11
+2026-08-20 21:55:51.653 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | entry_judge/开仓子条件 | code=US.AMBA rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=26 est_notional~1926.86
+2026-08-20 21:55:51.653 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 开始交易/start_trade | code=US.AMBA entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:55:51.653 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 报单计算/order_sizing | 参考价/px=73.71 | budget_total=2000.00 | lot_size=1 => qty=27 | lot_size=1 budget/price~27.1334 n_lots=27 qty=27 | est_notional~1990.17
+2026-08-20 21:55:51.653 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=73.71 submit_price=72.24 time_in_force=DAY side=SELL code=US.AMBA qty=27 est_notional~1950.37 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:55:51.855 | WARN | strategy_runtime.acc_0_idx_0.US_AMBA | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:55:51.855 | WARN | strategy_runtime.acc_0_idx_0.US_AMBA | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:55:51.855 | ERROR | strategy_runtime.acc_0_idx_0.US_AMBA | entry_order_fatal | entry_order_fatal | code=US.AMBA status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:18:56.101 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | startup | 启动成功 symbol=US.AMBA mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:18:56.101 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:18:56.101 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | lot_size/手 | code=US.AMBA value=1 (snapshot)
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   订阅 / subscribe: ORDER_BOOK  |  US.AMBA 推送已开 / push on
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | ==========================================================
+2026-08-20 22:18:56.572 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 22:18:57.075 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.64 ask_1=73.75
+2026-08-20 22:18:57.075 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | entry_judge/开仓子条件 | code=US.AMBA rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=27 est_notional~1991.25
+2026-08-20 22:18:57.075 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 开始交易/start_trade | code=US.AMBA entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:18:57.075 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 报单计算/order_sizing | 参考价/px=73.64 | budget_total=2000.00 | lot_size=1 => qty=27 | lot_size=1 budget/price~27.1592 n_lots=27 qty=27 | est_notional~1988.28
+2026-08-20 22:18:57.075 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=73.64 submit_price=72.16 time_in_force=DAY side=SELL code=US.AMBA qty=27 est_notional~1948.32 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:18:57.401 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 下单结果/place_order_result | ret=0 order_id=3246052 status=SUBMITTING
+2026-08-20 22:18:57.401 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 已报单，等待成交/await_order_fill | order_id=3246052 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:18:57.776 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:57.776 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.64 ask_1=73.75
+2026-08-20 22:18:57.947 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:57.947 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:57.948 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:57.948 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:58.249 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:58.249 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:58.546 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:58.546 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:58.977 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:58.977 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:59.141 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:59.141 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:18:59.443 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:18:59.443 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.75
+2026-08-20 22:19:00.386 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:00.386 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.6 ask_1=73.67
+2026-08-20 22:19:00.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:00.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.5 ask_1=73.67
+2026-08-20 22:19:00.642 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:00.642 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:01.078 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:01.078 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:01.241 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:01.241 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:01.638 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:01.638 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:01.842 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:01.842 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:02.144 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:02.144 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:02.461 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:02.461 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:02.740 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:02.740 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:02.741 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:02.741 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:03.432 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:03.432 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:03.648 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:03.648 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:04.610 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:04.610 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:05.610 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:05.610 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.57
+2026-08-20 22:19:06.419 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:06.419 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.37 ask_1=73.56
+2026-08-20 22:19:06.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:06.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:06.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:06.641 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:06.941 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:06.941 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:07.243 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:07.243 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:07.243 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:07.243 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:07.541 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:07.541 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:07.847 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:07.847 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:08.142 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:08.142 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:09.142 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=5 dealt=0 target=27 -> wait
+2026-08-20 22:19:09.142 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:09.251 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 订单轮询/order_poll | code=US.AMBA order_id=3246052 status=11 dealt=27 target=27 -> filled
+2026-08-20 22:19:09.251 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 【开仓】====2026-08-20 22:19:09.251
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | US.AMBA-sell  |  计划金额: 2000
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | real_price: 73.43 (exp=72.16)
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | real_qty: 27 | real_amount: 1982.61
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | env: paper
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | o_status: filled (order_id:3246052)
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | task_id: nana_paper_AMBA_5m_1787234120923
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 触发开仓条件------------------------
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | ·立即开仓 (2%限仿市)
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 预设平仓条件------------------------
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 不平仓，无平仓监控
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 22:19:09.252 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 
+2026-08-20 22:19:09.933 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | 读取行情/read_market | code=US.AMBA bid_1=73.29 ask_1=73.53
+2026-08-20 22:19:09.933 | INFO | strategy_runtime.acc_0_idx_0.US_AMBA | managed_done_exit | loop_tick US.AMBA

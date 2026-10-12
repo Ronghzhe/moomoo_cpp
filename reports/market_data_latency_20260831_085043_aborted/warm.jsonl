@@ -1,0 +1,1 @@
+{"case": "push_basicqot_warm", "path": "warm", "lang": "python", "ok": true, "ms_connect": 5.236, "ms_subscribe": 10.049, "ms_first_push": 272.394, "push_count": 4, "symbol": "US.AAPL", "name": "Apple", "market": "US", "timeout_sec": 20.0, "target_samples": 20, "intervals_ms": [8198.323, 249.611, 8798.808], "error": "", "ts": "2026-08-31T08:51:03"}

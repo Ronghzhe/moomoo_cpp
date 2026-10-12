@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:13:44,nana_paper_LUNR_5m_1787233229841,US.LUNR,BUY,3246026,11,110,17.99,strategy_cpp_entry,,,,paper,,,

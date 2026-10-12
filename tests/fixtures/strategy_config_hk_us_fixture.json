@@ -1,0 +1,268 @@
+{
+  "_fixture_meta": {
+    "source": "moomoo_python/strategy/config/strategy_config_hk_us.json",
+    "purpose": "C++ migration parity tests (sanitized, paper mode)",
+    "redacted_fields": [
+      "webhook",
+      "secret",
+      "acc_id>0",
+      "client_name"
+    ]
+  },
+  "$comment": "多标的 symbols[]。exit_strategies：建议同时具备 bid_1 价格上沿(>= 止盈参照)与下沿(<= 止损参照)两条 orderbook 规则，再按需加 pnl；组内 logic(all/any)，组间 exit_strategy_logic=any 时常为任一命中即平仓。exit_enabled 为自动平仓总开关。symbols[] 推荐字段顺序：task_id → enabled/exit_enabled/startup_notify_once → code → 报单 → budget/entry_qty/exit_qty/entry_side → status/成交字段 → 策略块 → runtime_updated_at。execution.order_poll_min_sec：待成交订单查询最小间隔。budget 与 entry_qty 二选一。exit_qty：单笔平仓上限股数，null/省略则一次性平清持仓；模版常与 entry_qty 同值，可按需改小分批。",
+  "version": 1,
+  "client_name": "FixtureClient",
+  "strategy_name": "short_squeeze",
+  "mode": "paper",
+  "symbols": [
+    {
+      "task_id": "",
+      "enabled": true,
+      "exit_enabled": false,
+      "startup_notify_once": true,
+      "code": "US.AAPL",
+      "order_type": "sim_market",
+      "sim_market_pct": 0.03,
+      "time_in_force": "DAY",
+      "budget": null,
+      "entry_qty": 1,
+      "initial_qty": 1.0,
+      "exit_qty": null,
+      "entry_side": "BUY",
+      "status": 0,
+      "opened_qty": 0.0,
+      "opened_price": 0.0,
+      "closed_qty": 0.0,
+      "closed_price": 0.0,
+      "entry_strategy_logic": "any",
+      "entry_strategies": [
+        {
+          "id": "S1",
+          "enabled": false,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "ask_1",
+              "op": "",
+              "value": 16.5
+            }
+          ]
+        },
+        {
+          "id": "candle_1",
+          "enabled": true,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "kline_candle",
+              "kl_type": "K_15M",
+              "candle": 1,
+              "candle_ref": "prev_close",
+              "after_open_minutes": 15,
+              "poll_sec": 5,
+              "eval_mode": "once"
+            }
+          ]
+        },
+        {
+          "id": "S2",
+          "enabled": false,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "ask_1",
+              "op": ">=",
+              "value": 18.2
+            },
+            {
+              "type": "open",
+              "gain_pct": 0.5,
+              "ref": "mid"
+            },
+            {
+              "type": "volume",
+              "kl_type": "K_15M",
+              "ma_period": 10,
+              "multiple": 3.0,
+              "ma_include_last": true,
+              "poll_sec": 20
+            },
+            {
+              "type": "kline_close",
+              "kl_type": "K_15M",
+              "op": ">=",
+              "value": 18.2,
+              "after_open_minutes": 15,
+              "poll_sec": 20
+            },
+            {
+              "type": "kline_candle",
+              "kl_type": "K_15M",
+              "candle": 1,
+              "candle_ref": "prev_close",
+              "after_open_minutes": 15,
+              "poll_sec": 5,
+              "eval_mode": "once"
+            }
+          ]
+        }
+      ],
+      "exit_strategy_logic": "any",
+      "exit_strategies": [
+        {
+          "id": "普通orderbook平仓",
+          "enabled": true,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "",
+              "value": 12.5
+            }
+          ]
+        },
+        {
+          "id": "吊灯止损",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "trailing_take_profit",
+              "kl_type": "K_15M",
+              "n_pct": 0.01,
+              "price_field": "bid_1",
+              "log_interval_sec": 10
+            }
+          ]
+        },
+        {
+          "id": "20日close均线平仓",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "trailing_ma20_close",
+              "kl_type": "K_15M",
+              "ma_period": 20,
+              "op": "<",
+              "poll_sec": 10,
+              "log_interval_sec": 10
+            }
+          ]
+        },
+        {
+          "id": "20日均线实时平仓",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "trailing_ma20_realtime",
+              "kl_type": "K_30M",
+              "ma_period": 20,
+              "op": "<",
+              "price_field": "bid_1",
+              "log_interval_sec": 10
+            }
+          ]
+        },
+        {
+          "id": "分批止盈示例",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "staged_take_profit",
+              "price_field": "bid_1",
+              "targets": [
+                0.02,
+                0.01
+              ],
+              "fractions": [
+                0.6,
+                0.4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E2_PRICE_LOW",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "<=",
+              "value": 17.2
+            }
+          ]
+        },
+        {
+          "id": "E3_PNL_TAKE",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": ">=",
+              "value": 0.1
+            }
+          ]
+        },
+        {
+          "id": "E4_PNL_STOP",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": "<=",
+              "value": -0.1
+            }
+          ]
+        }
+      ],
+      "runtime_updated_at": "2026-05-19T03:16:18Z",
+      "pre_entry_low_stop_bar_keys": {}
+    }
+  ],
+  "opend": {
+    "host": "127.0.0.1",
+    "port": 11121
+  },
+  "account": {
+    "trd_market": "HK"
+  },
+  "execution": {
+    "order_poll_min_sec": 3,
+    "auto_stop_after_close": true
+  },
+  "notify": {
+    "$comment_dingding": "mode=paper 用 paper 群的 webhook；mode=real 用 real 群。可同时配置；某一侧也可用 webhook_env / secret_env 从环境变量读。缺省仍支持仅写根级 webhook/secret（两边共用）。",
+    "dingding": {
+      "enabled": false,
+      "paper": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      },
+      "real": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      }
+    }
+  },
+  "storage": {
+    "csv_dir": "./strategy/daily_logs"
+  }
+}

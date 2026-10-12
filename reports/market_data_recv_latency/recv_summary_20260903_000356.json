@@ -1,0 +1,116 @@
+{
+  "batch_id": "20260903_000356",
+  "host": "127.0.0.1",
+  "port": 11121,
+  "duration_sec": 60.0,
+  "symbols": 50,
+  "pushes": 80,
+  "note": "BasicQot push 的 data_date/data_time 来自 pb.updateTime（数据时间=推送更新时间同源）；snapshot_update_time 来自 get_market_snapshot.update_time。",
+  "metrics": {
+    "HK": {
+      "pushes": 25,
+      "ms_recv_minus_data": {
+        "n": 25,
+        "p50": 28559168.228,
+        "p90": 28570725.241,
+        "mean": 28615447.178,
+        "min": 28554096.22,
+        "max": 29934203.512
+      },
+      "ms_recv_minus_push_update": {
+        "n": 25,
+        "p50": 28559168.228,
+        "p90": 28570725.241,
+        "mean": 28615447.178,
+        "min": 28554096.22,
+        "max": 29934203.512
+      },
+      "ms_recv_minus_snapshot_update": {
+        "n": 25,
+        "p50": 28559168.0,
+        "p90": 28570725.0,
+        "mean": 28615446.68,
+        "min": 28554096.0,
+        "max": 29934203.0
+      },
+      "ms_snapshot_update_minus_data": {
+        "n": 25,
+        "p50": 0.0,
+        "p90": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    "US": {
+      "pushes": 55,
+      "ms_recv_minus_data": {
+        "n": 52,
+        "p50": 1671.677,
+        "p90": 24772.111,
+        "mean": 13195.559,
+        "min": 173.077,
+        "max": 252871.405
+      },
+      "ms_recv_minus_push_update": {
+        "n": 52,
+        "p50": 1671.677,
+        "p90": 24772.111,
+        "mean": 13195.559,
+        "min": 173.077,
+        "max": 252871.405
+      },
+      "ms_recv_minus_snapshot_update": {
+        "n": 55,
+        "p50": 1876.0,
+        "p90": 23147.2,
+        "mean": 12842.218,
+        "min": -161.0,
+        "max": 253268.0
+      },
+      "ms_snapshot_update_minus_data": {
+        "n": 52,
+        "p50": -424.5,
+        "p90": -40.1,
+        "mean": -281.558,
+        "min": -1487.0,
+        "max": 7781.0
+      }
+    },
+    "ALL": {
+      "pushes": 80,
+      "ms_recv_minus_data": {
+        "n": 77,
+        "p50": 9367.217,
+        "p90": 28561611.929,
+        "mean": 9299640.89,
+        "min": 173.077,
+        "max": 29934203.512
+      },
+      "ms_recv_minus_push_update": {
+        "n": 77,
+        "p50": 9367.217,
+        "p90": 28561611.929,
+        "mean": 9299640.89,
+        "min": 173.077,
+        "max": 29934203.512
+      },
+      "ms_recv_minus_snapshot_update": {
+        "n": 80,
+        "p50": 7817.0,
+        "p90": 28561320.9,
+        "mean": 8951156.113,
+        "min": -161.0,
+        "max": 29934203.0
+      },
+      "ms_snapshot_update_minus_data": {
+        "n": 77,
+        "p50": -84.0,
+        "p90": 0.0,
+        "mean": -190.143,
+        "min": -1487.0,
+        "max": 7781.0
+      }
+    }
+  }
+}

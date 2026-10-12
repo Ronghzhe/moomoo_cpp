@@ -1,0 +1,46 @@
+{
+  "id": "l2_07_staged_take_profit",
+  "cases": [
+    {
+      "baseline_qty": 563.0,
+      "qtys": [
+        281.0,
+        282.0
+      ],
+      "sum_qty": 563.0
+    },
+    {
+      "baseline_qty": 563.0,
+      "qtys": [
+        281.0,
+        282.0
+      ],
+      "sum_qty": 563.0
+    },
+    {
+      "baseline_qty": 600.0,
+      "qtys": [
+        200.0,
+        400.0
+      ],
+      "sum_qty": 600.0
+    },
+    {
+      "baseline_qty": 563.0,
+      "qtys": [
+        281.0,
+        169.0,
+        113.0
+      ],
+      "sum_qty": 563.0
+    },
+    {
+      "baseline_qty": 500.0,
+      "qtys": [
+        200.0,
+        300.0
+      ],
+      "sum_qty": 500.0
+    }
+  ]
+}

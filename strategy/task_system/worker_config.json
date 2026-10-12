@@ -1,0 +1,10 @@
+{
+  "mysql_config": "/home/ubuntu/workspace/mysql/mysql_config.json",
+  "task_type": 2,
+  "poll_sec": 2,
+  "simulate": 0,
+  "executor_poll_sec": 2,
+  "executor_timeout_sec": 0,
+  "executor_open_stagger_slot_sec": 2,
+  "executor_open_stagger_buckets": 20
+}

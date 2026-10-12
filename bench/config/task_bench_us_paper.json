@@ -1,0 +1,14 @@
+{
+  "task_type": 4,
+  "account": "nana_paper",
+  "trader": "all",
+  "stock_type": "US",
+  "rounds": 2,
+  "insert_gap_ms": 0,
+  "wait_timeout_sec": 900,
+  "cases": [
+    {"stock_code": "AAPL", "trade_qty": 1},
+    {"stock_code": "MU", "trade_qty": 1},
+    {"stock_code": "SMCI", "trade_qty": 1}
+  ]
+}

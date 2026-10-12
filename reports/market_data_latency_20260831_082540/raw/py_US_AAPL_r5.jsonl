@@ -1,0 +1,1 @@
+{"case": "push_basicqot", "lang": "python", "iter": 1, "ok": true, "ms_total": 11.749, "ms_connect": 3.294, "ms_subscribe": 11.871, "ms_first_push": 11.749, "push_count": 1, "symbol": "US.AAPL", "timeout_sec": 15.0, "error": "", "ts": "2026-08-31T08:26:03"}

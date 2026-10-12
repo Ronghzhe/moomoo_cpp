@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -no-pie -Wl,--dependency-file=CMakeFiles/trade_executor_cpp.dir/link.d CMakeFiles/trade_executor_cpp.dir/trade_executor_main.cpp.o -o trade_executor_cpp  ../src/libmoomoo_core.a -lmysqlclient

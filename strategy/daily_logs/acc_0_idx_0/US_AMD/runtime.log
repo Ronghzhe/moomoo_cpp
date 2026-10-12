@@ -1,0 +1,100 @@
+2026-08-20 21:42:07.100 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | startup | 启动成功 symbol=US.AMD mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:42:07.100 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:42:07.100 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | lot_size/手 | code=US.AMD value=1 (snapshot)
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   订阅 / subscribe: ORDER_BOOK  |  US.AMD 推送已开 / push on
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | ==========================================================
+2026-08-20 21:42:07.577 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 21:42:07.860 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=472.75 ask_1=473.53
+2026-08-20 21:42:07.860 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | entry_judge/开仓子条件 | code=US.AMD rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1894.12
+2026-08-20 21:42:07.860 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 开始交易/start_trade | code=US.AMD entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:42:07.860 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 报单计算/order_sizing | 参考价/px=473.53 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.2236 n_lots=4 qty=4 | est_notional~1894.12
+2026-08-20 21:42:07.860 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=473.53 submit_price=483.00 time_in_force=DAY side=BUY code=US.AMD qty=4 est_notional~1932.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:42:08.062 | WARN | strategy_runtime.acc_0_idx_0.US_AMD | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:42:08.062 | WARN | strategy_runtime.acc_0_idx_0.US_AMD | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:42:08.062 | ERROR | strategy_runtime.acc_0_idx_0.US_AMD | entry_order_fatal | entry_order_fatal | code=US.AMD status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:12:16.292 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | startup | 启动成功 symbol=US.AMD mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:12:16.292 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:12:16.292 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | lot_size/手 | code=US.AMD value=1 (snapshot)
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   订阅 / subscribe: ORDER_BOOK  |  US.AMD 推送已开 / push on
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | ==========================================================
+2026-08-20 22:12:16.761 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 22:12:17.161 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469 ask_1=469.41
+2026-08-20 22:12:17.161 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | entry_judge/开仓子条件 | code=US.AMD rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1877.64
+2026-08-20 22:12:17.161 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 开始交易/start_trade | code=US.AMD entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:12:17.161 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 报单计算/order_sizing | 参考价/px=469.41 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.26067 n_lots=4 qty=4 | est_notional~1877.64
+2026-08-20 22:12:17.161 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=469.41 submit_price=478.80 time_in_force=DAY side=BUY code=US.AMD qty=4 est_notional~1915.20 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:12:17.496 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 下单结果/place_order_result | ret=0 order_id=3246014 status=SUBMITTING
+2026-08-20 22:12:17.496 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 已报单，等待成交/await_order_fill | order_id=3246014 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:12:17.755 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:17.756 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.41
+2026-08-20 22:12:17.756 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:17.756 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.057 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.057 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.057 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.058 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.352 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.352 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.651 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.651 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.652 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.652 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.13 ask_1=469.63
+2026-08-20 22:12:18.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:18.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:18.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:19.254 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.255 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:19.256 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.256 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:19.550 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.550 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:19.550 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.550 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.37 ask_1=469.65
+2026-08-20 22:12:19.854 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.855 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.04 ask_1=469.49
+2026-08-20 22:12:19.855 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:19.855 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.49
+2026-08-20 22:12:20.152 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:20.152 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.63
+2026-08-20 22:12:20.152 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:20.152 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.63
+2026-08-20 22:12:20.452 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:20.452 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.63
+2026-08-20 22:12:20.452 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:20.452 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.63
+2026-08-20 22:12:20.760 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:20.760 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.05 ask_1=469.48
+2026-08-20 22:12:21.059 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:21.060 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.04 ask_1=469.47
+2026-08-20 22:12:21.060 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:12:21.060 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.04 ask_1=469.48
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 订单轮询/order_poll | code=US.AMD order_id=3246014 status=11 dealt=4 target=4 -> filled
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 【开仓】====2026-08-20 22:12:21.357
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | US.AMD-buy  |  计划金额: 2000
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | real_price: 469.39 (exp=478.80)
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | real_qty: 4 | real_amount: 1877.56
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | env: paper
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | o_status: filled (order_id:3246014)
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | task_id: nana_paper_AMD_5m_1787232990589
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 触发开仓条件------------------------
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | ·立即开仓 (2%限仿市)
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 预设平仓条件------------------------
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 不平仓，无平仓监控
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 22:12:21.357 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 
+2026-08-20 22:12:22.027 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | 读取行情/read_market | code=US.AMD bid_1=469.04 ask_1=469.42
+2026-08-20 22:12:22.027 | INFO | strategy_runtime.acc_0_idx_0.US_AMD | managed_done_exit | loop_tick US.AMD

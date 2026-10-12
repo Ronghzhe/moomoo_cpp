@@ -1,0 +1,20 @@
+2026-08-20 11:02:47.459 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | startup | 启动成功 symbol=HK.03690 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 11:02:47.459 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 11:02:47.459 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | lot_size/手 | code=HK.03690 value=100 (snapshot)
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | ========== 运行中 / RUNNING ==============================
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 |   订阅 / subscribe: ORDER_BOOK  |  HK.03690 推送已开 / push on
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | ==========================================================
+2026-08-20 11:02:47.922 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 
+2026-08-20 11:02:48.373 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 读取行情/read_market | code=HK.03690 bid_1=86.65 ask_1=86.7
+2026-08-20 11:02:48.373 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | entry_judge/开仓子条件 | code=HK.03690 rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=100 est_notional~8670.00
+2026-08-20 11:02:48.373 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 开始交易/start_trade | code=HK.03690 entry_hit=立即开仓 (1%限仿市)
+2026-08-20 11:02:48.373 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 报单计算/order_sizing | 参考价/px=86.70 | budget_total=10000.00 | lot_size=100 => qty=100 | lot_size=100 budget/price~115.34 n_lots=1 qty=100 | est_notional~8670.00
+2026-08-20 11:02:48.373 | INFO | strategy_runtime.acc_0_idx_0.HK_03690 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=86.70 submit_price=86.70 time_in_force=DAY side=SELL code=HK.03690 qty=100 est_notional~8670.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 11:02:48.601 | WARN | strategy_runtime.acc_0_idx_0.HK_03690 | 下单结果/place_order_result | ret=-1 error=Short selling is currently not supported.
+2026-08-20 11:02:48.601 | WARN | strategy_runtime.acc_0_idx_0.HK_03690 | place_failed | Short selling is currently not supported.
+2026-08-20 11:02:48.601 | ERROR | strategy_runtime.acc_0_idx_0.HK_03690 | entry_order_fatal | entry_order_fatal | code=HK.03690 status=- reason=Short selling is currently not supported.

@@ -1,0 +1,146 @@
+2026-08-20 21:46:04.279 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | startup | 启动成功 symbol=US.QBTS mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:46:04.279 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:46:04.279 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | lot_size/手 | code=US.QBTS value=1 (snapshot)
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   订阅 / subscribe: ORDER_BOOK  |  US.QBTS 推送已开 / push on
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | ==========================================================
+2026-08-20 21:46:04.757 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 21:46:05.043 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=19.35 ask_1=19.37
+2026-08-20 21:46:05.043 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | entry_judge/开仓子条件 | code=US.QBTS rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=103 est_notional~1995.11
+2026-08-20 21:46:05.043 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 开始交易/start_trade | code=US.QBTS entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:46:05.043 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 报单计算/order_sizing | 参考价/px=19.37 | budget_total=2000.00 | lot_size=1 => qty=103 | lot_size=1 budget/price~103.252 n_lots=103 qty=103 | est_notional~1995.11
+2026-08-20 21:46:05.043 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=19.37 submit_price=19.76 time_in_force=DAY side=BUY code=US.QBTS qty=103 est_notional~2035.01 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:46:05.245 | WARN | strategy_runtime.acc_0_idx_0.US_QBTS | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:46:05.245 | WARN | strategy_runtime.acc_0_idx_0.US_QBTS | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:46:05.245 | ERROR | strategy_runtime.acc_0_idx_0.US_QBTS | entry_order_fatal | entry_order_fatal | code=US.QBTS status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:15:50.080 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | startup | 启动成功 symbol=US.QBTS mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:15:50.080 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:15:50.080 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | lot_size/手 | code=US.QBTS value=1 (snapshot)
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   订阅 / subscribe: ORDER_BOOK  |  US.QBTS 推送已开 / push on
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | ==========================================================
+2026-08-20 22:15:50.550 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 22:15:50.941 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.95 ask_1=18.96
+2026-08-20 22:15:50.941 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | entry_judge/开仓子条件 | code=US.QBTS rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=105 est_notional~1990.80
+2026-08-20 22:15:50.941 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 开始交易/start_trade | code=US.QBTS entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:15:50.941 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 报单计算/order_sizing | 参考价/px=18.96 | budget_total=2000.00 | lot_size=1 => qty=105 | lot_size=1 budget/price~105.485 n_lots=105 qty=105 | est_notional~1990.80
+2026-08-20 22:15:50.941 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=18.96 submit_price=19.34 time_in_force=DAY side=BUY code=US.QBTS qty=105 est_notional~2030.70 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:15:51.266 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 下单结果/place_order_result | ret=0 order_id=3246032 status=SUBMITTING
+2026-08-20 22:15:51.266 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 已报单，等待成交/await_order_fill | order_id=3246032 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:15:51.534 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:51.534 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.95 ask_1=18.96
+2026-08-20 22:15:51.535 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:51.535 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.95 ask_1=18.96
+2026-08-20 22:15:51.834 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:51.834 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.95 ask_1=18.95
+2026-08-20 22:15:51.834 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:51.834 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:52.135 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:52.135 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:52.135 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:52.135 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:52.433 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:52.433 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:52.433 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:52.433 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:52.729 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:52.729 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.036 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.036 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.036 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.036 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.334 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.334 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.334 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.334 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.649 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.649 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:53.957 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:53.957 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:54.239 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:54.239 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:54.239 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:54.239 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:54.539 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:54.539 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:54.837 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:54.837 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:54.838 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:54.838 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:55.135 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:55.136 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:55.435 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:55.435 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:55.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:55.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.94
+2026-08-20 22:15:55.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:55.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:56.039 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:56.039 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:56.039 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:56.040 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:56.337 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:56.337 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:57.148 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:57.148 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:57.533 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:57.533 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:57.835 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:57.835 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:58.134 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:58.134 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.94
+2026-08-20 22:15:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:58.440 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:58.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:58.735 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.95
+2026-08-20 22:15:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.94 ask_1=18.94
+2026-08-20 22:15:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:59.330 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.331 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:59.637 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.637 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:59.637 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.637 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:59.931 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.931 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:15:59.931 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:15:59.931 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:16:00.226 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:16:00.226 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:16:00.227 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:16:00.227 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.94
+2026-08-20 22:16:00.288 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:16:00.288 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.93 ask_1=18.93
+2026-08-20 22:16:00.288 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=5 dealt=0 target=105 -> wait
+2026-08-20 22:16:00.288 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.92 ask_1=18.93
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 订单轮询/order_poll | code=US.QBTS order_id=3246032 status=11 dealt=105 target=105 -> filled
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 【开仓】====2026-08-20 22:16:00.543
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | US.QBTS-buy  |  计划金额: 2000
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | real_price: 18.93 (exp=19.34)
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | real_qty: 105 | real_amount: 1987.65
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | env: paper
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | o_status: filled (order_id:3246032)
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | task_id: nana_paper_QBTS_5m_1787233247430
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 触发开仓条件------------------------
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | ·立即开仓 (2%限仿市)
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 预设平仓条件------------------------
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 不平仓，无平仓监控
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 22:16:00.543 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 
+2026-08-20 22:16:01.899 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | 读取行情/read_market | code=US.QBTS bid_1=18.92 ask_1=18.93
+2026-08-20 22:16:01.899 | INFO | strategy_runtime.acc_0_idx_0.US_QBTS | managed_done_exit | loop_tick US.QBTS

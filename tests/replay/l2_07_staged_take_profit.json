@@ -1,0 +1,52 @@
+{
+  "id": "l2_07_staged_take_profit",
+  "module": "staged_take_profit",
+  "cases": [
+    {
+      "opened_qty": 563.0,
+      "initial_qty": 199.0,
+      "fractions": [
+        0.5,
+        0.5
+      ],
+      "lot_size": 1
+    },
+    {
+      "opened_qty": 200.0,
+      "initial_qty": 563.0,
+      "fractions": [
+        0.5,
+        0.5
+      ],
+      "lot_size": 1
+    },
+    {
+      "opened_qty": 600.0,
+      "initial_qty": 600.0,
+      "fractions": [
+        0.5,
+        0.5
+      ],
+      "lot_size": 200
+    },
+    {
+      "opened_qty": 563.0,
+      "initial_qty": 563.0,
+      "fractions": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "lot_size": 1
+    },
+    {
+      "opened_qty": 500.0,
+      "initial_qty": 500.0,
+      "fractions": [
+        0.5,
+        0.5
+      ],
+      "lot_size": 200
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:10:04,nana_paper_VRT_5m_1787232963525,US.VRT,SELL,3245991,11,7,255.5,strategy_cpp_entry,,,,paper,,,

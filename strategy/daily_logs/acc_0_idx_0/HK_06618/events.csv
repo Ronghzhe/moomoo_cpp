@@ -1,0 +1,37 @@
+ts,level,event_type,message
+2026-08-20T03:40:51,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20T03:40:51,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T03:40:56,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-20T05:35:55,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T05:35:55,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T05:35:56,WARN,place_failed,Invalid quantity.
+2026-08-20T05:35:56,ERROR,exit_order_fatal,exit_order_fatal | code=HK.06618 status=- reason=Invalid quantity.
+2026-08-20T06:56:07,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20T06:56:07,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20T06:56:08,INFO,place_exit,oid=3244748
+2026-08-20T06:56:13,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-21T01:56:25,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T01:56:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T01:56:26,WARN,place_failed,Short selling is currently not supported.
+2026-08-21T01:56:26,ERROR,entry_order_fatal,entry_order_fatal | code=HK.06618 status=- reason=Short selling is currently not supported.
+2026-08-21T03:46:27,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T03:46:27,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T03:46:36,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-21T05:11:45,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T05:11:45,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T05:11:47,INFO,place_exit,oid=3247493
+2026-08-21T05:11:49,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-21T05:30:25,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21T05:30:25,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T05:30:28,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-21T06:45:18,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21T06:45:18,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21T06:45:19,INFO,place_exit,oid=3247608
+2026-08-21T06:45:24,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-24T06:40:47,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24T06:40:47,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T06:40:52,INFO,managed_done_exit,loop_tick HK.06618
+2026-08-24T07:55:55,INFO,startup,启动成功 symbol=HK.06618 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-24T07:55:55,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24T07:55:56,INFO,place_exit,oid=3250712
+2026-08-24T07:56:01,INFO,managed_done_exit,loop_tick HK.06618

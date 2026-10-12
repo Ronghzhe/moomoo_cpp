@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "scenarios": [
+    "l2_01_strategy_judge_us_orderbook",
+    "l2_02_strategy_judge_us_pnl_exit",
+    "l2_03_hk_short_band",
+    "l2_06_book_guard_emergency_ref",
+    "l2_07_staged_take_profit"
+  ]
+}

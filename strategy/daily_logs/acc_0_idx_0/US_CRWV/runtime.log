@@ -1,0 +1,782 @@
+2026-08-20 21:36:57.514 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:36:57.514 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:36:57.514 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-20 21:36:57.980 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 21:36:58.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.89 ask_1=92
+2026-08-20 21:36:58.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | entry_judge/开仓子条件 | code=US.CRWV rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=21 est_notional~1932.00
+2026-08-20 21:36:58.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 开始交易/start_trade | code=US.CRWV entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:36:58.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单计算/order_sizing | 参考价/px=92.00 | budget_total=2000.00 | lot_size=1 => qty=21 | lot_size=1 budget/price~21.7391 n_lots=21 qty=21 | est_notional~1932.00
+2026-08-20 21:36:58.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=92.00 submit_price=93.84 time_in_force=DAY side=BUY code=US.CRWV qty=21 est_notional~1970.64 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:36:58.544 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3245789 status=SUBMITTING
+2026-08-20 21:36:58.544 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 已报单，等待成交/await_order_fill | order_id=3245789 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 21:36:58.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:58.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:36:59.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:36:59.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:36:59.435 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.435 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:36:59.436 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.436 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:36:59.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.9 ask_1=91.96
+2026-08-20 21:36:59.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:36:59.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.9 ask_1=91.96
+2026-08-20 21:37:00.044 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.044 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.9 ask_1=91.96
+2026-08-20 21:37:00.342 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.342 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:00.343 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.343 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:00.939 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:00.939 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:01.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:01.244 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.96
+2026-08-20 21:37:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.85 ask_1=91.94
+2026-08-20 21:37:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.94
+2026-08-20 21:37:01.840 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:01.840 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.94
+2026-08-20 21:37:01.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:01.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.94
+2026-08-20 21:37:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.94
+2026-08-20 21:37:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.94
+2026-08-20 21:37:02.444 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.444 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.88
+2026-08-20 21:37:02.444 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.444 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.77 ask_1=91.86
+2026-08-20 21:37:02.737 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.737 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.77 ask_1=91.86
+2026-08-20 21:37:02.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:02.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.77 ask_1=91.86
+2026-08-20 21:37:03.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.77 ask_1=91.85
+2026-08-20 21:37:03.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.72 ask_1=91.85
+2026-08-20 21:37:03.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.8 ask_1=91.94
+2026-08-20 21:37:03.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.8 ask_1=91.94
+2026-08-20 21:37:03.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.93
+2026-08-20 21:37:03.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.81 ask_1=91.93
+2026-08-20 21:37:03.926 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.926 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.86 ask_1=91.93
+2026-08-20 21:37:03.927 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:03.927 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.86 ask_1=91.93
+2026-08-20 21:37:04.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:04.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.86 ask_1=91.93
+2026-08-20 21:37:04.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:04.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.95 ask_1=91.93
+2026-08-20 21:37:04.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:04.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=92.03 ask_1=92.06
+2026-08-20 21:37:04.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:04.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=92.03 ask_1=92.06
+2026-08-20 21:37:04.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:04.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=92.03 ask_1=92.06
+2026-08-20 21:37:05.144 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:05.144 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=92.04 ask_1=92.09
+2026-08-20 21:37:05.438 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:05.438 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=92.04 ask_1=92.09
+2026-08-20 21:37:05.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:05.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.87 ask_1=92.06
+2026-08-20 21:37:05.743 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:05.743 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.93 ask_1=92.06
+2026-08-20 21:37:06.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:06.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.94 ask_1=92.16
+2026-08-20 21:37:06.038 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=5 dealt=0 target=21 -> wait
+2026-08-20 21:37:06.038 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.94 ask_1=92.16
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3245789 status=11 dealt=21 target=21 -> filled
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【开仓】====2026-08-20 21:37:06.339
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy  |  计划金额: 2000
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 92.06 (exp=93.84)
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 21 | real_amount: 1933.26
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3245789)
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787232934351
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发开仓条件------------------------
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即开仓 (2%限仿市)
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 预设平仓条件------------------------
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 不平仓，无平仓监控
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 21:37:06.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 21:37:07.031 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.96 ask_1=92.16
+2026-08-20 21:37:07.031 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-20 22:30:25.603 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 22:30:25.603 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:30:25.603 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-20 22:30:25.820 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 22:30:26.213 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.71 ask_1=90.74
+2026-08-20 22:30:26.213 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | exit_judge/平仓子条件 | code=US.CRWV rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=21 est_notional~1904.91
+2026-08-20 22:30:26.213 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.71 submit_price=88.89 time_in_force=DAY side=SELL code=US.CRWV qty=21 est_notional~1866.69 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 22:30:26.554 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3246097 status=SUBMITTING
+2026-08-20 22:30:26.554 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓已报单，等待成交/exit_await_fill | order_id=3246097 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-20 22:30:26.554 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓触发/exit_hit | code=US.CRWV 立即平仓 (2%限仿市)
+2026-08-20 22:30:26.554 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | place_exit | oid=3246097
+2026-08-20 22:30:26.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:26.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.77 ask_1=90.79
+2026-08-20 22:30:26.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:26.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.77 ask_1=90.79
+2026-08-20 22:30:27.045 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.045 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.84
+2026-08-20 22:30:27.045 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.045 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.84
+2026-08-20 22:30:27.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.84
+2026-08-20 22:30:27.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.84
+2026-08-20 22:30:27.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:27.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:27.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:27.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:28.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:28.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:28.541 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:28.541 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:28.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:28.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.75 ask_1=90.84
+2026-08-20 22:30:29.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:29.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.7 ask_1=90.84
+2026-08-20 22:30:30.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.7 ask_1=90.84
+2026-08-20 22:30:30.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.7 ask_1=90.84
+2026-08-20 22:30:30.421 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.421 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.7 ask_1=90.84
+2026-08-20 22:30:30.650 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.650 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:30.650 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.650 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:30.946 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:30.946 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:31.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:31.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:31.548 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:31.548 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:31.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:31.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:32.281 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:32.281 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:32.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:32.443 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.72 ask_1=90.84
+2026-08-20 22:30:32.753 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:32.753 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.84
+2026-08-20 22:30:32.754 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:32.754 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.94
+2026-08-20 22:30:33.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:33.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.94
+2026-08-20 22:30:33.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=5 dealt=0 target=21 -> wait
+2026-08-20 22:30:33.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.94
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246097 status=11 dealt=21 target=21 -> filled
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【平仓】====2026-08-20 22:30:33.344
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.77 (exp=88.89)
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 21
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3246097)
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787232934351
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发平仓条件------------------------
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即平仓 (2%限仿市)
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【盈亏统计】------------------------
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl: -27.09
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl%: -1.40%
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 22:30:33.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 22:30:34.079 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.92
+2026-08-20 22:30:34.079 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-20 23:35:59.100 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 23:35:59.100 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 23:35:59.100 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-20 23:35:59.317 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 23:35:59.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.2 ask_1=90.26
+2026-08-20 23:35:59.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | entry_judge/开仓子条件 | code=US.CRWV rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=22 est_notional~1985.72
+2026-08-20 23:35:59.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 开始交易/start_trade | code=US.CRWV entry_hit=立即开仓 (2%限仿市)
+2026-08-20 23:35:59.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单计算/order_sizing | 参考价/px=90.20 | budget_total=2000.00 | lot_size=1 => qty=22 | lot_size=1 budget/price~22.1729 n_lots=22 qty=22 | est_notional~1984.40
+2026-08-20 23:35:59.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.20 submit_price=88.39 time_in_force=DAY side=SELL code=US.CRWV qty=22 est_notional~1944.58 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 23:36:00.178 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3246303 status=SUBMITTING
+2026-08-20 23:36:00.178 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 已报单，等待成交/await_order_fill | order_id=3246303 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 23:36:00.367 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.367 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.2 ask_1=90.24
+2026-08-20 23:36:00.367 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.368 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.645 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:00.944 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:00.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:00.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:01.239 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:01.239 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:01.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:01.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.23
+2026-08-20 23:36:01.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:01.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.23
+2026-08-20 23:36:01.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:01.841 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.23
+2026-08-20 23:36:01.842 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:01.842 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:02.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:02.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:02.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:02.735 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:02.735 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.24
+2026-08-20 23:36:02.735 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:02.735 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:03.038 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:03.038 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:03.039 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:03.039 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:03.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:03.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:03.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:03.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:04.246 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:04.246 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:04.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:04.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:05.218 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:05.218 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.26
+2026-08-20 23:36:05.440 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:05.440 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:05.440 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:05.440 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:05.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:05.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:06.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=5 dealt=0 target=22 -> wait
+2026-08-20 23:36:06.040 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3246303 status=11 dealt=22 target=22 -> filled
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【开仓】====2026-08-20 23:36:06.337
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-sell  |  计划金额: 2000
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.22 (exp=88.39)
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 22 | real_amount: 1984.84
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3246303)
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787240135852
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发开仓条件------------------------
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即开仓 (2%限仿市)
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 预设平仓条件------------------------
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 不平仓，无平仓监控
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 23:36:06.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-20 23:36:07.009 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.18 ask_1=90.23
+2026-08-20 23:36:07.009 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-21 00:50:50.505 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 00:50:50.505 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 00:50:50.506 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-21 00:50:50.722 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 00:50:51.427 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.85
+2026-08-21 00:50:51.427 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | exit_judge/平仓子条件 | code=US.CRWV rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=22 est_notional~1975.60
+2026-08-21 00:50:51.427 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=89.85 submit_price=91.65 time_in_force=DAY side=BUY code=US.CRWV qty=22 est_notional~2016.30 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 00:50:51.755 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3246497 status=SUBMITTING
+2026-08-21 00:50:51.755 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓已报单，等待成交/exit_await_fill | order_id=3246497 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 00:50:51.755 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓触发/exit_hit | code=US.CRWV 立即平仓 (2%限仿市)
+2026-08-21 00:50:51.755 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | place_exit | oid=3246497
+2026-08-21 00:50:51.987 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:51.988 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.85
+2026-08-21 00:50:52.228 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:52.228 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.85
+2026-08-21 00:50:52.727 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:52.727 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.85
+2026-08-21 00:50:53.292 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:53.292 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.85
+2026-08-21 00:50:53.653 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:53.653 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.83
+2026-08-21 00:50:53.736 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:53.737 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.83
+2026-08-21 00:50:53.737 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:53.737 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.8 ask_1=89.83
+2026-08-21 00:50:54.033 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:54.033 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.79 ask_1=89.83
+2026-08-21 00:50:54.034 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=5 dealt=0 target=22 -> wait
+2026-08-21 00:50:54.034 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.79 ask_1=89.83
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3246497 status=11 dealt=22 target=22 -> filled
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【平仓】====2026-08-21 00:50:54.339
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-sell
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 89.83 (exp=91.65)
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 22
+2026-08-21 00:50:54.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3246497)
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787240135852
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发平仓条件------------------------
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即平仓 (2%限仿市)
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【盈亏统计】------------------------
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl: +8.58
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl%: +0.43%
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 00:50:54.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 00:50:55.107 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.79 ask_1=89.82
+2026-08-21 00:50:55.107 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-21 21:36:18.192 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 21:36:18.193 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 21:36:18.193 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-21 21:36:18.419 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:36:18.649 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:18.649 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | entry_judge/开仓子条件 | code=US.CRWV rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=21 est_notional~1917.30
+2026-08-21 21:36:18.649 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 开始交易/start_trade | code=US.CRWV entry_hit=立即开仓 (2%限仿市)
+2026-08-21 21:36:18.649 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单计算/order_sizing | 参考价/px=91.30 | budget_total=2000.00 | lot_size=1 => qty=21 | lot_size=1 budget/price~21.9058 n_lots=21 qty=21 | est_notional~1917.30
+2026-08-21 21:36:18.649 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=91.30 submit_price=93.13 time_in_force=DAY side=BUY code=US.CRWV qty=21 est_notional~1955.73 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 21:36:18.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3247981 status=SUBMITTING
+2026-08-21 21:36:18.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 已报单，等待成交/await_order_fill | order_id=3247981 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 21:36:19.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:19.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:19.238 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:19.238 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:19.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:19.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:19.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:19.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:20.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:20.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:20.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:20.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:20.438 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:20.438 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:20.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:20.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.032 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.033 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:21.936 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.936 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:21.936 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:21.937 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:22.236 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:22.236 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.3
+2026-08-21 21:36:22.236 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:22.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:22.834 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:22.834 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.140 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.441 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.441 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.441 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.441 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.32
+2026-08-21 21:36:23.743 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:23.743 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.18 ask_1=91.23
+2026-08-21 21:36:24.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.044 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.1 ask_1=91.21
+2026-08-21 21:36:24.044 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.044 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.1 ask_1=91.21
+2026-08-21 21:36:24.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91.1 ask_1=91.17
+2026-08-21 21:36:24.345 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.345 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:24.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:24.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:24.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:24.939 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:24.939 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.538 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.538 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.538 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.538 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:25.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:25.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:26.139 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.139 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:26.139 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.139 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91.17
+2026-08-21 21:36:26.425 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.425 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=91 ask_1=91
+2026-08-21 21:36:26.425 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.425 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.88 ask_1=91
+2026-08-21 21:36:26.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.88 ask_1=91
+2026-08-21 21:36:26.739 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:26.739 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.88 ask_1=91
+2026-08-21 21:36:27.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.84 ask_1=90.92
+2026-08-21 21:36:27.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.92
+2026-08-21 21:36:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.340 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:27.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.636 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:27.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.637 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:27.940 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.526 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.526 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.527 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.527 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:28.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:28.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=90.92
+2026-08-21 21:36:29.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.92
+2026-08-21 21:36:29.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.81 ask_1=90.92
+2026-08-21 21:36:29.442 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.442 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=90.92
+2026-08-21 21:36:29.442 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.442 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.87 ask_1=91
+2026-08-21 21:36:29.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=91
+2026-08-21 21:36:29.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:29.738 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=91
+2026-08-21 21:36:30.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:30.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=91
+2026-08-21 21:36:30.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:36:30.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=91
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3247981 status=11 dealt=21 target=21 -> filled
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【开仓】====2026-08-21 21:36:30.339
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy  |  计划金额: 2000
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.91 (exp=93.13)
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 21 | real_amount: 1909.01
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3247981)
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787319332008
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发开仓条件------------------------
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即开仓 (2%限仿市)
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 预设平仓条件------------------------
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 不平仓，无平仓监控
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:36:30.339 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:36:31.332 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.82 ask_1=91
+2026-08-21 21:36:31.332 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-21 21:55:42.726 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 21:55:42.726 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 21:55:42.726 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-21 21:55:42.945 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:55:43.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=89.98 ask_1=90.04
+2026-08-21 21:55:43.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | exit_judge/平仓子条件 | code=US.CRWV rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=21 est_notional~1889.58
+2026-08-21 21:55:43.245 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=89.98 submit_price=88.18 time_in_force=DAY side=SELL code=US.CRWV qty=21 est_notional~1851.78 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 21:55:43.599 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3248087 status=SUBMITTING
+2026-08-21 21:55:43.599 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓已报单，等待成交/exit_await_fill | order_id=3248087 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 21:55:43.599 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓触发/exit_hit | code=US.CRWV 立即平仓 (2%限仿市)
+2026-08-21 21:55:43.599 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | place_exit | oid=3248087
+2026-08-21 21:55:43.826 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:43.827 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.01 ask_1=90.04
+2026-08-21 21:55:43.827 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:43.827 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.01 ask_1=90.03
+2026-08-21 21:55:43.849 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:43.849 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.01 ask_1=90.03
+2026-08-21 21:55:44.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:44.137 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.01 ask_1=90.02
+2026-08-21 21:55:44.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:44.138 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.01 ask_1=90.02
+2026-08-21 21:55:44.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:44.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.03 ask_1=90.09
+2026-08-21 21:55:44.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:44.439 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.03 ask_1=90.09
+2026-08-21 21:55:44.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:44.741 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.03 ask_1=90.09
+2026-08-21 21:55:45.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=5 dealt=0 target=21 -> wait
+2026-08-21 21:55:45.041 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.03 ask_1=90.09
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248087 status=11 dealt=21 target=21 -> filled
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【平仓】====2026-08-21 21:55:45.334
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.02 (exp=88.18)
+2026-08-21 21:55:45.334 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 21
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3248087)
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787319332008
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发平仓条件------------------------
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即平仓 (2%限仿市)
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【盈亏统计】------------------------
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl: -18.59
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl%: -0.97%
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:55:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 21:55:46.024 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.03 ask_1=90.09
+2026-08-21 21:55:46.024 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-21 22:00:46.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 22:00:46.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 22:00:46.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 22:00:46.812 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-21 22:00:46.813 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:00:47.147 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.51 ask_1=90.59
+2026-08-21 22:00:47.147 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | entry_judge/开仓子条件 | code=US.CRWV rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=22 est_notional~1992.98
+2026-08-21 22:00:47.147 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 开始交易/start_trade | code=US.CRWV entry_hit=立即开仓 (2%限仿市)
+2026-08-21 22:00:47.147 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单计算/order_sizing | 参考价/px=90.59 | budget_total=2000.00 | lot_size=1 => qty=22 | lot_size=1 budget/price~22.0775 n_lots=22 qty=22 | est_notional~1992.98
+2026-08-21 22:00:47.147 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.59 submit_price=92.41 time_in_force=DAY side=BUY code=US.CRWV qty=22 est_notional~2033.02 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 22:00:47.500 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3248118 status=SUBMITTING
+2026-08-21 22:00:47.500 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 已报单，等待成交/await_order_fill | order_id=3248118 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 22:00:47.749 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:47.749 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.51 ask_1=90.59
+2026-08-21 22:00:48.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.043 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.51 ask_1=90.59
+2026-08-21 22:00:48.336 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.52 ask_1=90.59
+2026-08-21 22:00:48.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.52 ask_1=90.59
+2026-08-21 22:00:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.52 ask_1=90.59
+2026-08-21 22:00:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.639 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.52 ask_1=90.59
+2026-08-21 22:00:48.937 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.937 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.52 ask_1=90.53
+2026-08-21 22:00:48.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:48.938 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.53
+2026-08-21 22:00:49.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.53
+2026-08-21 22:00:49.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.237 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.53
+2026-08-21 22:00:49.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.53
+2026-08-21 22:00:49.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.53
+2026-08-21 22:00:49.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.54
+2026-08-21 22:00:49.838 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:49.839 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.54
+2026-08-21 22:00:50.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:50.141 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.54
+2026-08-21 22:00:50.142 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:50.142 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.54
+2026-08-21 22:00:50.437 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:50.437 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.54
+2026-08-21 22:00:50.746 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:50.746 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.53
+2026-08-21 22:00:50.747 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:50.747 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.47 ask_1=90.53
+2026-08-21 22:00:51.045 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:51.046 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.45 ask_1=90.46
+2026-08-21 22:00:51.047 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:00:51.047 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.43 ask_1=90.46
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3248118 status=11 dealt=22 target=22 -> filled
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【开仓】====2026-08-21 22:00:51.344
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy  |  计划金额: 2000
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.45 (exp=92.41)
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 22 | real_amount: 1989.90
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3248118)
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787320833749
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发开仓条件------------------------
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即开仓 (2%限仿市)
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 预设平仓条件------------------------
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 不平仓，无平仓监控
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:00:51.344 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:00:52.034 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.43 ask_1=90.46
+2026-08-21 22:00:52.034 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-21 22:05:50.200 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 22:05:50.200 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 22:05:50.201 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-21 22:05:50.417 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:05:50.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.29
+2026-08-21 22:05:50.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | exit_judge/平仓子条件 | code=US.CRWV rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=22 est_notional~1984.18
+2026-08-21 22:05:50.742 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=90.19 submit_price=88.38 time_in_force=DAY side=SELL code=US.CRWV qty=22 est_notional~1944.36 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 22:05:51.314 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3248151 status=SUBMITTING
+2026-08-21 22:05:51.314 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓已报单，等待成交/exit_await_fill | order_id=3248151 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 22:05:51.314 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 平仓触发/exit_hit | code=US.CRWV 立即平仓 (2%限仿市)
+2026-08-21 22:05:51.314 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | place_exit | oid=3248151
+2026-08-21 22:05:51.597 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:51.597 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.29
+2026-08-21 22:05:51.941 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:51.941 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.19 ask_1=90.29
+2026-08-21 22:05:52.240 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:52.240 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.25 ask_1=90.29
+2026-08-21 22:05:52.241 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:52.241 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:52.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:52.539 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:52.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:52.540 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:53.534 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:53.534 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:53.744 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:53.745 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:54.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:54.036 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:54.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=5 dealt=0 target=22 -> wait
+2026-08-21 22:05:54.037 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll_exit | code=US.CRWV order_id=3248151 status=11 dealt=22 target=22 -> filled
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【平仓】====2026-08-21 22:05:54.337
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-buy
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 90.25 (exp=88.38)
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 22
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3248151)
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787320833749
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发平仓条件------------------------
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即平仓 (2%限仿市)
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【盈亏统计】------------------------
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl: -4.40
+2026-08-21 22:05:54.337 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | pnl%: -0.22%
+2026-08-21 22:05:54.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:05:54.338 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-21 22:05:55.013 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=90.26 ask_1=90.33
+2026-08-21 22:05:55.013 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV
+2026-08-24 21:49:45.219 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup | 启动成功 symbol=US.CRWV mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24 21:49:45.219 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24 21:49:45.219 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | lot_size/手 | code=US.CRWV value=1 (snapshot)
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ========== 运行中 / RUNNING ==============================
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   [RUN] 本策略已上线 / strategy is live
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   订阅 / subscribe: ORDER_BOOK  |  US.CRWV 推送已开 / push on
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-24 21:49:45.698 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-24 21:49:45.699 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ==========================================================
+2026-08-24 21:49:45.699 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-24 21:49:46.180 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.21
+2026-08-24 21:49:46.180 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | entry_judge/开仓子条件 | code=US.CRWV rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=23 est_notional~1936.83
+2026-08-24 21:49:46.180 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 开始交易/start_trade | code=US.CRWV entry_hit=立即开仓 (2%限仿市)
+2026-08-24 21:49:46.180 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单计算/order_sizing | 参考价/px=84.14 | budget_total=2000.00 | lot_size=1 => qty=23 | lot_size=1 budget/price~23.7699 n_lots=23 qty=23 | est_notional~1935.22
+2026-08-24 21:49:46.180 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=84.14 submit_price=82.45 time_in_force=DAY side=SELL code=US.CRWV qty=23 est_notional~1896.35 remark=strategy_cpp_entry trd_env=paper
+2026-08-24 21:49:46.511 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 下单结果/place_order_result | ret=0 order_id=3251105 status=SUBMITTING
+2026-08-24 21:49:46.511 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 已报单，等待成交/await_order_fill | order_id=3251105 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-24 21:49:47.126 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.126 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.22
+2026-08-24 21:49:47.374 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.374 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.22
+2026-08-24 21:49:47.374 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.374 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.22
+2026-08-24 21:49:47.670 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.670 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.22
+2026-08-24 21:49:47.671 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.671 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.14 ask_1=84.22
+2026-08-24 21:49:47.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.08 ask_1=84.21
+2026-08-24 21:49:47.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=5 dealt=0 target=23 -> wait
+2026-08-24 21:49:47.971 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.08 ask_1=84.21
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 订单轮询/order_poll | code=US.CRWV order_id=3251105 status=11 dealt=23 target=23 -> filled
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 【开仓】====2026-08-24 21:49:48.273
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | US.CRWV-sell  |  计划金额: 2000
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_price: 84.15 (exp=82.45)
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | real_qty: 23 | real_amount: 1935.45
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | env: paper
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | o_status: filled (order_id:3251105)
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | task_id: nana_paper_CRWV_5m_1787579141222
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 触发开仓条件------------------------
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | ·立即开仓 (2%限仿市)
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 预设平仓条件------------------------
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 不平仓，无平仓监控
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-24 21:49:48.273 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 
+2026-08-24 21:49:48.999 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | 读取行情/read_market | code=US.CRWV bid_1=84.1 ask_1=84.21
+2026-08-24 21:49:49.000 | INFO | strategy_runtime.acc_0_idx_0.US_CRWV | managed_done_exit | loop_tick US.CRWV

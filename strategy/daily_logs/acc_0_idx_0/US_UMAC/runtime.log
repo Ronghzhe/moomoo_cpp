@@ -1,0 +1,308 @@
+2026-08-21 21:37:01.472 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup | 启动成功 symbol=US.UMAC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 21:37:01.473 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 21:37:01.473 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | lot_size/手 | code=US.UMAC value=1 (snapshot)
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ========== 运行中 / RUNNING ==============================
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   订阅 / subscribe: ORDER_BOOK  |  US.UMAC 推送已开 / push on
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ==========================================================
+2026-08-21 21:37:01.694 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 21:37:02.067 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.78 ask_1=26.87
+2026-08-21 21:37:02.067 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | entry_judge/开仓子条件 | code=US.UMAC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=74 est_notional~1988.38
+2026-08-21 21:37:02.067 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 开始交易/start_trade | code=US.UMAC entry_hit=立即开仓 (2%限仿市)
+2026-08-21 21:37:02.067 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单计算/order_sizing | 参考价/px=26.87 | budget_total=2000.00 | lot_size=1 => qty=74 | lot_size=1 budget/price~74.4325 n_lots=74 qty=74 | est_notional~1988.38
+2026-08-21 21:37:02.067 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=26.87 submit_price=27.41 time_in_force=DAY side=BUY code=US.UMAC qty=74 est_notional~2028.34 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 21:37:02.431 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 下单结果/place_order_result | ret=0 order_id=3247983 status=SUBMITTING
+2026-08-21 21:37:02.431 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 已报单，等待成交/await_order_fill | order_id=3247983 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 21:37:02.943 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:02.943 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.78 ask_1=26.87
+2026-08-21 21:37:03.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:03.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:04.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:04.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:05.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:05.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:06.378 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:06.379 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:07.379 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:07.379 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:08.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:08.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:09.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:09.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:10.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:10.055 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:10.198 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:10.198 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:10.542 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:10.543 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:10.842 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:10.842 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:11.136 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:11.136 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.87
+2026-08-21 21:37:11.136 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=5 dealt=0 target=74 -> wait
+2026-08-21 21:37:11.137 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.86
+2026-08-21 21:37:12.137 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3247983 status=11 dealt=74 target=74 -> filled
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【开仓】====2026-08-21 21:37:12.138
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | US.UMAC-buy  |  计划金额: 2000
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_price: 26.82 (exp=27.41)
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_qty: 74 | real_amount: 1985.05
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | env: paper
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | o_status: filled (order_id:3247983)
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | task_id: nana_paper_UMAC_5m_1787319344169
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 触发开仓条件------------------------
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ·立即开仓 (2%限仿市)
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 预设平仓条件------------------------
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 不平仓，无平仓监控
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 21:37:12.138 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 21:37:13.072 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.77 ask_1=26.86
+2026-08-21 21:37:13.072 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | managed_done_exit | loop_tick US.UMAC
+2026-08-21 22:16:31.935 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup | 启动成功 symbol=US.UMAC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 22:16:31.936 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 22:16:31.936 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 22:16:32.153 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | lot_size/手 | code=US.UMAC value=1 (snapshot)
+2026-08-21 22:16:32.153 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ========== 运行中 / RUNNING ==============================
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   订阅 / subscribe: ORDER_BOOK  |  US.UMAC 推送已开 / push on
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ==========================================================
+2026-08-21 22:16:32.154 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 22:16:32.721 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:32.721 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | exit_judge/平仓子条件 | code=US.UMAC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=74 est_notional~1975.80
+2026-08-21 22:16:32.721 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=26.70 submit_price=26.16 time_in_force=DAY side=SELL code=US.UMAC qty=74 est_notional~1935.84 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 22:16:33.092 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 下单结果/place_order_result | ret=0 order_id=3248218 status=SUBMITTING
+2026-08-21 22:16:33.092 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 平仓已报单，等待成交/exit_await_fill | order_id=3248218 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 22:16:33.092 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 平仓触发/exit_hit | code=US.UMAC 立即平仓 (2%限仿市)
+2026-08-21 22:16:33.092 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | place_exit | oid=3248218
+2026-08-21 22:16:34.075 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:34.075 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:34.513 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:34.513 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:34.514 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:34.514 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:35.514 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:35.514 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:35.599 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:35.599 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:35.734 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:35.734 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:36.734 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:36.734 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:37.734 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:37.735 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.77
+2026-08-21 22:16:37.845 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:37.845 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.73 ask_1=26.86
+2026-08-21 22:16:38.141 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:38.142 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.73 ask_1=26.86
+2026-08-21 22:16:38.142 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:38.142 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:39.142 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:39.142 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:40.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:40.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:41.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:41.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:42.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:42.143 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:42.821 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:42.821 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.7 ask_1=26.86
+2026-08-21 22:16:43.688 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:43.688 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.86
+2026-08-21 22:16:43.837 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:43.837 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.82
+2026-08-21 22:16:44.423 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:44.423 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.82
+2026-08-21 22:16:44.443 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:44.443 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.82
+2026-08-21 22:16:44.737 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:44.737 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.87
+2026-08-21 22:16:44.737 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=5 dealt=0 target=74 -> wait
+2026-08-21 22:16:44.737 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.87
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248218 status=11 dealt=74 target=74 -> filled
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【平仓】====2026-08-21 22:16:45.738
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | US.UMAC-buy
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_price: 26.75 (exp=26.16)
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_qty: 74
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | env: paper
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | o_status: filled (order_id:3248218)
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | task_id: nana_paper_UMAC_5m_1787319344169
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 触发平仓条件------------------------
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ·立即平仓 (2%限仿市)
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【盈亏统计】------------------------
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | pnl: -5.92
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | pnl%: -0.30%
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 22:16:45.738 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 22:16:46.430 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=26.74 ask_1=26.87
+2026-08-21 22:16:46.430 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | managed_done_exit | loop_tick US.UMAC
+2026-08-21 23:11:17.070 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup | 启动成功 symbol=US.UMAC mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 23:11:17.070 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 23:11:17.070 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | lot_size/手 | code=US.UMAC value=1 (snapshot)
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ========== 运行中 / RUNNING ==============================
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   订阅 / subscribe: ORDER_BOOK  |  US.UMAC 推送已开 / push on
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ==========================================================
+2026-08-21 23:11:17.289 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 23:11:17.593 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:17.593 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | entry_judge/开仓子条件 | code=US.UMAC rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=72 est_notional~1982.16
+2026-08-21 23:11:17.594 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 开始交易/start_trade | code=US.UMAC entry_hit=立即开仓 (2%限仿市)
+2026-08-21 23:11:17.594 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单计算/order_sizing | 参考价/px=27.53 | budget_total=2000.00 | lot_size=1 => qty=72 | lot_size=1 budget/price~72.648 n_lots=72 qty=72 | est_notional~1982.16
+2026-08-21 23:11:17.594 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.53 submit_price=28.09 time_in_force=DAY side=BUY code=US.UMAC qty=72 est_notional~2022.48 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 23:11:17.955 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 下单结果/place_order_result | ret=0 order_id=3248456 status=SUBMITTING
+2026-08-21 23:11:17.955 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 已报单，等待成交/await_order_fill | order_id=3248456 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 23:11:18.386 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:18.387 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:18.997 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:18.997 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:19.241 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:19.241 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:20.096 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:20.096 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:21.097 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.097 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:21.207 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.207 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.53
+2026-08-21 23:11:21.339 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.339 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:21.340 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.340 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:21.639 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.639 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:21.940 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:22.940 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:22.940 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:23.134 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:23.134 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:24.134 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:24.134 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:25.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:25.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:26.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:26.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:27.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:27.135 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.45 ask_1=27.5
+2026-08-21 23:11:27.934 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:27.934 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.5
+2026-08-21 23:11:28.239 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:28.239 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.5
+2026-08-21 23:11:28.239 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:28.239 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.51
+2026-08-21 23:11:28.537 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:28.538 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.51
+2026-08-21 23:11:29.059 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.059 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.49 ask_1=27.51
+2026-08-21 23:11:29.132 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.132 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.49 ask_1=27.53
+2026-08-21 23:11:29.133 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.133 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.53
+2026-08-21 23:11:29.432 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.432 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.53
+2026-08-21 23:11:29.733 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.733 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.52
+2026-08-21 23:11:29.733 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:29.733 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.52
+2026-08-21 23:11:30.035 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=5 dealt=0 target=72 -> wait
+2026-08-21 23:11:30.035 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.52
+2026-08-21 23:11:30.951 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll | code=US.UMAC order_id=3248456 status=11 dealt=72 target=72 -> filled
+2026-08-21 23:11:30.951 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 23:11:30.951 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【开仓】====2026-08-21 23:11:30.951
+2026-08-21 23:11:30.951 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | US.UMAC-buy  |  计划金额: 2000
+2026-08-21 23:11:30.951 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_price: 27.47 (exp=28.09)
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_qty: 72 | real_amount: 1977.84
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | env: paper
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | o_status: filled (order_id:3248456)
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | task_id: nana_paper_UMAC_5m_1787325041748
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 触发开仓条件------------------------
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ·立即开仓 (2%限仿市)
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 预设平仓条件------------------------
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 不平仓，无平仓监控
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 23:11:30.952 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-21 23:11:31.640 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.47 ask_1=27.52
+2026-08-21 23:11:31.640 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | managed_done_exit | loop_tick US.UMAC
+2026-08-22 00:55:46.407 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup | 启动成功 symbol=US.UMAC mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 00:55:46.407 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 00:55:46.407 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | lot_size/手 | code=US.UMAC value=1 (snapshot)
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ========== 运行中 / RUNNING ==============================
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   订阅 / subscribe: ORDER_BOOK  |  US.UMAC 推送已开 / push on
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ==========================================================
+2026-08-22 00:55:46.637 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-22 00:55:47.645 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:47.645 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | exit_judge/平仓子条件 | code=US.UMAC rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=72 est_notional~1987.20
+2026-08-22 00:55:47.646 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.60 submit_price=27.04 time_in_force=DAY side=SELL code=US.UMAC qty=72 est_notional~1946.88 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 00:55:47.969 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 下单结果/place_order_result | ret=0 order_id=3248845 status=SUBMITTING
+2026-08-22 00:55:47.969 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 平仓已报单，等待成交/exit_await_fill | order_id=3248845 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 00:55:47.969 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 平仓触发/exit_hit | code=US.UMAC 立即平仓 (2%限仿市)
+2026-08-22 00:55:47.969 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | place_exit | oid=3248845
+2026-08-22 00:55:48.970 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:48.970 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:49.155 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:49.155 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:50.155 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:50.155 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:51.155 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:51.156 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:51.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:51.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:51.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:51.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:52.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:52.930 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:53.455 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:53.455 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:54.455 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:54.455 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:54.545 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:54.545 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:54.627 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:54.627 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:55.628 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:55.628 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:56.183 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:56.183 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:56.746 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:56.746 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:57.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:57.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:58.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:58.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:55:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:55:59.031 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:56:00.032 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=5 dealt=0 target=72 -> wait
+2026-08-22 00:56:00.032 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 订单轮询/order_poll_exit | code=US.UMAC order_id=3248845 status=11 dealt=72 target=72 -> filled
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【平仓】====2026-08-22 00:56:00.754
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | US.UMAC-buy
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_price: 27.60 (exp=27.04)
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | real_qty: 72
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | env: paper
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | o_status: filled (order_id:3248845)
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | task_id: nana_paper_UMAC_5m_1787325041748
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 触发平仓条件------------------------
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | ·立即平仓 (2%限仿市)
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 【盈亏统计】------------------------
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | pnl: +9.43
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | pnl%: +0.48%
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-22 00:56:00.754 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 
+2026-08-22 00:56:01.457 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | 读取行情/read_market | code=US.UMAC bid_1=27.6 ask_1=27.62
+2026-08-22 00:56:01.457 | INFO | strategy_runtime.acc_0_idx_0.US_UMAC | managed_done_exit | loop_tick US.UMAC

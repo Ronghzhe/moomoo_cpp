@@ -1,0 +1,1 @@
+{"case":"push_basicqot","lang":"cpp","iter":1,"ok":true,"ms_total":7.640,"ms_connect":2.344,"ms_subscribe":7.854,"ms_first_push":7.640,"push_count":1,"symbol":"US.AAPL","timeout_sec":15.000}

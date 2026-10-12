@@ -1,0 +1,371 @@
+{
+  "batch_id": "20260831_085227",
+  "session": {
+    "bj": "2026-08-31 16:52:27",
+    "et": "2026-08-31 04:52:27 EDT",
+    "hk": "2026-08-31 16:52:27 HKT",
+    "us_session": "美股盘前",
+    "hk_session": "港股收盘后"
+  },
+  "samples": 20,
+  "timeout_sec": 20.0,
+  "gap_sec": 0.9,
+  "symbol_count": 50,
+  "note": "热连接主测+冷连接附录；BasicQot 非 OrderBook"
+}
+2026-08-31 08:52:27,036 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500113262032357294(1) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96cb2f230>
+[py warm] 1/50 US.AAPL ok=True first_push_ms=274.5 pushes=2
+[py warm] 2/50 US.NVDA ok=True first_push_ms=271.3 pushes=4
+[py warm] 3/50 US.MU ok=True first_push_ms=11.1 pushes=14
+[py warm] 4/50 US.SMCI ok=True first_push_ms=14.9 pushes=5
+[py warm] 5/50 US.TSLA ok=True first_push_ms=206.0 pushes=7
+[py warm] 6/50 US.GOOGL ok=True first_push_ms=263.9 pushes=15
+[py warm] 7/50 US.HD ok=True first_push_ms=285.6 pushes=10
+[py warm] 8/50 US.CRWD ok=True first_push_ms=272.9 pushes=11
+[py warm] 9/50 US.ISRG ok=True first_push_ms=78.4 pushes=20
+[py warm] 10/50 US.APP ok=True first_push_ms=260.7 pushes=10
+[py warm] 11/50 US.JCI ok=True first_push_ms=273.1 pushes=15
+[py warm] 12/50 US.NWG ok=True first_push_ms=118.4 pushes=9
+[py warm] 13/50 US.OKE ok=True first_push_ms=273.2 pushes=11
+[py warm] 14/50 US.FNV ok=True first_push_ms=264.6 pushes=7
+[py warm] 15/50 US.IBKR ok=True first_push_ms=270.1 pushes=16
+[py warm] 16/50 US.RKLB ok=True first_push_ms=11.8 pushes=11
+[py warm] 17/50 US.ILMN ok=True first_push_ms=41.0 pushes=11
+[py warm] 18/50 US.EIX ok=True first_push_ms=255.3 pushes=10
+[py warm] 19/50 US.PHG ok=True first_push_ms=268.1 pushes=14
+[py warm] 20/50 US.TROW ok=True first_push_ms=35.2 pushes=11
+[py warm] 21/50 US.ENTG ok=True first_push_ms=271.1 pushes=3
+[py warm] 22/50 US.CF ok=True first_push_ms=272.9 pushes=7
+[py warm] 23/50 US.DINO ok=True first_push_ms=267.1 pushes=10
+[py warm] 24/50 US.SKM ok=True first_push_ms=272.7 pushes=8
+[py warm] 25/50 US.W ok=True first_push_ms=264.4 pushes=12
+[py warm] 26/50 HK.02208 ok=True first_push_ms=38.0 pushes=18
+[py warm] 27/50 HK.09626 ok=True first_push_ms=266.6 pushes=18
+[py warm] 28/50 HK.00700 ok=True first_push_ms=266.8 pushes=13
+[py warm] 29/50 HK.09988 ok=True first_push_ms=261.7 pushes=10
+[py warm] 30/50 HK.03750 ok=True first_push_ms=263.5 pushes=4
+[py warm] 31/50 HK.01398 ok=True first_push_ms=205.4 pushes=18
+[py warm] 32/50 HK.00005 ok=True first_push_ms=70.0 pushes=6
+[py warm] 33/50 HK.00939 ok=True first_push_ms=165.9 pushes=6
+[py warm] 34/50 HK.00857 ok=True first_push_ms=259.6 pushes=11
+[py warm] 35/50 HK.01288 ok=True first_push_ms=264.2 pushes=11
+[py warm] 36/50 HK.00941 ok=True first_push_ms=268.7 pushes=9
+[py warm] 37/50 HK.03988 ok=True first_push_ms=265.7 pushes=5
+[py warm] 38/50 HK.00883 ok=True first_push_ms=262.0 pushes=10
+[py warm] 39/50 HK.03968 ok=True first_push_ms=258.4 pushes=11
+[py warm] 40/50 HK.02318 ok=True first_push_ms=255.4 pushes=12
+[py warm] 41/50 HK.06288 ok=True first_push_ms=81.4 pushes=17
+[py warm] 42/50 HK.01088 ok=True first_push_ms=258.2 pushes=17
+[py warm] 43/50 HK.02899 ok=True first_push_ms=257.7 pushes=12
+[py warm] 44/50 HK.01211 ok=True first_push_ms=133.4 pushes=13
+[py warm] 45/50 HK.01299 ok=True first_push_ms=256.1 pushes=9
+[py warm] 46/50 HK.02628 ok=True first_push_ms=256.3 pushes=15
+[py warm] 47/50 HK.01810 ok=True first_push_ms=269.4 pushes=4
+[py warm] 48/50 HK.00300 ok=True first_push_ms=265.4 pushes=8
+[py warm] 49/50 HK.03328 ok=True first_push_ms=256.0 pushes=11
+[py warm] 50/50 HK.01658 ok=True first_push_ms=138.2 pushes=17
+[cpp warm] /home/ubuntu/workspace/moomoo_CPP/cpp/build/bench_push_batch --host 127.0.0.1 --port 11121 --symbols-file /home/ubuntu/workspace/moomoo_CPP/reports/market_data_latency_20260831_085227/symbols.txt --out /home/ubuntu/workspace/moomoo_CPP/reports/market_data_latency_20260831_085227/warm.jsonl --samples 20 --timeout-sec 20.0 --gap-sec 0.9
+2026-08-31 09:00:09,338 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(1) reason=CallClose
+InitQot, suc = 1
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.AAPL is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 1/50 US.AAPL ok=1 first_push_ms=5.275 pushes=1
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.NVDA is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 2/50 US.NVDA ok=1 first_push_ms=262.443 pushes=5
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.MU is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 3/50 US.MU ok=1 first_push_ms=250.14 pushes=7
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.SMCI is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 4/50 US.SMCI ok=1 first_push_ms=269.638 pushes=7
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.TSLA is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 5/50 US.TSLA ok=1 first_push_ms=115.871 pushes=7
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.GOOGL is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 6/50 US.GOOGL ok=1 first_push_ms=265.064 pushes=4
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.HD is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 7/50 US.HD ok=1 first_push_ms=34.0572 pushes=13
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.CRWD is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 8/50 US.CRWD ok=1 first_push_ms=8.3539 pushes=20
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.ISRG is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 9/50 US.ISRG ok=1 first_push_ms=263.398 pushes=10
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.APP is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 10/50 US.APP ok=1 first_push_ms=200.851 pushes=6
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.JCI is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 11/50 US.JCI ok=1 first_push_ms=269.68 pushes=9
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.NWG is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 12/50 US.NWG ok=1 first_push_ms=216.376 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.OKE is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 13/50 US.OKE ok=1 first_push_ms=257.543 pushes=3
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.FNV is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 14/50 US.FNV ok=1 first_push_ms=262.819 pushes=6
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.IBKR is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 15/50 US.IBKR ok=1 first_push_ms=254.603 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.RKLB is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 16/50 US.RKLB ok=1 first_push_ms=259.098 pushes=8
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.ILMN is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 17/50 US.ILMN ok=1 first_push_ms=269.325 pushes=6
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.EIX is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 18/50 US.EIX ok=1 first_push_ms=261.914 pushes=9
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.PHG is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 19/50 US.PHG ok=1 first_push_ms=264.97 pushes=14
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.TROW is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 20/50 US.TROW ok=1 first_push_ms=52.839 pushes=20
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.ENTG is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 21/50 US.ENTG ok=1 first_push_ms=262.753 pushes=8
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.CF is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 22/50 US.CF ok=1 first_push_ms=262.215 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.DINO is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 23/50 US.DINO ok=1 first_push_ms=268.855 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.SKM is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 24/50 US.SKM ok=1 first_push_ms=273.104 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for US.W is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 25/50 US.W ok=1 first_push_ms=258.896 pushes=8
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.02208 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 26/50 HK.02208 ok=1 first_push_ms=259.876 pushes=14
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.09626 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 27/50 HK.09626 ok=1 first_push_ms=103.047 pushes=20
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00700 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 28/50 HK.00700 ok=1 first_push_ms=256.679 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.09988 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 29/50 HK.09988 ok=1 first_push_ms=250.632 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.03750 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 30/50 HK.03750 ok=1 first_push_ms=6.3167 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01398 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 31/50 HK.01398 ok=1 first_push_ms=252.591 pushes=20
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00005 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 32/50 HK.00005 ok=1 first_push_ms=259.759 pushes=6
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00939 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 33/50 HK.00939 ok=1 first_push_ms=250.537 pushes=6
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00857 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 34/50 HK.00857 ok=1 first_push_ms=255.787 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01288 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 35/50 HK.01288 ok=1 first_push_ms=253.355 pushes=18
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00941 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 36/50 HK.00941 ok=1 first_push_ms=7.01233 pushes=11
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.03988 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 37/50 HK.03988 ok=1 first_push_ms=254.821 pushes=13
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00883 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 38/50 HK.00883 ok=1 first_push_ms=212.673 pushes=9
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.03968 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 39/50 HK.03968 ok=1 first_push_ms=252.494 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.02318 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 40/50 HK.02318 ok=1 first_push_ms=251.519 pushes=14
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.06288 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 41/50 HK.06288 ok=1 first_push_ms=255.531 pushes=10
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01088 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 42/50 HK.01088 ok=1 first_push_ms=256.353 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.02899 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 43/50 HK.02899 ok=1 first_push_ms=251.67 pushes=17
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01211 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 44/50 HK.01211 ok=1 first_push_ms=250.574 pushes=14
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01299 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 45/50 HK.01299 ok=1 first_push_ms=67.5302 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.02628 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 46/50 HK.02628 ok=1 first_push_ms=128.304 pushes=12
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01810 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 47/50 HK.01810 ok=1 first_push_ms=168.461 pushes=7
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.00300 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 48/50 HK.00300 ok=1 first_push_ms=263.76 pushes=3
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.03328 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 49/50 HK.03328 ok=1 first_push_ms=267.488 pushes=16
+ERROR: OnReply_Sub, retMsg = The Basic subscription duration for HK.01658 is too short. Minimum subscription duration is 1 minute.
+[cpp warm] 50/50 HK.01658 ok=1 first_push_ms=62.7496 pushes=14
+InitQot, suc = 1
+2026-08-31 09:07:41,168 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117096177686099(2) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96cc09950>
+[py cold] US.AAPL r1 ok=True first=10.9
+2026-08-31 09:07:41,179 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(2) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:42,161 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117100343222943(3) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96cc0a850>
+[py cold] US.AAPL r2 ok=True first=9.8
+2026-08-31 09:07:42,171 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(3) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:43,158 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117104529911226(4) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96cbae190>
+[py cold] US.AAPL r3 ok=True first=7.8
+2026-08-31 09:07:43,167 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(4) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:44,145 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117108664853142(5) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96cbaf820>
+[py cold] US.AAPL r4 ok=True first=8.3
+2026-08-31 09:07:44,154 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(5) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:45,131 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117112807326142(6) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c198b00>
+[py cold] US.AAPL r5 ok=True first=8.0
+2026-08-31 09:07:45,140 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(6) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:46,380 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117118040028904(7) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c198c30>
+[py cold] US.NVDA r1 ok=True first=8.5
+2026-08-31 09:07:46,389 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(7) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:47,369 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117122186403448(8) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c1982b0>
+[py cold] US.NVDA r2 ok=True first=8.1
+2026-08-31 09:07:47,378 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(8) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:48,356 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117126326452697(9) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c198d60>
+[py cold] US.NVDA r3 ok=True first=8.5
+2026-08-31 09:07:48,365 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(9) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:49,343 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117130474379495(10) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c198e90>
+[py cold] US.NVDA r4 ok=True first=8.1
+2026-08-31 09:07:49,353 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(10) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:50,332 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117134618362878(11) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c198fc0>
+[py cold] US.NVDA r5 ok=True first=8.4
+2026-08-31 09:07:50,341 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(11) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:51,585 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117139870570552(12) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c1990f0>
+[py cold] US.MU r1 ok=True first=8.2
+2026-08-31 09:07:51,595 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(12) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:52,579 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117144034926937(13) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199220>
+[py cold] US.MU r2 ok=True first=8.3
+2026-08-31 09:07:52,588 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(13) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:53,567 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117148185951750(14) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199350>
+[py cold] US.MU r3 ok=True first=10.1
+2026-08-31 09:07:53,578 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(14) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:54,558 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117152346724766(15) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199480>
+[py cold] US.MU r4 ok=True first=8.8
+2026-08-31 09:07:54,568 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(15) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:55,551 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117156507572985(16) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c1995b0>
+[py cold] US.MU r5 ok=True first=8.2
+2026-08-31 09:07:55,560 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(16) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:56,793 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117161720403619(17) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c1996e0>
+[py cold] US.SKM r1 ok=True first=9.9
+2026-08-31 09:07:56,804 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(17) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:57,782 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117165869044979(18) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199810>
+[py cold] US.SKM r2 ok=True first=9.0
+2026-08-31 09:07:57,792 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(18) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:58,771 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117170013943576(19) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199940>
+[py cold] US.SKM r3 ok=True first=10.2
+2026-08-31 09:07:58,782 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(19) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:07:59,773 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117174213435957(20) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199a70>
+[py cold] US.SKM r4 ok=True first=10.9
+2026-08-31 09:07:59,784 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(20) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:00,761 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117178361361223(21) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199ba0>
+[py cold] US.SKM r5 ok=True first=10.2
+2026-08-31 09:08:00,773 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(21) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:02,012 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117183610982614(22) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199cd0>
+[py cold] US.W r1 ok=True first=11.5
+2026-08-31 09:08:02,025 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(22) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:03,003 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117187765152919(23) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199e00>
+[py cold] US.W r2 ok=True first=11.0
+2026-08-31 09:08:03,015 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(23) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:03,995 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117191929094475(24) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c199f30>
+[py cold] US.W r3 ok=True first=9.5
+2026-08-31 09:08:04,006 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(24) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:04,985 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117196073447457(25) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a060>
+[py cold] US.W r4 ok=True first=9.8
+2026-08-31 09:08:04,996 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(25) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:05,980 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117200254864948(26) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a190>
+[py cold] US.W r5 ok=True first=10.6
+2026-08-31 09:08:05,992 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(26) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:07,214 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117205430683050(27) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a2c0>
+[py cold] HK.02208 r1 ok=True first=5.2
+2026-08-31 09:08:07,221 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(27) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:08,199 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117209557437955(28) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a3f0>
+[py cold] HK.02208 r2 ok=True first=4.4
+2026-08-31 09:08:08,204 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(28) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:09,182 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117213681119986(29) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a520>
+[py cold] HK.02208 r3 ok=True first=4.4
+2026-08-31 09:08:09,188 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(29) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:10,188 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117217903312303(30) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a650>
+[py cold] HK.02208 r4 ok=True first=4.3
+2026-08-31 09:08:10,193 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(30) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:11,173 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117222034028868(31) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a780>
+[py cold] HK.02208 r5 ok=True first=4.1
+2026-08-31 09:08:11,179 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(31) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:12,420 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117227260214964(32) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a8b0>
+[py cold] HK.09626 r1 ok=True first=4.7
+2026-08-31 09:08:12,425 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(32) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:13,403 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117231383815706(33) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19a9e0>
+[py cold] HK.09626 r2 ok=True first=4.1
+2026-08-31 09:08:13,408 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(33) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:14,385 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117235507894491(34) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19ab10>
+[py cold] HK.09626 r3 ok=True first=4.6
+2026-08-31 09:08:14,391 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(34) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:15,378 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117239664747534(35) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19ac40>
+[py cold] HK.09626 r4 ok=True first=6.5
+2026-08-31 09:08:15,386 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(35) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:16,365 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117243809048231(36) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19ad70>
+[py cold] HK.09626 r5 ok=True first=4.0
+2026-08-31 09:08:16,370 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(36) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:17,596 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117248974260776(37) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19aea0>
+[py cold] HK.00700 r1 ok=True first=5.4
+2026-08-31 09:08:17,603 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(37) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:18,582 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117253110637341(38) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19afd0>
+[py cold] HK.00700 r2 ok=True first=5.1
+2026-08-31 09:08:18,589 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(38) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:19,568 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117257238324132(39) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b100>
+[py cold] HK.00700 r3 ok=True first=6.1
+2026-08-31 09:08:19,575 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(39) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:20,554 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117261376914869(40) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b230>
+[py cold] HK.00700 r4 ok=True first=4.4
+2026-08-31 09:08:20,559 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(40) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:21,538 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117265502350782(41) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b360>
+[py cold] HK.00700 r5 ok=True first=5.6
+2026-08-31 09:08:21,544 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(41) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:22,530 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117269665726342(42) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b490>
+[py cold] HK.03328 r1 ok=True first=4.4
+2026-08-31 09:08:22,535 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(42) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:23,521 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117273824913421(43) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b5c0>
+[py cold] HK.03328 r2 ok=True first=4.1
+2026-08-31 09:08:23,527 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(43) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:24,505 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117277947705763(44) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b6f0>
+[py cold] HK.03328 r3 ok=True first=4.2
+2026-08-31 09:08:24,510 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(44) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:25,491 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117282079738748(45) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b820>
+[py cold] HK.03328 r4 ok=True first=8.3
+2026-08-31 09:08:25,501 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(45) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:26,478 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117286229425683(46) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19b950>
+[py cold] HK.03328 r5 ok=True first=4.6
+2026-08-31 09:08:26,483 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(46) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:27,470 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117290389061675(47) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19ba80>
+[py cold] HK.01658 r1 ok=True first=4.3
+2026-08-31 09:08:27,475 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(47) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:28,453 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117294506889851(48) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19bbb0>
+[py cold] HK.01658 r2 ok=True first=4.8
+2026-08-31 09:08:28,459 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(48) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:29,437 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117298639645544(49) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19bce0>
+[py cold] HK.01658 r3 ok=True first=4.1
+2026-08-31 09:08:29,443 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(49) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:30,420 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117302761008460(50) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c19be10>
+[py cold] HK.01658 r4 ok=True first=4.4
+2026-08-31 09:08:30,425 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(50) reason=CallClose
+InitQot, suc = 1
+2026-08-31 09:08:31,408 | 859682 | 137410989969920 | [open_context_base.py:410] _init_connect_sync: New connect ready: conn=7500117306902709788(51) context=<moomoo.quote.open_quote_context.OpenQuoteContext object at 0x7cf96c21c050>
+[py cold] HK.01658 r5 ok=True first=4.1
+2026-08-31 09:08:31,413 | 859682 | 137410633529024 | [open_context_base.py:518] on_disconnect: Disconnected: conn=0(51) reason=CallClose
+DONE batch_id=20260831_085227 out=/home/ubuntu/workspace/moomoo_CPP/reports/market_data_latency_20260831_085227
+NEXT: python3 bench/market_data_latency_report_zh.py --batch-dir /home/ubuntu/workspace/moomoo_CPP/reports/market_data_latency_20260831_085227

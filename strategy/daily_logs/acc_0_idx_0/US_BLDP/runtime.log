@@ -1,0 +1,90 @@
+2026-08-20 21:38:03.562 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | startup | 启动成功 symbol=US.BLDP mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:38:03.562 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:38:03.562 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:38:04.061 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | lot_size/手 | code=US.BLDP value=1 (snapshot)
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   订阅 / subscribe: ORDER_BOOK  |  US.BLDP 推送已开 / push on
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | ==========================================================
+2026-08-20 21:38:04.062 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 21:38:04.548 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.48 ask_1=2.49
+2026-08-20 21:38:04.548 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | entry_judge/开仓子条件 | code=US.BLDP rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=803 est_notional~1999.47
+2026-08-20 21:38:04.548 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 开始交易/start_trade | code=US.BLDP entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:38:04.548 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 报单计算/order_sizing | 参考价/px=2.48 | budget_total=2000.00 | lot_size=1 => qty=806 | lot_size=1 budget/price~806.452 n_lots=806 qty=806 | est_notional~1998.88
+2026-08-20 21:38:04.548 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=2.48 submit_price=2.43 time_in_force=DAY side=SELL code=US.BLDP qty=806 est_notional~1958.90 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:38:04.750 | WARN | strategy_runtime.acc_0_idx_0.US_BLDP | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:38:04.751 | WARN | strategy_runtime.acc_0_idx_0.US_BLDP | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:38:04.751 | ERROR | strategy_runtime.acc_0_idx_0.US_BLDP | entry_order_fatal | entry_order_fatal | code=US.BLDP status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:07:17.220 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | startup | 启动成功 symbol=US.BLDP mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:07:17.220 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:07:17.220 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:07:17.693 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | lot_size/手 | code=US.BLDP value=1 (snapshot)
+2026-08-20 22:07:17.693 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   订阅 / subscribe: ORDER_BOOK  |  US.BLDP 推送已开 / push on
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | ==========================================================
+2026-08-20 22:07:17.694 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 22:07:18.049 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:18.049 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | entry_judge/开仓子条件 | code=US.BLDP rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=819 est_notional~1998.36
+2026-08-20 22:07:18.049 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 开始交易/start_trade | code=US.BLDP entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:07:18.049 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 报单计算/order_sizing | 参考价/px=2.43 | budget_total=2000.00 | lot_size=1 => qty=823 | lot_size=1 budget/price~823.045 n_lots=823 qty=823 | est_notional~1999.89
+2026-08-20 22:07:18.049 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=2.43 submit_price=2.38 time_in_force=DAY side=SELL code=US.BLDP qty=823 est_notional~1958.74 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:07:18.349 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 下单结果/place_order_result | ret=0 order_id=3245968 status=SUBMITTING
+2026-08-20 22:07:18.349 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 已报单，等待成交/await_order_fill | order_id=3245968 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:07:18.742 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:18.742 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:19.558 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:19.558 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:19.847 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:19.848 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:19.848 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:19.848 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:20.833 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:20.833 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:21.779 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:21.779 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:21.942 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:21.942 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:22.942 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:22.942 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:23.942 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:23.943 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:24.943 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:24.943 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:25.943 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:25.943 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:26.610 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:26.611 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:26.740 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:26.740 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:27.042 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:27.042 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:28.000 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:28.000 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:28.243 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:28.243 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:29.243 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=5 dealt=0 target=823 -> wait
+2026-08-20 22:07:29.243 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:30.243 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 订单轮询/order_poll | code=US.BLDP order_id=3245968 status=11 dealt=823 target=823 -> filled
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 【开仓】====2026-08-20 22:07:30.244
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | US.BLDP-sell  |  计划金额: 2000
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | real_price: 2.44 (exp=2.38)
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | real_qty: 823 | real_amount: 2004.01
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | env: paper
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | o_status: filled (order_id:3245968)
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | task_id: nana_paper_BLDP_5m_1787232951016
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 触发开仓条件------------------------
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | ·立即开仓 (2%限仿市)
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 预设平仓条件------------------------
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 不平仓，无平仓监控
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 22:07:30.244 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 
+2026-08-20 22:07:30.921 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | 读取行情/read_market | code=US.BLDP bid_1=2.43 ask_1=2.44
+2026-08-20 22:07:30.921 | INFO | strategy_runtime.acc_0_idx_0.US_BLDP | managed_done_exit | loop_tick US.BLDP

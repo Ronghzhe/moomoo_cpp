@@ -1,0 +1,19 @@
+{
+  "id": "l2_02_strategy_judge_us_pnl_exit",
+  "steps": [
+    {
+      "label": "pnl_exit_hit",
+      "entry_hit": false,
+      "entry_rule_id": "",
+      "exit_hit": true,
+      "exit_rule_id": "E3_CLOSE"
+    },
+    {
+      "label": "pnl_exit_miss",
+      "entry_hit": false,
+      "entry_rule_id": "",
+      "exit_hit": false,
+      "exit_rule_id": ""
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+2026-08-20 21:44:14.890 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | startup | 启动成功 symbol=US.AMAT mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:44:14.890 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:44:14.890 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | lot_size/手 | code=US.AMAT value=1 (snapshot)
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   订阅 / subscribe: ORDER_BOOK  |  US.AMAT 推送已开 / push on
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | ==========================================================
+2026-08-20 21:44:15.372 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 21:44:15.848 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=495.02 ask_1=495.99
+2026-08-20 21:44:15.848 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | entry_judge/开仓子条件 | code=US.AMAT rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1983.96
+2026-08-20 21:44:15.848 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 开始交易/start_trade | code=US.AMAT entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:44:15.848 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 报单计算/order_sizing | 参考价/px=495.99 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.03234 n_lots=4 qty=4 | est_notional~1983.96
+2026-08-20 21:44:15.848 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=495.99 submit_price=505.91 time_in_force=DAY side=BUY code=US.AMAT qty=4 est_notional~2023.64 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:44:16.050 | WARN | strategy_runtime.acc_0_idx_0.US_AMAT | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:16.050 | WARN | strategy_runtime.acc_0_idx_0.US_AMAT | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:44:16.050 | ERROR | strategy_runtime.acc_0_idx_0.US_AMAT | entry_order_fatal | entry_order_fatal | code=US.AMAT status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:13:07.210 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | startup | 启动成功 symbol=US.AMAT mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:13:07.210 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:13:07.211 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | lot_size/手 | code=US.AMAT value=1 (snapshot)
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   订阅 / subscribe: ORDER_BOOK  |  US.AMAT 推送已开 / push on
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | ==========================================================
+2026-08-20 22:13:07.592 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 22:13:08.037 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.63 ask_1=498.9
+2026-08-20 22:13:08.037 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | entry_judge/开仓子条件 | code=US.AMAT rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=4 est_notional~1995.60
+2026-08-20 22:13:08.037 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 开始交易/start_trade | code=US.AMAT entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:13:08.037 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 报单计算/order_sizing | 参考价/px=498.90 | budget_total=2000.00 | lot_size=1 => qty=4 | lot_size=1 budget/price~4.00882 n_lots=4 qty=4 | est_notional~1995.60
+2026-08-20 22:13:08.037 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=498.90 submit_price=508.88 time_in_force=DAY side=BUY code=US.AMAT qty=4 est_notional~2035.52 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:13:08.397 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 下单结果/place_order_result | ret=0 order_id=3246024 status=SUBMITTING
+2026-08-20 22:13:08.397 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 已报单，等待成交/await_order_fill | order_id=3246024 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:13:08.631 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:08.632 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.63 ask_1=498.9
+2026-08-20 22:13:08.926 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:08.926 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=498.99
+2026-08-20 22:13:08.926 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:08.926 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=498.99
+2026-08-20 22:13:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499
+2026-08-20 22:13:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:09.231 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.33
+2026-08-20 22:13:09.534 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:09.534 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.33
+2026-08-20 22:13:09.534 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:09.534 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.33
+2026-08-20 22:13:09.835 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:09.835 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.33
+2026-08-20 22:13:10.136 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:10.136 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:10.136 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:10.137 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:10.435 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:10.435 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:10.436 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:10.436 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:10.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:10.957 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.77 ask_1=499.27
+2026-08-20 22:13:11.029 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.029 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.77 ask_1=499.27
+2026-08-20 22:13:11.338 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.338 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.77 ask_1=499.27
+2026-08-20 22:13:11.338 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.338 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:11.637 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.637 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:11.637 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.637 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:11.934 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.934 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:11.935 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=5 dealt=0 target=4 -> wait
+2026-08-20 22:13:11.935 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 订单轮询/order_poll | code=US.AMAT order_id=3246024 status=11 dealt=4 target=4 -> filled
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 【开仓】====2026-08-20 22:13:12.235
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | US.AMAT-buy  |  计划金额: 2000
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | real_price: 499.40 (exp=508.88)
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | real_qty: 4 | real_amount: 1997.60
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | env: paper
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | o_status: filled (order_id:3246024)
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | task_id: nana_paper_AMAT_5m_1787233013546
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 触发开仓条件------------------------
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | ·立即开仓 (2%限仿市)
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 预设平仓条件------------------------
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 不平仓，无平仓监控
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 22:13:12.235 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 
+2026-08-20 22:13:12.937 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | 读取行情/read_market | code=US.AMAT bid_1=498.76 ask_1=499.27
+2026-08-20 22:13:12.937 | INFO | strategy_runtime.acc_0_idx_0.US_AMAT | managed_done_exit | loop_tick US.AMAT

@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:06:22,nana_paper_OKLO_5m_1787232937475,US.OKLO,SELL,3245962,11,48,41.51,strategy_cpp_entry,,,,paper,,,

@@ -1,0 +1,356 @@
+2026-08-20 22:26:17.073 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup | 启动成功 symbol=US.SKHY mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:26:17.073 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:26:17.073 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | lot_size/手 | code=US.SKHY value=1 (snapshot)
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   订阅 / subscribe: ORDER_BOOK  |  US.SKHY 推送已开 / push on
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ==========================================================
+2026-08-20 22:26:17.291 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:26:17.750 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.72 ask_1=163.8
+2026-08-20 22:26:17.750 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | entry_judge/开仓子条件 | code=US.SKHY rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=12 est_notional~1965.60
+2026-08-20 22:26:17.750 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 开始交易/start_trade | code=US.SKHY entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:26:17.750 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单计算/order_sizing | 参考价/px=163.80 | budget_total=2000.00 | lot_size=1 => qty=12 | lot_size=1 budget/price~12.21 n_lots=12 qty=12 | est_notional~1965.60
+2026-08-20 22:26:17.750 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=163.80 submit_price=167.08 time_in_force=DAY side=BUY code=US.SKHY qty=12 est_notional~2004.96 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:26:18.093 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 下单结果/place_order_result | ret=0 order_id=3246081 status=SUBMITTING
+2026-08-20 22:26:18.093 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 已报单，等待成交/await_order_fill | order_id=3246081 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:26:18.342 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.342 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.72 ask_1=163.8
+2026-08-20 22:26:18.342 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.342 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.72 ask_1=163.8
+2026-08-20 22:26:18.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.8
+2026-08-20 22:26:18.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.84
+2026-08-20 22:26:18.940 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.940 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.84
+2026-08-20 22:26:18.940 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:18.940 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:19.246 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:19.246 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:19.246 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:19.246 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:19.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:19.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:19.837 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:19.837 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:19.838 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:19.838 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:20.139 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:20.139 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:20.139 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:20.139 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:20.442 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:20.442 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:20.737 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:20.738 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.8 ask_1=163.89
+2026-08-20 22:26:20.738 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:20.738 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.84 ask_1=163.89
+2026-08-20 22:26:21.050 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.051 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.89
+2026-08-20 22:26:21.051 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.051 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:21.344 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.344 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:21.345 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.345 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:21.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.641 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:21.937 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.938 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:21.938 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:21.938 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:22.239 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:22.239 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:22.536 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:22.841 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:22.841 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:22.841 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:22.841 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:23.136 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.137 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.98
+2026-08-20 22:26:23.137 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.137 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.97
+2026-08-20 22:26:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.89 ask_1=163.97
+2026-08-20 22:26:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.437 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.84 ask_1=163.89
+2026-08-20 22:26:23.748 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.749 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.86 ask_1=163.89
+2026-08-20 22:26:23.749 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:23.749 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.93 ask_1=164.07
+2026-08-20 22:26:24.046 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:24.046 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.93 ask_1=164.07
+2026-08-20 22:26:24.047 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:26:24.047 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.92 ask_1=164.07
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3246081 status=11 dealt=12 target=12 -> filled
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【开仓】====2026-08-20 22:26:24.341
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | US.SKHY-buy  |  计划金额: 2000
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_price: 163.94 (exp=167.08)
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_qty: 12 | real_amount: 1967.34
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | env: paper
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | o_status: filled (order_id:3246081)
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | task_id: nana_paper_SKHY_5m_1787235952107
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 触发开仓条件------------------------
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ·立即开仓 (2%限仿市)
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 预设平仓条件------------------------
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 不平仓，无平仓监控
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:26:24.341 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:26:25.347 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.92 ask_1=164.07
+2026-08-20 22:26:25.347 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | managed_done_exit | loop_tick US.SKHY
+2026-08-20 22:56:17.306 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup | 启动成功 symbol=US.SKHY mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 22:56:17.306 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:56:17.306 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | lot_size/手 | code=US.SKHY value=1 (snapshot)
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   订阅 / subscribe: ORDER_BOOK  |  US.SKHY 推送已开 / push on
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ==========================================================
+2026-08-20 22:56:17.523 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:56:17.875 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.11 ask_1=163.18
+2026-08-20 22:56:17.875 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | exit_judge/平仓子条件 | code=US.SKHY rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=12 est_notional~1957.32
+2026-08-20 22:56:17.875 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=163.11 submit_price=159.84 time_in_force=DAY side=SELL code=US.SKHY qty=12 est_notional~1918.08 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 22:56:18.236 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 下单结果/place_order_result | ret=0 order_id=3246189 status=SUBMITTING
+2026-08-20 22:56:18.236 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 平仓已报单，等待成交/exit_await_fill | order_id=3246189 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-20 22:56:18.236 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 平仓触发/exit_hit | code=US.SKHY 立即平仓 (2%限仿市)
+2026-08-20 22:56:18.236 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | place_exit | oid=3246189
+2026-08-20 22:56:18.635 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:18.635 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.18
+2026-08-20 22:56:18.636 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:18.636 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.18
+2026-08-20 22:56:18.941 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:18.941 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.18
+2026-08-20 22:56:19.243 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:19.243 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.18
+2026-08-20 22:56:19.243 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:19.243 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:19.539 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:19.539 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:20.135 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:20.135 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:20.135 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:20.135 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:20.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:20.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:20.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:20.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:21.033 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:21.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:21.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=5 dealt=0 target=12 -> wait
+2026-08-20 22:56:21.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:21.336 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3246189 status=11 dealt=12 target=12 -> filled
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【平仓】====2026-08-20 22:56:21.337
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | US.SKHY-buy
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_price: 163.18 (exp=159.84)
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_qty: 12
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | env: paper
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | o_status: filled (order_id:3246189)
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | task_id: nana_paper_SKHY_5m_1787235952107
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 触发平仓条件------------------------
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ·立即平仓 (2%限仿市)
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【盈亏统计】------------------------
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | pnl: -9.18
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | pnl%: -0.47%
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:56:21.337 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-20 22:56:22.018 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=163.1 ask_1=163.23
+2026-08-20 22:56:22.018 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | managed_done_exit | loop_tick US.SKHY
+2026-08-21 23:41:37.042 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup | 启动成功 symbol=US.SKHY mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 23:41:37.043 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 23:41:37.043 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | lot_size/手 | code=US.SKHY value=1 (snapshot)
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ========== 运行中 / RUNNING ==============================
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   订阅 / subscribe: ORDER_BOOK  |  US.SKHY 推送已开 / push on
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 23:41:37.261 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ==========================================================
+2026-08-21 23:41:37.262 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-21 23:41:37.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.1
+2026-08-21 23:41:37.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | entry_judge/开仓子条件 | code=US.SKHY rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=11 est_notional~1838.10
+2026-08-21 23:41:37.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 开始交易/start_trade | code=US.SKHY entry_hit=立即开仓 (2%限仿市)
+2026-08-21 23:41:37.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单计算/order_sizing | 参考价/px=167.10 | budget_total=2000.00 | lot_size=1 => qty=11 | lot_size=1 budget/price~11.9689 n_lots=11 qty=11 | est_notional~1838.10
+2026-08-21 23:41:37.543 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=167.10 submit_price=170.45 time_in_force=DAY side=BUY code=US.SKHY qty=11 est_notional~1874.95 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 23:41:37.878 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 下单结果/place_order_result | ret=0 order_id=3248578 status=SUBMITTING
+2026-08-21 23:41:37.878 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 已报单，等待成交/await_order_fill | order_id=3248578 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 23:41:38.138 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:38.138 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:38.138 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:38.138 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:38.432 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:38.432 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:38.732 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:38.732 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:38.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:38.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:39.028 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.028 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:39.028 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.029 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:39.333 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.334 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:39.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.02
+2026-08-21 23:41:39.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.02
+2026-08-21 23:41:39.932 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.932 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.02
+2026-08-21 23:41:39.933 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:39.933 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.02
+2026-08-21 23:41:40.238 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:40.238 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.02
+2026-08-21 23:41:40.537 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:40.537 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:40.537 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:40.537 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:40.837 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:40.837 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:41.136 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:41.136 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:41.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:41.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:41.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:41.433 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:41.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:41.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:41.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:41.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:42.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:42.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.034 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.01 ask_1=167.08
+2026-08-21 23:41:42.332 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.333 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.08
+2026-08-21 23:41:42.333 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.333 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.08
+2026-08-21 23:41:42.634 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.634 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.08
+2026-08-21 23:41:42.932 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.932 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.02 ask_1=167.08
+2026-08-21 23:41:42.933 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:42.933 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:43.242 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:43.242 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:43.545 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:43.545 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:43.833 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:43.833 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=166.98 ask_1=167.08
+2026-08-21 23:41:43.834 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:43.834 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.08
+2026-08-21 23:41:44.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.08
+2026-08-21 23:41:44.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.08
+2026-08-21 23:41:44.435 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.436 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.04 ask_1=167.08
+2026-08-21 23:41:44.436 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.436 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.04 ask_1=167.08
+2026-08-21 23:41:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.04 ask_1=167.08
+2026-08-21 23:41:44.734 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:44.734 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.04 ask_1=167.08
+2026-08-21 23:41:45.035 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.036 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.08
+2026-08-21 23:41:45.036 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.036 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.06
+2026-08-21 23:41:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167 ask_1=167.06
+2026-08-21 23:41:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.335 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:45.631 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.631 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:45.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.632 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:45.968 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:45.968 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:46.231 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:46.231 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:46.941 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:46.941 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:47.130 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:47.130 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:47.431 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:47.431 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:47.736 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:47.737 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:48.032 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=5 dealt=0 target=11 -> wait
+2026-08-21 23:41:48.032 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll | code=US.SKHY order_id=3248578 status=11 dealt=11 target=11 -> filled
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【开仓】====2026-08-21 23:41:48.935
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | US.SKHY-buy  |  计划金额: 2000
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_price: 167.10 (exp=170.45)
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_qty: 11 | real_amount: 1838.10
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | env: paper
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | o_status: filled (order_id:3248578)
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | task_id: nana_paper_SKHY_5m_1787326858050
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 触发开仓条件------------------------
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ·立即开仓 (2%限仿市)
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 预设平仓条件------------------------
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 不平仓，无平仓监控
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-21 23:41:48.935 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-21 23:41:49.649 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=167.03 ask_1=167.1
+2026-08-21 23:41:49.649 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | managed_done_exit | loop_tick US.SKHY
+2026-08-22 00:10:46.619 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup | 启动成功 symbol=US.SKHY mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 00:10:46.620 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 00:10:46.620 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | lot_size/手 | code=US.SKHY value=1 (snapshot)
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ========== 运行中 / RUNNING ==============================
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   订阅 / subscribe: ORDER_BOOK  |  US.SKHY 推送已开 / push on
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ==========================================================
+2026-08-22 00:10:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-22 00:10:47.253 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.2 ask_1=165.38
+2026-08-22 00:10:47.253 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | exit_judge/平仓子条件 | code=US.SKHY rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=11 est_notional~1817.20
+2026-08-22 00:10:47.253 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=165.20 submit_price=161.89 time_in_force=DAY side=SELL code=US.SKHY qty=11 est_notional~1780.79 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 00:10:47.585 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 下单结果/place_order_result | ret=0 order_id=3248678 status=SUBMITTING
+2026-08-22 00:10:47.585 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 平仓已报单，等待成交/exit_await_fill | order_id=3248678 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 00:10:47.585 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 平仓触发/exit_hit | code=US.SKHY 立即平仓 (2%限仿市)
+2026-08-22 00:10:47.585 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | place_exit | oid=3248678
+2026-08-22 00:10:47.738 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:47.738 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.2 ask_1=165.38
+2026-08-22 00:10:48.032 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:48.033 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.38
+2026-08-22 00:10:49.033 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:49.033 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.38
+2026-08-22 00:10:49.638 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:49.638 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.38
+2026-08-22 00:10:50.057 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:50.057 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.36
+2026-08-22 00:10:50.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:50.133 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.36
+2026-08-22 00:10:50.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=5 dealt=0 target=11 -> wait
+2026-08-22 00:10:50.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.36
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 订单轮询/order_poll_exit | code=US.SKHY order_id=3248678 status=11 dealt=11 target=11 -> filled
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【平仓】====2026-08-22 00:10:51.429
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | US.SKHY-buy
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_price: 165.28 (exp=161.89)
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | real_qty: 11
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | env: paper
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | o_status: filled (order_id:3248678)
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | task_id: nana_paper_SKHY_5m_1787326858050
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 触发平仓条件------------------------
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | ·立即平仓 (2%限仿市)
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 【盈亏统计】------------------------
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | pnl: -20.07
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | pnl%: -1.09%
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-22 00:10:51.429 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 
+2026-08-22 00:10:52.173 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | 读取行情/read_market | code=US.SKHY bid_1=165.22 ask_1=165.36
+2026-08-22 00:10:52.173 | INFO | strategy_runtime.acc_0_idx_0.US_SKHY | managed_done_exit | loop_tick US.SKHY

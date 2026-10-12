@@ -1,0 +1,2 @@
+InitTrd, suc = 1
+{"case":"l1_contract","lang":"cpp","trd_env":"SIMULATE","ok":true,"ok_connect":true,"ok_place":true,"ok_push":true,"ok_query":true,"ok_cancel":true,"order_id":204210583424061784,"code":"US.AAPL"}

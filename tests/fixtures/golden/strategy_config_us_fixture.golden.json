@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "client_name": "FixtureClient",
+  "strategy_name": "short_squeeze",
+  "mode": "paper",
+  "opend_host": "127.0.0.1",
+  "opend_port": 11121,
+  "trd_market": "US",
+  "order_type": "NORMAL",
+  "order_poll_min_sec": 3.0,
+  "dingding_enabled": false,
+  "symbol_count": 1,
+  "symbols": [
+    {
+      "code": "US.QBTS",
+      "enabled": true,
+      "entry_side": "BUY",
+      "order_type": "MARKET",
+      "time_in_force": "DAY",
+      "entry_qty": 10000.0,
+      "budget": 0.0,
+      "status": 3,
+      "sim_market_pct": 0.05,
+      "exit_enabled": true,
+      "entry_strategy_logic": "any",
+      "exit_strategy_logic": "any",
+      "entry_strategies": [
+        {
+          "id": "S1_OPEN",
+          "enabled": true,
+          "logic": "all",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "S2_OPEN",
+          "enabled": false,
+          "logic": "all",
+          "condition_types": [
+            "DayOpenGainWhen",
+            "VolumeEntryWhen"
+          ]
+        }
+      ],
+      "exit_strategies": [
+        {
+          "id": "E1_CLOSE",
+          "enabled": true,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "E2_CLOSE",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PriceCondition"
+          ]
+        },
+        {
+          "id": "E3_CLOSE",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PnlCondition"
+          ]
+        },
+        {
+          "id": "E4_CLOSE",
+          "enabled": false,
+          "logic": "all",
+          "side": "SELL",
+          "condition_types": [
+            "PnlCondition"
+          ]
+        }
+      ],
+      "task_id_nonempty": true
+    }
+  ]
+}

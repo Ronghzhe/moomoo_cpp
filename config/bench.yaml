@@ -1,0 +1,21 @@
+# 模拟盘 OpenD 延迟 benchmark 配置
+trd_env: SIMULATE
+opend_host: 127.0.0.1
+opend_port: 11121
+gateway_url: http://127.0.0.1:18765
+
+symbol: US.AAPL
+code: US.AAPL
+kl_type: K_5M
+bars: 80
+
+warm_iters: 50
+cold_iters: 5
+order_iters: 30
+order_qty: 1
+order_price: 0.01
+order_side: BUY
+order_type: NORMAL
+
+# 报单间隔（秒）。OpenD SIMULATE 约 15 次/30s；Test 5 place/query/cancel 建议 ≥2.2
+order_gap_sec: 2.2

@@ -1,0 +1,4 @@
+secret：123456789:ABCdefGHIjklMNOpqrSTUvwxYZ
+模拟：quant-stock模拟盘测试群
+实盘：quant-stock实盘-交易通报
+模拟ID：-5560998729

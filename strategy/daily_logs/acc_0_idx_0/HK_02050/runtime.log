@@ -1,0 +1,277 @@
+2026-08-20 11:16:07.663 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 11:16:07.663 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 11:16:07.663 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-20 11:16:08.136 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-20 11:16:09.347 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=26.34 ask_1=26.36
+2026-08-20 11:16:09.347 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | entry_judge/开仓子条件 | code=HK.02050 rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=300 est_notional~7908.00
+2026-08-20 11:16:09.347 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 开始交易/start_trade | code=HK.02050 entry_hit=立即开仓 (1%限仿市)
+2026-08-20 11:16:09.347 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单计算/order_sizing | 参考价/px=26.36 | budget_total=10000.00 | lot_size=100 => qty=300 | lot_size=100 budget/price~379.363 n_lots=3 qty=300 | est_notional~7908.00
+2026-08-20 11:16:09.347 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=26.36 submit_price=26.36 time_in_force=DAY side=SELL code=HK.02050 qty=300 est_notional~7908.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 11:16:09.578 | WARN | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=-1 error=Short selling is currently not supported.
+2026-08-20 11:16:09.578 | WARN | strategy_runtime.acc_0_idx_0.HK_02050 | place_failed | Short selling is currently not supported.
+2026-08-20 11:16:09.578 | ERROR | strategy_runtime.acc_0_idx_0.HK_02050 | entry_order_fatal | entry_order_fatal | code=HK.02050 status=- reason=Short selling is currently not supported.
+2026-08-21 09:35:43.152 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 09:35:43.152 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 09:35:43.152 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 09:35:43.621 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 09:35:44.833 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=26.76 ask_1=26.8
+2026-08-21 09:35:44.833 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | entry_judge/开仓子条件 | code=HK.02050 rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=300 est_notional~8040.00
+2026-08-21 09:35:44.833 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 开始交易/start_trade | code=HK.02050 entry_hit=立即开仓 (1%限仿市)
+2026-08-21 09:35:44.833 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单计算/order_sizing | 参考价/px=26.80 | budget_total=10000.00 | lot_size=100 => qty=300 | lot_size=100 budget/price~373.134 n_lots=3 qty=300 | est_notional~8040.00
+2026-08-21 09:35:44.833 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=26.80 submit_price=27.08 time_in_force=DAY side=BUY code=HK.02050 qty=300 est_notional~8124.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 09:35:45.092 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247226 status=SUBMITTING
+2026-08-21 09:35:45.092 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 已报单，等待成交/await_order_fill | order_id=3247226 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247226 status=11 dealt=300 target=300 -> filled
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【开仓】====2026-08-21 09:35:46.093
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy  |  计划金额: 10000
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 26.80 (exp=27.08)
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300 | real_amount: 8040.00
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247226)
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787276130550
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发开仓条件------------------------
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即开仓 (1%限仿市)
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 预设平仓条件------------------------
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 不平仓，无平仓监控
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 09:35:46.093 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 09:35:46.760 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=26.76 ask_1=26.8
+2026-08-21 09:35:46.760 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050
+2026-08-21 10:30:27.835 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 10:30:27.835 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 10:30:27.835 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 10:30:28.307 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:30:29.328 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:29.328 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | exit_judge/平仓子条件 | code=HK.02050 rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=300 est_notional~8142.00
+2026-08-21 10:30:29.328 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.14 submit_price=26.86 time_in_force=DAY side=SELL code=HK.02050 qty=300 est_notional~8058.00 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 10:30:29.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247320 status=SUBMITTING
+2026-08-21 10:30:29.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓已报单，等待成交/exit_await_fill | order_id=3247320 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 10:30:29.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓触发/exit_hit | code=HK.02050 立即平仓 (1%限仿市)
+2026-08-21 10:30:29.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | place_exit | oid=3247320
+2026-08-21 10:30:30.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247320 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:30:30.569 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:31.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247320 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:30:31.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:32.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247320 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:30:32.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:33.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247320 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:30:33.570 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247320 status=11 dealt=300 target=300 -> filled
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【平仓】====2026-08-21 10:30:34.571
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 27.14 (exp=26.86)
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247320)
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787276130550
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发平仓条件------------------------
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即平仓 (1%限仿市)
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【盈亏统计】------------------------
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl: +102.00
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl%: +1.27%
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:30:34.571 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:30:35.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.14 ask_1=27.2
+2026-08-21 10:30:35.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050
+2026-08-21 10:55:41.110 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 10:55:41.110 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 10:55:41.110 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 10:55:41.581 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 10:55:41.581 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:55:41.581 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 10:55:41.582 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:55:42.796 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.26 ask_1=27.28
+2026-08-21 10:55:42.796 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | entry_judge/开仓子条件 | code=HK.02050 rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=300 est_notional~8184.00
+2026-08-21 10:55:42.796 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 开始交易/start_trade | code=HK.02050 entry_hit=立即开仓 (1%限仿市)
+2026-08-21 10:55:42.796 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单计算/order_sizing | 参考价/px=27.28 | budget_total=10000.00 | lot_size=100 => qty=300 | lot_size=100 budget/price~366.569 n_lots=3 qty=300 | est_notional~8184.00
+2026-08-21 10:55:42.796 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.28 submit_price=27.56 time_in_force=DAY side=BUY code=HK.02050 qty=300 est_notional~8268.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 10:55:43.046 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247345 status=SUBMITTING
+2026-08-21 10:55:43.046 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 已报单，等待成交/await_order_fill | order_id=3247345 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 10:55:44.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247345 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:55:44.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.26 ask_1=27.28
+2026-08-21 10:55:45.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247345 status=5 dealt=0 target=300 -> wait
+2026-08-21 10:55:45.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.26 ask_1=27.28
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247345 status=11 dealt=300 target=300 -> filled
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【开仓】====2026-08-21 10:55:46.047
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy  |  计划金额: 10000
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 27.28 (exp=27.56)
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300 | real_amount: 8184.00
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247345)
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787280926954
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发开仓条件------------------------
+2026-08-21 10:55:46.047 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即开仓 (1%限仿市)
+2026-08-21 10:55:46.048 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 预设平仓条件------------------------
+2026-08-21 10:55:46.048 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 不平仓，无平仓监控
+2026-08-21 10:55:46.048 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:55:46.048 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 10:55:46.729 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.26 ask_1=27.28
+2026-08-21 10:55:46.729 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050
+2026-08-21 11:11:02.630 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 11:11:02.630 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 11:11:02.630 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 11:11:03.091 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 11:11:04.306 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:04.306 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | exit_judge/平仓子条件 | code=HK.02050 rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=300 est_notional~8118.00
+2026-08-21 11:11:04.306 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.06 submit_price=26.78 time_in_force=DAY side=SELL code=HK.02050 qty=300 est_notional~8034.00 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 11:11:04.561 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247420 status=SUBMITTING
+2026-08-21 11:11:04.561 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓已报单，等待成交/exit_await_fill | order_id=3247420 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 11:11:04.561 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓触发/exit_hit | code=HK.02050 立即平仓 (1%限仿市)
+2026-08-21 11:11:04.561 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | place_exit | oid=3247420
+2026-08-21 11:11:05.561 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247420 status=5 dealt=0 target=300 -> wait
+2026-08-21 11:11:05.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:06.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247420 status=5 dealt=0 target=300 -> wait
+2026-08-21 11:11:06.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:07.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247420 status=5 dealt=0 target=300 -> wait
+2026-08-21 11:11:07.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:08.562 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247420 status=5 dealt=0 target=300 -> wait
+2026-08-21 11:11:08.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247420 status=11 dealt=300 target=300 -> filled
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【平仓】====2026-08-21 11:11:09.563
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 27.06 (exp=26.78)
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247420)
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787280926954
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发平仓条件------------------------
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即平仓 (1%限仿市)
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【盈亏统计】------------------------
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl: -66.00
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl%: -0.81%
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 11:11:09.563 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 11:11:10.238 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.06 ask_1=27.08
+2026-08-21 11:11:10.238 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050
+2026-08-21 13:36:02.157 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 13:36:02.158 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 13:36:02.158 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 13:36:02.636 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 13:36:02.636 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 13:36:02.637 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 13:36:03.859 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:03.859 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | entry_judge/开仓子条件 | code=HK.02050 rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=300 est_notional~8238.00
+2026-08-21 13:36:03.859 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 开始交易/start_trade | code=HK.02050 entry_hit=立即开仓 (1%限仿市)
+2026-08-21 13:36:03.859 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单计算/order_sizing | 参考价/px=27.46 | budget_total=10000.00 | lot_size=100 => qty=300 | lot_size=100 budget/price~364.166 n_lots=3 qty=300 | est_notional~8238.00
+2026-08-21 13:36:03.859 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.46 submit_price=27.74 time_in_force=DAY side=BUY code=HK.02050 qty=300 est_notional~8322.00 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 13:36:04.099 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247517 status=SUBMITTING
+2026-08-21 13:36:04.099 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 已报单，等待成交/await_order_fill | order_id=3247517 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 13:36:05.099 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=5 dealt=0 target=300 -> wait
+2026-08-21 13:36:05.099 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:06.100 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=5 dealt=0 target=300 -> wait
+2026-08-21 13:36:06.100 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:06.699 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=5 dealt=0 target=300 -> wait
+2026-08-21 13:36:06.699 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:07.700 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=5 dealt=0 target=300 -> wait
+2026-08-21 13:36:07.701 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:07.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=5 dealt=0 target=300 -> wait
+2026-08-21 13:36:07.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll | code=HK.02050 order_id=3247517 status=11 dealt=300 target=300 -> filled
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【开仓】====2026-08-21 13:36:08.753
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy  |  计划金额: 10000
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 27.46 (exp=27.74)
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300 | real_amount: 8238.00
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247517)
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787290529615
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发开仓条件------------------------
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即开仓 (1%限仿市)
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 预设平仓条件------------------------
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 不平仓，无平仓监控
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 13:36:08.753 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 13:36:09.436 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.44 ask_1=27.46
+2026-08-21 13:36:09.436 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050
+2026-08-21 14:45:26.705 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup | 启动成功 symbol=HK.02050 mode=paper status=2(持仓) exit_enabled=Y
+2026-08-21 14:45:26.706 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 14:45:26.706 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 交易上下文/trd_context | trd_env=paper trd_market=HK (cfg) | acc_id=0 acc_index=0
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | lot_size/手 | code=HK.02050 value=100 (snapshot)
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ========== 运行中 / RUNNING ==============================
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   订阅 / subscribe: ORDER_BOOK  |  HK.02050 推送已开 / push on
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ==========================================================
+2026-08-21 14:45:27.181 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 14:45:28.395 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:28.395 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | exit_judge/平仓子条件 | code=HK.02050 rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=300 est_notional~8298.00
+2026-08-21 14:45:28.395 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=27.66 submit_price=27.38 time_in_force=DAY side=SELL code=HK.02050 qty=300 est_notional~8214.00 remark=strategy_cpp_exit trd_env=paper
+2026-08-21 14:45:28.638 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 下单结果/place_order_result | ret=0 order_id=3247609 status=SUBMITTING
+2026-08-21 14:45:28.638 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓已报单，等待成交/exit_await_fill | order_id=3247609 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-21 14:45:28.638 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 平仓触发/exit_hit | code=HK.02050 立即平仓 (1%限仿市)
+2026-08-21 14:45:28.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | place_exit | oid=3247609
+2026-08-21 14:45:29.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247609 status=5 dealt=0 target=300 -> wait
+2026-08-21 14:45:29.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:30.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247609 status=5 dealt=0 target=300 -> wait
+2026-08-21 14:45:30.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:31.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247609 status=5 dealt=0 target=300 -> wait
+2026-08-21 14:45:31.639 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:32.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247609 status=5 dealt=0 target=300 -> wait
+2026-08-21 14:45:32.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 订单轮询/order_poll_exit | code=HK.02050 order_id=3247609 status=11 dealt=300 target=300 -> filled
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【平仓】====2026-08-21 14:45:33.241
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | HK.02050-buy
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_price: 27.66 (exp=27.38)
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | real_qty: 300
+2026-08-21 14:45:33.241 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | env: paper
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | o_status: filled (order_id:3247609)
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | task_id: nana_paper_02050_5m_1787290529615
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 触发平仓条件------------------------
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | ·立即平仓 (1%限仿市)
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 【盈亏统计】------------------------
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl: +60.00
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | pnl%: +0.73%
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 14:45:33.242 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 
+2026-08-21 14:45:33.940 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | 读取行情/read_market | code=HK.02050 bid_1=27.66 ask_1=27.7
+2026-08-21 14:45:33.940 | INFO | strategy_runtime.acc_0_idx_0.HK_02050 | managed_done_exit | loop_tick HK.02050

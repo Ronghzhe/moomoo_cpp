@@ -1,0 +1,168 @@
+2026-08-20 21:36:46.169 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | startup | 启动成功 symbol=US.RGTI mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:36:46.169 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:36:46.169 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | lot_size/手 | code=US.RGTI value=1 (snapshot)
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   订阅 / subscribe: ORDER_BOOK  |  US.RGTI 推送已开 / push on
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | ==========================================================
+2026-08-20 21:36:46.652 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 21:36:47.162 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.64 ask_1=16.65
+2026-08-20 21:36:47.162 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | entry_judge/开仓子条件 | code=US.RGTI rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=120 est_notional~1998.00
+2026-08-20 21:36:47.162 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 开始交易/start_trade | code=US.RGTI entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:36:47.162 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 报单计算/order_sizing | 参考价/px=16.64 | budget_total=2000.00 | lot_size=1 => qty=120 | lot_size=1 budget/price~120.192 n_lots=120 qty=120 | est_notional~1996.80
+2026-08-20 21:36:47.162 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=16.64 submit_price=16.31 time_in_force=DAY side=SELL code=US.RGTI qty=120 est_notional~1956.86 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:36:47.364 | WARN | strategy_runtime.acc_0_idx_0.US_RGTI | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:36:47.364 | WARN | strategy_runtime.acc_0_idx_0.US_RGTI | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:36:47.364 | ERROR | strategy_runtime.acc_0_idx_0.US_RGTI | entry_order_fatal | entry_order_fatal | code=US.RGTI status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:05:55.190 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | startup | 启动成功 symbol=US.RGTI mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:05:55.190 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:05:55.190 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | lot_size/手 | code=US.RGTI value=1 (snapshot)
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   订阅 / subscribe: ORDER_BOOK  |  US.RGTI 推送已开 / push on
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | ==========================================================
+2026-08-20 22:05:55.694 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 22:05:56.161 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:56.161 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | entry_judge/开仓子条件 | code=US.RGTI rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=121 est_notional~1996.50
+2026-08-20 22:05:56.161 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 开始交易/start_trade | code=US.RGTI entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:05:56.161 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 报单计算/order_sizing | 参考价/px=16.49 | budget_total=2000.00 | lot_size=1 => qty=121 | lot_size=1 budget/price~121.286 n_lots=121 qty=121 | est_notional~1995.29
+2026-08-20 22:05:56.161 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=16.49 submit_price=16.16 time_in_force=DAY side=SELL code=US.RGTI qty=121 est_notional~1955.36 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:05:56.457 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 下单结果/place_order_result | ret=0 order_id=3245961 status=SUBMITTING
+2026-08-20 22:05:56.457 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 已报单，等待成交/await_order_fill | order_id=3245961 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:05:56.756 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:56.756 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:05:56.756 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:56.756 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:05:57.052 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.052 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.052 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.052 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.353 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.353 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.353 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.353 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.643 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.643 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.643 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.643 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:57.951 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:57.951 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:58.255 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:58.255 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:58.255 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:58.255 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:58.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:58.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:05:58.859 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:58.859 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:58.860 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:58.860 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:59.152 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.152 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:59.152 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.152 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:59.451 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.451 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:59.452 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.452 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:05:59.758 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.758 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:05:59.758 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:05:59.758 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:06:00.054 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.054 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:00.054 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.054 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:00.360 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.360 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:06:00.360 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.360 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:00.638 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.639 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:00.958 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:00.959 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:01.258 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:01.258 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:01.536 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:01.537 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:01.537 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:01.537 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:01.854 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:01.855 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:01.855 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:01.855 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:02.192 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:02.192 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:02.453 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:02.453 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:02.763 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:02.763 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.48
+2026-08-20 22:06:03.057 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.057 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.058 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.058 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.355 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.355 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.356 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.356 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.653 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.653 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.653 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.654 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.47 ask_1=16.48
+2026-08-20 22:06:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.48 ask_1=16.48
+2026-08-20 22:06:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:03.956 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.48 ask_1=16.49
+2026-08-20 22:06:04.244 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.244 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.49
+2026-08-20 22:06:04.244 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.244 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:04.271 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.271 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.558 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.49 ask_1=16.5
+2026-08-20 22:06:04.868 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.868 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.5
+2026-08-20 22:06:04.869 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:04.869 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:05.159 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:05.159 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:05.159 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:05.159 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:05.457 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:05.458 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:05.458 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:05.458 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:05.764 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:05.764 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.5 ask_1=16.51
+2026-08-20 22:06:06.064 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:06.065 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.51 ask_1=16.51
+2026-08-20 22:06:06.065 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=5 dealt=0 target=121 -> wait
+2026-08-20 22:06:06.065 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.51 ask_1=16.52
+2026-08-20 22:06:06.356 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 订单轮询/order_poll | code=US.RGTI order_id=3245961 status=11 dealt=121 target=121 -> filled
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 【开仓】====2026-08-20 22:06:06.357
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | US.RGTI-sell  |  计划金额: 2000
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | real_price: 16.50 (exp=16.16)
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | real_qty: 121 | real_amount: 1997.10
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | env: paper
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | o_status: filled (order_id:3245961)
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | task_id: nana_paper_RGTI_5m_1787232927020
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 触发开仓条件------------------------
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | ·立即开仓 (2%限仿市)
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 预设平仓条件------------------------
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 不平仓，无平仓监控
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 22:06:06.357 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 
+2026-08-20 22:06:07.026 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | 读取行情/read_market | code=US.RGTI bid_1=16.51 ask_1=16.52
+2026-08-20 22:06:07.026 | INFO | strategy_runtime.acc_0_idx_0.US_RGTI | managed_done_exit | loop_tick US.RGTI

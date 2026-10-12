@@ -1,0 +1,2 @@
+ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
+2026-08-20T14:10:57,nana_paper_NOK_5m_1787232975986,US.NOK,SELL,3246000,11,199,10.045,strategy_cpp_entry,,,,paper,,,

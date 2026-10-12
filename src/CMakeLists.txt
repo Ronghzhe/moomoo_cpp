@@ -1,0 +1,97 @@
+add_library(moomoo_core STATIC
+  trade/order_parse.cpp
+  trade/order_errors.cpp
+  trade/broker_types.cpp
+  trade/broker_mapping.cpp
+  trade/order_id_util.cpp
+  trade/trade_pwd_util.cpp
+  trade/gateway_http.cpp
+  trade/gateway_broker.cpp
+  trade/fallback_broker.cpp
+  gateway/request_scheduler.cpp
+  market/hk_tick.cpp
+  trade/order_push_cache.cpp
+  config/execution_util.cpp
+  config/strategy_types.cpp
+  config/strategy_loader.cpp
+  config/config_path_resolver.cpp
+  common/rate_limiter.cpp
+  quote/kline_parse.cpp
+  engine/compare.cpp
+  engine/kline_candle_util.cpp
+  engine/eval/orderbook_eval.cpp
+  engine/eval/volume_eval.cpp
+  engine/eval/kline_candle_eval.cpp
+  engine/eval/trailing_take_profit_eval.cpp
+  engine/eval/day_open_gain_eval.cpp
+  engine/eval/trailing_ma20_close_eval.cpp
+  engine/eval/trailing_ma20_realtime_eval.cpp
+  engine/eval/pre_entry_bars_low_stop_eval.cpp
+  engine/eval/before_session_close_eval.cpp
+  engine/session_close_util.cpp
+  engine/staged_take_profit_util.cpp
+  config/condition_bridge.cpp
+  engine/registry.cpp
+  strategy/rule_logic.cpp
+  strategy/trade_side_util.cpp
+  strategy/eval_bundle_factory.cpp
+  strategy/strategy_judge.cpp
+  strategy/exchange_clock.cpp
+  strategy/tick_builder.cpp
+  strategy/strategy_runner.cpp
+  strategy/fill_detector.cpp
+  strategy/order_executor.cpp
+  strategy/position_sizing.cpp
+  strategy/book_guard.cpp
+  strategy/hk_short_params.cpp
+  strategy/entry_net_planner.cpp
+  strategy/net_split_rollback.cpp
+  strategy/net_split_remark.cpp
+  strategy/net_split_config.cpp
+  strategy/net_split_util.cpp
+  strategy/net_split_leg_wait.cpp
+  strategy/net_split_broker.cpp
+  strategy/symbol_tradability.cpp
+  strategy/symbol_loop_state.cpp
+  strategy/order_fail_retry.cpp
+  strategy/symbol_live_eval_util.cpp
+  log/ledger_ts.cpp
+  log/strategy_store.cpp
+  log/strategy_console_log.cpp
+  log/strategy_message_format.cpp
+  log/strategy_runtime_log.cpp
+  config/config_persist.cpp
+  db/mysql_config.cpp
+  db/mysql_client.cpp
+  task/task_types.cpp
+  task/task_repository.cpp
+  task/task_paths.cpp
+  task/task_params_spec.cpp
+  task/task_mapper.cpp
+  task/task_entry_note.cpp
+  task/task_backup_store.cpp
+  task/account_env.cpp
+  task/task_result.cpp
+  task/task_queue_notify.cpp
+  task/system_log.cpp
+  task/task_worker.cpp
+  task/trade_executor.cpp
+  task/task_latency_recorder.cpp
+  task/strategy_worker_pool.cpp
+  notify/telegram_client.cpp
+  notify/telegram_config.cpp
+  notify/tg_secrets_loader.cpp
+  notify/strategy_notify.cpp
+)
+
+include("${CMAKE_SOURCE_DIR}/cmake/JsonDeps.cmake")
+
+target_link_libraries(moomoo_core PUBLIC nlohmann_json::nlohmann_json mysqlclient)
+
+target_include_directories(moomoo_core PUBLIC
+  "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+
+if(BUILD_TRADE)
+  add_subdirectory(opend)
+endif()

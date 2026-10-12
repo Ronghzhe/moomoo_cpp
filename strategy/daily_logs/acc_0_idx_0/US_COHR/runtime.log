@@ -1,0 +1,539 @@
+2026-08-20 21:47:43.613 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:47:43.613 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:47:43.613 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-20 21:47:44.093 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:47:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.75 ask_1=282
+2026-08-20 21:47:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | entry_judge/开仓子条件 | code=US.COHR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=7 est_notional~1974.00
+2026-08-20 21:47:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 开始交易/start_trade | code=US.COHR entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:47:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单计算/order_sizing | 参考价/px=282.00 | budget_total=2000.00 | lot_size=1 => qty=7 | lot_size=1 budget/price~7.0922 n_lots=7 qty=7 | est_notional~1974.00
+2026-08-20 21:47:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=282.00 submit_price=287.64 time_in_force=DAY side=BUY code=US.COHR qty=7 est_notional~2013.48 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:47:44.740 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3245899 status=SUBMITTING
+2026-08-20 21:47:44.740 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 已报单，等待成交/await_order_fill | order_id=3245899 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 21:47:44.750 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:44.750 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282
+2026-08-20 21:47:44.751 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:44.751 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:45.049 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:45.049 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:45.753 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:45.753 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:46.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:46.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:47.155 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:47.155 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:47.656 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:47.656 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:47.752 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:47.752 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:48.041 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:48.041 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.28
+2026-08-20 21:47:48.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:48.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.05
+2026-08-20 21:47:48.644 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:48.644 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.8 ask_1=282.05
+2026-08-20 21:47:48.943 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:48.943 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.75 ask_1=282.05
+2026-08-20 21:47:48.944 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:48.944 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.75 ask_1=282.05
+2026-08-20 21:47:49.705 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:49.706 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.75 ask_1=282.05
+2026-08-20 21:47:50.095 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:50.095 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.75 ask_1=282.05
+2026-08-20 21:47:50.450 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:50.450 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.76 ask_1=282.05
+2026-08-20 21:47:50.451 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:50.451 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.76 ask_1=282.28
+2026-08-20 21:47:50.756 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:50.756 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.76 ask_1=282.28
+2026-08-20 21:47:51.048 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:51.048 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.94 ask_1=282.28
+2026-08-20 21:47:51.049 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=5 dealt=0 target=7 -> wait
+2026-08-20 21:47:51.049 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=282 ask_1=282.28
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3245899 status=11 dealt=7 target=7 -> filled
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【开仓】====2026-08-20 21:47:51.346
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-buy  |  计划金额: 2000
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 281.80 (exp=287.64)
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 7 | real_amount: 1972.60
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3245899)
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787233263882
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发开仓条件------------------------
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即开仓 (2%限仿市)
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 预设平仓条件------------------------
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 不平仓，无平仓监控
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:47:51.346 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:47:52.054 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=282 ask_1=282.28
+2026-08-20 21:47:52.054 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-20 21:50:53.227 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 21:50:53.227 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:50:53.227 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-20 21:50:53.443 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 21:50:54.225 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=281.13 ask_1=281.5
+2026-08-20 21:50:54.225 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | exit_judge/平仓子条件 | code=US.COHR rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=7 est_notional~1967.91
+2026-08-20 21:50:54.225 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=281.13 submit_price=275.51 time_in_force=DAY side=SELL code=US.COHR qty=7 est_notional~1928.55 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 21:50:54.427 | WARN | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:50:54.427 | WARN | strategy_runtime.acc_0_idx_0.US_COHR | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:50:54.427 | ERROR | strategy_runtime.acc_0_idx_0.US_COHR | exit_order_fatal | exit_order_fatal | code=US.COHR status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:00:58.647 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-20 22:00:58.647 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:00:58.647 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-20 22:00:59.129 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 22:00:59.774 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:00:59.774 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | exit_judge/平仓子条件 | code=US.COHR rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=7 est_notional~1965.25
+2026-08-20 22:00:59.774 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=280.75 submit_price=275.13 time_in_force=DAY side=SELL code=US.COHR qty=7 est_notional~1925.91 remark=strategy_cpp_exit trd_env=paper
+2026-08-20 22:01:00.078 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3245939 status=SUBMITTING
+2026-08-20 22:01:00.078 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓已报单，等待成交/exit_await_fill | order_id=3245939 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-20 22:01:00.078 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓触发/exit_hit | code=US.COHR 立即平仓 (2%限仿市)
+2026-08-20 22:01:00.078 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | place_exit | oid=3245939
+2026-08-20 22:01:00.537 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:00.537 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:00.942 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:00.942 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:01.249 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:01.249 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:01.545 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:01.545 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:01.545 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:01.545 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:01.860 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:01.860 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.08
+2026-08-20 22:01:01.860 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:01.861 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.07
+2026-08-20 22:01:02.148 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:02.148 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.75 ask_1=281.07
+2026-08-20 22:01:02.742 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:02.742 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.88 ask_1=281.15
+2026-08-20 22:01:03.042 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.042 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.88 ask_1=281.15
+2026-08-20 22:01:03.343 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.343 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.88 ask_1=281.15
+2026-08-20 22:01:03.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.88 ask_1=281.15
+2026-08-20 22:01:03.646 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.646 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.88 ask_1=281.15
+2026-08-20 22:01:03.646 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.646 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.62 ask_1=281.08
+2026-08-20 22:01:03.949 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.949 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.62 ask_1=281.08
+2026-08-20 22:01:03.949 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:03.950 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.08
+2026-08-20 22:01:04.249 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:04.249 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.08
+2026-08-20 22:01:04.250 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:04.250 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.08
+2026-08-20 22:01:05.215 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:05.215 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.08
+2026-08-20 22:01:05.597 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:05.597 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.9 ask_1=281.08
+2026-08-20 22:01:05.760 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:05.760 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.9 ask_1=281.15
+2026-08-20 22:01:05.760 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:05.760 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.15
+2026-08-20 22:01:06.045 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=5 dealt=0 target=7 -> wait
+2026-08-20 22:01:06.045 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.6 ask_1=281.15
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3245939 status=11 dealt=7 target=7 -> filled
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【平仓】====2026-08-20 22:01:06.342
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-buy
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 280.76 (exp=275.13)
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 7
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3245939)
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787233263882
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发平仓条件------------------------
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即平仓 (2%限仿市)
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【盈亏统计】------------------------
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl: -7.25
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl%: -0.37%
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 22:01:06.342 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-20 22:01:07.031 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=280.87 ask_1=281.14
+2026-08-20 22:01:07.031 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-21 23:01:16.194 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-21 23:01:16.195 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-21 23:01:16.195 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-21 23:01:16.423 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-21 23:01:17.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.5 ask_1=285.21
+2026-08-21 23:01:17.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | entry_judge/开仓子条件 | code=US.COHR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=7 est_notional~1996.47
+2026-08-21 23:01:17.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 开始交易/start_trade | code=US.COHR entry_hit=立即开仓 (2%限仿市)
+2026-08-21 23:01:17.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单计算/order_sizing | 参考价/px=284.50 | budget_total=2000.00 | lot_size=1 => qty=7 | lot_size=1 budget/price~7.02988 n_lots=7 qty=7 | est_notional~1991.50
+2026-08-21 23:01:17.314 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=284.50 submit_price=278.81 time_in_force=DAY side=SELL code=US.COHR qty=7 est_notional~1951.67 remark=strategy_cpp_entry trd_env=paper
+2026-08-21 23:01:17.654 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3248430 status=SUBMITTING
+2026-08-21 23:01:17.654 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 已报单，等待成交/await_order_fill | order_id=3248430 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-21 23:01:18.567 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:18.567 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.5 ask_1=285.21
+2026-08-21 23:01:18.936 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:18.936 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.72 ask_1=285.21
+2026-08-21 23:01:19.236 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.236 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.5 ask_1=285.21
+2026-08-21 23:01:19.237 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.237 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:19.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:19.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:19.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:20.134 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:20.134 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:20.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:20.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:20.736 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:20.736 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:21.033 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=5 dealt=0 target=7 -> wait
+2026-08-21 23:01:21.033 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248430 status=11 dealt=7 target=7 -> filled
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【开仓】====2026-08-21 23:01:21.934
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-sell  |  计划金额: 2000
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 285.26 (exp=278.81)
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 7 | real_amount: 1996.86
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3248430)
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787324448306
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发开仓条件------------------------
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即开仓 (2%限仿市)
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 预设平仓条件------------------------
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 不平仓，无平仓监控
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-21 23:01:21.934 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-21 23:01:22.618 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=284.95 ask_1=285.41
+2026-08-21 23:01:22.618 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-22 01:05:43.921 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 01:05:43.922 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 01:05:43.922 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-22 01:05:44.142 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:05:45.354 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:45.354 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | exit_judge/平仓子条件 | code=US.COHR rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=7 est_notional~2011.87
+2026-08-22 01:05:45.354 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=287.69 submit_price=293.45 time_in_force=DAY side=BUY code=US.COHR qty=7 est_notional~2054.15 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 01:05:45.672 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3248869 status=SUBMITTING
+2026-08-22 01:05:45.672 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓已报单，等待成交/exit_await_fill | order_id=3248869 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 01:05:45.672 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓触发/exit_hit | code=US.COHR 立即平仓 (2%限仿市)
+2026-08-22 01:05:45.672 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | place_exit | oid=3248869
+2026-08-22 01:05:45.927 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248869 status=5 dealt=0 target=7 -> wait
+2026-08-22 01:05:45.928 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:46.532 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248869 status=5 dealt=0 target=7 -> wait
+2026-08-22 01:05:46.532 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:47.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248869 status=5 dealt=0 target=7 -> wait
+2026-08-22 01:05:47.344 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248869 status=5 dealt=0 target=7 -> wait
+2026-08-22 01:05:47.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248869 status=11 dealt=7 target=7 -> filled
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【平仓】====2026-08-22 01:05:48.435
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-sell
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 287.57 (exp=293.45)
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 7
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3248869)
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787324448306
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发平仓条件------------------------
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即平仓 (2%限仿市)
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【盈亏统计】------------------------
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl: -16.17
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl%: -0.81%
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:05:48.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:05:49.126 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.41 ask_1=287.69
+2026-08-22 01:05:49.126 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-22 01:31:21.395 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-22 01:31:21.396 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 01:31:21.396 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-22 01:31:21.615 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:31:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.01 ask_1=288.34
+2026-08-22 01:31:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | entry_judge/开仓子条件 | code=US.COHR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=6 est_notional~1730.04
+2026-08-22 01:31:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 开始交易/start_trade | code=US.COHR entry_hit=立即开仓 (2%限仿市)
+2026-08-22 01:31:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单计算/order_sizing | 参考价/px=288.34 | budget_total=2000.00 | lot_size=1 => qty=6 | lot_size=1 budget/price~6.93626 n_lots=6 qty=6 | est_notional~1730.04
+2026-08-22 01:31:21.939 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=288.34 submit_price=294.11 time_in_force=DAY side=BUY code=US.COHR qty=6 est_notional~1764.66 remark=strategy_cpp_entry trd_env=paper
+2026-08-22 01:31:22.267 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3248925 status=SUBMITTING
+2026-08-22 01:31:22.267 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 已报单，等待成交/await_order_fill | order_id=3248925 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-22 01:31:22.528 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:22.528 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.34
+2026-08-22 01:31:22.831 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:22.831 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.34
+2026-08-22 01:31:23.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:23.435 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.34
+2026-08-22 01:31:23.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:23.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.38
+2026-08-22 01:31:24.028 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:24.028 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:24.029 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:24.029 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:24.705 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:24.705 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:24.928 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:24.928 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:24.929 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:24.929 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:25.234 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:25.234 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:25.528 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:25.528 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.33
+2026-08-22 01:31:25.529 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:25.529 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.38
+2026-08-22 01:31:25.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:25.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.32
+2026-08-22 01:31:25.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:25.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.32
+2026-08-22 01:31:26.555 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:26.555 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.9 ask_1=288.32
+2026-08-22 01:31:26.964 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=5 dealt=0 target=6 -> wait
+2026-08-22 01:31:26.964 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.94 ask_1=288.32
+2026-08-22 01:31:27.329 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3248925 status=11 dealt=6 target=6 -> filled
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【开仓】====2026-08-22 01:31:27.330
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-buy  |  计划金额: 2000
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 288.18 (exp=294.11)
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 6 | real_amount: 1729.08
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3248925)
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787333454346
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发开仓条件------------------------
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即开仓 (2%限仿市)
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 预设平仓条件------------------------
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 不平仓，无平仓监控
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:31:27.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 01:31:28.014 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=287.94 ask_1=288.32
+2026-08-22 01:31:28.014 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-22 02:00:41.221 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=2(持仓) exit_enabled=Y
+2026-08-22 02:00:41.221 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-22 02:00:41.221 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-22 02:00:41.441 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 02:00:41.737 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:41.737 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | exit_judge/平仓子条件 | code=US.COHR rule=X1_EXIT_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_exit_qty=6 est_notional~1728.66
+2026-08-22 02:00:41.737 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=288.11 submit_price=282.34 time_in_force=DAY side=SELL code=US.COHR qty=6 est_notional~1694.04 remark=strategy_cpp_exit trd_env=paper
+2026-08-22 02:00:42.092 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3248977 status=SUBMITTING
+2026-08-22 02:00:42.092 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓已报单，等待成交/exit_await_fill | order_id=3248977 (未平仓结前不写 status=3、不发平仓成交 Telegram)
+2026-08-22 02:00:42.092 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 平仓触发/exit_hit | code=US.COHR 立即平仓 (2%限仿市)
+2026-08-22 02:00:42.092 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | place_exit | oid=3248977
+2026-08-22 02:00:42.512 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:42.512 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:42.897 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:42.897 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:42.931 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:42.931 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:43.292 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:43.292 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:43.596 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:43.596 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:43.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:43.830 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:44.153 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:44.153 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:44.448 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:44.733 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:45.032 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.032 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:45.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:45.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.330 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:45.636 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.636 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.11 ask_1=288.41
+2026-08-22 02:00:45.931 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.932 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:45.932 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:45.932 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.27 ask_1=288.41
+2026-08-22 02:00:46.322 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:46.323 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.27 ask_1=288.41
+2026-08-22 02:00:46.533 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:46.533 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.27 ask_1=288.41
+2026-08-22 02:00:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:46.836 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:47.130 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:47.130 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:47.131 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:47.131 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:47.521 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:47.521 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:47.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:47.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:47.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:47.732 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:48.062 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=5 dealt=0 target=6 -> wait
+2026-08-22 02:00:48.062 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll_exit | code=US.COHR order_id=3248977 status=11 dealt=6 target=6 -> filled
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【平仓】====2026-08-22 02:00:48.327
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-buy
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 288.33 (exp=282.34)
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 6
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3248977)
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787333454346
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发平仓条件------------------------
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即平仓 (2%限仿市)
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【盈亏统计】------------------------
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl: +0.93
+2026-08-22 02:00:48.327 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | pnl%: +0.05%
+2026-08-22 02:00:48.328 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 02:00:48.328 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-22 02:00:49.048 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=288.24 ask_1=288.41
+2026-08-22 02:00:49.048 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR
+2026-08-24 21:50:32.068 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup | 启动成功 symbol=US.COHR mode=paper status=0(待开仓) exit_enabled=N
+2026-08-24 21:50:32.068 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-24 21:50:32.068 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-24 21:50:32.539 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | lot_size/手 | code=US.COHR value=1 (snapshot)
+2026-08-24 21:50:32.539 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-24 21:50:32.539 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ========== 运行中 / RUNNING ==============================
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   [RUN] 本策略已上线 / strategy is live
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   订阅 / subscribe: ORDER_BOOK  |  US.COHR 推送已开 / push on
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ==========================================================
+2026-08-24 21:50:32.540 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-24 21:50:33.044 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.99
+2026-08-24 21:50:33.044 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | entry_judge/开仓子条件 | code=US.COHR rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=7 est_notional~1854.93
+2026-08-24 21:50:33.044 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 开始交易/start_trade | code=US.COHR entry_hit=立即开仓 (2%限仿市)
+2026-08-24 21:50:33.044 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单计算/order_sizing | 参考价/px=264.08 | budget_total=2000.00 | lot_size=1 => qty=7 | lot_size=1 budget/price~7.57346 n_lots=7 qty=7 | est_notional~1848.56
+2026-08-24 21:50:33.044 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=264.08 submit_price=258.79 time_in_force=DAY side=SELL code=US.COHR qty=7 est_notional~1811.53 remark=strategy_cpp_entry trd_env=paper
+2026-08-24 21:50:33.456 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 下单结果/place_order_result | ret=0 order_id=3251109 status=SUBMITTING
+2026-08-24 21:50:33.456 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 已报单，等待成交/await_order_fill | order_id=3251109 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-24 21:50:33.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:33.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:33.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:33.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:33.871 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:33.871 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:34.336 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:34.336 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:35.336 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:35.337 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:35.371 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:35.371 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:35.673 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:35.673 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:35.974 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:35.974 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.98
+2026-08-24 21:50:35.974 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:35.974 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.51
+2026-08-24 21:50:36.637 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:36.637 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.51
+2026-08-24 21:50:37.388 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:37.388 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.2 ask_1=264.51
+2026-08-24 21:50:37.471 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:37.471 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.2 ask_1=264.51
+2026-08-24 21:50:37.770 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:37.770 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.2 ask_1=264.51
+2026-08-24 21:50:38.073 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.073 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.2 ask_1=264.51
+2026-08-24 21:50:38.374 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.374 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.51
+2026-08-24 21:50:38.673 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.673 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.08 ask_1=264.51
+2026-08-24 21:50:38.674 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.674 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.98
+2026-08-24 21:50:38.972 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.972 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.98
+2026-08-24 21:50:38.972 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:38.973 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.98
+2026-08-24 21:50:39.271 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:39.271 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.98
+2026-08-24 21:50:39.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:39.572 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.98
+2026-08-24 21:50:39.871 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:39.871 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:39.872 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:39.872 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:40.172 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:40.172 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:40.472 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:40.472 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:40.472 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:40.472 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:40.770 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:40.771 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:40.771 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:40.771 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.18 ask_1=264.98
+2026-08-24 21:50:41.072 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:41.072 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.17 ask_1=264.86
+2026-08-24 21:50:41.073 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:41.073 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.16 ask_1=264.86
+2026-08-24 21:50:41.374 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:41.374 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.16 ask_1=264.86
+2026-08-24 21:50:41.771 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:41.771 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.16 ask_1=264.86
+2026-08-24 21:50:41.972 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=5 dealt=0 target=7 -> wait
+2026-08-24 21:50:41.972 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.16 ask_1=264.86
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 订单轮询/order_poll | code=US.COHR order_id=3251109 status=11 dealt=7 target=7 -> filled
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 【开仓】====2026-08-24 21:50:42.573
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | US.COHR-sell  |  计划金额: 2000
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_price: 264.27 (exp=258.79)
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | real_qty: 7 | real_amount: 1849.89
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | env: paper
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | o_status: filled (order_id:3251109)
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | task_id: nana_paper_COHR_5m_1787579170968
+2026-08-24 21:50:42.573 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 触发开仓条件------------------------
+2026-08-24 21:50:42.574 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | ·立即开仓 (2%限仿市)
+2026-08-24 21:50:42.574 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 预设平仓条件------------------------
+2026-08-24 21:50:42.574 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 不平仓，无平仓监控
+2026-08-24 21:50:42.574 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-24 21:50:42.574 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 
+2026-08-24 21:50:43.339 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | 读取行情/read_market | code=US.COHR bid_1=264.16 ask_1=264.86
+2026-08-24 21:50:43.339 | INFO | strategy_runtime.acc_0_idx_0.US_COHR | managed_done_exit | loop_tick US.COHR

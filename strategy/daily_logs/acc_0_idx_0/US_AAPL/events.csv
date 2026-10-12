@@ -1,0 +1,6 @@
+ts,level,event_type,message
+2026-08-31T10:16:32,INFO,startup,启动成功 symbol=US.AAPL mode=paper status=0(待开仓) exit_enabled=N
+2026-08-31T10:16:32,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-09-01T03:24:23,INFO,startup,启动成功 symbol=US.AAPL mode=paper status=0(待开仓) exit_enabled=N
+2026-09-01T03:24:23,INFO,telegram_startup_sent,启动监控摘要已推送 Telegram
+2026-09-01T13:30:22,INFO,managed_done_exit,loop_tick US.AAPL

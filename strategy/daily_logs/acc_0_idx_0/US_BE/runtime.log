@@ -1,0 +1,82 @@
+2026-08-20 21:35:52.755 | INFO | strategy_runtime.acc_0_idx_0.US_BE | startup | 启动成功 symbol=US.BE mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 21:35:52.755 | INFO | strategy_runtime.acc_0_idx_0.US_BE | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 21:35:52.755 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE | lot_size/手 | code=US.BE value=1 (snapshot)
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE | ========== 运行中 / RUNNING ==============================
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   订阅 / subscribe: ORDER_BOOK  |  US.BE 推送已开 / push on
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE | ==========================================================
+2026-08-20 21:35:52.974 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 21:35:53.576 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=203.03 ask_1=203.36
+2026-08-20 21:35:53.576 | INFO | strategy_runtime.acc_0_idx_0.US_BE | entry_judge/开仓子条件 | code=US.BE rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=9 est_notional~1830.24
+2026-08-20 21:35:53.576 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 开始交易/start_trade | code=US.BE entry_hit=立即开仓 (2%限仿市)
+2026-08-20 21:35:53.577 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 报单计算/order_sizing | 参考价/px=203.03 | budget_total=2000.00 | lot_size=1 => qty=9 | lot_size=1 budget/price~9.85076 n_lots=9 qty=9 | est_notional~1827.27
+2026-08-20 21:35:53.577 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=203.03 submit_price=198.97 time_in_force=DAY side=SELL code=US.BE qty=9 est_notional~1790.72 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 21:35:53.779 | WARN | strategy_runtime.acc_0_idx_0.US_BE | 下单结果/place_order_result | ret=-1 error=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:35:53.779 | WARN | strategy_runtime.acc_0_idx_0.US_BE | place_failed | The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 21:35:53.779 | ERROR | strategy_runtime.acc_0_idx_0.US_BE | entry_order_fatal | entry_order_fatal | code=US.BE status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
+2026-08-20 22:04:48.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | startup | 启动成功 symbol=US.BE mode=paper status=0(待开仓) exit_enabled=N
+2026-08-20 22:04:48.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | startup_notify_skipped | 监控摘要已由 Worker 推送，Executor 跳过重复通知
+2026-08-20 22:04:48.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 交易上下文/trd_context | trd_env=paper trd_market=US (cfg) | acc_id=0 acc_index=0
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE | lot_size/手 | code=US.BE value=1 (snapshot)
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE | ========== 运行中 / RUNNING ==============================
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   [RUN] 本策略已上线 / strategy is live
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   订阅 / subscribe: ORDER_BOOK  |  US.BE 推送已开 / push on
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   Telegram/notify: 启用 / enabled（startup_notify_once=false；开/平仓报单结果亦推送）
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE |   —— 以下为运行期日志 / runtime log below —— 
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE | ==========================================================
+2026-08-20 22:04:48.619 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 22:04:49.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.03 ask_1=202.5
+2026-08-20 22:04:49.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | entry_judge/开仓子条件 | code=US.BE rule=S1_TRADE_NOW #0 type=orderbook | op_empty_skip_compare ok=True | plan_qty=9 est_notional~1822.50
+2026-08-20 22:04:49.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 开始交易/start_trade | code=US.BE entry_hit=立即开仓 (2%限仿市)
+2026-08-20 22:04:49.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 报单计算/order_sizing | 参考价/px=202.03 | budget_total=2000.00 | lot_size=1 => qty=9 | lot_size=1 budget/price~9.89952 n_lots=9 qty=9 | est_notional~1818.27
+2026-08-20 22:04:49.144 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 报单提交/order_request | order_type=SIM_MARKET sim_market_pct=0.0300 ref_px=202.03 submit_price=197.98 time_in_force=DAY side=SELL code=US.BE qty=9 est_notional~1781.82 remark=strategy_cpp_entry trd_env=paper
+2026-08-20 22:04:49.442 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 下单结果/place_order_result | ret=0 order_id=3245956 status=SUBMITTING
+2026-08-20 22:04:49.442 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 已报单，等待成交/await_order_fill | order_id=3245956 (未成仓前不写 JSON、不发成交 Telegram)
+2026-08-20 22:04:49.802 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:49.802 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.03 ask_1=202.5
+2026-08-20 22:04:50.031 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:50.031 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.03 ask_1=202.5
+2026-08-20 22:04:50.883 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:50.883 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:51.203 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:51.203 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:51.531 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:51.531 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:52.312 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:52.312 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:52.729 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:52.730 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:53.035 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.035 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:53.335 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.336 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.5
+2026-08-20 22:04:53.336 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.336 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.02 ask_1=202.63
+2026-08-20 22:04:53.633 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.633 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.02 ask_1=202.68
+2026-08-20 22:04:53.633 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.633 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.02 ask_1=202.68
+2026-08-20 22:04:53.938 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=5 dealt=0 target=9 -> wait
+2026-08-20 22:04:53.938 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202.02 ask_1=202.68
+2026-08-20 22:04:54.938 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 订单轮询/order_poll | code=US.BE order_id=3245956 status=11 dealt=9 target=9 -> filled
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 【开仓】====2026-08-20 22:04:54.939
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | US.BE-sell  |  计划金额: 2000
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | real_price: 202.23 (exp=197.98)
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | real_qty: 9 | real_amount: 1820.07
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | env: paper
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | o_status: filled (order_id:3245956)
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | task_id: nana_paper_BE_5m_1787232915565
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 触发开仓条件------------------------
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | ·立即开仓 (2%限仿市)
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 预设平仓条件------------------------
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 不平仓，无平仓监控
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 22:04:54.939 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 
+2026-08-20 22:04:55.621 | INFO | strategy_runtime.acc_0_idx_0.US_BE | 读取行情/read_market | code=US.BE bid_1=202 ask_1=202.68
+2026-08-20 22:04:55.621 | INFO | strategy_runtime.acc_0_idx_0.US_BE | managed_done_exit | loop_tick US.BE

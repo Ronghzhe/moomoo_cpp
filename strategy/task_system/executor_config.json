@@ -1,0 +1,11 @@
+{
+  "mysql_config": "/home/ubuntu/workspace/mysql/mysql_config.json",
+  "executor_poll_sec": 0.2,
+  "executor_parallel": 3,
+  "executor_parallel_hk": 3,
+  "executor_parallel_us": 3,
+  "executor_not_done_retry_sec": 30,
+  "executor_timeout_sec": 0,
+  "executor_open_stagger_slot_sec": 2,
+  "executor_open_stagger_buckets": 20
+}

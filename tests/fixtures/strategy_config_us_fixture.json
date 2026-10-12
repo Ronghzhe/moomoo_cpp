@@ -1,0 +1,160 @@
+{
+  "_fixture_meta": {
+    "source": "moomoo_python/strategy/config/strategy_config_us.json",
+    "purpose": "C++ migration parity tests (sanitized, paper mode)",
+    "redacted_fields": [
+      "webhook",
+      "secret",
+      "acc_id>0",
+      "client_name"
+    ]
+  },
+  "$comment": "仅美股 exit_strategies 建议同时具备 bid 上沿(>=)与下沿(<=) 两条 orderbook 规则（可与 pnl 并存）；组间常用 exit_strategy_logic=any。symbols[] 建议在 budget/entry_qty 旁填写 exit_qty（与 entry_qty 同值为模版；null=单笔平满当前持仓；改小可分批平仓）。其余同前。",
+  "version": 1,
+  "client_name": "FixtureClient",
+  "strategy_name": "short_squeeze",
+  "mode": "paper",
+  "opend": {
+    "host": "127.0.0.1",
+    "port": 11121
+  },
+  "account": {
+    "trd_market": "US",
+    "acc_id": 0,
+    "acc_index": 0
+  },
+  "execution": {
+    "order_poll_min_sec": 3
+  },
+  "notify": {
+    "$comment_dingding": "mode=paper 用 paper 群的 webhook；mode=real 用 real 群。可同时配置；某一侧也可用 webhook_env / secret_env 从环境变量读。缺省仍支持仅写根级 webhook/secret（两边共用）。",
+    "dingding": {
+      "enabled": false,
+      "paper": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      },
+      "real": {
+        "webhook": "REDACTED",
+        "secret": "REDACTED"
+      }
+    }
+  },
+  "symbols": [
+    {
+      "task_id": "",
+      "enabled": true,
+      "exit_enabled": true,
+      "startup_notify_once": false,
+      "code": "US.QBTS",
+      "order_type": "market",
+      "time_in_force": "DAY",
+      "budget": null,
+      "entry_qty": 10000,
+      "exit_qty": null,
+      "entry_side": "BUY",
+      "status": 3,
+      "opened_qty": 10000.0,
+      "opened_price": 19.6947,
+      "closed_qty": 10000.0,
+      "closed_price": 19.9087529,
+      "entry_strategy_logic": "any",
+      "entry_strategies": [
+        {
+          "id": "S1_OPEN",
+          "enabled": true,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "ask_1",
+              "op": "<=",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "id": "S2_OPEN",
+          "enabled": false,
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "open",
+              "gain_pct": 0.01,
+              "ref": "mid"
+            },
+            {
+              "type": "volume",
+              "kl_type": "K_15M",
+              "ma_period": 20,
+              "multiple": 3.0,
+              "ma_include_last": true,
+              "poll_sec": 30
+            }
+          ]
+        }
+      ],
+      "exit_strategy_logic": "any",
+      "exit_strategies": [
+        {
+          "id": "E1_CLOSE",
+          "enabled": true,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "<=",
+              "value": 25
+            }
+          ]
+        },
+        {
+          "id": "E2_CLOSE",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "orderbook",
+              "field": "bid_1",
+              "op": "<=",
+              "value": 230
+            }
+          ]
+        },
+        {
+          "id": "E3_CLOSE",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": ">=",
+              "value": 0.1
+            }
+          ]
+        },
+        {
+          "id": "E4_CLOSE",
+          "enabled": false,
+          "side": "SELL",
+          "logic": "all",
+          "conditions": [
+            {
+              "type": "pnl_gain_pct",
+              "op": "<=",
+              "value": -0.1
+            }
+          ]
+        }
+      ],
+      "runtime_updated_at": "2026-05-01T14:25:25Z"
+    }
+  ],
+  "storage": {
+    "csv_dir": "./strategy/daily_logs"
+  }
+}
