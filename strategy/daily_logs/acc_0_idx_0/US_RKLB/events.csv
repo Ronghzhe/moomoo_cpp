@@ -1,8 +1,0 @@
-ts,level,event_type,message
-2026-08-20T13:56:22,INFO,startup,启动成功 symbol=US.RKLB mode=paper status=0(待开仓) exit_enabled=N
-2026-08-20T13:56:22,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
-2026-08-20T13:56:22,WARN,place_failed,The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
-2026-08-20T13:56:22,ERROR,entry_order_fatal,entry_order_fatal | code=US.RKLB status=- reason=The precision of Price in Place Order does not meet the specification. Please visit https://openapi.moomoo.com/moomoo-api-doc/en/trade/place-order.html for parameter guidelines.
-2026-08-20T14:19:40,INFO,startup,启动成功 symbol=US.RKLB mode=paper status=0(待开仓) exit_enabled=N
-2026-08-20T14:19:40,INFO,startup_notify_skipped,监控摘要已由 Worker 推送，Executor 跳过重复通知
-2026-08-20T14:19:46,INFO,managed_done_exit,loop_tick US.RKLB

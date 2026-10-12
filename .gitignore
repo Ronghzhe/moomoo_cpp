@@ -1,0 +1,22 @@
+# CMake out-of-source build trees (see build_cpp.sh, root CMakeLists.txt)
+/build/
+/cpp/build/
+/cpp/build-fast/
+/cpp/build-ubuntu/
+
+# Stray in-tree compile artifacts (if any)
+*.o
+*.o.d
+*.a
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+
+# Runtime / local execution output (configs stay tracked: strategy/config/, bench/config/, *_config.json)
+/strategy/daily_logs/
+/strategy/task_system/run_logs/
+/strategy/task_system/sys_log/
+/strategy/task_system/bench_logs/
+/strategy/task_system/pids/
+/sys_log/

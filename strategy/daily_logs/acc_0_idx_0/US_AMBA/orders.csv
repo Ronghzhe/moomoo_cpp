@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:18:57,nana_paper_AMBA_5m_1787234120923,US.AMBA,SELL,3246052,11,27,73.43,strategy_cpp_entry,,,,paper,,,

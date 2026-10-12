@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:12:47,nana_paper_ASTS_5m_1787233003089,US.ASTS,SELL,3246020,11,30,64.735,strategy_cpp_entry,,,,paper,,,

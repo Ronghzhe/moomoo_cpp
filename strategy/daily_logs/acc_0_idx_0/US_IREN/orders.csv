@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:12:41,nana_paper_IREN_5m_1787232999958,US.IREN,BUY,3246018,11,47,42.32,strategy_cpp_entry,,,,paper,,,

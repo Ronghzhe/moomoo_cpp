@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:14:42,nana_paper_ALAB_5m_1787233241172,US.ALAB,BUY,3246029,11,6,288,strategy_cpp_entry,,,,paper,,,

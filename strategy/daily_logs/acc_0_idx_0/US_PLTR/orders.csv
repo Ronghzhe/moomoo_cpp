@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:12:23,nana_paper_PLTR_5m_1787232993720,US.PLTR,SELL,3246015,11,11,175.09,strategy_cpp_entry,,,,paper,,,

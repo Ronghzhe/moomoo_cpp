@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:13:14,nana_paper_SMCI_5m_1787233225690,US.SMCI,BUY,3246025,11,54,36.855,strategy_cpp_entry,,,,paper,,,

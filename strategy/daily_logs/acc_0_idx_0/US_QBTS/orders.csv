@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:15:51,nana_paper_QBTS_5m_1787233247430,US.QBTS,BUY,3246032,11,105,18.93,strategy_cpp_entry,,,,paper,,,

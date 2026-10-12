@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:16:31,nana_paper_IONQ_5m_1787233256599,US.IONQ,BUY,3246038,11,47,41.58,strategy_cpp_entry,,,,paper,,,

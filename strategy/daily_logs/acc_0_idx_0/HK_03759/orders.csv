@@ -1,3 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T02:35:32,nana_paper_03759_5m_1787193319385,HK.03759,BUY,3244505,11,200,34.62,strategy_cpp_entry,,,,paper,,,
-2026-08-20T06:56:23,nana_paper_03759_5m_1787193319385,HK.03759,SELL,3244750,11,200,34.12,strategy_cpp_exit,,,,SIMULATE,loss,-1.44%,-100.00

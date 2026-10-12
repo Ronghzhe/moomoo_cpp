@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:07:58,nana_paper_ENPH_5m_1787232954158,US.ENPH,BUY,3245975,11,52,38.14,strategy_cpp_entry,,,,paper,,,

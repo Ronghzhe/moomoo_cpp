@@ -1,5 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:26:18,nana_paper_SKHY_5m_1787235952107,US.SKHY,BUY,3246081,11,12,163.945,strategy_cpp_entry,,,,paper,,,
-2026-08-20T14:56:18,nana_paper_SKHY_5m_1787235952107,US.SKHY,SELL,3246189,11,12,163.18,strategy_cpp_exit,,,,SIMULATE,loss,-0.47%,-9.18
-2026-08-21T15:41:37,nana_paper_SKHY_5m_1787326858050,US.SKHY,BUY,3248578,11,11,167.1,strategy_cpp_entry,,,,paper,,,
-2026-08-21T16:10:47,nana_paper_SKHY_5m_1787326858050,US.SKHY,SELL,3248678,11,11,165.275,strategy_cpp_exit,,,,SIMULATE,loss,-1.09%,-20.07

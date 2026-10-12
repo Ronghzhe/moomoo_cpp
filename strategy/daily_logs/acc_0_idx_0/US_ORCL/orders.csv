@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:06:50,nana_paper_ORCL_5m_1787232941626,US.ORCL,SELL,3245963,11,14,142.81,strategy_cpp_entry,,,,paper,,,

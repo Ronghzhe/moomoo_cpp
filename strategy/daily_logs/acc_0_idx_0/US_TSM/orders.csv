@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:17:36,nana_paper_TSM_5m_1787233271184,US.TSM,BUY,3246043,11,4,414.03,strategy_cpp_entry,,,,paper,,,

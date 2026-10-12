@@ -1,8 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T13:36:36,nana_paper_AAOI_5m_1787232921816,US.AAOI,SELL,3245782,11,16,121.575,strategy_cpp_entry,,,,paper,,,
-2026-08-20T14:05:43,nana_paper_AAOI_5m_1787232921816,US.AAOI,BUY,3245960,11,16,121.46,strategy_cpp_exit,,,,SIMULATE,profit,+0.09%,+1.84
-2026-08-21T13:35:43,nana_paper_AAOI_5m_1787319320865,US.AAOI,BUY,3247979,11,15,129.395,strategy_cpp_entry,,,,paper,,,
-2026-08-21T13:40:36,nana_paper_AAOI_5m_1787319320865,US.AAOI,SELL,3248005,11,15,128.29,strategy_cpp_exit,,,,SIMULATE,loss,-0.85%,-16.58
-2026-08-21T13:45:45,nana_paper_AAOI_5m_1787319929189,US.AAOI,BUY,3248043,11,15,131.822,strategy_cpp_entry,,,,paper,,,
-2026-08-21T14:05:33,nana_paper_AAOI_5m_1787319929189,US.AAOI,SELL,3248150,11,15,128,strategy_cpp_exit,,,,SIMULATE,loss,-2.90%,-57.33
-2026-08-24T13:49:32,nana_paper_AAOI_5m_1787579131553,US.AAOI,SELL,3251103,11,19,103.719,strategy_cpp_entry,,,,paper,,,

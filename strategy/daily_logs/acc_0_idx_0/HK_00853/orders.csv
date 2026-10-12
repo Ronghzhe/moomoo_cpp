@@ -1,7 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T03:02:22,nana_paper_00853_5m_1787194229597,HK.00853,BUY,3244529,11,1400,6.84,strategy_cpp_entry,,,,paper,,,
-2026-08-20T06:56:52,nana_paper_00853_5m_1787194229597,HK.00853,SELL,3244751,11,1400,6.78,strategy_cpp_exit,,,,SIMULATE,loss,-0.88%,-84.00
-2026-08-21T06:15:45,nana_paper_00853_5m_1787292929351,HK.00853,BUY,3247563,11,1500,6.555,strategy_cpp_entry,,,,paper,,,
-2026-08-21T06:35:37,nana_paper_00853_5m_1787292929351,HK.00853,SELL,3247580,11,1500,6.54,strategy_cpp_exit,,,,SIMULATE,loss,-0.23%,-22.50
-2026-08-24T06:20:53,nana_paper_00853_5m_1787552439390,HK.00853,BUY,3250602,11,1500,6.31,strategy_cpp_entry,,,,paper,,,
-2026-08-24T07:10:51,nana_paper_00853_5m_1787552439390,HK.00853,SELL,3250671,11,1500,6.28,strategy_cpp_exit,,,,SIMULATE,loss,-0.48%,-45.00

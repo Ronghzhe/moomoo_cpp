@@ -1,6 +1,0 @@
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/mm_proto_kline.dir
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/mm_demo_base.dir
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/mm_demo_base_lite.dir
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/bench_kline_fast.dir
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/edit_cache.dir
-/home/ubuntu/workspace/moomoo_CPP/cpp/build-fast/CMakeFiles/rebuild_cache.dir

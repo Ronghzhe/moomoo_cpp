@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:15:16,nana_paper_MRVL_5m_1787233244302,US.MRVL,BUY,3246031,11,8,241.811,strategy_cpp_entry,,,,paper,,,

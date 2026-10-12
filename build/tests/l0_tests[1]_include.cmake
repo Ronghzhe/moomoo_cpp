@@ -1,5 +1,0 @@
-if(EXISTS "/home/ubuntu/workspace/moomoo_CPP/build/tests/l0_tests[1]_tests.cmake")
-  include("/home/ubuntu/workspace/moomoo_CPP/build/tests/l0_tests[1]_tests.cmake")
-else()
-  add_test(l0_tests_NOT_BUILT l0_tests_NOT_BUILT)
-endif()

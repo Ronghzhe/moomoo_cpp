@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:17:23,nana_paper_GLW_5m_1787233267023,US.GLW,BUY,3246042,11,13,151.11,strategy_cpp_entry,,,,paper,,,

@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:11:22,nana_paper_NBIS_5m_1787232980156,US.NBIS,SELL,3246004,11,9,217.25,strategy_cpp_entry,,,,paper,,,

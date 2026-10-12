@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:18:22,nana_paper_AXTI_5m_1787233575536,US.AXTI,SELL,3246050,11,27,71.95,strategy_cpp_entry,,,,paper,,,

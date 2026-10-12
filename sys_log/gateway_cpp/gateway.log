@@ -1,7 +1,0 @@
-opend_gateway_cpp start bind=127.0.0.1:18766 opend=127.0.0.1:11121 env=SIMULATE market=US dry_run=1 log_dir=/home/ubuntu/workspace/moomoo_CPP/sys_log/gateway_cpp
-opend_gateway_cpp start bind=127.0.0.1:18766 opend=127.0.0.1:11121 env=SIMULATE market=US dry_run=0 log_dir=/home/ubuntu/workspace/moomoo_CPP/sys_log/gateway_cpp
-InitTrd, suc = 1
-opend_gateway_cpp start bind=127.0.0.1:18766 opend=127.0.0.1:11121 env=SIMULATE market=US dry_run=0 log_dir=/home/ubuntu/workspace/moomoo_CPP/sys_log/gateway_cpp
-InitTrd, suc = 1
-opend_gateway_cpp start bind=127.0.0.1:18766 opend=127.0.0.1:11121 env=SIMULATE market=US dry_run=0 log_dir=/home/ubuntu/workspace/moomoo_CPP/sys_log/gateway_cpp
-InitTrd, suc = 1

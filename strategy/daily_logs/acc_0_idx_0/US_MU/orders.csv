@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:12:08,nana_paper_MU_5m_1787232987432,US.MU,BUY,3246013,11,2,952.17,strategy_cpp_entry,,,,paper,,,

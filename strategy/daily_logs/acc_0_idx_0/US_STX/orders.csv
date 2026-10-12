@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:12:59,nana_paper_STX_5m_1787233010420,US.STX,BUY,3246021,11,2,857.365,strategy_cpp_entry,,,,paper,,,

@@ -1,8 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T13:47:44,nana_paper_COHR_5m_1787233263882,US.COHR,BUY,3245899,11,7,281.8,strategy_cpp_entry,,,,paper,,,
-2026-08-20T14:01:00,nana_paper_COHR_5m_1787233263882,US.COHR,SELL,3245939,11,7,280.765,strategy_cpp_exit,,,,SIMULATE,loss,-0.37%,-7.25
-2026-08-21T15:01:17,nana_paper_COHR_5m_1787324448306,US.COHR,SELL,3248430,11,7,285.265,strategy_cpp_entry,,,,paper,,,
-2026-08-21T17:05:45,nana_paper_COHR_5m_1787324448306,US.COHR,BUY,3248869,11,7,287.575,strategy_cpp_exit,,,,SIMULATE,loss,-0.81%,-16.17
-2026-08-21T17:31:22,nana_paper_COHR_5m_1787333454346,US.COHR,BUY,3248925,11,6,288.18,strategy_cpp_entry,,,,paper,,,
-2026-08-21T18:00:42,nana_paper_COHR_5m_1787333454346,US.COHR,SELL,3248977,11,6,288.335,strategy_cpp_exit,,,,SIMULATE,profit,+0.05%,+0.93
-2026-08-24T13:50:33,nana_paper_COHR_5m_1787579170968,US.COHR,SELL,3251109,11,7,264.27,strategy_cpp_entry,,,,paper,,,

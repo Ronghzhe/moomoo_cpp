@@ -1,8 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T17:51:05,nana_paper_SPCX_5m_1787248230601,US.SPCX,BUY,3246616,11,15,132.08,strategy_cpp_entry,,,,paper,,,
-2026-08-20T19:56:23,nana_paper_SPCX_5m_1787248230601,US.SPCX,SELL,3246902,11,15,134.195,strategy_cpp_exit,,,,SIMULATE,profit,+1.60%,+31.72
-2026-08-21T13:40:47,nana_paper_SPCX_5m_1787319628600,US.SPCX,BUY,3248008,11,15,131.93,strategy_cpp_entry,,,,paper,,,
-2026-08-21T13:45:20,nana_paper_SPCX_5m_1787319628600,US.SPCX,SELL,3248039,11,15,131.8,strategy_cpp_exit,,,,SIMULATE,loss,-0.10%,-1.95
-2026-08-21T14:35:41,nana_paper_SPCX_5m_1787322933778,US.SPCX,BUY,3248332,11,15,133.18,strategy_cpp_entry,,,,paper,,,
-2026-08-21T16:20:21,nana_paper_SPCX_5m_1787322933778,US.SPCX,SELL,3248716,11,15,136.085,strategy_cpp_exit,,,,SIMULATE,profit,+2.18%,+43.58
-2026-08-24T13:48:05,nana_paper_SPCX_5m_1787578542320,US.SPCX,BUY,3251096,11,14,135.93,strategy_cpp_entry,,,,paper,,,

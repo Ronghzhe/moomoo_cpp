@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:08:41,nana_paper_FN_5m_1787232957283,US.FN,SELL,3245983,11,4,446.54,strategy_cpp_entry,,,,paper,,,

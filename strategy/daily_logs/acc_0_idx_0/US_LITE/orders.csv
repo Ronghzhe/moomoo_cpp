@@ -1,2 +1,0 @@
-ts,task_id,symbol,side,order_id,status,qty,price,remark,budget,est_notional,sizing,trd_env,profit_status,profit_pct,profit_amount
-2026-08-20T14:17:19,nana_paper_LITE_5m_1787233259721,US.LITE,BUY,3246041,11,2,848.18,strategy_cpp_entry,,,,paper,,,
