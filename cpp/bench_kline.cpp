@@ -64,44 +64,72 @@ void ParseSymbol(const std::string &sym, Qot_Common::QotMarket &market, std::str
 
 class KlineBench : public FTAPIDemoBase {
  public:
-  KlineBench() : bar_count_(0), get_ok_(false) {}
+  KlineBench()
+      : bar_count_(0),
+        get_ok_(false),
+        sub_ok_(false),
+        market_(Qot_Common::QotMarket_US_Security) {}
 
-  bool FetchOnce(const std::string &symbol, int bars, double &ms_fetch, int &count) {
-    bar_count_ = 0;
-    get_ok_ = false;
-    Qot_Common::QotMarket market = Qot_Common::QotMarket_US_Security;
-    std::string code;
-    ParseSymbol(symbol, market, code);
+  // warm：连接后调用一次；循环内只 FetchKl。
+  bool Subscribe(const std::string &symbol, double *ms_sub_out) {
+    sub_ok_ = false;
+    ParseSymbol(symbol, market_, code_);
 
     Qot_Sub::Request sub_req;
     Qot_Sub::C2S *sub_c2s = sub_req.mutable_c2s();
     Qot_Common::Security *sec = sub_c2s->add_securitylist();
-    sec->set_market(market);
-    sec->set_code(code);
+    sec->set_market(market_);
+    sec->set_code(code_);
     sub_c2s->add_subtypelist(Qot_Common::SubType_KL_5Min);
     sub_c2s->set_issuborunsub(true);
     sub_c2s->set_isregorunregpush(false);
     sub_c2s->set_extendedtime(true);
+
+    Ticker t;
     WaitReply(m_pQotApi->Sub(sub_req));
+    if (ms_sub_out != NULL) {
+      *ms_sub_out = t.ElapsedMs();
+    }
+    return sub_ok_;
+  }
+
+  bool FetchKl(int bars, double &ms_get_kl, int &count) {
+    bar_count_ = 0;
+    get_ok_ = false;
 
     Qot_GetKL::Request get_req;
     Qot_GetKL::C2S *get_c2s = get_req.mutable_c2s();
     get_c2s->set_rehabtype(Qot_Common::RehabType_Forward);
     get_c2s->set_kltype(Qot_Common::KLType_5Min);
     Qot_Common::Security *gsec = get_c2s->mutable_security();
-    gsec->set_market(market);
-    gsec->set_code(code);
+    gsec->set_market(market_);
+    gsec->set_code(code_);
     get_c2s->set_reqnum(bars);
 
     Ticker t;
     WaitReply(m_pQotApi->GetKL(get_req));
-    ms_fetch = t.ElapsedMs();
+    ms_get_kl = t.ElapsedMs();
     count = bar_count_;
     return get_ok_;
   }
 
+  // cold：每轮新连接后 Sub + GetKL；ms_fetch = 两者之和（与旧 bench 语义一致）。
+  bool FetchOnce(const std::string &symbol, int bars, double &ms_fetch, int &count) {
+    double ms_sub = 0.0;
+    if (!Subscribe(symbol, &ms_sub)) {
+      ms_fetch = ms_sub;
+      count = 0;
+      return false;
+    }
+    double ms_get = 0.0;
+    const bool ok = FetchKl(bars, ms_get, count);
+    ms_fetch = ms_sub + ms_get;
+    return ok;
+  }
+
   void OnReply_Sub(Moomoo::u32_t nSerialNo, const Qot_Sub::Response &stRsp) override {
-    if (stRsp.rettype() != Common::RetType_Succeed) {
+    sub_ok_ = (stRsp.rettype() == Common::RetType_Succeed);
+    if (!sub_ok_) {
       PrintUTF8(stRsp.retmsg());
     }
     PostReply();
@@ -120,6 +148,9 @@ class KlineBench : public FTAPIDemoBase {
  private:
   int bar_count_;
   bool get_ok_;
+  bool sub_ok_;
+  Qot_Common::QotMarket market_;
+  std::string code_;
 };
 
 int main(int argc, char **argv) {
@@ -159,20 +190,27 @@ int main(int argc, char **argv) {
       rc = 1;
     } else {
       double ms_connect = t_conn.ElapsedMs();
-      for (int i = 1; i <= warm_iters; ++i) {
-        double ms_fetch = 0.0;
-        int count = 0;
-        bool ok = bench.FetchOnce(symbol, bars, ms_fetch, count);
-        std::ostringstream oss;
-        oss << std::fixed << std::setprecision(3);
-        oss << "{\"case\":\"kline_warm\",\"lang\":\"cpp\",\"iter\":" << i
-            << ",\"ok\":" << (ok ? "true" : "false") << ",\"ms_total\":" << ms_fetch
-            << ",\"ms_connect\":" << (i == 1 ? ms_connect : 0.0) << ",\"ms_fetch\":" << ms_fetch
-            << ",\"symbol\":\"" << JsonEscape(symbol) << "\",\"kl_type\":\"K_5M\",\"bars\":" << bars
-            << ",\"kline_src\":\"get_kl\",\"bar_count\":" << count
-            << ",\"trd_env\":\"SIMULATE\"}";
-        AppendJsonl(out_path, oss.str());
-        if (!ok) rc = 1;
+      double ms_sub = 0.0;
+      if (!bench.Subscribe(symbol, &ms_sub)) {
+        std::cerr << "warm Subscribe failed" << std::endl;
+        rc = 1;
+      } else {
+        for (int i = 1; i <= warm_iters; ++i) {
+          double ms_fetch = 0.0;
+          int count = 0;
+          const bool ok = bench.FetchKl(bars, ms_fetch, count);
+          std::ostringstream oss;
+          oss << std::fixed << std::setprecision(3);
+          oss << "{\"case\":\"kline_warm\",\"lang\":\"cpp\",\"iter\":" << i
+              << ",\"ok\":" << (ok ? "true" : "false") << ",\"ms_total\":" << ms_fetch
+              << ",\"ms_connect\":" << (i == 1 ? ms_connect : 0.0)
+              << ",\"ms_sub\":" << (i == 1 ? ms_sub : 0.0) << ",\"ms_fetch\":" << ms_fetch
+              << ",\"symbol\":\"" << JsonEscape(symbol) << "\",\"kl_type\":\"K_5M\",\"bars\":" << bars
+              << ",\"kline_src\":\"get_kl\",\"bar_count\":" << count
+              << ",\"trd_env\":\"SIMULATE\"}";
+          AppendJsonl(out_path, oss.str());
+          if (!ok) rc = 1;
+        }
       }
       bench.UnInitQot();
     }

@@ -130,78 +130,41 @@ mm_demo_base/fast:
 .PHONY : mm_demo_base/fast
 
 #=============================================================================
-# Target rules for targets named bench_push
+# Target rules for targets named bench_kline
 
 # Build rule for target.
-bench_push: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_push
-.PHONY : bench_push
+bench_kline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_kline
+.PHONY : bench_kline
 
 # fast build rule for target.
-bench_push/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/build
-.PHONY : bench_push/fast
+bench_kline/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/build
+.PHONY : bench_kline/fast
 
-#=============================================================================
-# Target rules for targets named bench_push_batch
-
-# Build rule for target.
-bench_push_batch: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_push_batch
-.PHONY : bench_push_batch
-
-# fast build rule for target.
-bench_push_batch/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/build
-.PHONY : bench_push_batch/fast
-
-bench_push.o: bench_push.cpp.o
-.PHONY : bench_push.o
+bench_kline.o: bench_kline.cpp.o
+.PHONY : bench_kline.o
 
 # target to build an object file
-bench_push.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.o
-.PHONY : bench_push.cpp.o
+bench_kline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/bench_kline.cpp.o
+.PHONY : bench_kline.cpp.o
 
-bench_push.i: bench_push.cpp.i
-.PHONY : bench_push.i
-
-# target to preprocess a source file
-bench_push.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.i
-.PHONY : bench_push.cpp.i
-
-bench_push.s: bench_push.cpp.s
-.PHONY : bench_push.s
-
-# target to generate assembly for a file
-bench_push.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push.dir/build.make CMakeFiles/bench_push.dir/bench_push.cpp.s
-.PHONY : bench_push.cpp.s
-
-bench_push_batch.o: bench_push_batch.cpp.o
-.PHONY : bench_push_batch.o
-
-# target to build an object file
-bench_push_batch.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.o
-.PHONY : bench_push_batch.cpp.o
-
-bench_push_batch.i: bench_push_batch.cpp.i
-.PHONY : bench_push_batch.i
+bench_kline.i: bench_kline.cpp.i
+.PHONY : bench_kline.i
 
 # target to preprocess a source file
-bench_push_batch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.i
-.PHONY : bench_push_batch.cpp.i
+bench_kline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/bench_kline.cpp.i
+.PHONY : bench_kline.cpp.i
 
-bench_push_batch.s: bench_push_batch.cpp.s
-.PHONY : bench_push_batch.s
+bench_kline.s: bench_kline.cpp.s
+.PHONY : bench_kline.s
 
 # target to generate assembly for a file
-bench_push_batch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_push_batch.dir/build.make CMakeFiles/bench_push_batch.dir/bench_push_batch.cpp.s
-.PHONY : bench_push_batch.cpp.s
+bench_kline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_kline.dir/build.make CMakeFiles/bench_kline.dir/bench_kline.cpp.s
+.PHONY : bench_kline.cpp.s
 
 home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o: home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.cpp.o
 .PHONY : home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o
@@ -235,15 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bench_push"
-	@echo "... bench_push_batch"
+	@echo "... bench_kline"
 	@echo "... mm_demo_base"
-	@echo "... bench_push.o"
-	@echo "... bench_push.i"
-	@echo "... bench_push.s"
-	@echo "... bench_push_batch.o"
-	@echo "... bench_push_batch.i"
-	@echo "... bench_push_batch.s"
+	@echo "... bench_kline.o"
+	@echo "... bench_kline.i"
+	@echo "... bench_kline.s"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.o"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.i"
 	@echo "... home/ubuntu/workspace/MMAPI4CPP_10.9.6908/Sample/SimpleSample/FTAPIDemoBase.s"
