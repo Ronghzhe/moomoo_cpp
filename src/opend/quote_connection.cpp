@@ -2,8 +2,11 @@
 
 #include "opend/connect_guard.hpp"
 #include "quote/kline_parse.hpp"
+#include "strategy/order_session_policy.hpp"
+#include "task/pipeline_latency.hpp"
 
 #include "Proto/Qot_Common.pb.h"
+#include "Proto/Qot_GetMarketState.pb.h"
 
 #include <algorithm>
 #include <chrono>
@@ -13,6 +16,14 @@ namespace mmtrade {
 namespace opend {
 
 namespace {
+
+std::string MarketTagFromCode(const std::string &code_full) {
+  if (code_full.size() >= 3 && (code_full.compare(0, 3, "HK.") == 0 ||
+                                code_full.compare(0, 3, "hk.") == 0)) {
+    return "HK";
+  }
+  return "US";
+}
 
 std::string SecurityToFullCode(const Qot_Common::Security &sec) {
   std::string prefix = "US";
@@ -98,7 +109,8 @@ QuoteConnection::QuoteConnection()
       snap_sec_status_(0),
       snap_suspended_(false),
       book_push_seq_(0),
-      kline_get_ok_(false) {}
+      kline_get_ok_(false),
+      market_state_ok_(false) {}
 
 bool QuoteConnection::Connect(const std::string &host, int port) {
   Disconnect();
@@ -277,6 +289,51 @@ QuoteSnapshot QuoteConnection::GetSnapshot(const std::string &code_full) const {
   return it->second;
 }
 
+bool QuoteConnection::RefreshMarketState(const std::vector<std::string> &codes_full) {
+  if (!connected_ || m_pQotApi == NULL || codes_full.empty()) {
+    return false;
+  }
+  market_state_ok_ = false;
+  Qot_GetMarketState::Request req;
+  Qot_GetMarketState::C2S *c2s = req.mutable_c2s();
+  for (size_t i = 0; i < codes_full.size(); ++i) {
+    if (codes_full[i].empty()) {
+      continue;
+    }
+    Qot_Common::Security *sec = c2s->add_securitylist();
+    sec->set_market(ToSdkMarket(codes_full[i]));
+    sec->set_code(SdkCode(codes_full[i]));
+  }
+  if (c2s->securitylist_size() <= 0) {
+    return false;
+  }
+  WaitReply(m_pQotApi->GetMarketState(req));
+  return market_state_ok_;
+}
+
+std::string QuoteConnection::MarketPhaseForCode(const std::string &code_full) const {
+  std::lock_guard<std::mutex> lk(mu_);
+  std::map<std::string, std::string>::const_iterator it = market_phase_by_code_.find(code_full);
+  if (it != market_phase_by_code_.end() && !it->second.empty()) {
+    return it->second;
+  }
+  const std::string tag = MarketTagFromCode(code_full);
+  it = market_phase_by_tag_.find(tag);
+  if (it != market_phase_by_tag_.end()) {
+    return it->second;
+  }
+  return "";
+}
+
+std::string QuoteConnection::MarketPhaseForTag(const std::string &market_tag) const {
+  std::lock_guard<std::mutex> lk(mu_);
+  std::map<std::string, std::string>::const_iterator it = market_phase_by_tag_.find(market_tag);
+  if (it == market_phase_by_tag_.end()) {
+    return "";
+  }
+  return it->second;
+}
+
 Qot_Common::QotMarket QuoteConnection::ToSdkMarketSymbol(
     const quote::QuoteSymbol &sym) const {
   if (sym.prefix == "HK") {
@@ -432,6 +489,33 @@ void QuoteConnection::OnReply_GetSecuritySnapshot(Moomoo::u32_t,
   PostReply();
 }
 
+void QuoteConnection::OnReply_GetMarketState(Moomoo::u32_t,
+                                             const Qot_GetMarketState::Response &stRsp) {
+  market_state_ok_ = (stRsp.rettype() == Common::RetType_Succeed);
+  if (!market_state_ok_ || !stRsp.has_s2c()) {
+    if (!market_state_ok_) {
+      PrintUTF8(stRsp.retmsg());
+    }
+    PostReply();
+    return;
+  }
+  {
+    std::lock_guard<std::mutex> lk(mu_);
+    const Qot_GetMarketState::S2C &s2c = stRsp.s2c();
+    for (int i = 0; i < s2c.marketinfolist_size(); ++i) {
+      const Qot_GetMarketState::MarketInfo &info = s2c.marketinfolist(i);
+      if (!info.has_security()) {
+        continue;
+      }
+      const std::string code = SecurityToFullCode(info.security());
+      const std::string phase = mmtrade::strategy::MarketPhaseFromStateCode(info.marketstate());
+      market_phase_by_code_[code] = phase;
+      market_phase_by_tag_[MarketTagFromCode(code)] = phase;
+    }
+  }
+  PostReply();
+}
+
 void QuoteConnection::OnReply_GetKL(Moomoo::u32_t, const Qot_GetKL::Response &stRsp) {
   kline_get_ok_ = (stRsp.rettype() == Common::RetType_Succeed);
   kline_last_bars_.clear();
@@ -478,18 +562,24 @@ void QuoteConnection::OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response
   if (!stRsp.has_s2c()) {
     return;
   }
+  mmtrade::task::PipelineLatency::OnMdSdkRecv();
+  const auto &book = stRsp.s2c();
+  const std::int64_t exchange_ts_ms = std::max(
+      book.has_svrrecvtimebidtimestamp()
+          ? OpenDServerTimestampMs(book.svrrecvtimebidtimestamp()) : 0,
+      book.has_svrrecvtimeasktimestamp()
+          ? OpenDServerTimestampMs(book.svrrecvtimeasktimestamp()) : 0);
+  if (exchange_ts_ms > 0) {
+    mmtrade::task::PipelineLatency::OnMdOpenDRecvMs(exchange_ts_ms);
+  }
   {
     std::lock_guard<std::mutex> lk(mu_);
-    const auto& book = stRsp.s2c();
-    const std::int64_t exchange_ts_ms = std::max(
-        book.has_svrrecvtimebidtimestamp()
-            ? OpenDServerTimestampMs(book.svrrecvtimebidtimestamp()) : 0,
-        book.has_svrrecvtimeasktimestamp()
-            ? OpenDServerTimestampMs(book.svrrecvtimeasktimestamp()) : 0);
-    ApplyBookToCache(stRsp.s2c().security(), stRsp.s2c().orderbookbidlist(),
-                     stRsp.s2c().orderbookasklist(), exchange_ts_ms, &cache_);
+    ApplyBookToCache(book.security(), book.orderbookbidlist(), book.orderbookasklist(),
+                     exchange_ts_ms, &cache_);
   }
+  mmtrade::task::PipelineLatency::OnMdProtoDecoded();
   NotifyBookPush();
+  mmtrade::task::PipelineLatency::OnMdCallbackNotified();
 }
 
 }  // namespace opend

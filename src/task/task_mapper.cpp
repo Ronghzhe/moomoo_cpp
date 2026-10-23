@@ -1,5 +1,6 @@
 #include "task/task_mapper.hpp"
 
+#include "strategy/order_session_policy.hpp"
 #include "task/task_paths.hpp"
 
 #include <algorithm>
@@ -386,6 +387,21 @@ MappedConfigResult BuildStrategyConfig(const std::string &task_name, const nlohm
   sym["entry_side"] = (side == "long") ? "BUY" : "SELL";
   sym["order_type"] = (order_type == "market") ? "sim_market" : "NORMAL";
 
+  std::string order_session = "RTH";
+  if (params.contains("order_session") && !params.at("order_session").is_null()) {
+    const std::string raw_sess = params.at("order_session").get<std::string>();
+    if (!raw_sess.empty()) {
+      order_session = mmtrade::strategy::NormalizeOrderSession(raw_sess);
+    }
+  }
+  sym["order_session"] = order_session;
+  if (order_session == "ALL" || order_session == "OVERNIGHT") {
+    if (!cfg.contains("execution") || !cfg["execution"].is_object()) {
+      cfg["execution"] = nlohmann::json::object();
+    }
+    cfg["execution"]["auto_stop_after_close"] = false;
+  }
+
   if (params.contains("sim_market_pct") && !params.at("sim_market_pct").is_null()) {
     sym["sim_market_pct"] = SafeFloat(params.at("sim_market_pct"), 0.03);
   } else {
@@ -513,7 +529,8 @@ MappedConfigResult BuildStrategyConfig(const std::string &task_name, const nlohm
                                {"enabled", sym["enabled"]},
                                {"exit_enabled", sym["exit_enabled"]},
                                {"entry_conditions_count", entry_rows.size()},
-                               {"exit_conditions_count", exit_rows.size()}};
+                               {"exit_conditions_count", exit_rows.size()},
+                               {"order_session", order_session}};
   return out;
 }
 

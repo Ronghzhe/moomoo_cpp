@@ -4,6 +4,41 @@
 
 #include <gtest/gtest.h>
 
+TEST(SymbolLoopState, IsAwaitingFillWithOrderIdExOnly) {
+  mmtrade::strategy::SymbolLoopState st;
+  st.pending.kind = mmtrade::strategy::PendingKind::kEntry;
+  st.pending.order_id = 0;
+  st.pending.order_id_ex = "FS1D46FA09217A1000";
+  EXPECT_TRUE(mmtrade::strategy::IsAwaitingFill(st));
+}
+
+TEST(SymbolLoopState, IsAwaitingFillIdleWhenNoIds) {
+  mmtrade::strategy::SymbolLoopState st;
+  st.pending.kind = mmtrade::strategy::PendingKind::kEntry;
+  st.pending.order_id = 0;
+  EXPECT_FALSE(mmtrade::strategy::IsAwaitingFill(st));
+}
+
+TEST(FillDetector, ResolveOrderIdExOnlyViaPollCache) {
+  mmtrade::trade::OrderPushCache cache;
+  mmtrade::trade::OrderPushRow row;
+  row.order_id = "FS1D46FA09217A1000";
+  row.order_status = "FILL";
+  row.dealt_qty = 1.0;
+  row.dealt_avg_price = 341.96;
+  row.numeric_order_id = 123456789;
+  row.code = "US.AAPL";
+  cache.Ingest(row);
+  const double placed_mono = cache.LastUpdateMono("FS1D46FA09217A1000") - 0.5;
+  const double now_mono = placed_mono + 2.0;
+  double last_poll = 0.0;
+  const mmtrade::strategy::FillResolveResult out = mmtrade::strategy::ResolveOrderRowForFill(
+      &cache, "FS1D46FA09217A1000", placed_mono, now_mono, 0.0, 0.0, &last_poll, nullptr);
+  EXPECT_TRUE(out.has_row);
+  EXPECT_EQ(out.source, "push");
+  EXPECT_DOUBLE_EQ(out.row.dealt_qty, 1.0);
+}
+
 TEST(FillDetector, FilledAllStatus) {
   mmtrade::trade::OrderPushRow row;
   row.order_status = "11";

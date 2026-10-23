@@ -1,6 +1,7 @@
 #include "config/strategy_loader.hpp"
 
 #include "config/execution_util.hpp"
+#include "strategy/order_session_policy.hpp"
 
 #include <nlohmann/json.hpp>
 
@@ -429,6 +430,12 @@ SymbolConfig ParseSymbol(const json &sym, const std::string &label,
   }
   out.sim_market_pct = JsonToDouble(sym.value("sim_market_pct", json(0.05)), 0.05);
   out.startup_notify_once = sym.value("startup_notify_once", true);
+  if (sym.contains("order_session") && !JsonIsEmpty(sym.at("order_session"))) {
+    out.order_session =
+        mmtrade::strategy::NormalizeOrderSession(Trim(sym.at("order_session").get<std::string>()));
+  } else {
+    out.order_session = "RTH";
+  }
   if (sym.contains("initial_qty") && !JsonIsEmpty(sym.at("initial_qty"))) {
     const double iq = JsonToDouble(sym.at("initial_qty"));
     if (iq > 0.0 && iq < 1e15) {

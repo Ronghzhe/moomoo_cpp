@@ -226,6 +226,18 @@ PlaceOrderResult TradeConnection::Place(const PlaceOrderParams &params) {
   place_c2s->set_remark(params.remark.empty() ? "moomoo_trade" : params.remark);
   place_c2s->set_timeinforce(ToSdkTif(params.time_in_force));
   place_c2s->set_filloutsiderth(params.fill_outside_rth);
+  if (!params.sdk_session.empty()) {
+    const std::string sess = params.sdk_session;
+    if (sess == "RTH") {
+      place_c2s->set_session(static_cast<int>(Common::Session_RTH));
+    } else if (sess == "ALL") {
+      place_c2s->set_session(static_cast<int>(Common::Session_ALL));
+    } else if (sess == "OVERNIGHT") {
+      place_c2s->set_session(static_cast<int>(Common::Session_OVERNIGHT));
+    } else if (sess == "ETH") {
+      place_c2s->set_session(static_cast<int>(Common::Session_ETH));
+    }
+  }
 
   const int64_t t1 = wall_us();
   const int place_serial = m_pTrdApi->PlaceOrder(place_req);
@@ -287,6 +299,30 @@ bool TradeConnection::QueryOrder(std::uint64_t order_id, const std::string &code
   lhdr->set_trdmarket(market.trd_market);
   list_c2s->mutable_filterconditions()->add_codelist(code);
   list_c2s->mutable_filterconditions()->add_idlist(order_id);
+  list_c2s->set_refreshcache(true);
+  WaitReply(m_pTrdApi->GetOrderList(list_req));
+  return query_ok_;
+}
+
+bool TradeConnection::QueryOrdersForCode(const std::string &code_full) {
+  if (!trade_connected()) {
+    return false;
+  }
+  const std::string code = ParseCode(code_full);
+  const SdkMarketInfo market = ParseMarket(code_full);
+  const std::uint64_t acc_id = ResolveAccId(code_full);
+  if (acc_id == 0) {
+    return false;
+  }
+
+  query_ok_ = false;
+  Trd_GetOrderList::Request list_req;
+  Trd_GetOrderList::C2S *list_c2s = list_req.mutable_c2s();
+  Trd_Common::TrdHeader *lhdr = list_c2s->mutable_header();
+  lhdr->set_trdenv(TrdEnvFromSimulate(simulate_));
+  lhdr->set_accid(acc_id);
+  lhdr->set_trdmarket(market.trd_market);
+  list_c2s->mutable_filterconditions()->add_codelist(code);
   list_c2s->set_refreshcache(true);
   WaitReply(m_pTrdApi->GetOrderList(list_req));
   return query_ok_;

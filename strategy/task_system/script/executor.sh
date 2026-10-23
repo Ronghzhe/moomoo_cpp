@@ -101,6 +101,24 @@ parse_args() {
   done
 }
 
+# 与 moomoo_python/run_strategy_real.sh 一致：.env.real + Fernet 路径，供 pool-worker 解锁实盘。
+apply_python_trade_env() {
+  local PY_ROOT="${MOOMOO_PYTHON_ROOT:-/home/ubuntu/workspace/moomoo_python}"
+  export MOOMOO_PYTHON_ROOT="$PY_ROOT"
+  if [ -x "$PY_ROOT/.venv/bin/python" ]; then
+    export MOOMOO_PYTHON_BIN="${MOOMOO_PYTHON_BIN:-$PY_ROOT/.venv/bin/python}"
+  fi
+  local ENV_FILE="${ENV_FILE:-$PY_ROOT/.env.real}"
+  if [ -f "$ENV_FILE" ]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$ENV_FILE"
+    set +a
+  fi
+  export MOOMOO_TRADE_FERNET_KEY_FILE="${MOOMOO_TRADE_FERNET_KEY_FILE:-$PY_ROOT/secrets/moomoo_fernet.key}"
+  export MOOMOO_TRADE_PWD_ENC_FILE="${MOOMOO_TRADE_PWD_ENC_FILE:-$PY_ROOT/secrets/moomoo_trade_pwd.fernet}"
+}
+
 # Export place-broker env for trade_executor_cpp → strategy_cpp children.
 apply_gateway_env() {
   if [ "$USE_GATEWAY" != "1" ]; then
@@ -169,6 +187,7 @@ is_running() {
 }
 
 run_cmd() {
+  apply_python_trade_env
   "$BIN" \
     --mysql-config "$MYSQL_CONFIG" \
     --task-type "$TASK_TYPE" \
@@ -219,8 +238,9 @@ case "$ACTION" in
       echo "  order_mode=direct"
     fi
     echo "  backup_dir=$MOOMOO_TASK_BACKUP_DIR"
-    echo "  run_logs=$TASK_DIR/run_logs"
+    echo "  run_logs=off (策略详情见 daily_logs/.../runtime.log；设 MOOMOO_STRATEGY_RUN_LOG=1 可恢复 task run_log)"
     echo "  log=$SYSTEM_LOG"
+    apply_python_trade_env
     nohup "$BIN" \
       --mysql-config "$MYSQL_CONFIG" \
       --task-type "$TASK_TYPE" \

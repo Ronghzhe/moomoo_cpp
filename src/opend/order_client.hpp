@@ -34,13 +34,17 @@ class OrderClient {
   PlaceOrderResult Place(const std::string &code_full, const std::string &side, double qty,
                          double price, const std::string &order_type = "NORMAL",
                          const std::string &remark = "", const std::string &time_in_force = "DAY",
-                         bool fill_outside_rth = false);
+                         bool fill_outside_rth = false,
+                         const std::string &sdk_session = "");
 
-  bool CancelOrder(std::uint64_t order_id, const std::string &code_full);
-  bool QueryOrder(std::uint64_t order_id, const std::string &code_full);
+  bool CancelOrder(std::uint64_t order_id, const std::string &code_full,
+                   const std::string &order_id_ex = "");
+  bool QueryOrder(std::uint64_t order_id, const std::string &code_full,
+                  const std::string &order_id_ex = "");
   bool GetPositions(const std::string &code_full, PositionList *out);
 
   const OrderConfig &config() const { return config_; }
+  TradeConnection *TradeConn() const { return conn_; }
 
  private:
   OrderConfig config_;

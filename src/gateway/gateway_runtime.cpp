@@ -2,6 +2,7 @@
 
 #include "opend/order_client.hpp"
 #include "opend/order_config.hpp"
+#include "opend/trade_connection.hpp"
 #include "trade/order_errors.hpp"
 #include "trade/order_id_util.hpp"
 #include "trade/order_parse.hpp"
@@ -130,6 +131,7 @@ GatewayRuntime::GatewayRuntime(const GatewayConfig &cfg)
       scheduler_(cfg.queue_maxsize),
       place_limiter_(MakeRateConfig(cfg)),
       running_(true),
+      shared_trade_port_(0),
       accepted_total_(0),
       ok_total_(0),
       error_total_(0),
@@ -157,14 +159,13 @@ void GatewayRuntime::Close() {
     worker_.join();
   }
   std::lock_guard<std::mutex> lock(client_mu_);
-  for (std::map<std::string, std::unique_ptr<opend::OrderClient> >::iterator it =
-           client_pool_.begin();
-       it != client_pool_.end(); ++it) {
-    if (it->second.get() != NULL) {
-      it->second->Close();
-    }
-  }
   client_pool_.clear();
+  if (shared_trade_.get() != NULL) {
+    shared_trade_->Disconnect();
+    shared_trade_.reset();
+  }
+  shared_trade_host_.clear();
+  shared_trade_port_ = 0;
 }
 
 void GatewayRuntime::LogEvent(const nlohmann::json &event) {
@@ -233,6 +234,9 @@ void GatewayRuntime::ResolveRoute(const nlohmann::json &payload, std::string *ho
     *port = 11121;
   }
   *trd_env = UpperCopy(JsonString(ctx, "trd_env", cfg_.trd_env));
+  if (*trd_env == "PAPER") {
+    *trd_env = "SIMULATE";
+  }
   if (trd_env->empty()) {
     *trd_env = "SIMULATE";
   }
@@ -248,6 +252,34 @@ void GatewayRuntime::ResolveRoute(const nlohmann::json &payload, std::string *ho
   *acc_index = JsonInt(ctx, "acc_index", cfg_.acc_index);
 }
 
+bool GatewayRuntime::EnsureSharedTradeConnected(const std::string &host, int port) {
+  if (shared_trade_.get() == NULL) {
+    shared_trade_.reset(new opend::TradeConnection());
+    shared_trade_host_.clear();
+    shared_trade_port_ = 0;
+  }
+  if (shared_trade_->trade_connected() && shared_trade_host_ == host &&
+      shared_trade_port_ == port) {
+    return true;
+  }
+  if (shared_trade_->trade_connected() &&
+      (shared_trade_host_ != host || shared_trade_port_ != port)) {
+    shared_trade_->Disconnect();
+  }
+  // One InitTrd per gateway process; REAL unlock when pwd is available (SIMULATE uses trd_env on each order).
+  std::string unlock_md5;
+  const std::string pwd = trade::ResolveTradePasswordPlain();
+  if (!pwd.empty()) {
+    unlock_md5 = trade::Md5HexLower(pwd);
+  }
+  if (!shared_trade_->Connect(host, port, unlock_md5)) {
+    return false;
+  }
+  shared_trade_host_ = host;
+  shared_trade_port_ = port;
+  return true;
+}
+
 opend::OrderClient *GatewayRuntime::GetClient(const nlohmann::json &payload) {
   std::string host;
   int port = 0;
@@ -260,6 +292,9 @@ opend::OrderClient *GatewayRuntime::GetClient(const nlohmann::json &payload) {
   key << host << ":" << port << ":" << trd_env << ":" << trd_market << ":" << acc_id << ":"
       << acc_index;
   std::lock_guard<std::mutex> lock(client_mu_);
+  if (!EnsureSharedTradeConnected(host, port)) {
+    return NULL;
+  }
   std::map<std::string, std::unique_ptr<opend::OrderClient> >::iterator it =
       client_pool_.find(key.str());
   if (it != client_pool_.end()) {
@@ -272,10 +307,7 @@ opend::OrderClient *GatewayRuntime::GetClient(const nlohmann::json &payload) {
   oc.trd_market = ParseMarketLabel(trd_market);
   oc.acc_id = acc_id;
   oc.refresh_cache = true;
-  std::unique_ptr<opend::OrderClient> client(new opend::OrderClient(oc));
-  if (!client->Connect()) {
-    return NULL;
-  }
+  std::unique_ptr<opend::OrderClient> client(new opend::OrderClient(oc, shared_trade_.get()));
   opend::OrderClient *raw = client.get();
   client_pool_[key.str()] = std::move(client);
   return raw;
@@ -512,7 +544,7 @@ nlohmann::json GatewayRuntime::ExecutePlace(const nlohmann::json &payload, doubl
         JsonString(payload, "code"), JsonString(payload, "side"), JsonDouble(payload, "qty", 0.0),
         JsonDouble(payload, "price", 0.0), JsonString(payload, "order_type", "NORMAL"),
         JsonString(payload, "remark"), JsonString(payload, "time_in_force", "DAY"),
-        JsonBool(payload, "fill_outside_rth", false));
+        JsonBool(payload, "fill_outside_rth", false), JsonString(payload, "session"));
     const double place_wall_ms = (SteadyNowSec() - t_place0) * 1000.0;
 
     const double queue_wait_ms = (start_mono - enqueued_mono) * 1000.0;
@@ -540,6 +572,7 @@ nlohmann::json GatewayRuntime::ExecutePlace(const nlohmann::json &payload, doubl
     return nlohmann::json{{"ok", raw.ok},
                           {"ret_code", raw.ret_code},
                           {"order_id", oid},
+                          {"internal_order_id", raw.order_id},
                           {"status", raw.ok ? "SUBMITTING" : ""},
                           {"error", err},
                           {"request_id", req_id},

@@ -51,6 +51,7 @@ add_library(moomoo_core STATIC
   strategy/net_split_util.cpp
   strategy/net_split_leg_wait.cpp
   strategy/net_split_broker.cpp
+  strategy/order_session_policy.cpp
   strategy/symbol_tradability.cpp
   strategy/symbol_loop_state.cpp
   strategy/order_fail_retry.cpp
@@ -77,6 +78,7 @@ add_library(moomoo_core STATIC
   task/task_worker.cpp
   task/trade_executor.cpp
   task/task_latency_recorder.cpp
+  task/pipeline_latency.cpp
   task/strategy_worker_pool.cpp
   notify/telegram_client.cpp
   notify/telegram_config.cpp

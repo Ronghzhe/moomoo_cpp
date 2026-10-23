@@ -84,6 +84,7 @@ struct SymbolConfig {
   std::string order_type;
   double sim_market_pct;
   std::string time_in_force;
+  std::string order_session;
   bool startup_notify_once;
 };
 

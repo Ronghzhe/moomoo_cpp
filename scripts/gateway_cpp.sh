@@ -4,6 +4,18 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PY_ROOT="${MOOMOO_PYTHON_ROOT:-/home/ubuntu/workspace/moomoo_python}"
+ENV_FILE="${MOOMOO_TRADE_ENV_FILE:-$PY_ROOT/.env.real}"
+apply_trade_env() {
+  if [[ -f "$ENV_FILE" ]]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$ENV_FILE"
+    set +a
+  fi
+  export MOOMOO_TRADE_FERNET_KEY_FILE="${MOOMOO_TRADE_FERNET_KEY_FILE:-$PY_ROOT/secrets/moomoo_fernet.key}"
+  export MOOMOO_TRADE_PWD_ENC_FILE="${MOOMOO_TRADE_PWD_ENC_FILE:-$PY_ROOT/secrets/moomoo_trade_pwd.fernet}"
+}
 BIN="${GATEWAY_CPP_BIN:-$ROOT/build/apps/opend_gateway_cpp}"
 PID_FILE="${GATEWAY_CPP_PID_FILE:-$ROOT/sys_log/opend_gateway_cpp.pid}"
 LOG_DIR="${GATEWAY_CPP_LOG_DIR:-$ROOT/sys_log/gateway_cpp}"
@@ -41,6 +53,7 @@ start() {
     echo "[opend-gateway-cpp] binary not found: $BIN (build with BUILD_TRADE=ON)" >&2
     return 1
   fi
+  apply_trade_env
   echo "[opend-gateway-cpp] starting bind=${BIND_HOST}:${BIND_PORT} mode=${MODE_FLAG} ..."
   nohup "$BIN" \
     --bind-host "$BIND_HOST" \

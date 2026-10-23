@@ -20,6 +20,7 @@
 namespace mmtrade {
 namespace opend {
 class OrderClient;
+class TradeConnection;
 }
 
 namespace gateway {
@@ -55,6 +56,7 @@ class GatewayRuntime {
                     std::string *trd_env, std::string *trd_market, std::uint64_t *acc_id,
                     int *acc_index) const;
   opend::OrderClient *GetClient(const nlohmann::json &payload);
+  bool EnsureSharedTradeConnected(const std::string &host, int port);
   nlohmann::json CacheGet(const std::string &request_id);
   void CachePut(const std::string &request_id, const nlohmann::json &result);
   void SetResult(const std::string &request_id, const nlohmann::json &result);
@@ -70,6 +72,9 @@ class GatewayRuntime {
   std::atomic<bool> running_;
   std::thread worker_;
   mutable std::mutex client_mu_;
+  std::unique_ptr<opend::TradeConnection> shared_trade_;
+  std::string shared_trade_host_;
+  int shared_trade_port_;
   std::map<std::string, std::unique_ptr<opend::OrderClient> > client_pool_;
   mutable std::mutex event_log_mu_;
   std::string event_log_path_;

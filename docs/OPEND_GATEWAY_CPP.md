@@ -8,7 +8,7 @@
 - 按 `acc_id` 限频（默认 14/30s，最小间隔 0.02s，预留 1）
 - `request_id` 幂等缓存（300s）+ 在途合并
 - 请求等待超时（默认 15s）
-- OpenD `OrderClient` 连接池
+- 单进程 **一条** OpenD 交易连接（Moomoo SDK 仅支持一次 `InitTrd`）；按 `trd_env`（SIMULATE/REAL）切换报单环境，可同时接模拟盘与实盘任务
 - dry-run / live
 - `/health` `/metrics` + `gateway_events.jsonl`
 

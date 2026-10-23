@@ -91,6 +91,7 @@ struct SymbolLoopState {
   int exit_retry_failed_count;
   bool entry_force_market_next;
   bool exit_force_market_next;
+  std::string last_market_phase;
 
   NetSplitRetryState net_split_retry;
 
@@ -134,7 +135,8 @@ struct SymbolLoopState {
         entry_retry_failed_count(0),
         exit_retry_failed_count(0),
         entry_force_market_next(false),
-        exit_force_market_next(false) {}
+        exit_force_market_next(false),
+        last_market_phase() {}
 };
 
 bool IsAwaitingFill(const SymbolLoopState &st);

@@ -42,7 +42,10 @@ bool RefreshSymbolTradability(SymbolLoopState *st, const opend::QuoteSnapshot &s
 }
 
 bool IsAwaitingFill(const SymbolLoopState &st) {
-  return st.pending.kind != PendingKind::kNone && st.pending.order_id != 0;
+  if (st.pending.kind == PendingKind::kNone) {
+    return false;
+  }
+  return st.pending.order_id != 0 || !st.pending.order_id_ex.empty();
 }
 
 int StatusAfterEntryFill(double opened_qty, double entry_qty) {

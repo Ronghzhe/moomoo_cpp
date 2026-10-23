@@ -272,6 +272,52 @@ bool InRthOpenBurstWindow(std::time_t now_ts) {
   return in_window;
 }
 
+std::string JsonStringOrEmpty(const nlohmann::json &j, const char *key) {
+  if (j.contains(key) && j[key].is_string()) {
+    return j[key].get<std::string>();
+  }
+  return "";
+}
+
+// Mapped 任务把标的放在 symbols[0].code（如 US.AAPL），顶层往往没有 symbol。
+// 品种目录 latency.csv 依赖 staging 里的 symbol。
+std::string LatencySymbolFromMapped(const nlohmann::json &mapped) {
+  const std::string top = JsonStringOrEmpty(mapped, "symbol");
+  if (!top.empty()) {
+    return top;
+  }
+  if (mapped.contains("symbols") && mapped["symbols"].is_array()) {
+    for (size_t i = 0; i < mapped["symbols"].size(); ++i) {
+      const nlohmann::json &sym = mapped["symbols"][i];
+      if (!sym.is_object()) {
+        continue;
+      }
+      if (sym.contains("enabled") && sym["enabled"].is_boolean() && !sym["enabled"].get<bool>()) {
+        continue;
+      }
+      std::string code = JsonStringOrEmpty(sym, "code");
+      if (code.empty()) {
+        code = JsonStringOrEmpty(sym, "symbol");
+      }
+      if (!code.empty()) {
+        return code;
+      }
+    }
+  }
+  const std::string stock_code = JsonStringOrEmpty(mapped, "stock_code");
+  if (stock_code.find('.') != std::string::npos) {
+    return stock_code;
+  }
+  std::string stock_type = JsonStringOrEmpty(mapped, "stock_type");
+  if (stock_type.empty() && mapped.contains("account") && mapped["account"].is_object()) {
+    stock_type = JsonStringOrEmpty(mapped["account"], "trd_market");
+  }
+  if (!stock_type.empty() && !stock_code.empty()) {
+    return ToUpperCopyLocal(stock_type) + "." + stock_code;
+  }
+  return "";
+}
+
 // 仅开盘窗口内：多任务同时 ready 时按 f_id 取模 sleep，减轻 OpenD 同时连/订阅压力。
 void MaybeOpenBurstStagger(const TaskRow &task, SystemLogger *log, double slot_sec, int buckets) {
   if (slot_sec <= 0 || buckets <= 0) {
@@ -377,8 +423,9 @@ ExecutorRunResult RunOneTask(const TaskRow &task, int timeout_sec, SystemLogger 
   const nlohmann::json mapped_cfg = ReadJsonFile(mapped_path);
   const std::string mode = mapped_cfg.value("mode", "paper") == "real" ? "real" : "paper";
   if (lat.Enabled()) {
-    if (mapped_cfg.contains("symbol") && mapped_cfg["symbol"].is_string()) {
-      lat.RecordString("symbol", mapped_cfg["symbol"].get<std::string>());
+    const std::string latency_symbol = LatencySymbolFromMapped(mapped_cfg);
+    if (!latency_symbol.empty()) {
+      lat.RecordString("symbol", latency_symbol);
     }
     if (mapped_cfg.contains("stock_code") && mapped_cfg["stock_code"].is_string()) {
       lat.RecordString("stock_code", mapped_cfg["stock_code"].get<std::string>());
@@ -431,9 +478,12 @@ ExecutorRunResult RunOneTask(const TaskRow &task, int timeout_sec, SystemLogger 
                                  {"mapped_backup", mapped_path}};
     return out;
   }
-  const std::string run_log_path =
-      run_log_dir + "/" + SafePathSegment(task_name, "_noname") + ".log";
-  {
+  std::string run_log_path;
+  const char *run_log_enable = std::getenv("MOOMOO_STRATEGY_RUN_LOG");
+  const bool want_run_log =
+      run_log_enable != NULL && run_log_enable[0] != '\0' && run_log_enable[0] != '0';
+  if (want_run_log) {
+    run_log_path = run_log_dir + "/" + SafePathSegment(task_name, "_noname") + ".log";
     std::ofstream lf(run_log_path.c_str(), std::ios::app);
     lf << "\n=== " << started << " START task=" << task_name << " mode=" << mode << " ===\n";
   }
@@ -469,8 +519,8 @@ ExecutorRunResult RunOneTask(const TaskRow &task, int timeout_sec, SystemLogger 
     preq.run_log = run_log_path;
     preq.timeout_sec = timeout_sec;
     if (log != NULL) {
-      log->Info("executor_run_pool task=" + task_name + " mode=" + mode +
-                " mapped=" + mapped_path + " run_log=" + run_log_path);
+      log->Info("executor_run_pool task=" + task_name + " mode=" + mode + " mapped=" + mapped_path +
+                (run_log_path.empty() ? " run_log=off" : " run_log=" + run_log_path));
     }
     const StrategyPoolRunResult pr = pool->Run(preq, log);
     if (pr.used_pool && !pool_transport_fail(pr.error)) {
@@ -500,7 +550,8 @@ ExecutorRunResult RunOneTask(const TaskRow &task, int timeout_sec, SystemLogger 
                 " run_log=" + run_log_path +
                 (via == "shell_fallback" ? " via=shell_fallback" : ""));
     }
-    const int code_raw = RunShellCommand(cmd, run_log_path, timeout_sec);
+    const std::string shell_log = run_log_path.empty() ? "/dev/null" : run_log_path;
+    const int code_raw = RunShellCommand(cmd, shell_log, timeout_sec);
     code = code_raw;
     if (code_raw == 124 * 256 || code_raw == 124) {
       code = 124;

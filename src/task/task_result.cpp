@@ -46,8 +46,20 @@ const ErrSpec *CatalogSpec(const std::string &code) {
       {"EXIT_PLACE_REJECTED", {"平仓报单被拒", "平仓报单被券商或交易所拒绝"}},
       {"ENTRY_ORDER_FAILED", {"开仓失败", "开仓订单执行失败"}},
       {"EXIT_ORDER_FAILED", {"平仓失败", "平仓订单执行失败"}},
-      {"ENTRY_RETRY_EXCEEDED", {"开仓重试次数已用尽", "开仓重试次数已用尽"}},
-      {"EXIT_RETRY_EXCEEDED", {"平仓重试次数已用尽", "平仓重试次数已用尽"}},
+      {"ENTRY_RETRY_EXCEEDED", {"开仓连续四次报单均未成交", "开仓连续四次报单均未成交"}},
+      {"ENTRY_RETRY_EXCEEDED_RTH",
+       {"开仓连续四次报单均未成交（常规盘）",
+        "开仓：order_session=ALL，常规交易时段连续四次报单均未成交"}},
+      {"ENTRY_RETRY_EXCEEDED_OVERNIGHT",
+       {"开仓连续四次报单均未成交（夜盘）",
+        "开仓：order_session=ALL，夜盘（盘前/盘后/隔夜）连续四次报单均未成交"}},
+      {"EXIT_RETRY_EXCEEDED", {"平仓连续四次报单均未成交", "平仓连续四次报单均未成交"}},
+      {"EXIT_RETRY_EXCEEDED_RTH",
+       {"平仓连续四次报单均未成交（常规盘）",
+        "平仓：order_session=ALL，常规交易时段连续四次报单均未成交"}},
+      {"EXIT_RETRY_EXCEEDED_OVERNIGHT",
+       {"平仓连续四次报单均未成交（夜盘）",
+        "平仓：order_session=ALL，夜盘（盘前/盘后/隔夜）连续四次报单均未成交"}},
       {"TRADING_FATAL", {"盘中交易异常终止", "盘中交易流程异常终止"}},
       {"UNLOCK_RATE_LIMIT",
        {"实盘解锁限频", "Unlock 接口 30 秒内超过 10 次，已安排自动重试"}},
@@ -65,6 +77,12 @@ const ErrSpec *CatalogSpec(const std::string &code) {
        {"账户购买力不足",
         "Insufficient buying power. You can increase it by exchanging currencies, "
         "depositing funds, or using other methods."}},
+      {"PRICE_DEVIATED_FROM_MARKET",
+       {"委托价偏离市价过大", "Price deviated too much from the market"}},
+      {"PAPER_OVERNIGHT_UNSUPPORTED",
+       {"模拟盘不支持夜盘报单", "Paper trading does not support overnight trading sessions"}},
+      {"OVERNIGHT_MARKET_UNSUPPORTED",
+       {"夜盘不支持市价单", "The overnight session does not support Market order"}},
       {"ACCOUNT_ERROR", {"账户配置错误", "账户参数或权限配置有误"}},
       {"VALIDATION_FAILED", {"任务参数校验或映射失败", "任务参数校验或映射失败"}},
       {"TIMEOUT", {"任务执行超时", "策略子进程执行超时"}},
@@ -175,6 +193,15 @@ std::string BrokerErrorCodeFromHint(const std::string &hint) {
       t.find("insufficient position") != std::string::npos) {
     return "INSUFFICIENT_POSITION";
   }
+  if (t.find("price deviated too much") != std::string::npos) {
+    return "PRICE_DEVIATED_FROM_MARKET";
+  }
+  if (t.find("paper trading does not support overnight") != std::string::npos) {
+    return "PAPER_OVERNIGHT_UNSUPPORTED";
+  }
+  if (t.find("overnight session does not support market") != std::string::npos) {
+    return "OVERNIGHT_MARKET_UNSUPPORTED";
+  }
   return "";
 }
 
@@ -185,7 +212,9 @@ bool PassThroughDetailCode(const std::string &code) {
          code == "UNLOCK_RATE_LIMIT" || code == "ENTRY_PLACE_REJECTED" ||
          code == "EXIT_PLACE_REJECTED" || code == "ENTRY_ORDER_FAILED" ||
          code == "EXIT_ORDER_FAILED" || code == "ENTRY_RETRY_EXCEEDED" ||
-         code == "EXIT_RETRY_EXCEEDED" || code == "INVALID_ORDER_QUANTITY" ||
+         code == "ENTRY_RETRY_EXCEEDED_RTH" || code == "ENTRY_RETRY_EXCEEDED_OVERNIGHT" ||
+         code == "EXIT_RETRY_EXCEEDED" || code == "EXIT_RETRY_EXCEEDED_RTH" ||
+         code == "EXIT_RETRY_EXCEEDED_OVERNIGHT" || code == "INVALID_ORDER_QUANTITY" ||
          code == "INVALID_ORDER_PRICE" || code == "ORDER_PRICE_LIMIT_EXCEEDED" ||
          code == "INSUFFICIENT_POSITION" || code == "INSUFFICIENT_BUYING_POWER" ||
          code == "SHORT_POOL_INSUFFICIENT" || code == "SHORT_SELL_PRICE_BELOW_ASK";
@@ -202,6 +231,18 @@ std::string DetailWithRuntimeHint(const std::string &code, const std::string &ca
   }
   const size_t max_len = (code == "UNLOCK_RATE_LIMIT") ? 480 : 2000;
   return compact.size() > max_len ? compact.substr(0, max_len) : compact;
+}
+
+std::string MessageWithRuntimeHint(const std::string &code, const std::string &catalog_message,
+                                   const std::string &hint) {
+  const std::string compact = Trim(hint);
+  if (compact.empty()) {
+    return catalog_message;
+  }
+  if (code == "ENTRY_PLACE_REJECTED" || code == "EXIT_PLACE_REJECTED") {
+    return compact.size() > 500 ? compact.substr(0, 500) : compact;
+  }
+  return catalog_message;
 }
 
 nlohmann::json EmptyLeg() { return nlohmann::json{{"qty", nullptr}, {"avg_price", nullptr}}; }
@@ -270,7 +311,8 @@ nlohmann::json ResolveTaskError(const std::string &code, const std::string &hint
 
   const ErrSpec *known = CatalogSpec(fatal_code);
   if (known != NULL) {
-    return ErrObj(fatal_code, known->message,
+    return ErrObj(fatal_code,
+                 MessageWithRuntimeHint(fatal_code, known->message, compact_hint),
                  DetailWithRuntimeHint(fatal_code, known->detail, compact_hint));
   }
 

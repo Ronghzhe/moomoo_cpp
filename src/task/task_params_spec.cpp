@@ -1,5 +1,7 @@
 #include "task/task_params_spec.hpp"
 
+#include "strategy/order_session_policy.hpp"
+
 namespace mmtrade {
 namespace task {
 
@@ -105,6 +107,13 @@ void ValidateTaskParams(const nlohmann::json &payload) {
   }
   if (!amount.is_null() && !IsNumber(amount)) {
     throw std::runtime_error("trade_amount must be number or null");
+  }
+
+  if (payload.contains("order_session") && !payload.at("order_session").is_null()) {
+    const std::string raw = payload.at("order_session").get<std::string>();
+    if (!raw.empty()) {
+      (void)mmtrade::strategy::NormalizeOrderSession(raw);
+    }
   }
 }
 

@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <sstream>
+#include <unistd.h>
 
 namespace mmtrade {
 namespace trade {
@@ -23,11 +24,26 @@ std::string Trim(const std::string &s) {
   return s.substr(start, end - start);
 }
 
+std::string ResolvePythonBin() {
+  const char *bin = std::getenv("MOOMOO_PYTHON_BIN");
+  if (bin != NULL && bin[0] != '\0') {
+    return Trim(bin);
+  }
+  const char *py_root = std::getenv("MOOMOO_PYTHON_ROOT");
+  std::string root = py_root != NULL ? std::string(py_root) : "../moomoo_python";
+  const std::string venv_py = root + "/.venv/bin/python";
+  if (::access(venv_py.c_str(), X_OK) == 0) {
+    return venv_py;
+  }
+  return "python3";
+}
+
 std::string RunPythonResolvePassword() {
   const char *py_root = std::getenv("MOOMOO_PYTHON_ROOT");
   std::string root = py_root != NULL ? std::string(py_root) : "../moomoo_python";
+  const std::string py_bin = ResolvePythonBin();
   std::ostringstream cmd;
-  cmd << "python3 -c \"import sys; sys.path.insert(0,'" << root
+  cmd << py_bin << " -c \"import sys; sys.path.insert(0,'" << root
       << "'); from tools.trade_pwd_util import resolve_trade_password; "
          "p=resolve_trade_password(); print(p or '')\" 2>/dev/null";
   FILE *pipe = popen(cmd.str().c_str(), "r");

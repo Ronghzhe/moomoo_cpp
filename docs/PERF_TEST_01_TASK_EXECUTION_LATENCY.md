@@ -63,6 +63,23 @@ Executor claim / shell_start
 | `entry_place_post_us` | 报单后处理（微秒） |
 | `entry_fill_source` | 成交来源（`push` / `poll`） |
 
+### 2.2 端到端 pipeline 时间戳（每 leg 各阶段首次）
+
+| 阶段 | 字段 | 说明 |
+|------|------|------|
+| 行情进入 OpenD | `md_opend_recv_ms` | OpenD 推送里的服务端接收时间（非本机 wall，可与本地戳对比 skew） |
+| SDK 收到 | `md_sdk_recv_ms` | `OnPush_UpdateOrderBook` 入口 |
+| Protobuf 解码完成 | `md_proto_done_ms` | 写入 orderbook cache 后 |
+| 回调触发 | `md_callback_ms` | `NotifyBookPush` 后 |
+| 策略线程唤醒 | `md_loop_wakeup_ms` | `WaitBookPush` 返回后 |
+| 策略计算 | `entry_pipe_strategy_ms` / `exit_pipe_strategy_ms` | 首次 entry/exit judge hit |
+| 风控通过 | `entry_pipe_risk_ms` / `exit_pipe_risk_ms` | 可下单前（tradability/book/qty 等已通过） |
+| 发出订单 | `entry_pipe_order_sent_ms` | 与 `entry_place_sent_ms` 同刻 |
+| 订单确认 | `entry_pipe_order_ack_ms` | Place 成功返回（含 gateway HTTP 路径） |
+| 成交/失败 | `entry_pipe_order_terminal_ms` + `entry_pipe_terminal_kind` | `fill` / `failed` |
+
+派生段：`ms_md_sdk_to_proto`、`ms_md_proto_to_callback`、`ms_md_callback_to_loop`、`ms_entry_pipe_*` 等在 CSV 合并时自动计算。
+
 ---
 
 ## 3. 怎么跑

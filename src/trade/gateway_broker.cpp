@@ -218,7 +218,14 @@ PlaceOrderResult HttpPostJson(const std::string &base_url, const std::string &pa
     PlaceOrderResult out(data.value("ok", false), data.value("ret_code", -1),
                          data.value("order_id", ""), data.value("status", ""),
                          data.value("error", ""));
-    out.internal_order_id = ParseOrderIdUint64(out.order_id);
+    if (data.contains("internal_order_id") && data["internal_order_id"].is_number_unsigned()) {
+      out.internal_order_id = data["internal_order_id"].get<std::uint64_t>();
+    } else if (data.contains("internal_order_id") && data["internal_order_id"].is_number_integer()) {
+      const std::int64_t v = data["internal_order_id"].get<std::int64_t>();
+      out.internal_order_id = v > 0 ? static_cast<std::uint64_t>(v) : 0;
+    } else {
+      out.internal_order_id = ParseOrderIdUint64(out.order_id);
+    }
     fill_timings(&out, data);
     return out;
   } catch (...) {

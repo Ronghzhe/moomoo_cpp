@@ -17,6 +17,7 @@
 #include "strategy/net_split_leg_wait.hpp"
 #include "strategy/symbol_tradability.hpp"
 #include "trade/order_errors.hpp"
+#include "trade/order_id_util.hpp"
 
 #include <chrono>
 #include <sstream>
@@ -27,10 +28,8 @@ namespace strategy {
 
 namespace {
 
-std::string OrderIdStr(std::uint64_t order_id) {
-  std::ostringstream oss;
-  oss << order_id;
-  return oss.str();
+std::string PendingOid(const PendingOrderState &pending) {
+  return trade::ResolveDisplayOrderId(pending.order_id, pending.order_id_ex);
 }
 
 double NowMono() {
@@ -47,11 +46,13 @@ bool WaitForLegFill(SymbolLoopState *st, opend::OrderClient *client,
   const double deadline = placed_mono + 180.0;
   while (NowMono() < deadline) {
     const double now_mono = NowMono();
-    const std::string oid = OrderIdStr(st->pending.order_id);
+    const std::string oid = PendingOid(st->pending);
     const FillResolveResult resolved = ResolveOrderRowForFill(
         client->PushHub(), oid, placed_mono, now_mono, OrderFillPushSilenceSec(), poll_min,
         last_poll_mono,
-        [&client, st]() { return client->QueryOrder(st->pending.order_id, st->sym.code); });
+        [&client, st]() {
+          return client->QueryOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
+        });
     if (!resolved.has_row) {
       std::this_thread::sleep_for(std::chrono::milliseconds(200));
       continue;
@@ -67,13 +68,13 @@ bool WaitForLegFill(SymbolLoopState *st, opend::OrderClient *client,
         ShouldNetSplitBookGuardStaleReprice(*pend_snap, resolved.row.order_status, fill.dealt_qty,
                                             target_qty, now_mono, BookGuardEmergencyStaleSec(),
                                             BookGuardEmergencyEnabled())) {
-      client->CancelOrder(st->pending.order_id, st->sym.code);
+      client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
       std::this_thread::sleep_for(std::chrono::milliseconds(350));
       return false;
     }
     if (ShouldNetSplitStaleReprice(st->pending.order_type_used, resolved.row.order_status,
                                    fill.dealt_qty, target_qty, placed_mono, now_mono, stale_sec)) {
-      client->CancelOrder(st->pending.order_id, st->sym.code);
+      client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
       std::this_thread::sleep_for(std::chrono::milliseconds(350));
       return false;
     }
@@ -283,18 +284,18 @@ NetSplitLegFillResult ExecuteNetSplitLegSync(const EntryNetSplitParams &ctx, Net
     }
 
     const FillResolveResult resolved = ResolveOrderRowForFill(
-        ctx.client->PushHub(), OrderIdStr(st->pending.order_id), placed_mono, NowMono(),
+        ctx.client->PushHub(), PendingOid(st->pending), placed_mono, NowMono(),
         OrderFillPushSilenceSec(),
         ctx.cfg->order_poll_min_sec > 0.0 ? ctx.cfg->order_poll_min_sec : 3.0, &poll_mono,
         [&ctx, st]() {
-          return ctx.client->QueryOrder(st->pending.order_id, st->sym.code);
+          return ctx.client->QueryOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
         });
     const FillClassification fill = ClassifyOrderFill(resolved.row, leg.qty);
     out.ok = true;
     out.fill_qty = fill.dealt_qty > 0.0 ? fill.dealt_qty : leg.qty;
     out.fill_px = fill.dealt_avg_price > 0.0 ? fill.dealt_avg_price : leg_ref;
     out.fill_status = resolved.row.order_status;
-    out.oid = OrderIdStr(st->pending.order_id);
+    out.oid = PendingOid(st->pending);
     st->entry_await_fill = false;
     st->exit_await_fill = false;
     st->pending = PendingOrderState();

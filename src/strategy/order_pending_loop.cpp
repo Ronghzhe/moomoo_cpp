@@ -14,8 +14,10 @@
 #include "strategy/net_split_leg_wait.hpp"
 #include "strategy/order_executor.hpp"
 #include "strategy/order_fail_retry.hpp"
+#include "strategy/order_session_policy.hpp"
 #include "strategy/position_sizing.hpp"
 #include "strategy/symbol_tradability.hpp"
+#include "task/pipeline_latency.hpp"
 #include "task/task_latency_recorder.hpp"
 #include "trade/order_errors.hpp"
 #include "trade/order_id_util.hpp"
@@ -309,7 +311,7 @@ bool EntryBookGuardEmergencyStaleToMarket(SymbolLoopState *st, mmtrade::opend::O
   if ((now_mono - st->pending.placed_mono) < stale_sec) {
     return false;
   }
-  client->CancelOrder(st->pending.order_id, st->sym.code);
+  client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
   std::this_thread::sleep_for(std::chrono::milliseconds(
       static_cast<int>(300.0)));  // brief cancel confirm
   const double ref_px = st->pending.ref_px;
@@ -353,7 +355,7 @@ bool ExitBookGuardEmergencyStaleToMarket(SymbolLoopState *st, mmtrade::opend::Or
   if ((now_mono - st->pending.placed_mono) < stale_sec) {
     return false;
   }
-  client->CancelOrder(st->pending.order_id, st->sym.code);
+  client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
   std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(300.0)));
   const double ref_px = st->pending.ref_px;
   const double qty = st->pending.target_qty;
@@ -414,7 +416,7 @@ bool EntryHkShortUnfilledReplace(SymbolLoopState *st, mmtrade::opend::OrderClien
     }
     return true;
   }
-  client->CancelOrder(st->pending.order_id, st->sym.code);
+  client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
   std::this_thread::sleep_for(
       std::chrono::milliseconds(static_cast<int>(kHkShortPostCancelWaitSec * 1000.0)));
   double fresh_ask = book.ask_1;
@@ -610,8 +612,25 @@ PlaceAttemptResult PlacePendingOrder(SymbolLoopState *st, mmtrade::opend::OrderC
     log::LogOrderRequest(store, st->sym, side, qty, price, log_ref_px, trd_env, use_remark);
   }
   const int64_t t_place0 = mmtrade::task::TaskLatencyRecorder::WallMsNow();
+  const std::string order_sess_raw =
+      st->sym.order_session.empty() ? "RTH" : st->sym.order_session;
+  const bool is_paper = (trd_env == "paper" || trd_env == "SIMULATE");
+  const bool fill_outside = FillOutsideRthForSession(order_sess_raw, is_paper);
+  const std::string sdk_sess = SdkSessionStringForPlace(order_sess_raw, is_paper);
+  const std::string order_sess_place =
+      mmtrade::strategy::OrderSessionForPlace(order_sess_raw, is_paper);
+  if (is_paper && mmtrade::strategy::NormalizeOrderSession(order_sess_raw) == "ALL" &&
+      order_sess_place == "RTH" && store != NULL) {
+    store->LogEvent("INFO", "order_session_paper_downgrade",
+                    "ALL→RTH for paper PlaceOrder code=" + st->sym.code);
+  }
+  const std::string order_sess = order_sess_place;
+  const std::string tif = st->sym.time_in_force.empty() ? "DAY" : st->sym.time_in_force;
+  const std::string ot_use =
+      ClampOrderTypeForSession(order_sess_raw, order_type, st->last_market_phase);
   const mmtrade::opend::PlaceOrderResult pr =
-      client->Place(st->sym.code, side, qty, price, order_type, use_remark);
+      client->Place(st->sym.code, side, qty, price, ot_use, use_remark, tif, fill_outside,
+                    sdk_sess);
   if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
     const int64_t api_ms = mmtrade::task::TaskLatencyRecorder::WallMsNow() - t_place0;
     RecordPlaceBreakdown(kind, pr, api_ms);
@@ -656,6 +675,13 @@ PlaceAttemptResult PlacePendingOrder(SymbolLoopState *st, mmtrade::opend::OrderC
   out.ok = true;
   if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
     mmtrade::task::TaskLatencyRecorder::Instance().RecordTimestampMs(PlaceSentField(kind));
+    if (kind == PendingKind::kEntry) {
+      mmtrade::task::PipelineLatency::OnEntryOrderSent();
+      mmtrade::task::PipelineLatency::OnEntryOrderAck();
+    } else {
+      mmtrade::task::PipelineLatency::OnExitOrderSent();
+      mmtrade::task::PipelineLatency::OnExitOrderAck();
+    }
   }
   return out;
 }
@@ -749,6 +775,8 @@ bool TryPlaceEntry(SymbolLoopState *st, const config::StrategyConfig &cfg,
   if (qty <= 0.0) {
     return false;
   }
+
+  mmtrade::task::PipelineLatency::OnEntryRiskPass();
 
   EntryNetSplitParams net_params;
   net_params.state = st;
@@ -844,6 +872,8 @@ bool TryPlaceExit(SymbolLoopState *st, const config::StrategyConfig &cfg,
                                    store, trd_env);
   }
 
+  mmtrade::task::PipelineLatency::OnExitRiskPass();
+
   ExitNetSplitParams net_params;
   net_params.state = st;
   net_params.store = store;
@@ -918,7 +948,7 @@ PendingAdvanceResult AdvancePendingOrder(SymbolLoopState *st, const config::Stra
       client->PushHub(), oid, st->pending.placed_mono, now_mono, OrderFillPushSilenceSec(),
       poll_min,
       &st->pending.last_poll_mono, [&client, st]() {
-        return client->QueryOrder(st->pending.order_id, st->sym.code);
+        return client->QueryOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
       });
   if (!resolved.has_row) {
     return PendingAdvanceResult::kWaiting;
@@ -959,64 +989,96 @@ PendingAdvanceResult AdvancePendingOrder(SymbolLoopState *st, const config::Stra
         fill.dealt_qty + 1e-9 < st->pending.target_qty &&
         (now_mono - st->pending.placed_mono) >= stale_sec &&
         !IsHkShortOpenEntry(st->sym.code, st->sym.entry_side, st->sym.entry_side)) {
-      const int max_replace = 3;
-      if (st->pending.replace_count < max_replace) {
-        client->CancelOrder(st->pending.order_id, st->sym.code);
-        if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
-          if (kind == PendingKind::kEntry) {
-            mmtrade::task::TaskLatencyRecorder::Instance().Increment("entry_cancel_count");
-          } else {
-            mmtrade::task::TaskLatencyRecorder::Instance().Increment("exit_cancel_count");
-          }
-        }
-        std::this_thread::sleep_for(std::chrono::milliseconds(
-            static_cast<int>(cfg.order_cancel_retry_wait_sec * 1000.0)));
-        const bool market_fallback = st->pending.replace_count + 1 >= max_replace;
-        const int attempt = st->pending.replace_count + 1;
-        const double qty = st->pending.target_qty;
-        const std::string side = st->pending.side;
-        const std::string exit_rule = st->pending.exit_rule_id;
+      const int retry_max = cfg.order_retry_max >= 0 ? cfg.order_retry_max : 3;
+      int *fail_n = (kind == PendingKind::kEntry) ? &st->entry_retry_failed_count
+                                                 : &st->exit_retry_failed_count;
+      *fail_n += 1;
+      if (*fail_n > retry_max) {
+        client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
         st->pending = PendingOrderState();
         if (kind == PendingKind::kEntry) {
           st->entry_await_fill = false;
         } else {
           st->exit_await_fill = false;
         }
-        const double price =
-            market_fallback
-                ? 0.0
-                : ComputeSubmitPriceForAttempt(st->sym, book, side, attempt, false);
-        const std::string order_type = market_fallback ? "MARKET" : st->sym.order_type;
-        PlaceAttemptResult pr =
-            PlacePendingOrder(st, client, kind, side, qty, price, order_type, false, false, price,
-                          hooks != NULL ? hooks->store : NULL,
-                          hooks != NULL ? hooks->trd_env : "", exit_rule);
-        if (pr.ok) {
-          st->pending.placed_mono = now_mono;
-          st->pending.replace_count = attempt;
-          if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
-            if (kind == PendingKind::kEntry) {
-              mmtrade::task::TaskLatencyRecorder::Instance().Increment("entry_replace_count");
-            } else {
-              mmtrade::task::TaskLatencyRecorder::Instance().Increment("exit_replace_count");
-            }
-          }
-          if (hooks != NULL && hooks->store != NULL) {
-            hooks->store->LogEvent("INFO", "stale_unfilled_replace", "oid=" + oid);
-          }
-          return PendingAdvanceResult::kReplaced;
-        }
-        if (IsWaitableSymbolNotTradableFail(pr.error)) {
-          ScheduleNotTradableWait(st, pr.error, now_mono, hooks != NULL ? hooks->store : NULL);
-        }
-        st->place_cooldown_until_mono = now_mono + cfg.order_cancel_retry_wait_sec;
+        std::ostringstream line;
+        line << "连续重试报单失败/"
+             << (kind == PendingKind::kEntry ? "entry" : "exit")
+             << "_retry_exceeded_stop | code=" << st->sym.code << " retry_max=" << retry_max
+             << " 连续" << (retry_max + 1) << "次仍未成交 => stop";
+        SetTradingFatal(st,
+                        RetryExceededFatalCode(
+                            st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                            st->last_market_phase,
+                            kind == PendingKind::kEntry ? "entry" : "exit"),
+                        "stale_unfilled retry_max=" + std::to_string(retry_max),
+                        hooks != NULL ? hooks->store : NULL,
+                        kind == PendingKind::kEntry ? "entry_retry_exceeded_stop"
+                                                    : "exit_retry_exceeded_stop",
+                        line.str());
+        return PendingAdvanceResult::kFatal;
       }
+      client->CancelOrder(st->pending.order_id, st->sym.code, st->pending.order_id_ex);
+      if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
+        if (kind == PendingKind::kEntry) {
+          mmtrade::task::TaskLatencyRecorder::Instance().Increment("entry_cancel_count");
+        } else {
+          mmtrade::task::TaskLatencyRecorder::Instance().Increment("exit_cancel_count");
+        }
+      }
+      std::this_thread::sleep_for(std::chrono::milliseconds(
+          static_cast<int>(cfg.order_cancel_retry_wait_sec * 1000.0)));
+      const bool market_fallback =
+          *fail_n >= retry_max &&
+          SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                   st->last_market_phase);
+      const int attempt = st->pending.replace_count + 1;
+      const double qty = st->pending.target_qty;
+      const std::string side = st->pending.side;
+      const std::string exit_rule = st->pending.exit_rule_id;
+      st->pending = PendingOrderState();
+      if (kind == PendingKind::kEntry) {
+        st->entry_await_fill = false;
+      } else {
+        st->exit_await_fill = false;
+      }
+      const double price =
+          market_fallback ? 0.0 : ComputeSubmitPriceForAttempt(st->sym, book, side, attempt, false);
+      const std::string order_type = market_fallback ? "MARKET" : st->sym.order_type;
+      PlaceAttemptResult pr =
+          PlacePendingOrder(st, client, kind, side, qty, price, order_type, false, false, price,
+                            hooks != NULL ? hooks->store : NULL,
+                            hooks != NULL ? hooks->trd_env : "", exit_rule);
+      if (pr.ok) {
+        st->pending.placed_mono = now_mono;
+        st->pending.replace_count = attempt;
+        if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
+          if (kind == PendingKind::kEntry) {
+            mmtrade::task::TaskLatencyRecorder::Instance().Increment("entry_replace_count");
+          } else {
+            mmtrade::task::TaskLatencyRecorder::Instance().Increment("exit_replace_count");
+          }
+        }
+        if (hooks != NULL && hooks->store != NULL) {
+          hooks->store->LogEvent("INFO", "stale_unfilled_replace", "oid=" + oid);
+        }
+        return PendingAdvanceResult::kReplaced;
+      }
+      if (IsWaitableSymbolNotTradableFail(pr.error)) {
+        ScheduleNotTradableWait(st, pr.error, now_mono, hooks != NULL ? hooks->store : NULL);
+      }
+      st->place_cooldown_until_mono = now_mono + cfg.order_cancel_retry_wait_sec;
     }
     return PendingAdvanceResult::kWaiting;
   }
 
   const double submit_px = st->pending.submit_price;
   if (fill.outcome == FillOutcome::kFailed) {
+    if (kind == PendingKind::kEntry) {
+      mmtrade::task::PipelineLatency::OnEntryOrderTerminal("failed");
+    } else {
+      mmtrade::task::PipelineLatency::OnExitOrderTerminal("failed");
+    }
     const std::string fail_status = resolved.row.order_status;
     const std::string fail_detail = fail_status;
     const PendingKind pk = st->pending.kind;
@@ -1043,6 +1105,7 @@ PendingAdvanceResult AdvancePendingOrder(SymbolLoopState *st, const config::Stra
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
       mmtrade::task::TaskLatencyRecorder::Instance().RecordTimestampMs("entry_filled_ms");
     }
+    mmtrade::task::PipelineLatency::OnEntryOrderTerminal("fill");
     ApplyEntryFill(st, fill.dealt_qty, fill.dealt_avg_price, st->lot_size);
     st->entry_await_fill = false;
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
@@ -1061,6 +1124,7 @@ PendingAdvanceResult AdvancePendingOrder(SymbolLoopState *st, const config::Stra
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {
       mmtrade::task::TaskLatencyRecorder::Instance().RecordTimestampMs("exit_filled_ms");
     }
+    mmtrade::task::PipelineLatency::OnExitOrderTerminal("fill");
     ApplyExitFill(st, fill.dealt_qty, fill.dealt_avg_price);
     st->exit_await_fill = false;
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled()) {

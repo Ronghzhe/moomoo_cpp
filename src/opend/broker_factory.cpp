@@ -41,7 +41,8 @@ std::string GatewayUrlFromEnv() {
   return std::string(raw);
 }
 
-std::unique_ptr<trade::IOrderBroker> CreateOrderBroker(const trade::DirectBrokerConfig &direct_cfg) {
+std::unique_ptr<trade::IOrderBroker> CreateOrderBroker(const trade::DirectBrokerConfig &direct_cfg,
+                                                        TradeConnection *shared_trade) {
   const std::string mode = OrderBrokerModeFromEnv();
   if (mode != "gateway" && mode != "gateway_fallback") {
     return std::unique_ptr<trade::IOrderBroker>();
@@ -50,7 +51,7 @@ std::unique_ptr<trade::IOrderBroker> CreateOrderBroker(const trade::DirectBroker
   gcfg.base_url = GatewayUrlFromEnv();
   gcfg.timeout_sec = GatewayHttpTimeoutSecFromEnv();
   std::unique_ptr<trade::IOrderBroker> gateway(new trade::GatewayBroker(gcfg));
-  std::unique_ptr<trade::IOrderBroker> direct(new DirectBroker(direct_cfg));
+  std::unique_ptr<trade::IOrderBroker> direct(new DirectBroker(direct_cfg, shared_trade));
   return std::unique_ptr<trade::IOrderBroker>(
       new trade::FallbackBroker(std::move(gateway), std::move(direct)));
 }

@@ -17,6 +17,7 @@ add_executable(l0_tests
   unit/test_rate_limiter.cpp
   unit/test_gateway_components.cpp
   unit/test_order_fail_retry.cpp
+  unit/test_order_session_policy.cpp
   unit/test_kline_parse.cpp
   unit/test_account_config.cpp
   unit/test_broker.cpp

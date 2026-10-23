@@ -29,6 +29,8 @@ class TradeConnection : public FTAPIDemoBase {
   PlaceOrderResult Place(const PlaceOrderParams &params);
   bool CancelOrder(std::uint64_t order_id, const std::string &code_full);
   bool QueryOrder(std::uint64_t order_id, const std::string &code_full);
+  // Refresh push cache for all open orders on code (used when only orderIdEx is known).
+  bool QueryOrdersForCode(const std::string &code_full);
 
   AccountList GetAccountListCached() const;
   bool GetFunds(const std::string &code_full, FundsInfo *out);

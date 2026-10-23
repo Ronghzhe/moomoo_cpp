@@ -77,6 +77,44 @@ TEST(OrderFailRetry, EntryRetriableThenMarketThenExceed) {
   EXPECT_EQ(st.trading_fatal_code, "ENTRY_RETRY_EXCEEDED");
 }
 
+TEST(OrderFailRetry, AllSessionPostUsesOvernightFatalCode) {
+  SymbolLoopState st;
+  st.sym.code = "US.AAPL";
+  st.sym.order_type = "SIM_MARKET";
+  st.sym.entry_side = "BUY";
+  st.sym.order_session = "ALL";
+  st.last_market_phase = "post";
+  st.entry_retry_failed_count = 3;
+  const StrategyConfig cfg = MakeCfg();
+  EXPECT_EQ(BumpEntryOrderFail(&st, cfg, 40.0, "CANCELLED_ALL", "4", "CANCELLED_ALL", NULL),
+            OrderFailBumpResult::kFatal);
+  EXPECT_EQ(st.trading_fatal_code, "ENTRY_RETRY_EXCEEDED_OVERNIGHT");
+}
+
+TEST(OrderFailRetry, AllSessionMarketOnlyInRthPhase) {
+  SymbolLoopState st;
+  st.sym.code = "US.AAPL";
+  st.sym.order_type = "SIM_MARKET";
+  st.sym.entry_side = "BUY";
+  st.sym.order_session = "ALL";
+  st.entry_retry_failed_count = 3;
+  const StrategyConfig cfg = MakeCfg();
+
+  auto night = ResolveEntryOrderTypeForRetry(&st, cfg);
+  EXPECT_NE(night.order_type, "MARKET");
+
+  st.last_market_phase = "rth";
+  st.entry_force_market_next = false;
+  auto rth = ResolveEntryOrderTypeForRetry(&st, cfg);
+  EXPECT_EQ(rth.order_type, "MARKET");
+  EXPECT_TRUE(rth.market_fallback);
+
+  st.last_market_phase = "post";
+  st.entry_retry_failed_count = 3;
+  auto post = ResolveEntryOrderTypeForRetry(&st, cfg);
+  EXPECT_NE(post.order_type, "MARKET");
+}
+
 TEST(OrderFailRetry, ExitNonRetriableIsFatal) {
   SymbolLoopState st;
   st.sym.code = "US.AAPL";

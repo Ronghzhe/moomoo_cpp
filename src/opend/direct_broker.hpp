@@ -12,9 +12,12 @@ namespace opend {
 class OrderClient;
 
 // Mirrors Python broker.direct_broker.DirectBroker.
+class TradeConnection;
+
 class DirectBroker : public trade::IOrderBroker {
  public:
-  explicit DirectBroker(const trade::DirectBrokerConfig &config);
+  explicit DirectBroker(const trade::DirectBrokerConfig &config,
+                        TradeConnection *shared_trade = NULL);
   ~DirectBroker();
 
   trade::PlaceOrderResult PlaceOrder(const trade::PlaceOrderRequest &req) override;
@@ -25,6 +28,7 @@ class DirectBroker : public trade::IOrderBroker {
 
  private:
   trade::DirectBrokerConfig config_;
+  TradeConnection *shared_trade_;
   std::unique_ptr<OrderClient> client_;
   bool connected_;
 };

@@ -125,6 +125,15 @@ const std::vector<std::string> &AllCsvColumns() {
       "ms_insert_to_done",        "us_hit_to_place_sent",     "us_place_sent_to_push",
       "us_place_sent_to_filled",  "us_push_to_filled",        "us_exit_hit_to_place_sent",
       "us_exit_place_sent_to_filled",
+      "md_opend_recv_ms",         "md_sdk_recv_ms",           "md_proto_done_ms",
+      "md_callback_ms",           "md_loop_wakeup_ms",
+      "entry_pipe_strategy_ms",   "entry_pipe_risk_ms",       "entry_pipe_order_sent_ms",
+      "entry_pipe_order_ack_ms",  "entry_pipe_order_terminal_ms", "entry_pipe_terminal_kind",
+      "exit_pipe_strategy_ms",    "exit_pipe_risk_ms",        "exit_pipe_order_sent_ms",
+      "exit_pipe_order_ack_ms",   "exit_pipe_order_terminal_ms", "exit_pipe_terminal_kind",
+      "ms_md_sdk_to_proto",       "ms_md_proto_to_callback",  "ms_md_callback_to_loop",
+      "ms_entry_pipe_risk_to_sent", "ms_entry_pipe_sent_to_ack", "ms_entry_pipe_ack_to_terminal",
+      "ms_exit_pipe_risk_to_sent", "ms_exit_pipe_sent_to_ack", "ms_exit_pipe_ack_to_terminal",
   };
   return kCols;
 }
@@ -561,6 +570,30 @@ struct TaskLatencyRecorder::Impl {
                      entry_fill);
     PutDeltaUsFromMs(&data, "us_exit_hit_to_place_sent", exit_hit, exit_sent);
     PutDeltaUsFromMs(&data, "us_exit_place_sent_to_filled", exit_sent, exit_fill);
+
+    const int64_t md_sdk = JsonToInt64(data.value("md_sdk_recv_ms", 0));
+    const int64_t md_proto = JsonToInt64(data.value("md_proto_done_ms", 0));
+    const int64_t md_cb = JsonToInt64(data.value("md_callback_ms", 0));
+    const int64_t md_loop = JsonToInt64(data.value("md_loop_wakeup_ms", 0));
+    PutDeltaMs(&data, "ms_md_sdk_to_proto", md_sdk, md_proto);
+    PutDeltaMs(&data, "ms_md_proto_to_callback", md_proto, md_cb);
+    PutDeltaMs(&data, "ms_md_callback_to_loop", md_cb, md_loop);
+
+    const int64_t e_risk = JsonToInt64(data.value("entry_pipe_risk_ms", 0));
+    const int64_t e_sent = JsonToInt64(data.value("entry_pipe_order_sent_ms", 0));
+    const int64_t e_ack = JsonToInt64(data.value("entry_pipe_order_ack_ms", 0));
+    const int64_t e_term = JsonToInt64(data.value("entry_pipe_order_terminal_ms", 0));
+    PutDeltaMs(&data, "ms_entry_pipe_risk_to_sent", e_risk, e_sent);
+    PutDeltaMs(&data, "ms_entry_pipe_sent_to_ack", e_sent, e_ack);
+    PutDeltaMs(&data, "ms_entry_pipe_ack_to_terminal", e_ack, e_term);
+
+    const int64_t x_risk = JsonToInt64(data.value("exit_pipe_risk_ms", 0));
+    const int64_t x_sent = JsonToInt64(data.value("exit_pipe_order_sent_ms", 0));
+    const int64_t x_ack = JsonToInt64(data.value("exit_pipe_order_ack_ms", 0));
+    const int64_t x_term = JsonToInt64(data.value("exit_pipe_order_terminal_ms", 0));
+    PutDeltaMs(&data, "ms_exit_pipe_risk_to_sent", x_risk, x_sent);
+    PutDeltaMs(&data, "ms_exit_pipe_sent_to_ack", x_sent, x_ack);
+    PutDeltaMs(&data, "ms_exit_pipe_ack_to_terminal", x_ack, x_term);
   }
 
   bool FinalizeCsvRowImpl(int final_status, int exit_code) {

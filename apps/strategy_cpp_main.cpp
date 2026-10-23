@@ -9,11 +9,13 @@
 #include "opend/order_client.hpp"
 #include "opend/broker_factory.hpp"
 #include "opend/quote_connection.hpp"
+#include "task/pipeline_latency.hpp"
 #include "task/task_latency_recorder.hpp"
 #include "strategy/live_eval_compute.hpp"
 #include "strategy/live_eval_inject.hpp"
 #include "strategy/order_executor.hpp"
 #include "strategy/order_pending_loop.hpp"
+#include "strategy/order_session_policy.hpp"
 #include "strategy/position_sizing.hpp"
 #include "strategy/strategy_runner.hpp"
 #include "strategy/symbol_loop_state.hpp"
@@ -40,6 +42,7 @@
 #include <iostream>
 #include <map>
 #include <memory>
+#include <set>
 #include <sstream>
 #include <string>
 #include <sys/socket.h>
@@ -198,6 +201,77 @@ mmtrade::strategy::BookTick ToBookTick(const mmtrade::opend::QuoteSnapshot &snap
   book.bid_1 = snap.bid_1;
   book.ask_1 = snap.ask_1;
   return book;
+}
+
+std::string MarketTagFromSymbolCode(const std::string &code) {
+  if (code.size() >= 3 && code.compare(0, 3, "HK.") == 0) {
+    return "HK";
+  }
+  return "US";
+}
+
+void RefreshAndApplyMarketPhases(mmtrade::opend::QuoteConnection *opend,
+                                 std::map<std::string, mmtrade::strategy::SymbolLoopState> *loops,
+                                 double now, double *last_poll_ts) {
+  if (opend == NULL || loops == NULL || last_poll_ts == NULL || loops->empty()) {
+    return;
+  }
+  if (*last_poll_ts > 0.0 && (now - *last_poll_ts) < 30.0) {
+    return;
+  }
+  std::map<std::string, std::string> sample_by_tag;
+  for (std::map<std::string, mmtrade::strategy::SymbolLoopState>::const_iterator it =
+           loops->begin();
+       it != loops->end(); ++it) {
+    const std::string tag = MarketTagFromSymbolCode(it->first);
+    if (sample_by_tag.find(tag) == sample_by_tag.end()) {
+      sample_by_tag[tag] = it->first;
+    }
+  }
+  std::vector<std::string> sample_codes;
+  for (std::map<std::string, std::string>::const_iterator it = sample_by_tag.begin();
+       it != sample_by_tag.end(); ++it) {
+    sample_codes.push_back(it->second);
+  }
+  *last_poll_ts = now;
+  opend->RefreshMarketState(sample_codes);
+  for (std::map<std::string, mmtrade::strategy::SymbolLoopState>::iterator it = loops->begin();
+       it != loops->end(); ++it) {
+    const std::string phase = opend->MarketPhaseForCode(it->first);
+    if (!phase.empty()) {
+      it->second.last_market_phase = phase;
+    }
+  }
+}
+
+bool ShouldAutoStopAfterClose(
+    const mmtrade::config::StrategyConfig &cfg,
+    const std::map<std::string, mmtrade::strategy::SymbolLoopState> &loops,
+    mmtrade::opend::QuoteConnection *opend) {
+  if (!cfg.auto_stop_after_close || opend == NULL || loops.empty()) {
+    return false;
+  }
+  bool any_rth_session = false;
+  std::set<std::string> tags;
+  for (std::map<std::string, mmtrade::strategy::SymbolLoopState>::const_iterator it =
+           loops.begin();
+       it != loops.end(); ++it) {
+    const std::string sess =
+        it->second.sym.order_session.empty() ? "RTH" : it->second.sym.order_session;
+    if (mmtrade::strategy::EffectiveAutoStopAfterClose(true, sess)) {
+      any_rth_session = true;
+    }
+    tags.insert(MarketTagFromSymbolCode(it->first));
+  }
+  if (!any_rth_session) {
+    return false;
+  }
+  for (std::set<std::string>::const_iterator it = tags.begin(); it != tags.end(); ++it) {
+    if (opend->MarketPhaseForTag(*it) != "post") {
+      return false;
+    }
+  }
+  return true;
 }
 
 void InitLoopState(mmtrade::strategy::SymbolLoopState *st) {
@@ -594,6 +668,7 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
   std::map<std::string, mmtrade::strategy::SymbolLoopState> loops;
   std::map<std::string, std::unique_ptr<mmtrade::strategy::LiveEvalCompute> > live_compute;
   std::map<std::string, std::unique_ptr<mmtrade::log::StrategyStore> > stores;
+  bool latency_symbol_set = false;
   for (size_t i = 0; i < cfg.symbols.size(); ++i) {
     if (!cfg.symbols[i].enabled) {
       continue;
@@ -602,6 +677,11 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
     st.sym = cfg.symbols[i];
     InitLoopState(&st);
     loops[st.sym.code] = st;
+    if (!latency_symbol_set && mmtrade::task::TaskLatencyRecorder::Instance().Enabled() &&
+        !st.sym.code.empty()) {
+      mmtrade::task::TaskLatencyRecorder::Instance().RecordString("symbol", st.sym.code);
+      latency_symbol_set = true;
+    }
     stores[st.sym.code].reset(
         new mmtrade::log::StrategyStore(csv_dir, st.sym.code, cfg.acc_id, cfg.acc_index));
     RunStartupHooks(&loops[st.sym.code], cfg, args.config_path, trd_env, stores[st.sym.code].get());
@@ -725,7 +805,16 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
       }
     }
     if (!order_ready) {
-      mmtrade::log::LogConsoleWarn("order client connect failed (real 模式需 MOOMOO_TRADE_PWD)");
+      const std::string connect_warn =
+          "order client connect failed (real 需 MOOMOO_TRADE_PWD 或 .env.real 中 Fernet 路径)";
+      mmtrade::log::LogConsoleWarn(connect_warn);
+      for (std::map<std::string, std::unique_ptr<mmtrade::log::StrategyStore> >::iterator sit =
+               stores.begin();
+           sit != stores.end(); ++sit) {
+        if (sit->second.get() != NULL) {
+          sit->second->LogEvent("WARN", "order_client_connect_failed", connect_warn);
+        }
+      }
     } else {
       order_client->EnsurePushHub();
       mmtrade::trade::DirectBrokerConfig dcfg;
@@ -733,7 +822,8 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
       dcfg.port = args.port;
       dcfg.simulate = is_paper;
       dcfg.acc_id = static_cast<std::uint64_t>(cfg.acc_id);
-      place_broker = mmtrade::opend::CreateOrderBroker(dcfg);
+      place_broker =
+          mmtrade::opend::CreateOrderBroker(dcfg, order_client->TradeConn());
       if (place_broker.get() != NULL) {
         order_client->SetPlaceBroker(place_broker.get());
         mmtrade::log::LogConsoleInfo(
@@ -778,6 +868,7 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
 
   bool first_loop = true;
   int tick_count = 0;
+  double last_market_state_poll_ts = 0.0;
   while (g_run && (args.max_ticks <= 0 || tick_count < args.max_ticks)) {
     const bool awaiting_fill = AnyAwaitingFill(loops);
     const double book_wait_sec =
@@ -786,6 +877,7 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
     if (!skip_first_book_wait) {
       opend->WaitBookPush(book_wait_sec);
     }
+    mmtrade::task::PipelineLatency::OnMdLoopWakeup();
     first_loop = false;
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled() && !latency_first_push) {
       latency_first_push = true;
@@ -794,6 +886,12 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
 
     const double now = NowUnix();
     const double now_mono = NowMono();
+    RefreshAndApplyMarketPhases(opend, &loops, now, &last_market_state_poll_ts);
+    if (ShouldAutoStopAfterClose(cfg, loops, opend)) {
+      mmtrade::log::LogConsoleInfo("自动停机/auto_stop_after_close | all_markets_post_close");
+      g_run = 0;
+      break;
+    }
     const double trad_poll_sec = mmtrade::strategy::SymbolTradabilityPollSec();
     for (std::map<std::string, mmtrade::strategy::SymbolLoopState>::iterator it = loops.begin();
          it != loops.end(); ++it) {
@@ -863,10 +961,12 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
         if (outcome.entry_hit && !latency_entry_hit) {
           latency_entry_hit = true;
           mmtrade::task::TaskLatencyRecorder::Instance().RecordTimestampMs("entry_judge_hit_ms");
+          mmtrade::task::PipelineLatency::OnEntryStrategyDone();
         }
         if (outcome.exit_hit && !latency_exit_hit) {
           latency_exit_hit = true;
           mmtrade::task::TaskLatencyRecorder::Instance().RecordTimestampMs("exit_judge_hit_ms");
+          mmtrade::task::PipelineLatency::OnExitStrategyDone();
         }
       }
 
@@ -881,7 +981,23 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
       if (st.sym.status >= 2 && st.sym.opened_qty > 0) {
         summary << " pos=" << st.sym.opened_qty << "@" << st.sym.opened_price;
       }
-      mmtrade::log::LogConsoleInfo(summary.str());
+      mmtrade::log::StrategyStore *sym_store = stores[st.sym.code].get();
+      if (sym_store != NULL && book.valid) {
+        mmtrade::log::LogReadMarket(sym_store, st.sym.code, book.bid_1, book.ask_1);
+      }
+      if (sym_store != NULL && outcome.entry_hit && book.valid) {
+        const double px = book.ask_1 > 0.0 ? book.ask_1 : book.bid_1;
+        std::string note;
+        const double qty =
+            mmtrade::strategy::ResolveEntryQtyForPlace(st.sym, px, st.lot_size, &note);
+        mmtrade::log::LogEntryJudge(sym_store, st.sym.code, outcome.entry_rule_id, 0, "orderbook",
+                                    "op_empty_skip_compare", true, qty, px * qty);
+      }
+
+      const char *tick_console = std::getenv("MOOMOO_STRATEGY_CONSOLE_TICK");
+      if (tick_console != NULL && tick_console[0] != '\0' && tick_console[0] != '0') {
+        mmtrade::log::LogConsoleInfo(summary.str());
+      }
 
       if (args.verbose_json) {
         std::ostringstream line;
@@ -900,19 +1016,18 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
         continue;
       }
 
-      mmtrade::log::StrategyStore *sym_store = stores[st.sym.code].get();
-      if (sym_store != NULL && book.valid) {
-        mmtrade::log::LogReadMarket(sym_store, st.sym.code, book.bid_1, book.ask_1);
-      }
-
+      const std::string order_sess =
+          st.sym.order_session.empty() ? "RTH" : st.sym.order_session;
+      const bool phase_allows =
+          mmtrade::strategy::PhaseAllowsTrading(order_sess, st.last_market_phase);
       const bool can_place_entry =
           outcome.entry_hit && !st.entry_await_fill && !mmtrade::strategy::IsAwaitingFill(st) &&
           !st.entry_done && !st.entry_blocked && st.trading_fatal_code.empty() &&
-          st.sym.status < 2;
+          st.sym.status < 2 && phase_allows;
       const bool can_place_exit =
           outcome.exit_hit && !st.exit_await_fill && !mmtrade::strategy::IsAwaitingFill(st) &&
           st.entry_done && !st.exit_done && !st.entry_blocked && st.trading_fatal_code.empty() &&
-          st.sym.status == 2;
+          st.sym.status == 2 && phase_allows;
 
       if (can_place_entry) {
         st.last_entry_hit_rule_id = outcome.entry_rule_id;

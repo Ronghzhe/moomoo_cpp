@@ -33,6 +33,11 @@ class QuoteConnection : public TradeConnection {
 
   QuoteSnapshot GetSnapshot(const std::string &code_full) const;
 
+  // Sample codes (US./HK.); fills per-code and per-market (US/HK) phase: pre/rth/post/overnight.
+  bool RefreshMarketState(const std::vector<std::string> &codes_full);
+  std::string MarketPhaseForCode(const std::string &code_full) const;
+  std::string MarketPhaseForTag(const std::string &market_tag) const;
+
   // Fetch historical klines on the existing InitQot connection (no reconnect).
   KlineFetchResult FetchHistoricalKlines(const std::string &code_full,
                                        quote::KlTypeKey kl_type, int req_num,
@@ -51,6 +56,8 @@ class QuoteConnection : public TradeConnection {
   void OnReply_GetSecuritySnapshot(Moomoo::u32_t,
                                    const Qot_GetSecuritySnapshot::Response &stRsp) override;
   void OnReply_GetKL(Moomoo::u32_t, const Qot_GetKL::Response &stRsp) override;
+  void OnReply_GetMarketState(Moomoo::u32_t,
+                              const Qot_GetMarketState::Response &stRsp) override;
   void OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response &stRsp) override;
 
   Qot_Common::QotMarket ToSdkMarketSymbol(const quote::QuoteSymbol &sym) const;
@@ -74,6 +81,9 @@ class QuoteConnection : public TradeConnection {
   bool kline_get_ok_;
   std::vector<KlineBar> kline_last_bars_;
   std::string kline_last_error_;
+  bool market_state_ok_;
+  std::map<std::string, std::string> market_phase_by_code_;
+  std::map<std::string, std::string> market_phase_by_tag_;
 };
 
 }  // namespace opend

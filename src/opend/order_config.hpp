@@ -34,6 +34,8 @@ struct PlaceOrderParams {
   std::string remark;
   trade::TimeInForce time_in_force;
   bool fill_outside_rth;
+  // Empty = do not set OpenD session (explicit NONE). Otherwise RTH/ALL/OVERNIGHT.
+  std::string sdk_session;
 
   PlaceOrderParams()
       : side(trade::TrdSide::kBuy),

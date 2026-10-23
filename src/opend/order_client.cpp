@@ -82,7 +82,10 @@ const trade::OrderPushCache *OrderClient::PushHub() const {
 PlaceOrderResult OrderClient::Place(const std::string &code_full, const std::string &side,
                                     double qty, double price, const std::string &order_type,
                                     const std::string &remark, const std::string &time_in_force,
-                                    bool fill_outside_rth) {
+                                    bool fill_outside_rth, const std::string &sdk_session) {
+  if (conn_ != NULL) {
+    conn_->set_simulate(config_.simulate);
+  }
   EnsurePushHub();
   if (place_broker_ != NULL) {
     trade::PlaceOrderRequest req;
@@ -94,6 +97,7 @@ PlaceOrderResult OrderClient::Place(const std::string &code_full, const std::str
     req.remark = remark;
     req.time_in_force = time_in_force;
     req.fill_outside_rth = fill_outside_rth;
+    req.session = sdk_session;
     {
       std::ostringstream oss;
       oss << "cpp-" << code_full << "-" << static_cast<long long>(::time(NULL)) << "-"
@@ -121,6 +125,14 @@ PlaceOrderResult OrderClient::Place(const std::string &code_full, const std::str
     out.gateway_rate_wait_us = br.rate_wait_us;
     out.gateway_http_rtt_us = br.http_rtt_us;
     out.place_via = br.place_via.empty() ? "broker" : br.place_via;
+    if (out.ok) {
+      trade::OrderPushRow seed;
+      seed.order_id = trade::ResolveDisplayOrderId(out.order_id, out.order_id_ex);
+      seed.order_status = "SUBMITTING";
+      seed.code = code_full;
+      seed.numeric_order_id = out.order_id;
+      conn_->PushCache().Ingest(seed);
+    }
     return out;
   }
   PlaceOrderParams p;
@@ -132,6 +144,7 @@ PlaceOrderResult OrderClient::Place(const std::string &code_full, const std::str
   p.remark = remark;
   p.time_in_force = trade::ParseTimeInForce(time_in_force);
   p.fill_outside_rth = fill_outside_rth;
+  p.sdk_session = sdk_session;
   PlaceOrderResult out = conn_->Place(p);
   if (out.place_via.empty()) {
     out.place_via = "direct";
@@ -139,18 +152,43 @@ PlaceOrderResult OrderClient::Place(const std::string &code_full, const std::str
   return out;
 }
 
-bool OrderClient::CancelOrder(std::uint64_t order_id, const std::string &code_full) {
+bool OrderClient::CancelOrder(std::uint64_t order_id, const std::string &code_full,
+                              const std::string &order_id_ex) {
   if (conn_ == NULL) {
     return false;
   }
-  return conn_->CancelOrder(order_id, code_full);
+  std::uint64_t oid = order_id;
+  if (oid == 0 && !order_id_ex.empty()) {
+    const trade::OrderPushCache *hub = PushHub();
+    trade::OrderPushRow row;
+    if (hub != NULL && hub->GetRow(order_id_ex, &row) && row.numeric_order_id != 0) {
+      oid = row.numeric_order_id;
+    }
+    if (oid == 0) {
+      (void)conn_->QueryOrdersForCode(code_full);
+      if (hub != NULL && hub->GetRow(order_id_ex, &row) && row.numeric_order_id != 0) {
+        oid = row.numeric_order_id;
+      }
+    }
+  }
+  if (oid == 0) {
+    return false;
+  }
+  return conn_->CancelOrder(oid, code_full);
 }
 
-bool OrderClient::QueryOrder(std::uint64_t order_id, const std::string &code_full) {
+bool OrderClient::QueryOrder(std::uint64_t order_id, const std::string &code_full,
+                             const std::string &order_id_ex) {
   if (conn_ == NULL) {
     return false;
   }
-  return conn_->QueryOrder(order_id, code_full);
+  if (order_id != 0) {
+    return conn_->QueryOrder(order_id, code_full);
+  }
+  if (!order_id_ex.empty()) {
+    return conn_->QueryOrdersForCode(code_full);
+  }
+  return false;
 }
 
 bool OrderClient::GetPositions(const std::string &code_full, PositionList *out) {

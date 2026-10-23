@@ -18,7 +18,10 @@ std::string GatewayUrlFromEnv();
 
 // Returns NULL when ORDER_BROKER_MODE is unset/direct.
 // gateway / gateway_fallback both return FallbackBroker (gateway + DirectBroker).
-std::unique_ptr<trade::IOrderBroker> CreateOrderBroker(const trade::DirectBrokerConfig &direct_cfg);
+class TradeConnection;
+
+std::unique_ptr<trade::IOrderBroker> CreateOrderBroker(const trade::DirectBrokerConfig &direct_cfg,
+                                                        TradeConnection *shared_trade = NULL);
 
 }  // namespace opend
 }  // namespace mmtrade

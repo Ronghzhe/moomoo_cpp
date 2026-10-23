@@ -1,6 +1,7 @@
 #include "strategy/order_fail_retry.hpp"
 
 #include "log/strategy_store.hpp"
+#include "strategy/order_session_policy.hpp"
 #include "strategy/hk_short_params.hpp"
 #include "strategy/symbol_tradability.hpp"
 #include "trade/order_errors.hpp"
@@ -96,7 +97,9 @@ OrderTypeRetryChoice ResolveEntryOrderTypeForRetry(SymbolLoopState *st,
   }
   const bool hk_short =
       IsHkShortOpenEntry(st->sym.code, st->sym.entry_side, st->sym.entry_side);
-  if (st->entry_force_market_next && !hk_short) {
+  if (st->entry_force_market_next && !hk_short &&
+      SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                               st->last_market_phase)) {
     st->entry_force_market_next = false;
     return OrderTypeRetryChoice("MARKET", true);
   }
@@ -108,7 +111,9 @@ OrderTypeRetryChoice ResolveEntryOrderTypeForRetry(SymbolLoopState *st,
   const int fail_n = st->entry_retry_failed_count;
   const int retry_max = RetryMax(cfg);
   if (fail_n >= retry_max &&
-      (base == "SIM_MARKET" || base == "NORMAL" || base == "LIMIT") && !hk_short) {
+      (base == "SIM_MARKET" || base == "NORMAL" || base == "LIMIT") && !hk_short &&
+      SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                               st->last_market_phase)) {
     return OrderTypeRetryChoice("MARKET", true);
   }
   return out;
@@ -121,7 +126,9 @@ OrderTypeRetryChoice ResolveExitOrderTypeForRetry(SymbolLoopState *st,
     out.order_type = "NORMAL";
     return out;
   }
-  if (st->exit_force_market_next) {
+  if (st->exit_force_market_next &&
+      SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                               st->last_market_phase)) {
     st->exit_force_market_next = false;
     return OrderTypeRetryChoice("MARKET", true);
   }
@@ -129,7 +136,9 @@ OrderTypeRetryChoice ResolveExitOrderTypeForRetry(SymbolLoopState *st,
   out.order_type = st->sym.order_type.empty() ? "NORMAL" : st->sym.order_type;
   const int fail_n = st->exit_retry_failed_count;
   const int retry_max = RetryMax(cfg);
-  if (fail_n >= retry_max && (base == "SIM_MARKET" || base == "NORMAL" || base == "LIMIT")) {
+  if (fail_n >= retry_max && (base == "SIM_MARKET" || base == "NORMAL" || base == "LIMIT") &&
+      SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                               st->last_market_phase)) {
     return OrderTypeRetryChoice("MARKET", true);
   }
   return out;
@@ -188,7 +197,9 @@ OrderFailBumpResult BumpEntryOrderFail(SymbolLoopState *st, const config::Strate
   st->entry_retry_failed_count += 1;
   const int retry_max = RetryMax(cfg);
   if (trade::IsRetryableShortSellAskPriceFail(fail_detail) && st->entry_retry_failed_count >= 2) {
-    if (!IsHkShortOpenEntry(st->sym.code, st->sym.entry_side, st->sym.entry_side)) {
+    if (!IsHkShortOpenEntry(st->sym.code, st->sym.entry_side, st->sym.entry_side) &&
+        SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                 st->last_market_phase)) {
       st->entry_force_market_next = true;
     }
   }
@@ -212,7 +223,10 @@ OrderFailBumpResult BumpEntryOrderFail(SymbolLoopState *st, const config::Strate
     event_key = "entry_rate_limit_retry_scheduled";
   } else if (trade::IsRetryableTryAgainLater(fail_detail)) {
     event_key = "entry_try_again_market_retry_scheduled";
-    st->entry_force_market_next = true;
+    if (SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                 st->last_market_phase)) {
+      st->entry_force_market_next = true;
+    }
   }
 
   if (store != NULL) {
@@ -225,9 +239,11 @@ OrderFailBumpResult BumpEntryOrderFail(SymbolLoopState *st, const config::Strate
 
   if (st->entry_retry_failed_count > retry_max) {
     std::ostringstream line;
-    line << "entry_retry_exceeded_stop | code=" << st->sym.code << " retry_max=" << retry_max
-         << " => stop";
-    SetTradingFatal(st, "ENTRY_RETRY_EXCEEDED",
+    line << "连续重试报单失败/entry_retry_exceeded_stop | code=" << st->sym.code
+         << " retry_max=" << retry_max << " 连续" << (retry_max + 1) << "次仍未成交 => stop";
+    SetTradingFatal(st,
+                    RetryExceededFatalCode(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                           st->last_market_phase, "entry"),
                     fail_detail.empty() ? ("retry_max=" + std::to_string(retry_max)) : fail_detail,
                     store, "entry_retry_exceeded_stop", line.str());
     return OrderFailBumpResult::kFatal;
@@ -290,7 +306,10 @@ OrderFailBumpResult BumpExitOrderFail(SymbolLoopState *st, const config::Strateg
     event_key = "exit_rate_limit_retry_scheduled";
   } else if (trade::IsRetryableTryAgainLater(fail_detail)) {
     event_key = "exit_try_again_market_retry_scheduled";
-    st->exit_force_market_next = true;
+    if (SessionAllowsMarketOrder(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                 st->last_market_phase)) {
+      st->exit_force_market_next = true;
+    }
   }
 
   if (store != NULL) {
@@ -303,9 +322,11 @@ OrderFailBumpResult BumpExitOrderFail(SymbolLoopState *st, const config::Strateg
 
   if (st->exit_retry_failed_count > retry_max) {
     std::ostringstream line;
-    line << "exit_retry_exceeded_stop | code=" << st->sym.code << " retry_max=" << retry_max
-         << " => stop";
-    SetTradingFatal(st, "EXIT_RETRY_EXCEEDED",
+    line << "连续重试报单失败/exit_retry_exceeded_stop | code=" << st->sym.code
+         << " retry_max=" << retry_max << " 连续" << (retry_max + 1) << "次仍未成交 => stop";
+    SetTradingFatal(st,
+                    RetryExceededFatalCode(st->sym.order_session.empty() ? "RTH" : st->sym.order_session,
+                                           st->last_market_phase, "exit"),
                     fail_detail.empty() ? ("retry_max=" + std::to_string(retry_max)) : fail_detail,
                     store, "exit_retry_exceeded_stop", line.str());
     return OrderFailBumpResult::kFatal;
