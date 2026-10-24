@@ -1,10 +1,13 @@
 #include "task/task_latency_recorder.hpp"
 
+#include "task/pipeline_latency.hpp"
 #include "task/task_paths.hpp"
 
 #include <nlohmann/json.hpp>
 
 #include <algorithm>
+#include <atomic>
+#include <cstdint>
 #include <chrono>
 #include <condition_variable>
 #include <cerrno>
@@ -327,13 +330,14 @@ bool AppendLatencyCsvRowLocked(const std::string &csv, const nlohmann::json &sna
 struct TaskLatencyRecorder::Impl {
   std::string staging_path;
   std::string csv_path;
-  bool enabled;
+  std::atomic<bool> enabled;
 
   std::mutex queue_mu;
   std::condition_variable queue_cv;
   std::queue<std::pair<std::string, int64_t> > set_queue;
   std::queue<std::pair<std::string, std::string> > str_queue;
   std::queue<std::string> inc_queue;
+  std::atomic<uint32_t> merge_gen;
   bool stop;
   bool flush_requested;
 
@@ -342,7 +346,7 @@ struct TaskLatencyRecorder::Impl {
 
   std::thread worker;
 
-  Impl() : enabled(false), stop(false), flush_requested(false) {
+  Impl() : enabled(false), merge_gen(0), stop(false), flush_requested(false) {
     worker = std::thread([this]() { WorkerLoop(); });
   }
 
@@ -359,13 +363,16 @@ struct TaskLatencyRecorder::Impl {
   }
 
   void WorkerLoop() {
+    uint32_t last_merge = 0;
     for (;;) {
       std::unique_lock<std::mutex> lk(queue_mu);
-      queue_cv.wait(lk, [this]() {
+      queue_cv.wait(lk, [this, &last_merge]() {
         return stop || !set_queue.empty() || !str_queue.empty() || !inc_queue.empty() ||
-               flush_requested;
+               flush_requested || merge_gen.load(std::memory_order_acquire) != last_merge;
       });
-      if (stop && set_queue.empty() && str_queue.empty() && inc_queue.empty() && !flush_requested) {
+      last_merge = merge_gen.load(std::memory_order_acquire);
+      if (stop && set_queue.empty() && str_queue.empty() && inc_queue.empty() && !flush_requested &&
+          !PipelineLatency::HasPending()) {
         break;
       }
       std::queue<std::pair<std::string, int64_t> > sets;
@@ -377,6 +384,10 @@ struct TaskLatencyRecorder::Impl {
       const bool do_flush = flush_requested;
       flush_requested = false;
       lk.unlock();
+
+      std::vector<std::pair<std::string, int64_t> > pipe_nums;
+      std::vector<std::pair<std::string, std::string> > pipe_strs;
+      PipelineLatency::DrainPending(&pipe_nums, &pipe_strs);
 
       {
         std::lock_guard<std::mutex> dk(data_mu);
@@ -396,9 +407,16 @@ struct TaskLatencyRecorder::Impl {
           const int64_t cur = JsonToInt64(data.value(key, 0));
           data[key] = cur + 1;
         }
+        for (size_t i = 0; i < pipe_nums.size(); ++i) {
+          data[pipe_nums[i].first] = pipe_nums[i].second;
+        }
+        for (size_t i = 0; i < pipe_strs.size(); ++i) {
+          data[pipe_strs[i].first] = pipe_strs[i].second;
+        }
       }
 
-      if (do_flush || !sets.empty() || !strs.empty() || !incs.empty()) {
+      if (do_flush || !sets.empty() || !strs.empty() || !incs.empty() || !pipe_nums.empty() ||
+          !pipe_strs.empty()) {
         (void)PersistStaging();
       }
       if (stop) {
@@ -441,7 +459,7 @@ struct TaskLatencyRecorder::Impl {
   }
 
   bool PersistStaging() {
-    if (!enabled || staging_path.empty()) {
+    if (!enabled.load(std::memory_order_acquire) || staging_path.empty()) {
       return false;
     }
     const size_t slash = staging_path.find_last_of('/');
@@ -470,7 +488,7 @@ struct TaskLatencyRecorder::Impl {
   }
 
   void EnqueueSet(const std::string &field, int64_t value) {
-    if (!enabled) {
+    if (!enabled.load(std::memory_order_acquire)) {
       return;
     }
     {
@@ -481,7 +499,7 @@ struct TaskLatencyRecorder::Impl {
   }
 
   void EnqueueStr(const std::string &field, const std::string &value) {
-    if (!enabled) {
+    if (!enabled.load(std::memory_order_acquire)) {
       return;
     }
     {
@@ -492,7 +510,7 @@ struct TaskLatencyRecorder::Impl {
   }
 
   void EnqueueInc(const std::string &field) {
-    if (!enabled) {
+    if (!enabled.load(std::memory_order_acquire)) {
       return;
     }
     {
@@ -503,22 +521,24 @@ struct TaskLatencyRecorder::Impl {
   }
 
   void FlushAndWaitImpl() {
-    if (!enabled) {
+    if (!enabled.load(std::memory_order_acquire)) {
       return;
     }
-    {
-      std::lock_guard<std::mutex> lk(queue_mu);
-      flush_requested = true;
-    }
-    queue_cv.notify_all();
     for (int i = 0; i < 200; ++i) {
       {
         std::lock_guard<std::mutex> lk(queue_mu);
-        if (set_queue.empty() && str_queue.empty() && inc_queue.empty() && !flush_requested) {
+        flush_requested = true;
+        merge_gen.fetch_add(1, std::memory_order_release);
+      }
+      queue_cv.notify_all();
+      usleep(5000);
+      {
+        std::lock_guard<std::mutex> lk(queue_mu);
+        if (set_queue.empty() && str_queue.empty() && inc_queue.empty() && !flush_requested &&
+            !PipelineLatency::HasPending()) {
           break;
         }
       }
-      usleep(5000);
     }
     (void)PersistStaging();
   }
@@ -647,49 +667,60 @@ TaskLatencyRecorder &TaskLatencyRecorder::Instance() {
 }
 
 void TaskLatencyRecorder::Configure(const std::string &staging_path, const std::string &csv_path) {
+  PipelineLatency::Reset();
   {
     std::lock_guard<std::mutex> lk(impl_->data_mu);
     impl_->data = nlohmann::json::object();
   }
   impl_->staging_path = staging_path;
   impl_->csv_path = csv_path;
-  impl_->enabled = !staging_path.empty();
-  if (impl_->enabled) {
+  impl_->enabled.store(!staging_path.empty(), std::memory_order_release);
+  if (impl_->enabled.load(std::memory_order_acquire)) {
     (void)impl_->LoadStagingFromDisk();
   }
 }
 
-bool TaskLatencyRecorder::Enabled() const { return impl_->enabled; }
+bool TaskLatencyRecorder::Enabled() const {
+  return impl_->enabled.load(std::memory_order_acquire);
+}
 
 void TaskLatencyRecorder::RecordTimestampMs(const char *field) {
-  if (field == NULL || !impl_->enabled) {
+  if (field == NULL || !impl_->enabled.load(std::memory_order_acquire)) {
     return;
   }
   impl_->EnqueueSet(field, WallMsNow());
 }
 
 void TaskLatencyRecorder::RecordValue(const char *field, int64_t value) {
-  if (field == NULL || !impl_->enabled) {
+  if (field == NULL || !impl_->enabled.load(std::memory_order_acquire)) {
     return;
   }
   impl_->EnqueueSet(field, value);
 }
 
 void TaskLatencyRecorder::RecordString(const char *field, const std::string &value) {
-  if (field == NULL || !impl_->enabled) {
+  if (field == NULL || !impl_->enabled.load(std::memory_order_acquire)) {
     return;
   }
   impl_->EnqueueStr(field, value);
 }
 
 void TaskLatencyRecorder::Increment(const char *field) {
-  if (field == NULL || !impl_->enabled) {
+  if (field == NULL || !impl_->enabled.load(std::memory_order_acquire)) {
     return;
   }
   impl_->EnqueueInc(field);
 }
 
 void TaskLatencyRecorder::FlushAndWait() { impl_->FlushAndWaitImpl(); }
+
+void TaskLatencyRecorder::WakeMerge() {
+  if (!impl_->enabled.load(std::memory_order_acquire)) {
+    return;
+  }
+  impl_->merge_gen.fetch_add(1, std::memory_order_release);
+  impl_->queue_cv.notify_one();
+}
 
 bool TaskLatencyRecorder::FinalizeCsvRow(int final_status, int exit_code) {
   return impl_->FinalizeCsvRowImpl(final_status, exit_code);

@@ -10,7 +10,7 @@ from typing import Any, Literal
 
 LegKind = Literal["entry", "exit", "unknown"]
 
-# 与 C++ TaskLatencyRecorder::AllCsvColumns / task_latency_recorder.CSV_COLUMNS 一致
+# 与 C++ TaskLatencyRecorder::AllCsvColumns 一致（列名回退用；解析以文件表头为准）
 FULL_CSV_COLUMNS: list[str] = [
     "batch_id",
     "f_id",
@@ -23,8 +23,18 @@ FULL_CSV_COLUMNS: list[str] = [
     "exit_code",
     "insert_ts_ms",
     "prepare_acquire_ms",
+    "prepare_parse_done_ms",
+    "prepare_account_done_ms",
+    "prepare_build_done_ms",
+    "prepare_backup_done_ms",
     "prepare_done_ms",
     "prepare_status_2_ms",
+    "ms_prepare_acquire_to_parse",
+    "ms_prepare_parse_to_account",
+    "ms_prepare_account_to_build",
+    "ms_prepare_build_to_backup",
+    "ms_prepare_backup_to_done",
+    "ms_prepare_total",
     "executor_claim_ms",
     "mapped_ready_ms",
     "shell_start_ms",
@@ -48,6 +58,10 @@ FULL_CSV_COLUMNS: list[str] = [
     "entry_place_pre_us",
     "entry_place_sdk_us",
     "entry_place_post_us",
+    "entry_gateway_queue_wait_us",
+    "entry_gateway_rate_wait_us",
+    "entry_gateway_http_rtt_us",
+    "entry_place_via",
     "entry_price_compute_us",
     "entry_push_first_ms",
     "entry_poll_first_ms",
@@ -64,6 +78,10 @@ FULL_CSV_COLUMNS: list[str] = [
     "exit_place_pre_us",
     "exit_place_sdk_us",
     "exit_place_post_us",
+    "exit_gateway_queue_wait_us",
+    "exit_gateway_rate_wait_us",
+    "exit_gateway_http_rtt_us",
+    "exit_place_via",
     "exit_push_first_ms",
     "exit_poll_first_ms",
     "exit_push_submitting_ms",
@@ -88,7 +106,37 @@ FULL_CSV_COLUMNS: list[str] = [
     "us_push_to_filled",
     "us_exit_hit_to_place_sent",
     "us_exit_place_sent_to_filled",
+    "md_opend_recv_ms",
+    "md_sdk_recv_ms",
+    "md_proto_done_ms",
+    "md_callback_ms",
+    "md_loop_wakeup_ms",
+    "entry_pipe_strategy_ms",
+    "entry_pipe_risk_ms",
+    "entry_pipe_order_sent_ms",
+    "entry_pipe_order_ack_ms",
+    "entry_pipe_order_terminal_ms",
+    "entry_pipe_terminal_kind",
+    "exit_pipe_strategy_ms",
+    "exit_pipe_risk_ms",
+    "exit_pipe_order_sent_ms",
+    "exit_pipe_order_ack_ms",
+    "exit_pipe_order_terminal_ms",
+    "exit_pipe_terminal_kind",
+    "ms_md_sdk_to_proto",
+    "ms_md_proto_to_callback",
+    "ms_md_callback_to_loop",
+    "ms_entry_pipe_risk_to_sent",
+    "ms_entry_pipe_sent_to_ack",
+    "ms_entry_pipe_ack_to_terminal",
+    "ms_exit_pipe_risk_to_sent",
+    "ms_exit_pipe_sent_to_ack",
+    "ms_exit_pipe_ack_to_terminal",
 ]
+
+# 误把 epoch 毫秒读进时长列时约 1.7e12；真实任务时长远小于 7 天
+_MAX_PLAUSIBLE_DURATION_MS = 7 * 24 * 3600 * 1000
+_MAX_PLAUSIBLE_DURATION_US = _MAX_PLAUSIBLE_DURATION_MS * 1000
 
 # Test 2 — Worker 调度段（可由时间戳推算）
 SCHEDULING_COMPUTED: list[tuple[str, str, str, str]] = [
@@ -175,13 +223,27 @@ def num(v: Any) -> float | None:
 
 def parse_csv_line(line: str, header: list[str]) -> dict[str, str]:
     parts = next(csv.reader([line]))
-    if len(parts) >= len(FULL_CSV_COLUMNS):
-        return dict(zip(FULL_CSV_COLUMNS, parts[: len(FULL_CSV_COLUMNS)]))
-    if len(parts) == len(header):
-        return dict(zip(header, parts))
-    # 列数不齐：按 FULL 截断/补空
-    row = dict(zip(FULL_CSV_COLUMNS, parts + [""] * (len(FULL_CSV_COLUMNS) - len(parts))))
-    return row
+    # 必须以文件表头对齐。旧逻辑在列数 >= FULL 时按 FULL 位置 zip，
+    # C++ 在中间插入 prepare_* / gateway / pipe 列后，时长列会读到 epoch 时间戳。
+    names = header if header else FULL_CSV_COLUMNS
+    if len(parts) < len(names):
+        parts = parts + [""] * (len(names) - len(parts))
+    return dict(zip(names, parts[: len(names)]))
+
+
+def is_duration_metric(name: str) -> bool:
+    if name.startswith("ms_") or name.startswith("us_") or name.startswith("sched_"):
+        return True
+    if name.endswith("_us") or name.endswith("_api_ms"):
+        return True
+    return False
+
+
+def is_plausible_duration(name: str, value: float) -> bool:
+    if not is_duration_metric(name):
+        return True
+    cap = _MAX_PLAUSIBLE_DURATION_US if metric_unit(name) == "us" else _MAX_PLAUSIBLE_DURATION_MS
+    return 0 <= value <= cap
 
 
 def _row_anchor_ms(row: dict[str, str]) -> int | None:
@@ -280,7 +342,9 @@ def is_valid_scheduling_sample(row: dict[str, str], metric: str) -> bool:
     v = num(enriched.get(metric) if metric.startswith("sched_") else row.get(metric))
     if v is None:
         return False
-    return v >= 0
+    if v < 0:
+        return False
+    return is_plausible_duration(metric, v)
 
 
 def metric_unit(name: str) -> str:
@@ -332,6 +396,8 @@ def collect_metric_values(
         if v is None:
             continue
         if scheduling_only_valid and metric in SCHEDULING_DURATION_METRICS and v < 0:
+            continue
+        if not is_plausible_duration(metric, v):
             continue
         vals.append(v)
     return vals

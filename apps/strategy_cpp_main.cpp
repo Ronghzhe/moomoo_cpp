@@ -628,6 +628,7 @@ struct LeaveOpendCleanup {
 int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
                        mmtrade::opend::QuoteConnection *shared_opend, bool leave_opend_up) {
   g_session_error.clear();
+  mmtrade::task::PipelineLatency::Reset();
   if (args.host.empty()) {
     args.host = cfg.opend_host;
   }

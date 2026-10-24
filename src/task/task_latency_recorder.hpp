@@ -25,6 +25,7 @@ class TaskLatencyRecorder {
   void Increment(const char *field);
 
   void FlushAndWait();
+  void WakeMerge();
   bool FinalizeCsvRow(int final_status, int exit_code);
 
   static int64_t WallMsNow();
