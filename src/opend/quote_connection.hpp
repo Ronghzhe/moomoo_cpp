@@ -1,10 +1,12 @@
 #pragma once
 
+#include "opend/book_mailbox.hpp"
 #include "opend/kline_connection.hpp"
 #include "opend/quote_snapshot.hpp"
 #include "opend/trade_connection.hpp"
 
 #include <condition_variable>
+#include <cstddef>
 #include <cstdint>
 #include <map>
 #include <mutex>
@@ -45,6 +47,9 @@ class QuoteConnection : public TradeConnection {
 
   // Block until orderbook push or timeout (seconds). Returns true if a push arrived.
   bool WaitBookPush(double timeout_sec);
+  // Strategy-thread handoff: merge the latest unread push for each symbol into cache_.
+  size_t DrainBookMailbox();
+  std::uint64_t BookMailboxOverwriteCount() const { return book_mailbox_.overwritten(); }
 
  private:
   void NotifyBookPush();
@@ -75,6 +80,7 @@ class QuoteConnection : public TradeConnection {
   bool snap_suspended_;
   mutable std::mutex mu_;
   std::map<std::string, QuoteSnapshot> cache_;
+  BookMailbox book_mailbox_;
   std::mutex book_wait_mu_;
   std::condition_variable book_wait_cv_;
   std::uint64_t book_push_seq_;

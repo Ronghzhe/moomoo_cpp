@@ -46,21 +46,20 @@ double BookVolume(const Qot_Common::OrderBook &book) {
                              : static_cast<double>(book.volume());
 }
 
-void ApplyBookToCache(const Qot_Common::Security &sec,
-                      const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &bids,
-                      const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &asks,
-                      std::int64_t exchange_ts_ms,
-                      std::map<std::string, QuoteSnapshot> *cache) {
-  if (cache == NULL) {
-    return;
+bool DecodeBookSnapshot(const Qot_Common::Security &sec,
+                        const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &bids,
+                        const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &asks,
+                        std::int64_t exchange_ts_ms, std::string *code,
+                        QuoteSnapshot *snapshot) {
+  if (code == NULL || snapshot == NULL) {
+    return false;
   }
   const double bid = FirstBookPrice(bids);
   const double ask = FirstBookPrice(asks);
   if (bid <= 0.0 || ask <= 0.0) {
-    return;
+    return false;
   }
-  const std::string key = SecurityToFullCode(sec);
-  QuoteSnapshot snap = (*cache)[key];
+  QuoteSnapshot snap;
   snap.bid_1 = bid;
   snap.ask_1 = ask;
   snap.bid_count =
@@ -83,7 +82,40 @@ void ApplyBookToCache(const Qot_Common::Security &sec,
                           system_clock::now().time_since_epoch())
                           .count();
   snap.exchange_ts_ms = exchange_ts_ms;
-  (*cache)[key] = snap;
+  *code = SecurityToFullCode(sec);
+  *snapshot = snap;
+  return true;
+}
+
+void MergeBookSnapshot(const std::string &code, const QuoteSnapshot &book,
+                       std::map<std::string, QuoteSnapshot> *cache) {
+  if (cache == NULL || code.empty() || !book.valid) {
+    return;
+  }
+  QuoteSnapshot merged = book;
+  std::map<std::string, QuoteSnapshot>::const_iterator it = cache->find(code);
+  if (it != cache->end()) {
+    merged.day_open = it->second.day_open;
+    merged.has_day_open = it->second.has_day_open;
+    merged.lot_size = it->second.lot_size;
+    merged.last_price = it->second.last_price;
+    merged.sec_status = it->second.sec_status;
+    merged.suspended = it->second.suspended;
+    merged.has_tradability = it->second.has_tradability;
+  }
+  (*cache)[code] = merged;
+}
+
+void ApplyBookToCache(const Qot_Common::Security &sec,
+                      const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &bids,
+                      const google::protobuf::RepeatedPtrField<Qot_Common::OrderBook> &asks,
+                      std::int64_t exchange_ts_ms,
+                      std::map<std::string, QuoteSnapshot> *cache) {
+  std::string code;
+  QuoteSnapshot snapshot;
+  if (DecodeBookSnapshot(sec, bids, asks, exchange_ts_ms, &code, &snapshot)) {
+    MergeBookSnapshot(code, snapshot, cache);
+  }
 }
 
 std::int64_t OpenDServerTimestampMs(double timestamp) {
@@ -183,16 +215,24 @@ bool QuoteConnection::UnsubscribeOrderBook(const std::vector<std::string> &codes
   c2s->set_isregorunregpush(false);
   c2s->set_extendedtime(true);
   WaitReply(m_pQotApi->Sub(req));
-  for (size_t i = 0; i < codes_full.size(); ++i) {
+  {
     std::lock_guard<std::mutex> lk(mu_);
-    cache_.erase(codes_full[i]);
+    for (size_t i = 0; i < codes_full.size(); ++i) {
+      cache_.erase(codes_full[i]);
+    }
+  }
+  for (size_t i = 0; i < codes_full.size(); ++i) {
+    book_mailbox_.Erase(codes_full[i]);
   }
   return sub_ok_;
 }
 
 void QuoteConnection::ClearQuoteCache() {
-  std::lock_guard<std::mutex> lk(mu_);
-  cache_.clear();
+  {
+    std::lock_guard<std::mutex> lk(mu_);
+    cache_.clear();
+  }
+  book_mailbox_.Clear();
 }
 
 bool QuoteConnection::RefreshOrderBook(const std::string &code_full) {
@@ -554,8 +594,23 @@ bool QuoteConnection::WaitBookPush(double timeout_sec) {
   std::unique_lock<std::mutex> lk(book_wait_mu_);
   const std::uint64_t seq = book_push_seq_;
   book_wait_cv_.wait_for(lk, std::chrono::milliseconds(static_cast<int>(t * 1000.0)),
-                         [this, seq]() { return book_push_seq_ != seq || !connected_; });
-  return book_push_seq_ != seq;
+                         [this, seq]() {
+                           return book_push_seq_ != seq || book_mailbox_.HasPending() ||
+                                  !connected_;
+                         });
+  return book_push_seq_ != seq || book_mailbox_.HasPending();
+}
+
+size_t QuoteConnection::DrainBookMailbox() {
+  const std::vector<std::pair<std::string, QuoteSnapshot> > pending = book_mailbox_.Drain();
+  if (pending.empty()) {
+    return 0;
+  }
+  std::lock_guard<std::mutex> lk(mu_);
+  for (size_t i = 0; i < pending.size(); ++i) {
+    MergeBookSnapshot(pending[i].first, pending[i].second, &cache_);
+  }
+  return pending.size();
 }
 
 void QuoteConnection::OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response &stRsp) {
@@ -572,12 +627,14 @@ void QuoteConnection::OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response
   if (exchange_ts_ms > 0) {
     mmtrade::task::PipelineLatency::OnMdOpenDRecvMs(exchange_ts_ms);
   }
-  {
-    std::lock_guard<std::mutex> lk(mu_);
-    ApplyBookToCache(book.security(), book.orderbookbidlist(), book.orderbookasklist(),
-                     exchange_ts_ms, &cache_);
+  std::string code;
+  QuoteSnapshot snapshot;
+  if (!DecodeBookSnapshot(book.security(), book.orderbookbidlist(), book.orderbookasklist(),
+                          exchange_ts_ms, &code, &snapshot)) {
+    return;
   }
   mmtrade::task::PipelineLatency::OnMdProtoDecoded();
+  book_mailbox_.Publish(code, snapshot);
   NotifyBookPush();
   mmtrade::task::PipelineLatency::OnMdCallbackNotified();
 }

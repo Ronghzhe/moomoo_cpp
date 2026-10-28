@@ -10,6 +10,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 add_executable(l0_tests
+  unit/test_book_mailbox.cpp
   unit/test_order_parse.cpp
   unit/test_hk_tick.cpp
   unit/test_order_push_cache.cpp

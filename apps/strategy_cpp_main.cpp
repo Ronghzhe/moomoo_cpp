@@ -878,6 +878,7 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
     if (!skip_first_book_wait) {
       opend->WaitBookPush(book_wait_sec);
     }
+    opend->DrainBookMailbox();
     mmtrade::task::PipelineLatency::OnMdLoopWakeup();
     first_loop = false;
     if (mmtrade::task::TaskLatencyRecorder::Instance().Enabled() && !latency_first_push) {
@@ -983,9 +984,6 @@ int RunStrategySession(AppArgs args, mmtrade::config::StrategyConfig cfg,
         summary << " pos=" << st.sym.opened_qty << "@" << st.sym.opened_price;
       }
       mmtrade::log::StrategyStore *sym_store = stores[st.sym.code].get();
-      if (sym_store != NULL && book.valid) {
-        mmtrade::log::LogReadMarket(sym_store, st.sym.code, book.bid_1, book.ask_1);
-      }
       if (sym_store != NULL && outcome.entry_hit && book.valid) {
         const double px = book.ask_1 > 0.0 ? book.ask_1 : book.bid_1;
         std::string note;
